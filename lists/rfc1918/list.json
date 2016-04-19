@@ -12,5 +12,6 @@
     "ip-dst"
   ],
   "description": "Event contains one or more entries part of the RFC 1918 CIDR blocks",
+  "version": 1,
   "name": "List of RFC 1918 CIDR blocks"
 }

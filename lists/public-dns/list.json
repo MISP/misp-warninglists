@@ -1,5 +1,6 @@
 {
   "name": "List of known public DNS resolvers",
+  "version": 1,
   "description": "Event contains one or more public DNS resolvers as attribute with an IDS flag set",
   "matching_attributes": [
     "ip-src",
