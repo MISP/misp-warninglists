@@ -10,6 +10,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/empty-hashes](lists/empty-hashes) - hash values of empty files
 - [lists/public-dns](lists/public-dns) - IP addresses of public DNS resolver
 - [lists/rfc1918](lists/rfc1918) - RFC 1918 network subnets
+- [lists/second-level-tlds](lists/second-level-tlds) - Mozilla list of second level top-level domains
 - [lists/tlds](lists/tlds) - top-level domains
 
 # Format of a warning list
