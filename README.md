@@ -7,6 +7,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 
 # lists
 
+- [lists/alexa](lists/alexa) - Top 1000 websites from Alexa
 - [lists/empty-hashes](lists/empty-hashes) - hash values of empty files
 - [lists/google](lists/google) - known domains and hostnames from Google
 - [lists/multicast](lists/multicast) - known IPv4 multicast CIDR blocks
