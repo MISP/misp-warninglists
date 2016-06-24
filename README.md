@@ -13,6 +13,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/multicast](lists/multicast) - known IPv4 multicast CIDR blocks
 - [lists/public-dns](lists/public-dns) - IP addresses of public DNS resolver
 - [lists/rfc1918](lists/rfc1918) - RFC 1918 network subnets
+- [lists/rfc5735](lists/rfc5735) - RFC 5735 CIDR blocks - Special Use IPv4 Addresses
 - [lists/second-level-tlds](lists/second-level-tlds) - Mozilla list of second level top-level domains
 - [lists/tlds](lists/tlds) - top-level domains
 
