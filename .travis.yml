@@ -1,0 +1,17 @@
+language: bash
+
+sudo: required
+
+dist: trusty
+
+install:
+    - git clone https://github.com/stedolan/jq.git
+    - pushd jq
+    - autoreconf -i
+    - ./configure --disable-maintainer-mode
+    - make
+    - sudo make install
+    - popd
+
+script:
+    - cat */*.json | jq .
