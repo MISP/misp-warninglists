@@ -1,8 +1,8 @@
 {
   "name": "List of known google domains",
-  "version": 1,
+  "version": 2,
   "description": "Event contains one or more entries of known google domains",
-  "matching_attributes": [ "domain", "hostname" ],
+  "matching_attributes": [ "domain", "hostname", "domain|ip" ],
   "list": [
         ".google.com",
         ".google.ad",

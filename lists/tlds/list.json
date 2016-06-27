@@ -1293,9 +1293,10 @@
   ],
   "matching_attributes": [
     "hostname",
-    "domain"
+    "domain",
+    "domain|ip"
   ],
   "description": "Event contains one or more TLDs as attribute with an IDS flag set",
-  "version": 1,
+  "version": 2,
   "name": "TLDs as known by IANA"
 }

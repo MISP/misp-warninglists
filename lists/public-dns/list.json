@@ -1,10 +1,11 @@
 {
   "name": "List of known public DNS resolvers",
-  "version": 2,
+  "version": 3,
   "description": "Event contains one or more public DNS resolvers as attribute with an IDS flag set",
   "matching_attributes": [
     "ip-src",
-    "ip-dst"
+    "ip-dst",
+    "domain|ip"
   ],
   "list": [
     "8.8.8.8",
