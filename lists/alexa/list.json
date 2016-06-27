@@ -1005,6 +1005,7 @@
   "description": "Event contains one or more entries from the top 1000 of the most used website (Alexa).",
   "matching_attributes": [
     "hostname",
-    "domain"
+    "domain",
+    "domain|ip"
   ]
 }

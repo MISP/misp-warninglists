@@ -21,9 +21,10 @@
   ],
   "matching_attributes": [
     "ip-src",
-    "ip-dst"
+    "ip-dst",
+    "domain|ip"
   ],
   "description": "Event contains one or more entries part of the RFC 5735 CIDR blocks - Special Use IPv4 Addresses",
-  "version": 1,
+  "version": 2,
   "name": "List of RFC 5735 CIDR blocks"
 }

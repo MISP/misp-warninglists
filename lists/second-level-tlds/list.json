@@ -6466,8 +6466,9 @@
     ],
     "matching_attributes": [
         "hostname",
-        "domain"
+        "domain",
+        "domain|ip"
     ],
     "name": "Second level TLDs as known by Mozilla Foundation",
-    "version": 1
+    "version": 2
 }
