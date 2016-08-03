@@ -17,7 +17,7 @@ with zipfile.ZipFile(alexa_file, 'r') as alexa_lists:
     for name in alexa_lists.namelist():
         if name == "top-1m.csv":
             with alexa_lists.open(name) as top:
-                top1000 = top.readlines()[0:999]
+                top1000 = top.readlines()[:1000]
         else:
             continue
 
