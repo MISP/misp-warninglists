@@ -14,4 +14,4 @@ install:
     - popd
 
 script:
-    - cat */*.json | jq .
+    - cat */*/*.json | jq .
