@@ -13,7 +13,8 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/empty-hashes](lists/empty-hashes) - hash values of empty files
 - [lists/google](lists/google) - known domains and hostnames from Google
 - [lists/multicast](lists/multicast) - known IPv4 multicast CIDR blocks
-- [lists/public-dns](lists/public-dns) - IP addresses of public DNS resolver
+- [lists/public-dns-v4](lists/public-dns-v4) - IPv4 addresses and reverse of public DNS resolver
+- [lists/public-dns-v6](lists/public-dns-v6) - IPv6 addresses and reverse of public DNS resolver
 - [lists/rfc1918](lists/rfc1918) - RFC 1918 network subnets
 - [lists/rfc3849](lists/rfc3849) - RFC 3849 - Documentation prefix for ipv6
 - [lists/rfc5735](lists/rfc5735) - RFC 5735 CIDR blocks - Special Use IPv4 Addresses
