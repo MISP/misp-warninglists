@@ -1,0 +1,16 @@
+{
+  "list": [
+    "FE80::/10"
+  ],
+  "type": [
+    "cidr"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip"
+  ],
+  "description": "Event contains one or more entries part of the IPv6 link local prefix (RFC 4291)",
+  "version": 1,
+  "name": "List of IPv6 link local blocks"
+}
