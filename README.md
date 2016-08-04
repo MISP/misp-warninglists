@@ -12,6 +12,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/alexa](lists/alexa) - Top 1000 websites from Alexa
 - [lists/empty-hashes](lists/empty-hashes) - hash values of empty files
 - [lists/google](lists/google) - known domains and hostnames from Google
+- [lists/ipv6-linklocal](ipv6-linklocal) - IPv6 link local prefix
 - [lists/multicast](lists/multicast) - known IPv4 multicast CIDR blocks
 - [lists/public-dns](lists/public-dns) - IP addresses of public DNS resolver
 - [lists/rfc1918](lists/rfc1918) - RFC 1918 network subnets
