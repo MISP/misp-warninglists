@@ -14,6 +14,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/google](lists/google) - known domains and hostnames from Google
 - [lists/ipv6-linklocal](ipv6-linklocal) - IPv6 link local prefix
 - [lists/microsoft](lists/microsoft) - known microsoft domains
+- [lists/microsoft-office365](lists/microsoft-office365) - known Office 365 URLs and IP address ranges
 - [lists/multicast](lists/multicast) - known IPv4 multicast CIDR blocks
 - [lists/public-dns-v4](lists/public-dns-v4) - IPv4 addresses and reverse of public DNS resolver
 - [lists/public-dns-v6](lists/public-dns-v6) - IPv6 addresses and reverse of public DNS resolver
