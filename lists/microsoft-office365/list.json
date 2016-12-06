@@ -1,4 +1,5 @@
 {
+  "name": "List of known Office 365 URLs and IP address ranges",
   "description": "Office 365 URLs and IP address ranges",
   "list": [
     "2a01:111:f406:8800::/64",
@@ -1334,5 +1335,6 @@
     "216.32.180.0/23",
     "2a01:111:f400:7c00::/54",
     "2a01:111:f403::/48"
-  ]
+  ],
+  "version": "20161206"
 }
