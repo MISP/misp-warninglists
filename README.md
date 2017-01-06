@@ -23,6 +23,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/rfc5735](lists/rfc5735) - RFC 5735 CIDR blocks - Special Use IPv4 Addresses
 - [lists/second-level-tlds](lists/second-level-tlds) - Mozilla list of second level top-level domains
 - [lists/tlds](lists/tlds) - top-level domains
+- [lists/url-shortener](lists/url-shortener) - URL shorteners services
 
 # Format of a warning list
 
