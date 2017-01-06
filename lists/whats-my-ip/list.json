@@ -2,7 +2,7 @@
   "name": "List of known domains to know external IP",
   "version": 2,
   "description": "Event contains one or more entries of known 'what's is my ip' domains",
-  "matching_attributes": [ "domain", "hostname", "domain|ip" ],
+  "matching_attributes": [ "domain", "hostname", "domain|ip", "uri", "url" ],
   "list": [
         "api.ipify.org",
         "checkip.dyndns.com",
