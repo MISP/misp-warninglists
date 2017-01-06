@@ -24,6 +24,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/second-level-tlds](lists/second-level-tlds) - Mozilla list of second level top-level domains
 - [lists/tlds](lists/tlds) - top-level domains
 - [lists/whats-my-ip](lists/whats-my-ip) - "What's my IP" service
+- [lists/url-shortener](lists/url-shortener) - URL shorteners services
 
 # Format of a warning list
 
