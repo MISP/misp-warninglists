@@ -1001,7 +1001,7 @@
     "voyeurhit.com"
   ],
   "name": "Top 1000 website from Alexa",
-  "version": "20170119",
+  "version": "20170120",
   "description": "Event contains one or more entries from the top 1000 of the most used website (Alexa).",
   "matching_attributes": [
     "hostname",
