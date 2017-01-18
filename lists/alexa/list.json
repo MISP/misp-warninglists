@@ -1006,7 +1006,8 @@
   "matching_attributes": [
     "hostname",
     "domain",
-    "domain|ip"
+    "domain|ip",
+    "url"
   ],
   "type": "substring"
 }
