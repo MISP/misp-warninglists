@@ -1009,5 +1009,5 @@
     "domain|ip",
     "url"
   ],
-  "type": "substring"
+  "type": "hostname"
 }
