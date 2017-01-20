@@ -50,6 +50,12 @@ are available in one of the list. The list can be globally enabled or disabled i
 
 If matching_attributes are not set, the list is matched against any type of attributes.
 
+## type of warning list
+
+- ```string``` (default) - perfect match of a string in the warning list against matching attributes
+- ```substring``` - substring matching of a string in the warning list against matching attributes
+- ```hostname``` - hostname matching (e.g. domain matching from URL) of a string in the warining list against matching attributes
+
 # License
 
 MISP warning-lists are licensed under [CC0 1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/) -  Public Domain Dedication. If a specific author of a taxonomy wants to license it under a different license, a pull request can be requested.
