@@ -1336,5 +1336,11 @@
     "2a01:111:f400:7c00::/54",
     "2a01:111:f403::/48"
   ],
-  "version": "20161206"
+  "matching_attributes": [
+      "ip-src",
+      "ip-dst",
+      "domain|ip",
+      "hostname"
+  ],
+  "version": "20170127"
 }
