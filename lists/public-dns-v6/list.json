@@ -174,7 +174,7 @@
         "yardbird.cns.ipv6.vt.edu.",
         "zen.stack.nl."
     ],
-    "matching_attribute": [
+    "matching_attributes": [
         "ip-src",
         "ip-dst",
         "domain|ip"

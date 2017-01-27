@@ -96085,7 +96085,7 @@
         "zz2013433001d30fccb2.userreverse.dion.ne.jp.",
         "zz2014403768d2c78302.userreverse.dion.ne.jp."
     ],
-    "matching_attribute": [
+    "matching_attributes": [
         "ip-src",
         "ip-dst",
         "domain|ip"
