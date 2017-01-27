@@ -49,7 +49,7 @@ out4_list = {}
 out4_list['name'] = 'List of known IPv4 public DNS resolvers'
 out4_list['version'] = version
 out4_list['description'] = 'Event contains one or more public IPv4 DNS resolvers as attribute with an IDS flag set'
-out4_list['matching_attribute'] = [ 'ip-src', 'ip-dst', 'domain|ip' ]
+out4_list['matching_attributes'] = [ 'ip-src', 'ip-dst', 'domain|ip' ]
 out4_list['list'] = sorted(ip4_list)
 
 
@@ -57,7 +57,7 @@ out6_list = {}
 out6_list['name'] = 'List of known IPv6 public DNS resolvers'
 out6_list['version'] = version
 out6_list['description'] = 'Event contains one or more public IPv6 DNS resolvers as attribute with an IDS flag set'
-out6_list['matching_attribute'] = [ 'ip-src', 'ip-dst', 'domain|ip' ]
+out6_list['matching_attributes'] = [ 'ip-src', 'ip-dst', 'domain|ip' ]
 out6_list['list'] = sorted(ip6_list)
 
 
