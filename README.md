@@ -21,6 +21,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/rfc1918](lists/rfc1918) - RFC 1918 network subnets
 - [lists/rfc3849](lists/rfc3849) - RFC 3849 - Documentation prefix for ipv6
 - [lists/rfc5735](lists/rfc5735) - RFC 5735 CIDR blocks - Special Use IPv4 Addresses
+- [lists/rfc6598](lists/rfc6598) - RFC 6598 IANA-Reserved IPv4 Prefix for Shared Address Space (Carrier- Grade NAT (CGN) devices)
 - [lists/second-level-tlds](lists/second-level-tlds) - Mozilla list of second level top-level domains
 - [lists/tlds](lists/tlds) - top-level domains
 - [lists/whats-my-ip](lists/whats-my-ip) - "What's my IP" service
@@ -54,7 +55,7 @@ If matching_attributes are not set, the list is matched against any type of attr
 
 - ```string``` (default) - perfect match of a string in the warning list against matching attributes
 - ```substring``` - substring matching of a string in the warning list against matching attributes
-- ```hostname``` - hostname matching (e.g. domain matching from URL) of a string in the warining list against matching attributes
+- ```hostname``` - hostname matching (e.g. domain matching from URL) of a string in the warning list against matching attributes
 
 # License
 
