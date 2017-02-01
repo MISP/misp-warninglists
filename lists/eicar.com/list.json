@@ -1,0 +1,23 @@
+{
+  "name": "List of hashes for EICAR test virus",
+  "version": 1,
+  "description": "Event contains one or more entries based on hashes for EICAR test virus",
+  "matching_attributes": [ ],
+  "list": [
+    "44d88612fea8a8f36de82e1278abb02f",
+    "6ce6f415d8475545be5ba114f208b0ff",
+    "e4968ef99266df7c9a1f0637d2389dab",
+    "3395856ce81f2b7382dee72602f798b642f14140",
+    "d27265074c9eac2e2122ed69294dbc4d7cce9141",
+    "bec1b52d350d721c7e22a6d4bb0a92909893a3ae",
+    "b42ec8b47deb2dc75edebd01132d63f8e8d4cd08e5d26d8bd366bdc5",
+    "b31bb2cf25d7e654c694ffb85b426d164a210ead66affc3b004702be",
+    "765dceb9a8c8ff4318e3ccaf7dbb9b05c0a53a819d24a50714aebe6c",
+    "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f",
+    "2546dcffc5ad854d4ddc64fbf056871cd5a00f2471cb7a5bfd4ac23b6e9eedad",
+    "e1105070ba828007508566e28a2b8d4c65d192e9eaf3b7868382b7cae747b397",
+    "cc805d5fab1fd71a4ab352a9c533e65fb2d5b885518f4e565e68847223b8e6b85cb48f3afad842726d99239c9e36505c64b0dc9a061d9e507d833277ada336ab",
+    "d9305862fe0bf552718d19db43075d88cffd768974627db60fa1a90a8d45563e035a6449663b8f66aac53791d77f37dbb5035159aa08e69fc473972022f80010",
+    "73d6b0ca9c5554fd2b37ff8af6b51812f3af49962cebd6e042d0883a45794ddb8a53724275d26f3e18cebf1cd1d67740acc920aba16965038c0cc75b87030fbe"
+  ]
+}
