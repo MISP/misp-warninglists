@@ -9,4 +9,10 @@ install:
     - sudo apt-get install -y -qq jq
 
 script:
-    - for dir in lists/*/list.json; do echo -n "${dir}: ";jsonschema -i ${dir} schema.json; echo ''; done
+    - |
+      for dir in lists/*/list.json
+      do
+        echo -n "${dir}: "
+        jsonschema -i ${dir} schema.json
+        echo ''
+      done
