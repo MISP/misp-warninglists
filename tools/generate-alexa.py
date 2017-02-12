@@ -8,7 +8,7 @@ import json
 
 alexa_url = "http://s3.amazonaws.com/alexa-static/top-1m.csv.zip"
 alexa_file = "top-1m.csv.zip"
-user_agent = {"User-agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0"}
+user_agent = {"User-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0"}
 r = requests.get(alexa_url, headers=user_agent)
 with open(alexa_file, 'wb') as fd:
     for chunk in r.iter_content(4096):
@@ -22,15 +22,17 @@ with zipfile.ZipFile(alexa_file, 'r') as alexa_lists:
             continue
 
 alexa_warninglist = {}
+version = int(datetime.date.today().strftime('%Y%m%d'))
 
 alexa_warninglist['description'] = "Event contains one or more entries from the top 1000 of the most used website (Alexa)."
 d = datetime.datetime.now()
-alexa_warninglist['version'] = "{0}{1:02d}{2:02d}".format(d.year,d.month,d.day)
+alexa_warninglist['version'] = version
 alexa_warninglist['name'] = "Top 1000 website from Alexa"
 alexa_warninglist['list'] = []
-alexa_warninglist['matching_attributes'] = ['hostname','domain']
+alexa_warninglist['matching_attributes'] = ['hostname', 'domain']
 
 for site in top1000:
     v = str(site).split(',')[1]
     alexa_warninglist['list'].append(v[:-3])
-print (json.dumps(alexa_warninglist))
+alexa_warninglist['list'] = sorted(set(alexa_warninglist['list']))
+print(json.dumps(alexa_warninglist))
