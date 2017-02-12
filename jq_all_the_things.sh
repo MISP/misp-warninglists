@@ -3,7 +3,11 @@
 set -e
 set -x
 
+# Seeds sponge, from moreutils
+
 for dir in lists/*/list.json
 do
-    cat ${dir} | jq . | tee ${dir}
+    cat ${dir} | jq . | sponge ${dir}
 done
+
+cat schema.json | jq . | sponge schema.json
