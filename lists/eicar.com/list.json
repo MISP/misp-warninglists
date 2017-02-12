@@ -2,7 +2,7 @@
   "name": "List of hashes for EICAR test virus",
   "version": 1,
   "description": "Event contains one or more entries based on hashes for EICAR test virus",
-  "matching_attributes": [ ],
+  "matching_attributes": [],
   "list": [
     "44d88612fea8a8f36de82e1278abb02f",
     "6ce6f415d8475545be5ba114f208b0ff",
