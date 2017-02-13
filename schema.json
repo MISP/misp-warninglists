@@ -3,6 +3,7 @@
   "title": "Validator for misp-warninglists",
   "id": "https://www.github.com/MISP/misp-warninglists/schema.json",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "description": {
       "type": "string"
