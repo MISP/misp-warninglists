@@ -3,14 +3,14 @@
   "version": 1,
   "description": "Event contains one or more entries of empty files based on known hashed",
   "matching_attributes": [
-	"md5",
-    "sha1",
-    "sha256",
-	"sha512",
-	"filename|md5",
-	"filename|sha1",
-	"filename|sha256",
-	"filename|sha512"
+      "md5",
+      "sha1",
+      "sha256",
+      "sha512",
+      "filename|md5",
+      "filename|sha1",
+      "filename|sha256",
+      "filename|sha512"
   ],
   "list": [
     "d41d8cd98f00b204e9800998ecf8427e",
