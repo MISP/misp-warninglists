@@ -28,7 +28,7 @@ with open(csv_path) as csv_file:
 
     for row in servers_list:
         if row[5] == '':
-            try: 
+            try:
                 ip = ipaddress.ip_address(row[0])
 
                 if ip.version == 4:
@@ -43,25 +43,25 @@ with open(csv_path) as csv_file:
             except ValueError as exc:
                 logging.warning(str(exc))
 
-version = datetime.datetime.now().strftime('%Y%m%d')
+version = int(datetime.date.today().strftime('%Y%m%d'))
 
 out4_list = {}
 out4_list['name'] = 'List of known IPv4 public DNS resolvers'
 out4_list['version'] = version
 out4_list['description'] = 'Event contains one or more public IPv4 DNS resolvers as attribute with an IDS flag set'
-out4_list['matching_attribute'] = [ 'ip-src', 'ip-dst', 'domain|ip' ]
-out4_list['list'] = sorted(ip4_list)
+out4_list['matching_attributes'] = ['ip-src', 'ip-dst', 'domain|ip']
+out4_list['list'] = sorted(set(ip4_list))
 
 
 out6_list = {}
 out6_list['name'] = 'List of known IPv6 public DNS resolvers'
 out6_list['version'] = version
 out6_list['description'] = 'Event contains one or more public IPv6 DNS resolvers as attribute with an IDS flag set'
-out6_list['matching_attribute'] = [ 'ip-src', 'ip-dst', 'domain|ip' ]
-out6_list['list'] = sorted(ip6_list)
+out6_list['matching_attributes'] = ['ip-src', 'ip-dst', 'domain|ip']
+out6_list['list'] = sorted(set(ip6_list))
 
 
-#print(json.dumps(out4_list, indent=True))
+# print(json.dumps(out4_list, indent=True))
 with open(dns4_path, 'w') as dns4_file:
     dns4_file.write(json.dumps(out4_list, indent=4, sort_keys=True))
 

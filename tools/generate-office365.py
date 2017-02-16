@@ -15,10 +15,10 @@ for address in office365.iter('address'):
 
 warninglist = {}
 warninglist['name'] = 'List of known Office 365 URLs and IP address ranges'
-d = datetime.datetime.now()
-warninglist['version'] = "{0}{1:02d}{2:02d}".format(d.year, d.month, d.day)
+warninglist['version'] = int(datetime.date.today().strftime('%Y%m%d'))
 warninglist['description'] = 'Office 365 URLs and IP address ranges'
-warninglist['list'] = l
+warninglist['list'] = sorted(set(l))
+warninglist['matching_attributes'] = ["ip-src", "ip-dst", "domain|ip", "hostname"]
 
 
-print (json.dumps(warninglist))
+print(json.dumps(warninglist))
