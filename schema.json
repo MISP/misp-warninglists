@@ -38,7 +38,6 @@
   },
   "required": [
     "list",
-    "matching_attributes",
     "description",
     "version",
     "name"
