@@ -5,10 +5,12 @@
   "matching_attributes": [
     "md5",
     "sha1",
+    "sha224",
     "sha256",
     "sha512",
     "filename|md5",
     "filename|sha1",
+    "filename|sha224",
     "filename|sha256",
     "filename|sha512"
   ],
