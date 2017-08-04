@@ -1,6 +1,6 @@
 {
   "name": "List of known URL Shorteners domains",
-  "version": 3,
+  "version": 4,
   "description": "Event contains one or more entries of known Shorteners domains",
   "matching_attributes": [
     "domain",
@@ -8,6 +8,9 @@
     "domain|ip",
     "url",
     "uri"
+  ],
+  "type": [
+    "hostname"
   ],
   "list": [
     "1url.com",
