@@ -12,6 +12,16 @@ if ! [ $diffs -eq 0 ]; then
 	exit 1
 fi
 
+# remove the exec flag on the json files
+find -name "*.json" -exec chmod -x "{}" \;
+
+diffs=`git status --porcelain | wc -l`
+
+if ! [ $diffs -eq 0 ]; then
+    echo "Please make sure you run remove the executable flag on the json files before commiting: find -name "*.json" -exec chmod -x \"{}\" \\;"
+    exit 1
+fi
+
 for dir in lists/*/list.json
 do
   echo -n "${dir}: "
