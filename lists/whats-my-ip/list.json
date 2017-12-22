@@ -1,6 +1,6 @@
 {
   "name": "List of known domains to know external IP",
-  "version": 2,
+  "version": 3,
   "description": "Event contains one or more entries of known 'what's is my ip' domains",
   "matching_attributes": [
     "domain",
@@ -9,6 +9,7 @@
     "uri",
     "url"
   ],
+  "type": "hostname",
   "list": [
     "2ip.ru",
     "2ip.tools",

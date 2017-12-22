@@ -1,12 +1,13 @@
 {
   "name": "List of known microsoft domains",
-  "version": 1,
+  "version": 2,
   "description": "Event contains one or more entries of known microsoft domains",
   "matching_attributes": [
     "domain",
     "hostname",
     "domain|ip"
   ],
+  "type": "hostname",
   "list": [
     ".files-df.1drv.com",
     ".files.1drv.com",

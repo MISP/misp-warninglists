@@ -22,11 +22,13 @@
       }
     },
     "type": {
-      "type": "array",
-      "uniqueItems": true,
-      "items": {
-        "type": "string"
-      }
+      "type": "string",
+      "enum": [
+        "string",
+        "substring",
+        "hostname",
+        "cidr"
+      ]
     },
     "matching_attributes": {
       "type": "array",
@@ -40,6 +42,7 @@
     "list",
     "description",
     "version",
-    "name"
+    "name",
+    "type"
   ]
 }

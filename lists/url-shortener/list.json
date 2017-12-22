@@ -1,6 +1,6 @@
 {
   "name": "List of known URL Shorteners domains",
-  "version": 4,
+  "version": 5,
   "description": "Event contains one or more entries of known Shorteners domains",
   "matching_attributes": [
     "domain",
@@ -9,9 +9,7 @@
     "url",
     "uri"
   ],
-  "type": [
-    "hostname"
-  ],
+  "type": "hostname",
   "list": [
     "1url.com",
     "adcraft.co",

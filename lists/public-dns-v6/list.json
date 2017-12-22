@@ -278,6 +278,7 @@
     "ip-dst",
     "domain|ip"
   ],
+  "type": "string",
   "name": "List of known IPv6 public DNS resolvers",
-  "version": 20170212
+  "version": 20171222
 }

@@ -1005,7 +1005,8 @@
     "hostname",
     "domain"
   ],
+  "type": "hostname",
   "name": "Top 1000 website from Alexa",
-  "version": 20170212,
+  "version": 20171222,
   "description": "Event contains one or more entries from the top 1000 of the most used website (Alexa)."
 }

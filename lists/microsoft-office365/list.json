@@ -1519,7 +1519,8 @@
   ],
   "name": "List of known Office 365 URLs and IP address ranges",
   "description": "Office 365 URLs and IP address ranges",
-  "version": 20170212,
+  "version": 20171222,
+  "type": "hostname",
   "matching_attributes": [
     "ip-src",
     "ip-dst",

@@ -40654,6 +40654,7 @@
     "ip-dst",
     "domain|ip"
   ],
+  "type": "string",
   "name": "List of known IPv4 public DNS resolvers",
-  "version": 20171222
+  "version": 20171223
 }
