@@ -25343,8 +25343,13 @@
   ],
   "matching_attributes": [
     "hostname",
-    "domain"
+    "domain",
+    "url",
+    "domain|ip"
+  ],
+  "type": [
+    "hostname"
   ],
   "name": "List of known public DNS resolvers expressed as hostname",
-  "version": 20171222
+  "version": 20171223
 }
