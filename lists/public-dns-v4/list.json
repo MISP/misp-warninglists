@@ -50217,6 +50217,7 @@
     "99.99.99.193",
     "99.info-pros.com.",
     "99.red-80-58-141.staticip.rima-tde.net.",
+    "9.9.9.9",
     "A-B-C-166.static.isp.telekom.rs.",
     "A091H095.cable.ogaki-tv.ne.jp.",
     "A095H019.cable.ogaki-tv.ne.jp.",
@@ -65995,5 +65996,5 @@
     "domain|ip"
   ],
   "name": "List of known IPv4 public DNS resolvers",
-  "version": 20170212
+  "version": 20171213
 }
