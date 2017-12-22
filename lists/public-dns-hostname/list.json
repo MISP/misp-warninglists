@@ -25347,7 +25347,9 @@
     "url",
     "domain|ip"
   ],
-  "type": "hostname",
+  "type": [
+    "hostname"
+  ],
   "name": "List of known public DNS resolvers expressed as hostname",
   "version": 20171223
 }
