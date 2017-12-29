@@ -1500,5 +1500,6 @@
     "zoom-cs-prod.cloudapp.net"
   ],
   "name": "List of known Office 365 URLs and IP address ranges",
-  "description": "Office 365 URLs and IP address ranges"
+  "description": "Office 365 URLs and IP address ranges",
+  "type": "substring"
 }
