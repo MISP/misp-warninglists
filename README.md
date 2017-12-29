@@ -14,7 +14,8 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/empty-hashes](lists/empty-hashes) - hash values of empty files
 - [lists/google](lists/google) - known domains and hostnames from Google
 - [lists/ipv6-linklocal](ipv6-linklocal) - IPv6 link local prefix
-- [lists/microsoft](lists/microsoft) - known microsoft domains
+- [lists/microsoft](lists/microsoft) - known Microsoft domains
+- [lists/microsoft-azure](lists/microsoft-azure) - known Microsoft Azure Datacenter IP Ranges
 - [lists/microsoft-office365](lists/microsoft-office365) - known Office 365 URLs and IP address ranges
 - [lists/microsoft-office365-cn](lists/microsoft-office365-cn) - known Office 365 IP address ranges in China
 - [lists/multicast](lists/multicast) - known IPv4 multicast CIDR blocks
