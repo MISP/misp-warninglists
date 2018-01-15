@@ -6469,7 +6469,7 @@
     "domain",
     "domain|ip"
   ],
-  "type": "substring",
+  "type": "domain",
   "name": "Second level TLDs as known by Mozilla Foundation",
-  "version": 3
+  "version": 4
 }
