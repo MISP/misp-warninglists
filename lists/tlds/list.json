@@ -1296,8 +1296,8 @@
     "domain",
     "domain|ip"
   ],
-  "type": "hostname",
+  "type": "string",
   "description": "Event contains one or more TLDs as attribute with an IDS flag set",
-  "version": 4,
+  "version": 5,
   "name": "TLDs as known by IANA"
 }
