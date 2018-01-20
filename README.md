@@ -61,6 +61,7 @@ If matching_attributes are not set, the list is matched against any type of attr
 - ```substring``` - substring matching of a string in the warning list against matching attributes
 - ```hostname``` - hostname matching (e.g. domain matching from URL) of a string in the warning list against matching attributes
 - ```cidr``` - IP or CDIR block matching in the warning list against matching attributes
+- ```regex``` - regex matching of a string matching attributes
 
 # License
 
