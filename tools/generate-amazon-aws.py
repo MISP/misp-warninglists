@@ -28,4 +28,3 @@ warninglist['matching_attributes'] = ["ip-src", "ip-dst", "domain|ip"], ["type":
 
 
 print(json.dumps(warninglist))
- "type": "cidr",
