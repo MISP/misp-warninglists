@@ -13,12 +13,10 @@ j = json.loads(res_body.decode("utf-8"))
 l = []
 
 for prefix in j['prefixes']:
-   #print("{0}".format(prefix['ip_prefix']))
    l.append(prefix['ip_prefix'])
 
 
 for prefix in j['ipv6_prefixes']:
-   #print("{0}".format(prefix['ipv6_prefix']))
    prefix['ipv6_prefix']
    
 warninglist = {}
