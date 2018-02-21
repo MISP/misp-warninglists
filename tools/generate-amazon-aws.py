@@ -24,7 +24,8 @@ warninglist['name'] = 'List of known Amazon AWS IP address ranges'
 warninglist['version'] = int(datetime.date.today().strftime('%Y%m%d'))
 warninglist['description'] = 'Amazon AWS IP address ranges (https://ip-ranges.amazonaws.com/ip-ranges.json)'
 warninglist['list'] = sorted(set(l))
-warninglist['matching_attributes'] = ["ip-src", "ip-dst", "domain|ip"]
+warninglist['matching_attributes'] = ["ip-src", "ip-dst", "domain|ip"], ["type": "cidr"]
 
 
 print(json.dumps(warninglist))
+ "type": "cidr",
