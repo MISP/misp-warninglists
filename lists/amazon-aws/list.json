@@ -667,6 +667,7 @@
     "87.238.80.0/21",
     "96.127.0.0/17"
   ],
+  "type": "cidr",
   "matching_attributes": [
     "ip-src",
     "ip-dst",
