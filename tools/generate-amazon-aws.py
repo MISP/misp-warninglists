@@ -16,7 +16,7 @@ for prefix in j['prefixes']:
    l.append(prefix['ip_prefix'])
 
 for prefix in j['ipv6_prefixes']:
-   prefix['ipv6_prefix']
+   l.append(prefix['ipv6_prefix'])
    
 warninglist = {}
 warninglist['name'] = 'List of known Amazon AWS IP address ranges'
