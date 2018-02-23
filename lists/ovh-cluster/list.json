@@ -1,6 +1,6 @@
 {
   "name": "List of known Ovh Cluster IP",
-  "version": "20180222",
+  "version": 20180222,
   "description": "OVH Cluster IP address (https://docs.ovh.com/fr/hosting/liste-des-adresses-ip-des-clusters-et-hebergements-web/)",
   "list": [
     "2001:41d0:1:1b00:188:165:143:16",
