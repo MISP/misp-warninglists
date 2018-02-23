@@ -437,7 +437,7 @@
     "94.23.88.105"
   ],
   "type": "string",
-  "matching-attributes": [
+  "matching_attributes": [
     "ip-src",
     "ip-dst",
     "domain|ip"
