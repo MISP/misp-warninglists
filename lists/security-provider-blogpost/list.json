@@ -1,6 +1,6 @@
 {
   "name": "List of known security providers/vendors blog domain",
-  "version": 1,
+  "version": 2,
   "description": "Event contains one or more entries of known security providers/vendors blog domain with an IDS flag set",
   "matching_attributes": [
     "domain",
@@ -224,7 +224,6 @@
     "doc.emergingthreats.net",
     "lavasoft.com",
     "www.spiegel.de",
-    "lol.garena.tw",
     "www.codeandsec.com",
     "www.blackhat.com",
     "seclists.org",
