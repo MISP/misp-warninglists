@@ -73,9 +73,11 @@ def asciidoc(content=False, adoc=None, t='title', title=''):
     if t == 'title':
         output = '== ' + content
     elif t == 'info':
-        output = "\n{}.\n\n{} {} {} {}.\n".format(content, 'NOTE:' ,title, 'are warning lists available in JSON format at https://github.com/MISP/misp-warninglists/tree/master/lists.' ,'The JSON format can be freely reused in your application or automatically enabled in https://www.github.com/MISP/MISP[MISP]')
+        output = "\n{}.\n\n{} {} {} {}.".format(content, 'NOTE:' ,title, 'are warning lists available in JSON format at https://github.com/MISP/misp-warninglists/tree/master/lists.' ,'The JSON format can be freely reused in your application or automatically enabled in https://www.github.com/MISP/MISP[MISP]')
     elif t == 'description':
-        content = "\n{} \n".format(content)
+        output = "\n{} \n".format(content)
+    elif t == 'list':
+        output = "The warning list contains {} elements.\n".format(content)
     adoc = adoc + output
     return adoc
 adoc = ""
@@ -91,6 +93,7 @@ for warninglist in lists:
     if 'matching_attributes' in c:
         adoc = asciidoc(content=c['matching_attributes'], adoc=adoc, t='matching_attributes')
     if 'list' in c:
-        adoc = asciidoc(content=c['list'], adoc=adoc, t='list')
+        cards = len(c['list'])
+    adoc = asciidoc(content=cards, adoc=adoc, t='list')
 
 print(adoc)
