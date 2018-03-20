@@ -1,6 +1,6 @@
 {
   "name": "List of known URL Shorteners domains",
-  "version": 5,
+  "version": 6,
   "description": "Event contains one or more entries of known Shorteners domains",
   "matching_attributes": [
     "domain",
@@ -74,6 +74,7 @@
     "u.bb",
     "u.to",
     "v.gd",
+    "urlz.fr",
     "vzturl.com",
     "wp.me",
     "x.co",
