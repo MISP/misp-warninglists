@@ -1,6 +1,9 @@
 {
   "description": "Event contains one or more entries part of the RFC 6761 Special-Use Domain Names",
   "list": [
+    "example.com",
+    "example.net",
+    "example.org",
     "10.in-addr.arpa",
     "16.172.in-addr.arpa",
     "17.172.in-addr.arpa",
