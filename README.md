@@ -28,6 +28,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/rfc3849](lists/rfc3849) - RFC 3849 - Documentation prefix for ipv6
 - [lists/rfc5735](lists/rfc5735) - RFC 5735 CIDR blocks - Special Use IPv4 Addresses
 - [lists/rfc6598](lists/rfc6598) - RFC 6598 IANA-Reserved IPv4 Prefix for Shared Address Space (Carrier- Grade NAT (CGN) devices)
+- [lists/rfc6761](lists/rfc6761) - RFC 6761 Special-Use Domain Names
 - [lists/security-provider-blogpost](lists/security-provider-blogpost) - Security providers or vendors blog domains
 - [lists/second-level-tlds](lists/second-level-tlds) - Mozilla list of second level top-level domains
 - [lists/tlds](lists/tlds) - top-level domains
