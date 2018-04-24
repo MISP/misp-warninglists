@@ -112,6 +112,7 @@
     "BING",
     "BINGO",
     "BIO",
+    "BIT",
     "BIZ",
     "BJ",
     "BLACK",
@@ -1298,6 +1299,6 @@
   ],
   "type": "string",
   "description": "Event contains one or more TLDs as attribute with an IDS flag set",
-  "version": 5,
+  "version": 6,
   "name": "TLDs as known by IANA"
 }
