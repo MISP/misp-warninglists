@@ -67,6 +67,11 @@ If matching_attributes are not set, the list is matched against any type of attr
 - ```cidr``` - IP or CDIR block matching in the warning list against matching attributes
 - ```regex``` - regex matching of a string matching attributes
 
+# Processing warning lists in python
+
+See [PyMISPWarningLists](https://github.com/MISP/PyMISPWarningLists) for a
+python interface to warning lists.
+
 # License
 
 MISP warning-lists are licensed under [CC0 1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/) -  Public Domain Dedication. If a specific author of a taxonomy wants to license it under a different license, a pull request can be requested.
