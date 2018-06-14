@@ -1,6 +1,6 @@
 {
   "name": "List of known domains to know external IP",
-  "version": 3,
+  "version": 4,
   "description": "Event contains one or more entries of known 'what's is my ip' domains",
   "matching_attributes": [
     "domain",
