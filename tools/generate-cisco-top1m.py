@@ -28,8 +28,10 @@ cisco_warninglist['description'] = "Event contains one or more entries from the 
 d = datetime.datetime.now()
 cisco_warninglist['version'] = version
 cisco_warninglist['name'] = "Top 1000 website from Cisco Umbrella"
-cisco_warninglist['list'] = []
+cisco_warninglist['type'] = "hostname"
 cisco_warninglist['matching_attributes'] = ['hostname', 'domain']
+cisco_warninglist['list'] = []
+
 
 for site in top1000:
     v = str(site).split(',')[1]
