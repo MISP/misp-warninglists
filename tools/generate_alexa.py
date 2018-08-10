@@ -28,6 +28,7 @@ alexa_warninglist['description'] = "Event contains one or more entries from the 
 d = datetime.datetime.now()
 alexa_warninglist['version'] = version
 alexa_warninglist['name'] = "Top 1000 website from Alexa"
+alexa_warninglist['type'] = 'hostname'
 alexa_warninglist['list'] = []
 alexa_warninglist['matching_attributes'] = ['hostname', 'domain']
 
