@@ -2,6 +2,11 @@
   "description": "Event contains one or more entries from the top 1000 of the most used website (Cisco Umbrella).",
   "version": 20180810,
   "name": "Top 1000 website from Cisco Umbrella",
+  "type": "hostname",
+  "matching_attributes": [
+    "hostname",
+    "domain"
+  ],
   "list": [
     "0.client-channel.google.co",
     "1-courier.push.apple.co",
@@ -1003,9 +1008,5 @@
     "ytimg.co",
     "z.moatads.co",
     "zemanta.co"
-  ],
-  "matching_attributes": [
-    "hostname",
-    "domain"
   ]
 }
