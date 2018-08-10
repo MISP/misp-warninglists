@@ -24,11 +24,11 @@ with zipfile.ZipFile(cisco_file, 'r') as cisco_lists:
 cisco_warninglist = {}
 version = int(datetime.date.today().strftime('%Y%m%d'))
 
-cisco_warninglist['description'] = "Event contains one or more entries from the top 1000 of the most used website (Cisco Umbrella)."
+cisco_warninglist['description'] = 'Event contains one or more entries from the top 1000 of the most used website (Cisco Umbrella).'
 d = datetime.datetime.now()
 cisco_warninglist['version'] = version
-cisco_warninglist['name'] = "Top 1000 website from Cisco Umbrella"
-cisco_warninglist['type'] = "hostname"
+cisco_warninglist['name'] = 'Top 1000 website from Cisco Umbrella'
+cisco_warninglist['type'] = 'hostname'
 cisco_warninglist['matching_attributes'] = ['hostname', 'domain']
 cisco_warninglist['list'] = []
 
