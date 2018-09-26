@@ -36,6 +36,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/rfc6761](lists/rfc6761) - RFC 6761 Special-Use Domain Names
 - [lists/security-provider-blogpost](lists/security-provider-blogpost) - Security providers or vendors blog domains
 - [lists/second-level-tlds](lists/second-level-tlds) - Mozilla list of second level top-level domains
+- [lists/sinkholes](lists/sinkholes) - List of known sinkholes
 - [lists/tlds](lists/tlds) - top-level domains
 - [lists/url-shortener](lists/url-shortener) - URL shorteners services
 - [lists/whats-my-ip](lists/whats-my-ip) - "What's my IP" service
