@@ -1,6 +1,8 @@
 {
   "description": "Event contains one or more public IPv4 DNS resolvers as attribute with an IDS flag set",
   "list": [
+    "1.0.0.1",
+    "1.1.1.1",
     "1.11.71.4",
     "1.160.206.11",
     "1.161.102.122",
@@ -40656,5 +40658,5 @@
   ],
   "type": "string",
   "name": "List of known IPv4 public DNS resolvers",
-  "version": 20171223
+  "version": 20181114
 }
