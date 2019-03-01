@@ -29,5 +29,4 @@ dict['version']= int(datetime.date.today().strftime('%Y%m%d'))
 dict['description']="CRL Warninglist from threatstop (https://github.com/threatstop/crl-ocsp-whitelist/)"
 dict['list']=list(set(dict['list']))
 
-with open('../lists/crl-ip-hostname/list.json', 'w') as dict_output:
-	dict_output.write(json.dumps(dict))
+print(json.dumps(dict))
