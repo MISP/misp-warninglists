@@ -1,5 +1,5 @@
 {
-  "type": "string",
+  "type": "substring",
   "matching_attributes": [
     "hostname",
     "domain",
