@@ -21,7 +21,7 @@ university_list_json=university_list_file.json()
 
 for university in university_list_json:
 	for domain in university.get('domains'):
-		json_output['list'].append(domain)
+		if domain not in json_output['list']:
+			json_output['list'].append(domain)
 
-with open('../lists/university_domains/list.json','w') as university_domains_output:
-	university_domains_output.write(json.dumps(json_output, indent=1))
+print(json.dumps(json_output))
