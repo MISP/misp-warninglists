@@ -15,6 +15,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/bank-website](lists/bank-website) - List of known banking website
 - [lists/cisco_top1000](lists/cisco_top1000) - Cisco (Umbrella) top 1000 websites
 - [lists/common-ioc-false-positive](lists/common-ioc-false-positive) - common false-positives in IOCs
+- [lists/crl](lists/crl-ip-hostname) - Source IP addresses, hostname and url from CRL (certificate revocation list)
 - [lists/eicar.com](lists/eicar.com) - hashes for EICAR test virus
 - [lists/empty-hashes](lists/empty-hashes) - hash values of empty files
 - [lists/google](lists/google) - known domains and hostnames from Google
