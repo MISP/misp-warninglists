@@ -41,6 +41,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/sinkholes](lists/sinkholes) - List of known sinkholes
 - [lists/tlds](lists/tlds) - top-level domains
 - [lists/url-shortener](lists/url-shortener) - URL shorteners services
+- [lists/university_domains](lists/university_domains) - University domain names
 - [lists/whats-my-ip](lists/whats-my-ip) - "What's my IP" service
 
 # Format of a warning list
