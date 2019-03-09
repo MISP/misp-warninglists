@@ -35,6 +35,6 @@ cisco_warninglist['list'] = []
 
 for site in top1000:
     v = str(site).split(',')[1]
-    cisco_warninglist['list'].append(v[:-5])
+    cisco_warninglist['list'].append(v.rstrip())
 cisco_warninglist['list'] = sorted(set(cisco_warninglist['list']))
 print(json.dumps(cisco_warninglist))
