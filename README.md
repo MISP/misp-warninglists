@@ -9,6 +9,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 
 # lists
 
+- [lists/akamai](lists/akamai) - Akamai networks
 - [lists/alexa](lists/alexa) - Top 1000 websites from Alexa
 - [lists/amazon-aws](lists/amazon-aws) - Known Amazon AWS IP address ranges
 - [lists/automated-malware-analysis](lists/automated-malware-analysis) - known domains used by automated malware analysis services
