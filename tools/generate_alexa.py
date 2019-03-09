@@ -34,6 +34,6 @@ alexa_warninglist['matching_attributes'] = ['hostname', 'domain']
 
 for site in top1000:
     v = str(site).split(',')[1]
-    alexa_warninglist['list'].append(v[:-3])
+    alexa_warninglist['list'].append(v.rstrip())
 alexa_warninglist['list'] = sorted(set(alexa_warninglist['list']))
 print(json.dumps(alexa_warninglist))
