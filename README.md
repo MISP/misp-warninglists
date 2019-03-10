@@ -23,7 +23,8 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/ipv6-linklocal](lists/ipv6-linklocal) - IPv6 link local prefix
 - [lists/microsoft](lists/microsoft) - known Microsoft domains
 - [lists/microsoft-azure](lists/microsoft-azure) - known Microsoft Azure Datacenter IP Ranges
-- [lists/microsoft-office365](lists/microsoft-office365) - known Office 365 URLs and IP address ranges
+- [lists/microsoft-office365](lists/microsoft-office365) - known Office 365 URLs
+- [lists/microsoft-office365-ip](lists/microsoft-office365-ip) - known Office 365 IP address ranges
 - [lists/microsoft-office365-cn](lists/microsoft-office365-cn) - known Office 365 IP address ranges in China
 - [lists/microsoft-attack-simulator](lists/microsoft-attack-simulator/) - known Office 365 hostnames and IP address used for Microsoft "Attack Simulator"
 - [lists/microsoft-win10-connection-endpoints](lists/microsoft-win10-connection-endpoints/) - known Windows 10 connection endpoints
