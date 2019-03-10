@@ -30,7 +30,7 @@ with open('../lists/microsoft-office365/list.json', 'w') as data_file:
     json.dump(warninglist, data_file, indent=4, sort_keys=True)
 
 warninglist = {}
-warninglist['name'] = 'List of known Office 365 URLs and IP address ranges'
+warninglist['name'] = 'List of known Office 365 IP address ranges'
 warninglist['version'] = int(datetime.date.today().strftime('%Y%m%d'))
 warninglist['description'] = 'Office 365 URLs and IP address ranges'
 warninglist['list'] = sorted(set(lips))
