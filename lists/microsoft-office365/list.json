@@ -1,5 +1,5 @@
 {
-  "description": "Office 365 URLs and IP address ranges",
+  "description": "Office 365 URLs",
   "list": [
     "-files.sharepoint.com",
     "-myfiles.sharepoint.com",
@@ -413,7 +413,7 @@
     "domain|ip",
     "hostname"
   ],
-  "name": "List of known Office 365 URLs address ranges",
-  "type": "string",
+  "name": "List of known Office 365 URLs",
+  "type": "substring",
   "version": 20190310
 }

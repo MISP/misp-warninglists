@@ -1,5 +1,5 @@
 {
-  "description": "Office 365 URLs and IP address ranges",
+  "description": "Office 365 IP address ranges",
   "list": [
     "104.146.128.0/17",
     "104.210.208.16/29",
@@ -319,7 +319,7 @@
     "ip-dst",
     "domain|ip"
   ],
-  "name": "List of known Office 365 IP address ranges",
+  "name": "List of known Office 365 IP",
   "type": "cidr",
   "version": 20190310
 }
