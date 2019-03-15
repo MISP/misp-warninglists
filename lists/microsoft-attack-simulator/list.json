@@ -2,6 +2,7 @@
   "matching_attributes": [
     "ip-src",
     "ip-dst",
+    "domain",
     "domain|ip",
     "hostname"
   ],

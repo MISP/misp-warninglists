@@ -1,7 +1,8 @@
 {
   "matching_attributes": [
     "hostname",
-    "domain"
+    "domain",
+    "domain|ip"
   ],
   "description": "Event contains one or more entries from the top 1000 of the most used website (Cisco Umbrella).",
   "list": [
