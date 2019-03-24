@@ -18,6 +18,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/common-ioc-false-positive](lists/common-ioc-false-positive) - common false-positives in IOCs
 - [lists/crl](lists/crl-ip-hostname) - Source IP addresses, hostname and url from CRL (certificate revocation list)
 - [lists/eicar.com](lists/eicar.com) - hashes for EICAR test virus
+- [lists/disposable-email](lists/disposable-email) - List of disposable email domains
 - [lists/empty-hashes](lists/empty-hashes) - hash values of empty files
 - [lists/google](lists/google) - known domains and hostnames from Google
 - [lists/ipv6-linklocal](lists/ipv6-linklocal) - IPv6 link local prefix
