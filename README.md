@@ -43,6 +43,8 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/tlds](lists/tlds) - top-level domains
 - [lists/url-shortener](lists/url-shortener) - URL shorteners services
 - [lists/university_domains](lists/university_domains) - University domain names
+- [lists/vpn-ipv4](lists/vpn-ipv4) - Specialized list of IPv4 addresses belonging to common VPN providers and datacenters
+- [lists/vpn-ipv6](lists/vpn-ipv6) - Specialized list of IPv6 addresses belonging to common VPN providers and datacenters
 - [lists/whats-my-ip](lists/whats-my-ip) - "What's my IP" service
 
 # Format of a warning list
