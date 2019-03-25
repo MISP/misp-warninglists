@@ -19,9 +19,9 @@ warninglist['version'] = int(datetime.date.today().strftime('%Y%m%d'))
 warninglist['description'] = 'List of disposable email domains'
 warninglist['list'] = sorted(set(domain))
 warninglist['type'] = 'substring'
-warninglist['matching_attributes'] = ["email-src", "email-dst", "whois-registrant-email", "domain|ip", "dns-soa-email"] 
+warninglist['matching_attributes'] = ["email-src", "email-dst", "whois-registrant-email", "domain|ip", "dns-soa-email"]
 
-with open('../lists/disposable-email/lists.json', 'w') as data_file:
+with open('../lists/disposable-email/list.json', 'w') as data_file:
     json.dump(warninglist, data_file, indent=4, sort_keys=True)
 
 

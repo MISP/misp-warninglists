@@ -22,7 +22,7 @@ warninglist['type'] = 'cidr'
 warninglist['matching_attributes'] = ["ip-src", "ip-dst", "domain|ip"]
 
 
-with open('../lists/vpn-ipv4/lists.json', 'w') as data_file:
+with open('../lists/vpn-ipv4/list.json', 'w') as data_file:
     json.dump(warninglist, data_file, indent=4, sort_keys=True)
 
 
@@ -43,7 +43,7 @@ warninglist['type'] = 'cidr'
 warninglist['matching_attributes'] = ["ip-src", "ip-dst", "domain|ip"]
 
 
-with open('../lists/vpn-ipv6/lists.json', 'w') as data_file:
+with open('../lists/vpn-ipv6/list.json', 'w') as data_file:
     json.dump(warninglist, data_file, indent=4, sort_keys=True)
 
 
