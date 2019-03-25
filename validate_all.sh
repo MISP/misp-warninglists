@@ -22,6 +22,15 @@ if ! [ $diffs -eq 0 ]; then
     exit 1
 fi
 
+# test filename
+for dir in lists/*/*.json
+do
+    if [ basename ${dir: -4} != "list.json" ]; then
+        echo "Invalid filename (should be list.json): " ${dir}
+        exit 1
+    fi
+done
+
 for dir in lists/*/list.json
 do
   echo -n "${dir}: "
