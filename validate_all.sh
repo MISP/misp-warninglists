@@ -25,7 +25,7 @@ fi
 # test filename
 for dir in lists/*/*.json
 do
-    if [ basename ${dir: -4} != "list.json" ]; then
+    if [ `basename ${dir}` != "list.json" ]; then
         echo "Invalid filename (should be list.json): " ${dir}
         exit 1
     fi
