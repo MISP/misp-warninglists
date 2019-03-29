@@ -45,7 +45,7 @@ def process(file, dst, type):
     warninglist['type'] = 'string'
     warninglist['matching_attributes'] = ["md5", "sha1", "sha256", "filename|md5", "filename|sha1", "filename|sha256", "x509-fingerprint-md5", "x509-fingerprint-sha1", "x509-fingerprint-sha256"]
     with open('../lists/{dst}/list.json'.format(dst=dst), 'w') as data_file:
-        json.dump(warninglist, data_file, indent=4, sort_keys=True)
+        json.dump(warninglist, data_file, indent=2, sort_keys=True)
 
 if __name__ == '__main__':
     download(Included_CA_url, Included_CA_file)
