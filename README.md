@@ -29,6 +29,8 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/microsoft-office365-cn](lists/microsoft-office365-cn) - known Office 365 IP address ranges in China
 - [lists/microsoft-attack-simulator](lists/microsoft-attack-simulator/) - known Office 365 hostnames and IP address used for Microsoft "Attack Simulator"
 - [lists/microsoft-win10-connection-endpoints](lists/microsoft-win10-connection-endpoints/) - known Windows 10 connection endpoints
+- [lists/mozilla-CA](lists/mozilla-CA) - Mozilla keystore CA
+- [lists/mozilla-IntermediateCA](lists/mozilla-IntermediateCA) - Mozilla keystore Intermediate CA
 - [lists/multicast](lists/multicast) - known IPv4 multicast CIDR blocks
 - [lists/ovh-cluster](lists/ovh-cluster) - List of known OVH Cluster IP
 - [lists/public-dns-v4](lists/public-dns-v4) - IPv4 addresses and reverse of public DNS resolver
