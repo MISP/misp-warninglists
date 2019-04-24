@@ -34,8 +34,8 @@ with open(moz_file) as csv_file:
             line_count += 1
         else:
             #print(f'\t{row[0]}. {row[1]}, MozTrust: {row[5]}.')
-            v = str(row).split(',')[1]
-            moz_warninglist['list'].append(v.rstrip().lstrip('/'))
+            v = row[1]
+            moz_warninglist['list'].append(v.rstrip().rstrip('/'))
             line_count += 1
 
 moz_warninglist['list'] = sorted(set(moz_warninglist['list']))
