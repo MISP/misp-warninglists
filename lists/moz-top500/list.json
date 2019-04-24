@@ -1,7 +1,7 @@
 {
   "description": "Event contains one or more entries from the top 500 of the most used domains (Mozilla).",
   "version": 20190424,
-  "name": "Top 500 domains and pages from Mozilla",
+  "name": "Top 500 domains and pages from https://moz.com/top500",
   "type": "hostname",
   "list": [
     "123-reg-expired.co.uk",
