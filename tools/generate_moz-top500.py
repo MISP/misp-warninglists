@@ -7,7 +7,6 @@ import json
 import csv
 import os
 
-# TODO: Include Top500 pages
 # TODO: Include MozRank
 
 moz_url_domains = "https://moz.com/top500/domains/csv"
@@ -29,7 +28,7 @@ version = int(datetime.date.today().strftime('%Y%m%d'))
 moz_warninglist['description'] = "Event contains one or more entries from the top 500 of the most used domains (Mozilla)."
 d = datetime.datetime.now()
 moz_warninglist['version'] = version
-moz_warninglist['name'] = "Top 500 domains and pages from Mozilla"
+moz_warninglist['name'] = "Top 500 domains and pages from https://moz.com/top500"
 moz_warninglist['type'] = 'hostname'
 moz_warninglist['list'] = []
 moz_warninglist['matching_attributes'] = ['hostname', 'domain', 'uri', 'url']
