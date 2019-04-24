@@ -6,6 +6,5 @@ Contains a list of the top 500 web pages ranked by the number of linking root do
 ## Update list
 
 ```bash
-wget https://moz.com/top500/pages/csv
-
+../../tools/generate_mozilla-top500.py |jq . > list.json
 ```
