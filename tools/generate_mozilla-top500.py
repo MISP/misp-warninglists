@@ -32,9 +32,22 @@ moz_warninglist['version'] = version
 moz_warninglist['name'] = "Top 500 domains and pages from Mozilla"
 moz_warninglist['type'] = 'hostname'
 moz_warninglist['list'] = []
-moz_warninglist['matching_attributes'] = ['hostname', 'domain']
+moz_warninglist['matching_attributes'] = ['hostname', 'domain', 'uri', 'url']
 
 with open(moz_file_domains) as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    line_count = 0
+    for row in csv_reader:
+        if line_count == 0:
+            #print(f'Column names are {", ".join(row)}')
+            line_count += 1
+        else:
+            #print(f'\t{row[0]}. {row[1]}, MozTrust: {row[5]}.')
+            v = row[1]
+            moz_warninglist['list'].append(v.rstrip().rstrip('/'))
+            line_count += 1
+
+with open(moz_file_pages) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
     for row in csv_reader:
