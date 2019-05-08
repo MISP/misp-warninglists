@@ -1,0 +1,26 @@
+{
+  "name": "List of known dax30 webpages",
+  "version": 1,
+  "description": "Event contains one or more entries of known dax30 webpages",
+  "matching_attributes": [
+    "domain",
+    "hostname",
+    "domain|ip"
+  ],
+  "type": "hostname",
+  "list": [
+    ".telekom.com",
+    ".telekom.de",
+    ".t-systems.com",
+    ".t-mobile.de",
+    ".innogy.com",
+    ".linde.de",
+    ".the-linde-group.com",
+    ".deutsche-boerse.com",
+    ".lufthansa.com",
+    ".rwe.com",
+    ".siemens.com",
+    ".volkswagen.de",
+    ".",
+  ]
+}
