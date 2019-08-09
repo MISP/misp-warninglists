@@ -7,7 +7,7 @@
     "72.14.192.0/18",
     "74.125.0.0/16",
     "108.177.8.0/21",
-    "172.217.0.0/19 ",
+    "172.217.0.0/19",
     "173.194.0.0/16",
     "207.126.144.0/20",
     "209.85.128.0/17",
@@ -27,6 +27,6 @@
     "domain|ip"
   ],
   "name": "List of known gmail sending IP ranges",
-  "version": 20190724,
+  "version": 20190809,
   "description": "List of known gmail sending IP ranges (https://support.google.com/a/answer/27642?hl=en )"
 }
