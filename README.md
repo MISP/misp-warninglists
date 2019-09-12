@@ -52,6 +52,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/vpn-ipv4](lists/vpn-ipv4) - Specialized list of IPv4 addresses belonging to common VPN providers and datacenters
 - [lists/vpn-ipv6](lists/vpn-ipv6) - Specialized list of IPv6 addresses belonging to common VPN providers and datacenters
 - [lists/whats-my-ip](lists/whats-my-ip) - "What's my IP" service
+- [lists/wikimedia/list.json](lists/wikimedia/) - Lists of subnet used by Wikimedia (such as Wikipedia and alike)
 
 # Format of a warning list
 
