@@ -1,5 +1,5 @@
 {
-  "description": "Akamai IP rannges from BGP search",
+  "description": "Akamai IP ranges from BGP search",
   "list": [
     "103.12.23.0/24",
     "103.15.143.0/24",
