@@ -46,6 +46,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/security-provider-blogpost](lists/security-provider-blogpost) - Security providers or vendors blog domains
 - [lists/second-level-tlds](lists/second-level-tlds) - Mozilla list of second level top-level domains
 - [lists/sinkholes](lists/sinkholes) - List of known sinkholes
+- [lists/tranco](lists/tranco) - Top 1,000,000 domains from [Tranco](https://tranco-list.eu/)
 - [lists/tlds](lists/tlds) - top-level domains
 - [lists/url-shortener](lists/url-shortener) - URL shorteners services
 - [lists/university_domains](lists/university_domains) - University domain names
