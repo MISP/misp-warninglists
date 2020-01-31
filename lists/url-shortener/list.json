@@ -1,6 +1,6 @@
 {
   "name": "List of known URL Shorteners domains",
-  "version": 6,
+  "version": 7,
   "description": "Event contains one or more entries of known Shorteners domains",
   "matching_attributes": [
     "domain",
@@ -50,6 +50,7 @@
     "lnk.direct",
     "lnkd.in",
     "mcaf.ee",
+    "merky.de",
     "nov.io",
     "ow.ly",
     "p6l.org",
