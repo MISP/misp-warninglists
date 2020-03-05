@@ -27,7 +27,8 @@
         "string",
         "substring",
         "hostname",
-        "cidr"
+        "cidr",
+        "regex"
       ]
     },
     "matching_attributes": {
