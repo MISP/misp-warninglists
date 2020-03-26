@@ -17,21 +17,22 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/cisco_top1000](lists/cisco_top1000) - Cisco (Umbrella) top 1000 websites
 - [lists/cloudflare](lists/cloudflare) - known IP ranges published by Cloudflare
 - [lists/common-ioc-false-positive](lists/common-ioc-false-positive) - common false-positives in IOCs
+- [lists/covid](lists/covid) - Valid covid-19 related domains
 - [lists/crl](lists/crl-ip-hostname) - Source IP addresses, hostname and url from CRL (certificate revocation list)
-- [lists/eicar.com](lists/eicar.com) - hashes for EICAR test virus
 - [lists/disposable-email](lists/disposable-email) - List of disposable email domains
+- [lists/eicar.com](lists/eicar.com) - hashes for EICAR test virus
 - [lists/empty-hashes](lists/empty-hashes) - hash values of empty files
+- [lists/google-gmail-sending-ips](lists/google-gmail-sending-ips) - known IP ranges use by Google gmail mail sending
 - [lists/google](lists/google) - known domains and hostnames from Google
 - [lists/googlebot](lists/googlebot) - known IP ranges for googlebot crawler
-- [lists/google-gmail-sending-ips](lists/google-gmail-sending-ips) - known IP ranges use by Google gmail mail sending
 - [lists/ipv6-linklocal](lists/ipv6-linklocal) - IPv6 link local prefix
-- [lists/microsoft](lists/microsoft) - known Microsoft domains
-- [lists/microsoft-azure](lists/microsoft-azure) - known Microsoft Azure Datacenter IP Ranges
-- [lists/microsoft-office365](lists/microsoft-office365) - known Office 365 URLs
-- [lists/microsoft-office365-ip](lists/microsoft-office365-ip) - known Office 365 IP address ranges
-- [lists/microsoft-office365-cn](lists/microsoft-office365-cn) - known Office 365 IP address ranges in China
 - [lists/microsoft-attack-simulator](lists/microsoft-attack-simulator/) - known Office 365 hostnames and IP address used for Microsoft "Attack Simulator"
+- [lists/microsoft-azure](lists/microsoft-azure) - known Microsoft Azure Datacenter IP Ranges
+- [lists/microsoft-office365-cn](lists/microsoft-office365-cn) - known Office 365 IP address ranges in China
+- [lists/microsoft-office365-ip](lists/microsoft-office365-ip) - known Office 365 IP address ranges
+- [lists/microsoft-office365](lists/microsoft-office365) - known Office 365 URLs
 - [lists/microsoft-win10-connection-endpoints](lists/microsoft-win10-connection-endpoints/) - known Windows 10 connection endpoints
+- [lists/microsoft](lists/microsoft) - known Microsoft domains
 - [lists/mozilla-CA](lists/mozilla-CA) - Mozilla keystore CA
 - [lists/mozilla-IntermediateCA](lists/mozilla-IntermediateCA) - Mozilla keystore Intermediate CA
 - [lists/multicast](lists/multicast) - known IPv4 multicast CIDR blocks
@@ -43,13 +44,13 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/rfc5735](lists/rfc5735) - RFC 5735 CIDR blocks - Special Use IPv4 Addresses
 - [lists/rfc6598](lists/rfc6598) - RFC 6598 IANA-Reserved IPv4 Prefix for Shared Address Space (Carrier- Grade NAT (CGN) devices)
 - [lists/rfc6761](lists/rfc6761) - RFC 6761 Special-Use Domain Names
-- [lists/security-provider-blogpost](lists/security-provider-blogpost) - Security providers or vendors blog domains
 - [lists/second-level-tlds](lists/second-level-tlds) - Mozilla list of second level top-level domains
+- [lists/security-provider-blogpost](lists/security-provider-blogpost) - Security providers or vendors blog domains
 - [lists/sinkholes](lists/sinkholes) - List of known sinkholes
-- [lists/tranco](lists/tranco) - Top 1,000,000 domains from [Tranco](https://tranco-list.eu/)
 - [lists/tlds](lists/tlds) - top-level domains
-- [lists/url-shortener](lists/url-shortener) - URL shorteners services
+- [lists/tranco](lists/tranco) - Top 1,000,000 domains from [Tranco](https://tranco-list.eu/)
 - [lists/university_domains](lists/university_domains) - University domain names
+- [lists/url-shortener](lists/url-shortener) - URL shorteners services
 - [lists/vpn-ipv4](lists/vpn-ipv4) - Specialized list of IPv4 addresses belonging to common VPN providers and datacenters
 - [lists/vpn-ipv6](lists/vpn-ipv6) - Specialized list of IPv6 addresses belonging to common VPN providers and datacenters
 - [lists/whats-my-ip](lists/whats-my-ip) - "What's my IP" service
