@@ -1,6 +1,6 @@
 {
   "name": "Valid covid-19 related domains",
-  "version": 2,
+  "version": 3,
   "description": "Maintained using different lists (such as Jaime Blasco's and Krassimir's lists).",
   "list": [
     "api.coronainusa.com",
@@ -97,6 +97,7 @@
     "covid19.govt.nz",
     "covid19.govt.nz",
     "covid19.isciii.es",
+    "covid19.min-saude.pt",
     "covid19.nashville.gov",
     "covid19.nj.gov",
     "covid19.thrive.health",
@@ -168,6 +169,7 @@
     "www.covid19.ca.gov",
     "www.covid19india.org",
     "www.covidvisualizer.com",
+    "www.info-coronavirus.be",
     "www.kycovid19.ky.gov",
     "www.voluntarioscoronavirus.rj.gov.br"
   ],
