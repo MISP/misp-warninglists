@@ -317,7 +317,9 @@
     "vaccine-coronavirus.com",
     "covid19.min-saude.pt",
     "www.info-coronavirus.be",
-    "info-coronavirus.be"
+    "info-coronavirus.be",
+    "coronavirus.gouvernement.lu",
+    "covid19.lu"
   ],
   "type": "hostname",
   "matching_attributes": [
