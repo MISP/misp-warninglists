@@ -1,6 +1,6 @@
 {
   "name": "Valid covid-19 related domains",
-  "version": 4,
+  "version": 5,
   "description": "Maintained using different lists (such as Jaime Blasco's and Krassimir's lists).",
   "list": [
     "3d.nicovideo.jp",
@@ -319,7 +319,8 @@
     "www.info-coronavirus.be",
     "info-coronavirus.be",
     "coronavirus.gouvernement.lu",
-    "covid19.lu"
+    "covid19.lu",
+    "covid3d.fr"
   ],
   "type": "hostname",
   "matching_attributes": [
