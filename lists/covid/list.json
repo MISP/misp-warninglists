@@ -1,6 +1,6 @@
 {
   "name": "Valid covid-19 related domains",
-  "version": 6,
+  "version": 7,
   "description": "Maintained using different lists (such as Jaime Blasco's and Krassimir's lists).",
   "list": [
     "3d.nicovideo.jp",
