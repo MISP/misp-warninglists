@@ -1,0 +1,39 @@
+{
+  "description": "Krassimir's Covid-19 whitelist of known good Covid-19 related websites.",
+  "list": [
+    "akkure4covid.com",
+    "bag-coronavirus.ch",
+    "bag-coronavirus.ch",
+    "corona-data.ch",
+    "coronamadrid.com",
+    "coronavirus.cl",
+    "coronavirus.jhu.edu",
+    "covid-19-1-newhavenct.hub.arcgis.com",
+    "covid-19.iglocska.eu",
+    "covid-misp.ncsc.gov.ie",
+    "covid.apollo247.com",
+    "covid19-phwstatement.nhs.wales",
+    "covid19.govt.nz",
+    "covid19.nhp.gov.in",
+    "covid19healthbot.cdc.gov",
+    "covid19india.org",
+    "covid19japan.com",
+    "cucovid19.ie",
+    "foph-coronavirus.ch",
+    "gov.ie",
+    "hsecovid19.ie",
+    "ncov2019.live",
+    "ofsp-coronavirus.ch",
+    "ufsp-coronavirus.ch",
+    "viruscorona.cl"
+  ],
+  "matching_attributes": [
+    "domain",
+    "hostname",
+    "url"
+  ],
+  "name": "Covid-19 Krassi's Whitelist",
+  "type": "hostname",
+  "uuid": "b600900c-aacc-4860-acf4-7e24a1b08202",
+  "version": 20200401
+}
