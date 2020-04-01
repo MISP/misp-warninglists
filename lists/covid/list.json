@@ -321,7 +321,11 @@
     "coronavirus.gouvernement.lu",
     "covid19.lu",
     "covid3d.fr",
-    "aatishb.com"
+    "aatishb.com",
+    "basemaps.arcgis.com",
+    "services9.arcgis.com",
+    "cdn.arcgis.com",
+    "tiles.arcgis.com"
   ],
   "type": "hostname",
   "matching_attributes": [
