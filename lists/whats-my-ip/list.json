@@ -1,6 +1,6 @@
 {
   "name": "List of known domains to know external IP",
-  "version": 6,
+  "version": 7,
   "description": "Event contains one or more entries of known 'what's my ip' domains",
   "matching_attributes": [
     "domain",
@@ -236,6 +236,7 @@
     "myip.opendns.com",
     "whatismyip.everdot.org",
     "ip-info.ff.avast.com",
-    "ipapi.co"
+    "ipapi.co",
+    "freegeoip.live"
   ]
 }
