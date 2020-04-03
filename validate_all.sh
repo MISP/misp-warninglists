@@ -3,6 +3,10 @@
 set -e
 set -x
 
+pushd tools
+python3 make_list_unique.py
+popd
+
 ./jq_all_the_things.sh
 
 diffs=`git status --porcelain | wc -l`
