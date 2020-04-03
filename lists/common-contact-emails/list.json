@@ -1,8 +1,5 @@
 {
-  "name": "Common contact e-mail addresses",
-  "version": 20200226,
   "description": "A list of commonly used abuse and contact e-mail addresses, including the ones denoted in RFC2142.",
-  "type": "regex",
   "list": [
     "/^(security|noc|soc|abuse)\\@.*\\..*$/i"
   ],
@@ -10,5 +7,8 @@
     "email-dst",
     "email-src",
     "target-email"
-  ]
+  ],
+  "name": "Common contact e-mail addresses",
+  "type": "regex",
+  "version": 20200226
 }

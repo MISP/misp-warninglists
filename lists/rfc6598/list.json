@@ -1,14 +1,14 @@
 {
+  "description": "Event contains one or more entries part of the RFC 6598 CIDR blocks - Special Use IPv4 Addresses",
   "list": [
     "100.64.0.0/10"
   ],
-  "type": "cidr",
   "matching_attributes": [
     "ip-src",
     "ip-dst",
     "domain|ip"
   ],
-  "description": "Event contains one or more entries part of the RFC 6598 CIDR blocks - Special Use IPv4 Addresses",
-  "version": 3,
-  "name": "List of RFC 6598 CIDR blocks"
+  "name": "List of RFC 6598 CIDR blocks",
+  "type": "cidr",
+  "version": 3
 }

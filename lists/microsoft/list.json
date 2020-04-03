@@ -1,13 +1,5 @@
 {
-  "name": "List of known microsoft domains",
-  "version": 3,
   "description": "Event contains one or more entries of known microsoft domains",
-  "matching_attributes": [
-    "domain",
-    "hostname",
-    "domain|ip"
-  ],
-  "type": "hostname",
   "list": [
     ".aadrm.com",
     ".afx.ms",
@@ -121,9 +113,9 @@
     ".windowsphone-int.net",
     ".windowsphone.com",
     ".windowsphone.net",
-    ".windowsupdate.com",
     ".windowssearch.com",
     ".windowsstore.com",
+    ".windowsupdate.com",
     ".wlxrs.com",
     ".xbox.com",
     ".xboxlive.com",
@@ -200,5 +192,13 @@
     "watson.telemetry.microsoft.com",
     "www.insidersurveys.windows.com",
     "za.microsoftstore.com"
-  ]
+  ],
+  "matching_attributes": [
+    "domain",
+    "hostname",
+    "domain|ip"
+  ],
+  "name": "List of known microsoft domains",
+  "type": "hostname",
+  "version": 3
 }

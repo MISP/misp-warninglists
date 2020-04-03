@@ -1,4 +1,5 @@
 {
+  "description": "Event contains one or more entries part of the RFC 5771 multicast CIDR blocks",
   "list": [
     "224.0.0.0/8",
     "225.0.0.0/8",
@@ -17,13 +18,12 @@
     "238.0.0.0/8",
     "239.0.0.0/8"
   ],
-  "type": "cidr",
   "matching_attributes": [
     "ip-src",
     "ip-dst",
     "domain|ip"
   ],
-  "description": "Event contains one or more entries part of the RFC 5771 multicast CIDR blocks",
-  "version": 3,
-  "name": "List of RFC 5771 multicast CIDR blocks"
+  "name": "List of RFC 5771 multicast CIDR blocks",
+  "type": "cidr",
+  "version": 3
 }

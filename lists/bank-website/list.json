@@ -1,13 +1,5 @@
 {
-  "name": "List of known bank domains",
-  "version": 2,
   "description": "Event contains one or more entries of known banking website",
-  "matching_attributes": [
-    "domain",
-    "hostname",
-    "domain|ip"
-  ],
-  "type": "hostname",
   "list": [
     ".02bancorp.com",
     ".1822direkt.com",
@@ -1501,8 +1493,8 @@
     ".spk-suedholstein.de",
     ".spk-vorpommern.de",
     ".spk-westholstein.de",
-    ".spkhb.de",
     ".spkef.is",
+    ".spkhb.de",
     ".ssbia.com",
     ".ssbnd.com",
     ".ssbnet.com",
@@ -1763,5 +1755,13 @@
     ".zionsbank.com",
     ".ziraatbank.de",
     ".zvezabank.at"
-  ]
+  ],
+  "matching_attributes": [
+    "domain",
+    "hostname",
+    "domain|ip"
+  ],
+  "name": "List of known bank domains",
+  "type": "hostname",
+  "version": 2
 }

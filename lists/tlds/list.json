@@ -1,4 +1,5 @@
 {
+  "description": "Event contains one or more TLDs as attribute with an IDS flag set",
   "list": [
     "AAA",
     "AARP",
@@ -1297,8 +1298,7 @@
     "domain",
     "domain|ip"
   ],
+  "name": "TLDs as known by IANA",
   "type": "string",
-  "description": "Event contains one or more TLDs as attribute with an IDS flag set",
-  "version": 6,
-  "name": "TLDs as known by IANA"
+  "version": 6
 }

@@ -1,8 +1,6 @@
 {
   "description": "Event contains one or more public IPv6 DNS resolvers as attribute with an IDS flag set",
   "list": [
-    "2606:4700:4700::1111",
-    "2606:4700:4700::1001",
     "2001:1488:800:400::130",
     "2001:14b8:100:350::2",
     "2001:14b8:100:8350::1",
@@ -111,6 +109,8 @@
     "2604:a880:1:20::c5b:1001",
     "2604:a880:400:d0::6d6:2001",
     "2605:f700:c0:1::1089:53ef",
+    "2606:4700:4700::1001",
+    "2606:4700:4700::1111",
     "2607:fa88:1::2",
     "2610:130:100:3::200",
     "2610:a1:1018::22",
@@ -280,7 +280,7 @@
     "ip-dst",
     "domain|ip"
   ],
-  "type": "string",
   "name": "List of known IPv6 public DNS resolvers",
+  "type": "string",
   "version": 20181114
 }

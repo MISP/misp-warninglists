@@ -3,7 +3,6 @@
   "list": [
     "akkure4covid.com",
     "bag-coronavirus.ch",
-    "bag-coronavirus.ch",
     "co19.oracle.com",
     "corona-data.ch",
     "coronamadrid.com",
@@ -36,6 +35,5 @@
   ],
   "name": "Covid-19 Krassi's Whitelist",
   "type": "hostname",
-  "uuid": "b600900c-aacc-4860-acf4-7e24a1b08202",
   "version": 20200403
 }

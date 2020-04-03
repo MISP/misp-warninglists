@@ -7,7 +7,7 @@ set -x
 
 for dir in lists/*/list.json
 do
-    cat ${dir} | jq . | sponge ${dir}
+    cat ${dir} | jq -S . | sponge ${dir}
 done
 
-cat schema.json | jq . | sponge schema.json
+cat schema.json | jq -S . | sponge schema.json
