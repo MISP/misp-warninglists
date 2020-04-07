@@ -1,8 +1,5 @@
 {
-  "name": "List of known Amazon AWS IP address ranges",
-  "version": 20200210,
   "description": "Amazon AWS IP address ranges (https://ip-ranges.amazonaws.com/ip-ranges.json)",
-  "type": "cidr",
   "list": [
     "100.20.0.0/14",
     "100.24.0.0/13",
@@ -1695,5 +1692,8 @@
     "ip-src",
     "ip-dst",
     "domain|ip"
-  ]
+  ],
+  "name": "List of known Amazon AWS IP address ranges",
+  "type": "cidr",
+  "version": 20200210
 }

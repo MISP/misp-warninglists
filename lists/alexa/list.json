@@ -1,8 +1,5 @@
 {
   "description": "Event contains one or more entries from the top 1000 of the most used website (Alexa).",
-  "version": 20190424,
-  "name": "Top 1000 website from Alexa",
-  "type": "hostname",
   "list": [
     "104.com.tw",
     "11st.co.kr",
@@ -1008,5 +1005,8 @@
   "matching_attributes": [
     "hostname",
     "domain"
-  ]
+  ],
+  "name": "Top 1000 website from Alexa",
+  "type": "hostname",
+  "version": 20190424
 }

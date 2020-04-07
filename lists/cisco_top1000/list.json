@@ -1,9 +1,4 @@
 {
-  "matching_attributes": [
-    "hostname",
-    "domain",
-    "domain|ip"
-  ],
   "description": "Event contains one or more entries from the top 1000 of the most used website (Cisco Umbrella).",
   "list": [
     "0.client-channel.google.com",
@@ -1007,7 +1002,12 @@
     "z.moatads.com",
     "zemanta.com"
   ],
-  "version": 20190309,
+  "matching_attributes": [
+    "hostname",
+    "domain",
+    "domain|ip"
+  ],
+  "name": "Top 1000 website from Cisco Umbrella",
   "type": "hostname",
-  "name": "Top 1000 website from Cisco Umbrella"
+  "version": 20190309
 }

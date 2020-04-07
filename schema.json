@@ -1,42 +1,40 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "title": "Validator for misp-warninglists",
-  "id": "https://www.github.com/MISP/misp-warninglists/schema.json",
-  "type": "object",
   "additionalProperties": false,
+  "id": "https://www.github.com/MISP/misp-warninglists/schema.json",
   "properties": {
     "description": {
       "type": "string"
     },
+    "list": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "matching_attributes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
     "name": {
       "type": "string"
     },
-    "version": {
-      "type": "integer"
-    },
-    "list": {
-      "type": "array",
-      "uniqueItems": true,
-      "items": {
-        "type": "string"
-      }
-    },
     "type": {
-      "type": "string",
       "enum": [
         "string",
         "substring",
         "hostname",
         "cidr",
         "regex"
-      ]
+      ],
+      "type": "string"
     },
-    "matching_attributes": {
-      "type": "array",
-      "uniqueItems": true,
-      "items": {
-        "type": "string"
-      }
+    "version": {
+      "type": "integer"
     }
   },
   "required": [
@@ -45,5 +43,7 @@
     "version",
     "name",
     "type"
-  ]
+  ],
+  "title": "Validator for misp-warninglists",
+  "type": "object"
 }

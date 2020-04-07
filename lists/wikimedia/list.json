@@ -1,8 +1,5 @@
 {
-  "name": "List of known Wikimedia address ranges",
-  "version": 20190912,
   "description": "Wikimedia address ranges (http://noc.wikimedia.org/conf/reverse-proxy.php.txt)",
-  "type": "cidr",
   "list": [
     "208.80.153.0/27",
     "208.80.153.32/27",
@@ -27,5 +24,8 @@
     "ip-src",
     "ip-dst",
     "domain|ip"
-  ]
+  ],
+  "name": "List of known Wikimedia address ranges",
+  "type": "cidr",
+  "version": 20190912
 }

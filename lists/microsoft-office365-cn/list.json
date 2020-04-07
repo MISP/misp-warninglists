@@ -1,6 +1,5 @@
 {
-  "type": "cidr",
-  "name": "List of known Office 365 IP address ranges in China",
+  "description": "Office 365 IP address ranges in China",
   "list": [
     "139.217.0.0/19",
     "139.217.128.0/19",
@@ -76,11 +75,12 @@
     "42.159.80.0/20",
     "42.159.96.0/19"
   ],
-  "description": "Office 365 IP address ranges in China",
   "matching_attributes": [
     "ip-src",
     "ip-dst",
     "domain|ip"
   ],
+  "name": "List of known Office 365 IP address ranges in China",
+  "type": "cidr",
   "version": 20171229
 }

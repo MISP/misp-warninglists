@@ -1,12 +1,5 @@
 {
-  "name": "Top 10K websites from Majestic Million",
-  "version": 20200203,
   "description": "Event contains one or more entries from the top 10K of the most used websites (Majestic Million - 10K).",
-  "matching_attributes": [
-    "hostname",
-    "domain"
-  ],
-  "type": "hostname",
   "list": [
     "00-tv.com",
     "000webhost.com",
@@ -10008,5 +10001,12 @@
     "zyxel.com",
     "zzu.edu.cn",
     "zzz.com.ua"
-  ]
+  ],
+  "matching_attributes": [
+    "hostname",
+    "domain"
+  ],
+  "name": "Top 10K websites from Majestic Million",
+  "type": "hostname",
+  "version": 20200203
 }

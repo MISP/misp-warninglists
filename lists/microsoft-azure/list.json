@@ -1,6 +1,5 @@
 {
   "description": "Microsoft Azure Datacenter IP Ranges",
-  "type": "cidr",
   "list": [
     "104.208.0.0/19",
     "104.208.128.0/17",
@@ -1956,6 +1955,7 @@
     "ip-dst",
     "domain|ip"
   ],
-  "version": 20171229,
-  "name": "List of known Microsoft Azure Datacenter IP Ranges"
+  "name": "List of known Microsoft Azure Datacenter IP Ranges",
+  "type": "cidr",
+  "version": 20171229
 }
