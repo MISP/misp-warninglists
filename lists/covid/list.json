@@ -318,7 +318,8 @@
     "www.kycovid19.ky.gov",
     "www.nicovideo.jp",
     "www.test.nicovideo.jp",
-    "www.voluntarioscoronavirus.rj.gov.br"
+    "www.voluntarioscoronavirus.rj.gov.br",
+    "covidmemory.lu"
   ],
   "matching_attributes": [
     "domain",
@@ -327,5 +328,5 @@
   ],
   "name": "Valid covid-19 related domains",
   "type": "hostname",
-  "version": 8
+  "version": 9
 }
