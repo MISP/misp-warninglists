@@ -187,6 +187,7 @@
     "covidien.com",
     "covidindia.org",
     "covidly.com",
+    "covidmemory.lu",
     "covidmutualaid.org",
     "covidnearyou.org",
     "covidout.in",
@@ -318,8 +319,7 @@
     "www.kycovid19.ky.gov",
     "www.nicovideo.jp",
     "www.test.nicovideo.jp",
-    "www.voluntarioscoronavirus.rj.gov.br",
-    "covidmemory.lu"
+    "www.voluntarioscoronavirus.rj.gov.br"
   ],
   "matching_attributes": [
     "domain",
