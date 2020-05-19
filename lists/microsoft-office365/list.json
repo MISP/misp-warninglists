@@ -17,6 +17,7 @@
     ".broadcast.skype.com",
     ".cdn.office.net",
     ".cloudapp.net",
+    ".config.office.net",
     ".entrust.net",
     ".events.data.microsoft.com",
     ".geotrust.com",
@@ -397,5 +398,5 @@
   ],
   "name": "List of known Office 365 URLs address ranges",
   "type": "string",
-  "version": 20200210
+  "version": 20200519
 }
