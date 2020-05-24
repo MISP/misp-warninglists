@@ -42,3 +42,7 @@ do
   echo ''
 done
 
+pushd tools
+python3 validate_values.py
+popd
+
