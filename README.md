@@ -26,6 +26,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/google](lists/google) - known domains and hostnames from Google
 - [lists/googlebot](lists/googlebot) - known IP ranges for googlebot crawler
 - [lists/ipv6-linklocal](lists/ipv6-linklocal) - IPv6 link local prefix
+- [lists/majestic_million](lists/majestic_million) - List of top 10K of the most referring subnets (Majestic Million - 10K).
 - [lists/microsoft-attack-simulator](lists/microsoft-attack-simulator/) - known Office 365 hostnames and IP address used for Microsoft "Attack Simulator"
 - [lists/microsoft-azure](lists/microsoft-azure) - known Microsoft Azure Datacenter IP Ranges
 - [lists/microsoft-office365-cn](lists/microsoft-office365-cn) - known Office 365 IP address ranges in China
