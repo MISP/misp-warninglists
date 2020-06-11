@@ -10007,7 +10007,7 @@
     "url",
     "domain|ip"
   ],
-  "name": "Top 1,000,000 most-used sites from Tranco",
+  "name": "Top 10k most-used sites from Tranco",
   "type": "hostname",
   "version": 20200611
 }
