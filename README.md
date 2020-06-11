@@ -50,6 +50,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/sinkholes](lists/sinkholes) - List of known sinkholes
 - [lists/tlds](lists/tlds) - top-level domains
 - [lists/tranco](lists/tranco) - Top 1,000,000 domains from [Tranco](https://tranco-list.eu/)
+- [lists/tranco10k](lists/tranco10k) - Top 10K domains from [Tranco](https://tranco-list.eu/)
 - [lists/university_domains](lists/university_domains) - University domain names
 - [lists/url-shortener](lists/url-shortener) - URL shorteners services
 - [lists/vpn-ipv4](lists/vpn-ipv4) - Specialized list of IPv4 addresses belonging to common VPN providers and datacenters
