@@ -5,6 +5,7 @@
     "2ip.tools",
     "aboutmyip.com",
     "api.ipify.org",
+    "api.myip.com",
     "api.wipmania.com",
     "bearsmyip.com",
     "bot.whatismyipaddress.com",
@@ -239,5 +240,5 @@
   ],
   "name": "List of known domains to know external IP",
   "type": "hostname",
-  "version": 7
+  "version": 8
 }
