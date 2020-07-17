@@ -1,5 +1,5 @@
 {
-  "description": "Event contains one or more entries from the top 1000 of the most used website (Cisco Umbrella).",
+  "description": "Event contains one or more entries from the top 1000 of the most used websites (Cisco Umbrella).",
   "list": [
     "0.client-channel.google.com",
     "0.pool.ntp.org",
@@ -1008,7 +1008,7 @@
     "url",
     "domain|ip"
   ],
-  "name": "Top 1000 website from Cisco Umbrella",
+  "name": "Top 1000 websites from Cisco Umbrella",
   "type": "hostname",
   "version": 20200717
 }
