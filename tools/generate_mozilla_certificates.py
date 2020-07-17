@@ -4,30 +4,14 @@
 import csv
 import datetime
 import json
-from inspect import currentframe, getframeinfo
-from os import path
 
-import requests
 from OpenSSL.crypto import FILETYPE_PEM, load_certificate
 
-
-def download(url, file):
-    r = requests.get(url)
-    with open(file, 'wb') as fd:
-        for chunk in r.iter_content(4096):
-            fd.write(chunk)
+from generator import download, download_to_file, get_abspath_list_file, get_version
 
 
 def gethash(cert, digest):
     return cert.digest(digest).decode('ASCII').replace(':', '').lower()
-
-
-def get_abspath_list_file(dst):
-    rel_path = getframeinfo(currentframe()).filename
-    current_folder = path.dirname(path.abspath(rel_path))
-    real_path = path.join(
-        current_folder, '../lists/{dst}/list.json'.format(dst=dst))
-    return path.abspath(path.realpath(real_path))
 
 
 def process(file, dst, type):
@@ -68,8 +52,8 @@ if __name__ == '__main__':
     CA_known_intermediate_file = 'PublicAllIntermediateCertsWithPEMCSV.csv'
     CA_known_intermediate_dst = 'mozilla-IntermediateCA'
 
-    download(Included_CA_url, Included_CA_file)
+    download_to_file(Included_CA_url, Included_CA_file)
     process(Included_CA_file, Included_CA_dst, 'trusted CA certificates')
-    download(CA_known_intermediate_url, CA_known_intermediate_file)
+    download_to_file(CA_known_intermediate_url, CA_known_intermediate_file)
     process(CA_known_intermediate_file, CA_known_intermediate_dst,
             'known intermedicate of trusted certificates')

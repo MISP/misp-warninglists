@@ -36,7 +36,7 @@ def process(file, warninglist, dst, first_10k=False):
 
 if __name__ == '__main__':
     tranco_url = 'https://tranco-list.eu/top-1m.csv.zip'
-    tranco_file = 'top-1m.csv.zip'
+    tranco_file = 'tranco_top-1m.csv.zip'
 
     download_to_file(tranco_url, tranco_file)
 

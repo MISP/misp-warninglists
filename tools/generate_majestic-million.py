@@ -1,40 +1,38 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-import datetime
-import logging
 import json
-import os
-import requests
+from generator import download, download_to_file, get_abspath_list_file, get_version
 
-servers_url = 'http://downloads.majestic.com/majestic_million.csv'
-csv_path = 'majestic_million.csv'
-hostname_path = 'list.json'
 
-if os.path.isfile(csv_path):
-    logging.warning('Not erasing local csv file')
-else:
-    req = requests.get(servers_url)
-    with open(csv_path, 'wb') as fd:
-        for chunk in req.iter_content(4096):
-            fd.write(chunk)
+def process(file, dst):
 
-host_list = []
-with open(csv_path, newline='\n', encoding='utf-8', errors='replace') as csv_file:
-    top10k = csv_file.readlines()[:10000]
+    with open(file, newline='\n', encoding='utf-8', errors='replace') as csv_file:
+        sites = csv_file.readlines()[:10000]
+    
+    warninglist = {
+        'name': 'Top 10K websites from Majestic Million',
+        'version': get_version(),
+        'description': 'Event contains one or more entries from the top 10K of the most used websites (Majestic Million).',
+        'matching_attributes': ['hostname', 'domain'],
+        'type': 'hostname',
+        'list': []
+    }
 
-version = int(datetime.date.today().strftime('%Y%m%d'))
-out_list = {}
+    for site in sites:
+        v = site.split(',')[2]
+        warninglist['list'].append(v.rstrip())
+    warninglist['list'] = sorted(set(warninglist['list']))
 
-out_list['name'] = 'Top 10K websites from Majestic Million'
-out_list['version'] = version
-out_list['description'] = 'Event contains one or more entries from the top 10K of the most used websites (Majestic Million).'
-out_list['matching_attributes'] = ['hostname', 'domain']
-out_list['type'] = 'hostname'
-out_list['list'] = sorted(set(host_list))
+    with open(get_abspath_list_file(dst), 'w') as data_file:
+        json.dump(warninglist, data_file, indent=2, sort_keys=True)
+        data_file.write("\n")
 
-for hostname in top10k:
-    v = hostname.split(',')[2]
-    out_list['list'].append(v.rstrip())
-out_list['list'] = sorted(set(out_list['list']))
-with open(hostname_path, 'w', newline='\n') as hostname_file:
-    hostname_file.write(json.dumps(out_list, indent=2, sort_keys=False))
+
+if __name__ == '__main__':
+    majestic_url = 'http://downloads.majestic.com/majestic_million.csv'
+    majestic_file = 'majestic_million.csv'
+    majestic_dst = 'majestic_million'
+
+    download_to_file(majestic_url, majestic_file)
+    process(majestic_file, majestic_dst)    

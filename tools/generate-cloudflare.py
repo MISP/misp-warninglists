@@ -1,33 +1,42 @@
 #!/usr/bin/env python3
 
 import json
-import os
-import requests
-import datetime
-import io
 
-base_url="https://www.cloudflare.com/"
-uri_list=['ips-v4','ips-v6']
-dict=dict()
-dict['list']=list()
-def source_read_and_add(input_file):
-	output_list=list()
-
-	for line in input_file.splitlines():
-		output_list.append(line)
-	return output_list
+from generator import download, download_to_file, get_abspath_list_file, get_version
 
 
-for uri in uri_list:
-	url = base_url + uri
-	r=requests.get(url)
-	dict['list'] += source_read_and_add(r.text)
+def process(files, dst):
+    warninglist = {}
+    warninglist['name'] = "List of known Cloudflare IP ranges"
+    warninglist['version'] = get_version()
+    warninglist['description'] = "List of known Cloudflare IP ranges (https://www.cloudflare.com/ips/)"
+    warninglist['type'] = "cidr"
+    warninglist['list'] = []
+    warninglist['matching_attributes'] = ["ip-dst","ip-src","domain|ip"]
+    
+    for file in files:
+        with open(file, 'r') as f:
+            ips = f.readlines()
+        for ip in ips:
+            warninglist['list'].append(ip.strip())
+        warninglist['list'] = sorted(set(warninglist['list']))
+    
+    with open(get_abspath_list_file(dst), 'w') as data_file:
+        json.dump(warninglist, data_file, indent=2, sort_keys=True)
+        data_file.write("\n")
 
-dict['type'] = "cidr"
-dict['matching_attributes']=["ip-dst","ip-src","domain|ip"]
-dict['name']="List of known Cloudflare IP ranges"
-dict['version']= int(datetime.date.today().strftime('%Y%m%d'))
-dict['description']="List of known Cloudflare IP ranges (https://www.cloudflare.com/ips/)"
-dict['list']=list(set(dict['list']))
 
-print(json.dumps(dict))
+if __name__ == '__main__':
+    cf_base_url = "https://www.cloudflare.com/"
+    uri_list = ['ips-v4','ips-v6']
+    cf_dst = 'cloudflare'
+
+    to_process = list()
+
+    for uri in uri_list:
+        url = cf_base_url+uri
+        file = 'cloudflare_{}.txt'.format(uri)
+        download_to_file(url, file)
+        to_process.append(file)
+    
+    process(to_process, cf_dst)

@@ -1,40 +1,44 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import requests
 import zipfile
-import datetime
 import json
 
-cisco_url = "http://s3-us-west-1.amazonaws.com/umbrella-static/top-1m.csv.zip"
-cisco_file = "top-1m.csv.zip"
-user_agent = {"User-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0"}
-r = requests.get(cisco_url, headers=user_agent)
-with open(cisco_file, 'wb') as fd:
-    for chunk in r.iter_content(4096):
-        fd.write(chunk)
-with zipfile.ZipFile(cisco_file, 'r') as cisco_lists:
-    for name in cisco_lists.namelist():
-        if name == "top-1m.csv":
-            with cisco_lists.open(name) as top:
-                top1000 = top.readlines()[:1000]
-        else:
-            continue
-
-cisco_warninglist = {}
-version = int(datetime.date.today().strftime('%Y%m%d'))
-
-cisco_warninglist['description'] = 'Event contains one or more entries from the top 1000 of the most used website (Cisco Umbrella).'
-d = datetime.datetime.now()
-cisco_warninglist['version'] = version
-cisco_warninglist['name'] = 'Top 1000 website from Cisco Umbrella'
-cisco_warninglist['type'] = 'hostname'
-cisco_warninglist['matching_attributes'] = ['hostname', 'domain']
-cisco_warninglist['list'] = []
+from generator import download, download_to_file, get_abspath_list_file, get_version
 
 
-for site in top1000:
-    v = str(site).split(',')[1]
-    cisco_warninglist['list'].append(v.rstrip())
-cisco_warninglist['list'] = sorted(set(cisco_warninglist['list']))
-print(json.dumps(cisco_warninglist))
+def process(file, dst):
+    with zipfile.ZipFile(file, 'r') as cisco_lists:
+        for name in cisco_lists.namelist():
+            if name == "top-1m.csv":
+                with cisco_lists.open(name) as top:
+                    top1000 = top.readlines()[:1000]
+            else:
+                continue
+    
+    warninglist = {
+        'description': 'Event contains one or more entries from the top 1000 of the most used website (Cisco Umbrella).',
+        'version': get_version(),
+        'name': 'Top 1000 website from Cisco Umbrella',
+        'type': 'hostname',
+        'matching_attributes': ['hostname', 'domain', 'url', 'domain|ip'],
+        'list': []
+    }
+
+    for site in top1000:
+        v = site.decode('UTF-8').split(',')[1]
+        warninglist['list'].append(v.strip().replace('\\r\\n',''))
+    warninglist['list'] = sorted(set(warninglist['list']))
+    
+    with open(get_abspath_list_file(dst), 'w') as data_file:
+        json.dump(warninglist, data_file, indent=2, sort_keys=True)
+        data_file.write("\n")
+
+
+if __name__ == '__main__':
+    cisco_url = "http://s3-us-west-1.amazonaws.com/umbrella-static/top-1m.csv.zip"
+    cisco_file = "cisco_top-1m.csv.zip"
+    cisco_dst = 'cisco_top1000'
+    
+    download_to_file(cisco_url, cisco_file)
+    process(cisco_file, cisco_dst)
