@@ -2,14 +2,15 @@
 # -*- coding: utf-8 -*-
 
 import json
-from generator import download, download_to_file, get_abspath_list_file, get_version
+
+from generator import download_to_file, get_abspath_list_file, get_version
 
 
 def process(file, dst):
 
     with open(file, newline='\n', encoding='utf-8', errors='replace') as csv_file:
         sites = csv_file.readlines()[:10000]
-    
+
     warninglist = {
         'name': 'Top 10K websites from Majestic Million',
         'version': get_version(),
@@ -35,4 +36,4 @@ if __name__ == '__main__':
     majestic_dst = 'majestic_million'
 
     download_to_file(majestic_url, majestic_file)
-    process(majestic_file, majestic_dst)    
+    process(majestic_file, majestic_dst)

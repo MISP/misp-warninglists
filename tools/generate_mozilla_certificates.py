@@ -7,7 +7,7 @@ import json
 
 from OpenSSL.crypto import FILETYPE_PEM, load_certificate
 
-from generator import download, download_to_file, get_abspath_list_file, get_version
+from generator import download_to_file, get_abspath_list_file, get_version
 
 
 def gethash(cert, digest):
@@ -31,7 +31,7 @@ def process(file, dst, type):
 
     warninglist = {}
     warninglist['name'] = 'Fingerprint of {type}'.format(type=type)
-    warninglist['version'] = int(datetime.date.today().strftime('%Y%m%d'))
+    warninglist['version'] = get_version()
     warninglist['description'] = "Fingerprint of {type} taken from Mozilla's lists at https://wiki.mozilla.org/CA".format(
         type=type)
     warninglist['list'] = sorted(hashes)

@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 
 import json
-import requests
+
 from bs4 import BeautifulSoup
 
-from generator import download, download_to_file, get_abspath_list_file, get_version
+from generator import (download, download_to_file, get_abspath_list_file,
+                       get_version)
 
 
 def get_json_url(page):
@@ -25,10 +26,10 @@ def process(file, dst):
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip"],
         'type': 'cidr'
     }
-    
+
     with open(file, 'r') as json_file:
         ms_azure_ip_list = json.load(json_file)
-    
+
     for value in ms_azure_ip_list['values']:
         warninglist['list'] += value['properties']['addressPrefixes']
 

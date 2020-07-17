@@ -3,7 +3,7 @@
 
 import json
 
-from generator import download, download_to_file, get_abspath_list_file, get_version
+from generator import download, get_abspath_list_file, get_version
 
 
 def process(url, warninglist, dst):
@@ -33,6 +33,7 @@ if __name__ == '__main__':
         'name': 'Covid-19 Cyber Threat Coalition\'s Whitelist',
         'description': 'The Cyber Threat Coalition\'s whitelist of COVID-19 related websites.'
     }
-    
+
     process(covid_krassi_url, covid_krassi_warninglist, covid_krassi_dst)
-    process(covid_cyber_threat_coalition_url, covid_cyber_threat_coalition_warninglist, covid_cyber_threat_coalition_dst)
+    process(covid_cyber_threat_coalition_url,
+            covid_cyber_threat_coalition_warninglist, covid_cyber_threat_coalition_dst)

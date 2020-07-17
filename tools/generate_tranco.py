@@ -4,7 +4,7 @@
 import json
 import zipfile
 
-from generator import download, download_to_file, get_abspath_list_file, get_version
+from generator import download_to_file, get_abspath_list_file, get_version
 
 
 def process(file, warninglist, dst, first_10k=False):
@@ -19,10 +19,11 @@ def process(file, warninglist, dst, first_10k=False):
                         sites = tranco.readlines()
             else:
                 continue
-    
+
     warninglist['type'] = 'hostname'
     warninglist['version'] = get_version()
-    warninglist['matching_attributes'] = ['hostname', 'domain', 'url', 'domain|ip']
+    warninglist['matching_attributes'] = [
+        'hostname', 'domain', 'url', 'domain|ip']
 
     for site in sites:
         v = site.decode('UTF-8').split(',')[1]
@@ -54,4 +55,5 @@ if __name__ == '__main__':
         'description': "Event contains one or more entries from the top 10K most-used sites (https://tranco-list.eu/).",
         'name': "Top 10K most-used sites from Tranco"
     }
-    process(tranco_file, tranco_10k_warninglist, tranco_10k_dst, first_10k=True)
+    process(tranco_file, tranco_10k_warninglist,
+            tranco_10k_dst, first_10k=True)

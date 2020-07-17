@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import zipfile
 import json
+import zipfile
 
-from generator import download, download_to_file, get_abspath_list_file, get_version
+from generator import download_to_file, get_abspath_list_file, get_version
 
 
 def process(file, warninglist, dst, limit='1k'):
@@ -23,17 +23,18 @@ def process(file, warninglist, dst, limit='1k'):
                         top = cisco_list.readlines()[:20000]
             else:
                 continue
-    
+
     warninglist['version'] = get_version()
     warninglist['type'] = 'hostname'
-    warninglist['matching_attributes'] = ['hostname', 'domain', 'url', 'domain|ip']
+    warninglist['matching_attributes'] = [
+        'hostname', 'domain', 'url', 'domain|ip']
     warninglist['list'] = []
 
     for site in top:
         v = site.decode('UTF-8').split(',')[1]
-        warninglist['list'].append(v.strip().replace('\\r\\n',''))
+        warninglist['list'].append(v.strip().replace('\\r\\n', ''))
     warninglist['list'] = sorted(set(warninglist['list']))
-    
+
     with open(get_abspath_list_file(dst), 'w') as data_file:
         json.dump(warninglist, data_file, indent=2, sort_keys=True)
         data_file.write("\n")
@@ -42,7 +43,7 @@ def process(file, warninglist, dst, limit='1k'):
 if __name__ == '__main__':
     cisco_url = "http://s3-us-west-1.amazonaws.com/umbrella-static/top-1m.csv.zip"
     cisco_file = "cisco_top-1m.csv.zip"
-    
+
     download_to_file(cisco_url, cisco_file)
 
     cisco_dst_1k = 'cisco_top1000'
@@ -58,7 +59,7 @@ if __name__ == '__main__':
         'description': 'Event contains one or more entries from the top 5000 of the most used websites (Cisco Umbrella).'
     }
     process(cisco_file, cisco_5k_warninglist, cisco_dst_5k, limit='5k')
-    
+
     cisco_dst_10k = 'cisco_top10k'
     cisco_10k_warninglist = {
         'name': 'Top 10 000 websites from Cisco Umbrella',

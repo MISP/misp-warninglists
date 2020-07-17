@@ -4,7 +4,7 @@
 import json
 import zipfile
 
-from generator import download, download_to_file, get_abspath_list_file, get_version
+from generator import download_to_file, get_abspath_list_file, get_version
 
 
 def process(file, dst):
