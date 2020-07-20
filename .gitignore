@@ -16,3 +16,4 @@ PublicAllIntermediateCertsWithPEMCSV.csv
 top500.domains.csv
 top500.pages.csv
 top-1m.csv.zip
+public-dns-nameservers.csv
