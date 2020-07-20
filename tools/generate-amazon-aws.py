@@ -3,7 +3,7 @@
 
 import json
 
-from generator import download_to_file, get_abspath_list_file, get_version
+from generator import download_to_file, get_version, write_to_file
 
 
 def process(file, dst):
@@ -17,17 +17,16 @@ def process(file, dst):
     for prefix in amazon_aws_ip_list['ipv6_prefixes']:
         l.append(prefix['ipv6_prefix'])
 
-    warninglist = {}
-    warninglist['name'] = 'List of known Amazon AWS IP address ranges'
-    warninglist['version'] = get_version()
-    warninglist['description'] = 'Amazon AWS IP address ranges (https://ip-ranges.amazonaws.com/ip-ranges.json)'
-    warninglist['type'] = 'cidr'
-    warninglist['list'] = sorted(set(l))
-    warninglist['matching_attributes'] = ["ip-src", "ip-dst", "domain|ip"]
+    warninglist = {
+        'name': 'List of known Amazon AWS IP address ranges',
+        'version': get_version(),
+        'description': 'Amazon AWS IP address ranges (https://ip-ranges.amazonaws.com/ip-ranges.json)',
+        'type': 'cidr',
+        'list': l,
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
+    }
 
-    with open(get_abspath_list_file(dst), 'w') as data_file:
-        json.dump(warninglist, data_file, indent=2, sort_keys=True)
-        data_file.write('\n')
+    write_to_file(warninglist, dst)
 
 
 if __name__ == '__main__':

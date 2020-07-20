@@ -2,12 +2,10 @@
 # -*- coding: utf-8 -*-
 
 import csv
-import datetime
-import json
 
 from OpenSSL.crypto import FILETYPE_PEM, load_certificate
 
-from generator import download_to_file, get_abspath_list_file, get_version
+from generator import download_to_file, get_version, write_to_file
 
 
 def gethash(cert, digest):
@@ -29,19 +27,18 @@ def process(file, dst, type):
             hashes.add(gethash(cert, 'sha1'))
             hashes.add(obj['SHA-256 Fingerprint'].lower())
 
-    warninglist = {}
-    warninglist['name'] = 'Fingerprint of {type}'.format(type=type)
-    warninglist['version'] = get_version()
-    warninglist['description'] = "Fingerprint of {type} taken from Mozilla's lists at https://wiki.mozilla.org/CA".format(
-        type=type)
-    warninglist['list'] = sorted(hashes)
-    warninglist['type'] = 'string'
-    warninglist['matching_attributes'] = ["md5", "sha1", "sha256", "filename|md5", "filename|sha1",
-                                          "filename|sha256", "x509-fingerprint-md5", "x509-fingerprint-sha1", "x509-fingerprint-sha256"]
+    warninglist = {
+        'name': 'Fingerprint of {type}'.format(type=type),
+        'version': get_version(),
+        'description': "Fingerprint of {type} taken from Mozilla's lists at https://wiki.mozilla.org/CA".format(
+            type=type),
+        'list': hashes,
+        'type': 'string',
+        'matching_attributes': ["md5", "sha1", "sha256", "filename|md5", "filename|sha1",
+                                "filename|sha256", "x509-fingerprint-md5", "x509-fingerprint-sha1", "x509-fingerprint-sha256"]
+    }
 
-    with open(get_abspath_list_file(dst), 'w') as data_file:
-        json.dump(warninglist, data_file, indent=2, sort_keys=True)
-        data_file.write("\n")
+    write_to_file(warninglist, dst)
 
 
 if __name__ == '__main__':

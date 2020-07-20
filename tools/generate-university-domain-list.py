@@ -1,27 +1,32 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+from generator import download, get_version, write_to_file
 
 
-import requests
-import datetime
-import json
+def process(url, dst):
 
-json_output=dict()
-json_output['type']="hostname"
-json_output['name']="University domains"
-json_output['matching_attributes']=['hostname','domain','url','domain|ip']
-json_output['version']= int(datetime.date.today().strftime('%Y%m%d'))
-json_output['description']="List of University domains from https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json"
-json_output['list']=list()
+    university_list = download(url).json()
+
+    warninglist = {
+        'type': "hostname",
+        'name': "University domains",
+        'matching_attributes': ['hostname', 'domain', 'url', 'domain|ip'],
+        'version': get_version(),
+        'description': "List of University domains from https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json",
+        'list': []
+    }
+
+    for university in university_list:
+        for domain in university.get('domains'):
+            if domain not in warninglist['list']:
+                warninglist['list'].append(domain)
+
+    write_to_file(warninglist, dst)
 
 
+if __name__ == '__main__':
+    university_url = 'https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json'
+    university_dst = 'university_domains'
 
-url="https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json"
-university_list_file=requests.get(url)
-university_list_json=university_list_file.json()
-
-for university in university_list_json:
-	for domain in university.get('domains'):
-		if domain not in json_output['list']:
-			json_output['list'].append(domain)
-
-print(json.dumps(json_output))
+    process(university_url, university_dst)

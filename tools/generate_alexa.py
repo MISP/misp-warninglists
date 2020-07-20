@@ -4,7 +4,7 @@
 import json
 import zipfile
 
-from generator import download_to_file, get_abspath_list_file, get_version
+from generator import download_to_file, get_version, write_to_file
 
 
 def process(file, dst):
@@ -28,11 +28,8 @@ def process(file, dst):
     for site in top1000:
         v = site.decode('UTF-8').split(',')[1]
         warninglist['list'].append(v.rstrip())
-    warninglist['list'] = sorted(set(warninglist['list']))
 
-    with open(get_abspath_list_file(dst), 'w') as data_file:
-        json.dump(warninglist, data_file, indent=2, sort_keys=True)
-        data_file.write("\n")
+    write_to_file(warninglist, dst)
 
 
 if __name__ == "__main__":

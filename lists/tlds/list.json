@@ -1170,7 +1170,6 @@
     "SX",
     "SY",
     "SYDNEY",
-    "SYMANTEC",
     "SYSTEMS",
     "SZ",
     "TAB",
@@ -1520,5 +1519,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20200706
+  "version": 20200721
 }

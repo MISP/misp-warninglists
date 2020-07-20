@@ -1,42 +1,58 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import requests
-import json
-import datetime
-
-url = 'https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7'
-r = requests.get(url)
-service_list = r.json()
-lurls= []
-lips = []
-
-for service in service_list:
-    for url in service.get('urls', []):
-        lurls.append(url.replace('*', ''))
-    for ip in service.get('ips', []):
-        lips.append(ip)
-
-warninglist = {}
-warninglist['name'] = 'List of known Office 365 URLs address ranges'
-warninglist['version'] = int(datetime.date.today().strftime('%Y%m%d'))
-warninglist['description'] = 'Office 365 URLs and IP address ranges'
-warninglist['type'] = 'string'
-warninglist['list'] = sorted(set(lurls))
-warninglist['matching_attributes'] = ["domain", "domain|ip", "hostname"]
+from generator import download, get_version, write_to_file
 
 
-with open('../lists/microsoft-office365/list.json', 'w') as data_file:
-    json.dump(warninglist, data_file, indent=4, sort_keys=True)
+def process(url):
+    lurls, lips = get_lists(url)
 
-warninglist = {}
-warninglist['name'] = 'List of known Office 365 IP address ranges'
-warninglist['version'] = int(datetime.date.today().strftime('%Y%m%d'))
-warninglist['description'] = 'Office 365 URLs and IP address ranges'
-warninglist['list'] = sorted(set(lips))
-warninglist['type'] = 'cidr'
-warninglist['matching_attributes'] = ["ip-src", "ip-dst", "domain|ip"]
+    # URLs of services
+    office365_urls_dst = 'microsoft-office365'
+    office365_urls_warninglist = {
+        'name': 'List of known Office 365 URLs',
+        'description': 'Office 365 URLs and IP address ranges',
+        'type': 'string',
+        'matching_attributes': ["domain", "domain|ip", "hostname"]
+    }
+    generate(lurls, office365_urls_dst, office365_urls_warninglist)
+
+    # IPs of services
+    office365_ips_dst = 'microsoft-office365-ip'
+    office365_ips_warninglist = {
+        'name': 'List of known Office 365 IP address ranges',
+        'description': 'Office 365 IP address ranges',
+        'type': 'cidr',
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
+    }
+    generate(lips, office365_ips_dst, office365_ips_warninglist)
 
 
-with open('../lists/microsoft-office365-ip/list.json', 'w') as data_file:
-    json.dump(warninglist, data_file, indent=4, sort_keys=True)
+def generate(data_list, dst, warninglist):
+
+    warninglist['version'] = get_version()
+    warninglist['list'] = data_list
+
+    write_to_file(warninglist, dst)
+
+
+def get_lists(url):
+    service_list = download(url).json()
+
+    lurls = []
+    lips = []
+
+    for service in service_list:
+        for url in service.get('urls', []):
+            if url.find(".*.") == -1:
+                lurls.append(url.replace('*', ''))
+        for ip in service.get('ips', []):
+            lips.append(ip)
+
+    return lurls, lips
+
+
+if __name__ == '__main__':
+    office365_url = 'https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7'
+
+    process(office365_url)

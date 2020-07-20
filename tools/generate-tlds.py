@@ -1,27 +1,31 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import requests
-import json
-import datetime
+from generator import download, get_version, write_to_file
 
-url = 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt'
-r = requests.get(url)
-tlds = []
-for tld in r.text.splitlines():
-    if tld.startswith('#'):
-        continue
-    tlds.append(tld)
 
-warninglist = {
-    'name': 'TLDs as known by IANA',
-    'version': int(datetime.date.today().strftime('%Y%m%d')),
-    'description': 'Event contains one or more TLDs as attribute with an IDS flag set',
-    'list': sorted(set(tlds)),
-    'matching_attributes': ["hostname", "domain", "domain|ip"],
-    'type': 'string',
-}
+def process(url, dst):
+    r = download(url)
+    tlds = []
+    for tld in r.text.splitlines():
+        if tld.startswith('#'):
+            continue
+        tlds.append(tld)
 
-with open('../lists/tlds/list.json', 'w') as data_file:
-    json.dump(warninglist, data_file, indent=2, sort_keys=True)
-    data_file.write("\n")
+    warninglist = {
+        'name': 'TLDs as known by IANA',
+        'version': get_version(),
+        'description': 'Event contains one or more TLDs as attribute with an IDS flag set',
+        'list': tlds,
+        'matching_attributes': ["hostname", "domain", "domain|ip"],
+        'type': 'string'
+    }
+
+    write_to_file(warninglist, dst)
+
+
+if __name__ == '__main__':
+    tlds_url = 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt'
+    tlds_dst = 'tlds'
+
+    process(tlds_url, tlds_dst)

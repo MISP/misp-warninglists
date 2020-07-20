@@ -1,29 +1,26 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-import json
-
-from generator import download_to_file, get_abspath_list_file, get_version
+from generator import download_to_file, get_version, write_to_file
 
 
 def process(files, dst):
-    warninglist = {}
-    warninglist['name'] = "List of known Cloudflare IP ranges"
-    warninglist['version'] = get_version()
-    warninglist['description'] = "List of known Cloudflare IP ranges (https://www.cloudflare.com/ips/)"
-    warninglist['type'] = "cidr"
-    warninglist['list'] = []
-    warninglist['matching_attributes'] = ["ip-dst", "ip-src", "domain|ip"]
+    warninglist = {
+        'name': "List of known Cloudflare IP ranges",
+        'version': get_version(),
+        'description': "List of known Cloudflare IP ranges (https://www.cloudflare.com/ips/)",
+        'type': "cidr",
+        'list': [],
+        'matching_attributes': ["ip-dst", "ip-src", "domain|ip"]
+    }
 
     for file in files:
         with open(file, 'r') as f:
             ips = f.readlines()
         for ip in ips:
             warninglist['list'].append(ip.strip())
-        warninglist['list'] = sorted(set(warninglist['list']))
 
-    with open(get_abspath_list_file(dst), 'w') as data_file:
-        json.dump(warninglist, data_file, indent=2, sort_keys=True)
-        data_file.write("\n")
+    write_to_file(warninglist, dst)
 
 
 if __name__ == '__main__':

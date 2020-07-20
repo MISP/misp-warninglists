@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import datetime
+import json
 from inspect import currentframe, getframeinfo
 from os import path
 
@@ -33,3 +34,13 @@ def get_abspath_list_file(dst):
 
 def get_version():
     return int(datetime.date.today().strftime('%Y%m%d'))
+
+
+def unique_sorted_warninglist(warninglist):
+    warninglist['list'] = sorted(set(warninglist['list']))
+    return warninglist
+
+def write_to_file(warninglist, dst):
+    with open(get_abspath_list_file(dst), 'w') as data_file:
+        json.dump(unique_sorted_warninglist(warninglist), data_file, indent=2, sort_keys=True)
+        data_file.write("\n")
