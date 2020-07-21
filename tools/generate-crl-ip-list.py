@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     for uri in uri_list:
         url = crl_ip_base_url + uri
-        file = 'ocsp_{}.txt'.format(uri)
+        file = 'ocsp_{}'.format(uri)
         download_to_file(url, file)
         to_process.append(file)
 
