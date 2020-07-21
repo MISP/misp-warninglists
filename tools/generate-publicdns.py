@@ -3,7 +3,6 @@
 
 import csv
 import ipaddress
-import json
 import logging
 
 from generator import download_to_file, get_version, write_to_file
@@ -46,7 +45,7 @@ def process(file):
 def generate(data_list, warninglist, dst):
 
     warninglist['version'] = get_version()
-    warninglist['list'] = sorted(set(data_list))
+    warninglist['list'] = data_list
 
     write_to_file(warninglist, dst)
 

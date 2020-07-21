@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import json
-
 from generator import download_to_file, get_version, write_to_file
 
 

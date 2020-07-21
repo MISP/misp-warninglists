@@ -5,26 +5,47 @@ import datetime
 import json
 from inspect import currentframe, getframeinfo
 from os import path
+import logging
 
 import requests
 from dateutil.parser import parse as parsedate
 
 
 def download_to_file(url, file):
-    user_agent = {
-        "User-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0"}
-    r = requests.head(url, headers=user_agent)
-    url_datetime = parsedate(r.headers['Last-Modified']).astimezone()
-    file_datetime = datetime.datetime.fromtimestamp(
-        path.getmtime(file)).astimezone()
+    user_agent = {"User-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0"}
+    try:
+        r = requests.head(url, headers=user_agent)
+        url_datetime = parsedate(r.headers['Last-Modified']).astimezone()
+        file_datetime = datetime.datetime.fromtimestamp(
+            path.getmtime(file)).astimezone()
 
-    if(url_datetime > file_datetime):
-        r = requests.get(url, headers=user_agent)
-        with open(file, 'wb') as fd:
-            for chunk in r.iter_content(4096):
-                fd.write(chunk)
+        if(url_datetime > file_datetime):
+            actual_download_to_file(url, file, user_agent)
+    except KeyError as ex:
+        logging.warning(str(ex))
+        actual_download_to_file(url, file, user_agent)
+        
+
+def actual_download_to_file(url, file, user_agent):
+    r = requests.get(url, headers=user_agent)
+    with open(file, 'wb') as fd:
+        for chunk in r.iter_content(4096):
+            fd.write(chunk)
 
 
+def process_stream(url):
+    r = requests.get(url, stream=True)
+    
+    data_list = []
+    for line in r.iter_lines():
+        v = line.decode('utf-8')
+        if not v.startswith("#"):
+            if v:
+                data_list.append(v)
+    
+    return data_list
+
+   
 def download(url):
     user_agent = {
         "User-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0"}

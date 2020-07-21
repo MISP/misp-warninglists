@@ -3,23 +3,16 @@
 
 import requests
 
-from generator import get_version, write_to_file
+from generator import process_stream, get_version, write_to_file
 
 
 def process(url, dst):
-    r = requests.get(url, stream=True)
-    domains = []
-    for ip in r.iter_lines():
-        v = ip.decode('utf-8')
-        if not v.startswith("#"):
-            if v:
-                domains.append(v)
 
     warninglist = {
         'name': 'List of disposable email domains',
         'version': get_version(),
         'description': 'List of disposable email domains',
-        'list': domains,
+        'list': process_stream(url),
         'type': 'substring',
         'matching_attributes': ["email-src", "email-dst", "whois-registrant-email", "domain|ip", "dns-soa-email"]
     }

@@ -5,21 +5,20 @@ from generator import download, get_version, write_to_file
 
 
 def process(url, dst):
-    r = download(url)
-    tlds = []
-    for tld in r.text.splitlines():
-        if tld.startswith('#'):
-            continue
-        tlds.append(tld)
-
     warninglist = {
         'name': 'TLDs as known by IANA',
         'version': get_version(),
         'description': 'Event contains one or more TLDs as attribute with an IDS flag set',
-        'list': tlds,
+        'list': [],
         'matching_attributes': ["hostname", "domain", "domain|ip"],
         'type': 'string'
     }
+
+    r = download(url)
+    for tld in r.text.splitlines():
+        if tld.startswith('#'):
+            continue
+        warninglist['list'].append(tld)
 
     write_to_file(warninglist, dst)
 
