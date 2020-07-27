@@ -1,25 +1,45 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import requests
-import xml.etree.ElementTree as ET
 import json
-import datetime
 
-url = 'https://download.microsoft.com/download/0/1/8/018E208D-54F8-44CD-AA26-CD7BC9524A8C/PublicIPs_20171226.xml'
-r = requests.get(url)
-office365 = ET.fromstring(r.text)
-l = []
-for region in office365.iter('Region'):
-    for subnet in region.iter('IpRange'):
-        l.append(subnet.get('Subnet'))
+from bs4 import BeautifulSoup
 
-warninglist = {}
-warninglist['name'] = 'List of known Microsoft Azure Datacenter IP Ranges'
-warninglist['version'] = int(datetime.date.today().strftime('%Y%m%d'))
-warninglist['description'] = 'Microsoft Azure Datacenter IP Ranges'
-warninglist['list'] = sorted(set(l))
-warninglist['matching_attributes'] = ["ip-src", "ip-dst", "domain|ip"]
-warninglist['type'] = 'cidr'
+from generator import download, download_to_file, get_version, write_to_file
 
-print(json.dumps(warninglist))
+
+def get_json_url(page):
+    soup = BeautifulSoup(page.text, 'html.parser')
+    retry_link_text = soup.find(class_='link-align')
+    retry_links = retry_link_text.find_all('a')
+    return retry_links[0].get('href')
+
+
+def process(file, dst):
+
+    warninglist = {
+        'name': 'List of known Microsoft Azure Datacenter IP Ranges',
+        'version': get_version(),
+        'description': 'Microsoft Azure Datacenter IP Ranges',
+        'list': [],
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"],
+        'type': 'cidr'
+    }
+
+    with open(file, 'r') as json_file:
+        ms_azure_ip_list = json.load(json_file)
+
+    for value in ms_azure_ip_list['values']:
+        warninglist['list'] += value['properties']['addressPrefixes']
+
+    write_to_file(warninglist, dst)
+
+
+if __name__ == '__main__':
+    ms_azure_url = 'https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519'
+    ms_azure_file = 'ms-azure.json'
+    ms_azure_dst = 'microsoft-azure'
+
+    ms_azure_json_url = get_json_url(download(ms_azure_url))
+    download_to_file(ms_azure_json_url, ms_azure_file)
+    process(ms_azure_file, ms_azure_dst)

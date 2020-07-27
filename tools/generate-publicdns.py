@@ -1,69 +1,85 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import csv
-import datetime
-import logging
 import ipaddress
-import json
-import os
-import requests
+import logging
 
-servers_url = 'http://public-dns.info/nameservers.csv'
-csv_path = 'nameservers.csv'
-dns4_path = 'list4.json'
-dns6_path = 'list6.json'
-
-if os.path.isfile(csv_path):
-    logging.warning('Not erasing local csv file')
-else:
-    req = requests.get(servers_url)
-    with open(csv_path, 'wb') as fd:
-        for chunk in req.iter_content(4096):
-            fd.write(chunk)
-
-ip4_list = []
-ip6_list = []
-with open(csv_path) as csv_file:
-    servers_list = csv.reader(csv_file, delimiter=',', quotechar='"')
-
-    for row in servers_list:
-        if row[5] == '':
-            try:
-                ip = ipaddress.ip_address(row[0])
-
-                if ip.version == 4:
-                    list = ip4_list
-                else:
-                    list = ip6_list
-
-                list.append(ip.compressed)
-                if len(row[1]) > 0 and row[1] != '.':
-                    list.append(row[1])
-
-            except ValueError as exc:
-                logging.warning(str(exc))
-
-version = int(datetime.date.today().strftime('%Y%m%d'))
-
-out4_list = {}
-out4_list['name'] = 'List of known IPv4 public DNS resolvers'
-out4_list['version'] = version
-out4_list['description'] = 'Event contains one or more public IPv4 DNS resolvers as attribute with an IDS flag set'
-out4_list['matching_attributes'] = ['ip-src', 'ip-dst', 'domain|ip']
-out4_list['list'] = sorted(set(ip4_list))
+from generator import download_to_file, get_version, write_to_file
 
 
-out6_list = {}
-out6_list['name'] = 'List of known IPv6 public DNS resolvers'
-out6_list['version'] = version
-out6_list['description'] = 'Event contains one or more public IPv6 DNS resolvers as attribute with an IDS flag set'
-out6_list['matching_attributes'] = ['ip-src', 'ip-dst', 'domain|ip']
-out6_list['list'] = sorted(set(ip6_list))
+def process(file):
+    lipv4, lipv6, lhostname = get_lists(file)
+
+    # Public DNS Domains
+    publicdns_hostname_dst = 'public-dns-hostname'
+    publicdns_hostname_warninglist = {
+        'description': 'Event contains one or more public DNS resolvers (expressed as hostname) as attribute with an IDS flag set',
+        'name': 'List of known public DNS resolvers expressed as hostname',
+        'type': 'hostname',
+        'matching_attributes': ['hostname', 'domain', 'url', 'domain|ip']
+    }
+    generate(lhostname, publicdns_hostname_warninglist, publicdns_hostname_dst)
+
+    # Public DNS IPv4
+    publicdns_ipv4_dst = 'public-dns-v4'
+    publicdns_ipv4_warninglist = {
+        'description': 'Event contains one or more public IPv4 DNS resolvers as attribute with an IDS flag set',
+        'name': 'List of known IPv4 public DNS resolvers',
+        'type': 'string',
+        'matching_attributes': ['ip-src', 'ip-dst', 'domain|ip']
+    }
+    generate(lipv4, publicdns_ipv4_warninglist, publicdns_ipv4_dst)
+
+    # Public DNS IPv4
+    publicdns_ipv6_dst = 'public-dns-v6'
+    publicdns_ipv6_warninglist = {
+        'description': 'Event contains one or more public IPv6 DNS resolvers as attribute with an IDS flag set',
+        'name': 'List of known IPv6 public DNS resolvers',
+        'type': 'string',
+        'matching_attributes': ['ip-src', 'ip-dst', 'domain|ip']
+    }
+    generate(lipv6, publicdns_ipv6_warninglist, publicdns_ipv6_dst)
 
 
-# print(json.dumps(out4_list, indent=True))
-with open(dns4_path, 'w') as dns4_file:
-    dns4_file.write(json.dumps(out4_list, indent=4, sort_keys=True))
+def generate(data_list, warninglist, dst):
 
-with open(dns6_path, 'w') as dns6_file:
-    dns6_file.write(json.dumps(out6_list, indent=4, sort_keys=True))
+    warninglist['version'] = get_version()
+    warninglist['list'] = data_list
+
+    write_to_file(warninglist, dst)
+
+
+def get_lists(file):
+
+    with open(file) as csv_file:
+        servers_list = csv.reader(csv_file, delimiter=',', quotechar='"')
+
+        lipv4 = []
+        lipv6 = []
+        lhostname = []
+        for row in servers_list:
+            if row[7] in (None, ""):
+                try:
+                    ip = ipaddress.ip_address(row[0])
+
+                    if ip.version == 4:
+                        lipv4.append(ip.compressed)
+                    elif ip.version == 6:
+                        lipv6.append(ip.compressed)
+
+                    if row[1] not in (None, "", '.'):
+                        lhostname.append(row[1])
+                except ValueError as exc:
+                    logging.warning(str(exc))
+
+    return lipv4, lipv6, lhostname
+
+
+if __name__ == '__main__':
+    publicdns_url = 'https://public-dns.info/nameservers.csv'
+    publicdns_file = 'public-dns-nameservers.csv'
+
+    download_to_file(publicdns_url, publicdns_file)
+
+    process(publicdns_file)

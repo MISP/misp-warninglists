@@ -1,32 +1,41 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-import json
-import os
-import requests
-import datetime
-
-base_url="https://raw.githubusercontent.com/threatstop/crl-ocsp-whitelist/master/"
-uri_list=['crl-hostnames.txt','crl-ipv4.txt','crl-ipv6.txt','ocsp-hostnames.txt','ocsp-ipv4.txt','ocsp-ipv6.txt']
-dict=dict()
-dict['list']=list()
-def source_read_and_add(input_file):
-	output_list=list()
-	for item in input_file:
-		item=item.rstrip()
-		output_list.append(item)
-	return output_list
+from generator import download_to_file, get_version, write_to_file
 
 
-for uri in uri_list:
-	url = base_url + uri
-	r=requests.get(url)
-	dict['list'] += source_read_and_add(r.text)
+def process(files, dst):
 
-dict['type'] = "string"
-dict['matching_attributes']=["hostname","domain","ip-dst","ip-src","url", "domain|ip"]
-dict['name']="CRL Warninglist"
-dict['version']= int(datetime.date.today().strftime('%Y%m%d'))
-dict['description']="CRL Warninglist from threatstop (https://github.com/threatstop/crl-ocsp-whitelist/)"
-dict['list']=list(set(dict['list']))
+    warninglist = {
+        'type': "string",
+        'matching_attributes': ["hostname", "domain", "ip-dst", "ip-src", "url", "domain|ip"],
+        'name': "CRL Warninglist",
+        'version': get_version(),
+        'description': "CRL Warninglist from threatstop (https://github.com/threatstop/crl-ocsp-whitelist/)",
+        'list': []
+    }
 
-print(json.dumps(dict))
+    for file in files:
+        with open(file, 'r') as f:
+            ips = f.readlines()
+        for ip in ips:
+            warninglist['list'].append(ip.strip())
+
+    write_to_file(warninglist, dst)
+
+
+if __name__ == '__main__':
+    crl_ip_base_url = 'https://raw.githubusercontent.com/threatstop/crl-ocsp-whitelist/master/'
+    uri_list = ['crl-hostnames.txt', 'crl-ipv4.txt', 'crl-ipv6.txt',
+                'ocsp-hostnames.txt', 'ocsp-ipv4.txt', 'ocsp-ipv6.txt']
+    crl_ip_dst = 'crl-ip-hostname'
+
+    to_process = list()
+
+    for uri in uri_list:
+        url = crl_ip_base_url + uri
+        file = 'ocsp_{}'.format(uri)
+        download_to_file(url, file)
+        to_process.append(file)
+
+    process(to_process, crl_ip_dst)

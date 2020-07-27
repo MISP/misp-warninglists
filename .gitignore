@@ -1,0 +1,20 @@
+# files download by generators
+alexa_top-1m.csv.zip
+amazon_ip-ranges.json
+cisco_top-1m.csv.zip
+cloudflare_ips-v4.txt
+cloudflare_ips-v6.txt
+IncludedCACertificateReportPEMCSV.csv
+majestic_million.csv
+ocsp_crl-hostnames.txt
+ocsp_crl-ipv4.txt
+ocsp_crl-ipv6.txt
+ocsp_ocsp-hostnames.txt
+ocsp_ocsp-ipv4.txt
+ocsp_ocsp-ipv6.txt
+PublicAllIntermediateCertsWithPEMCSV.csv
+top500.domains.csv
+top500.pages.csv
+top-1m.csv.zip
+public-dns-nameservers.csv
+ms-azure.json
