@@ -5,7 +5,7 @@ import csv
 import ipaddress
 import logging
 
-from generator import download_to_file, get_version, write_to_file
+from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
 
 
 def process(file):
@@ -52,7 +52,7 @@ def generate(data_list, warninglist, dst):
 
 def get_lists(file):
 
-    with open(file) as csv_file:
+    with open(get_abspath_source_file(file)) as csv_file:
         servers_list = csv.reader(csv_file, delimiter=',', quotechar='"')
 
         lipv4 = []

@@ -387,6 +387,6 @@
     "domain|ip"
   ],
   "name": "CRL Warninglist",
-  "type": "substring",
-  "version": 20190301
+  "type": "string",
+  "version": 20200727
 }

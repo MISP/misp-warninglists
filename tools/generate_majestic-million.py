@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from generator import download_to_file, get_version, write_to_file
+from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
 
 
 def process(file, dst):
 
-    with open(file, newline='\n', encoding='utf-8', errors='replace') as csv_file:
+    with open(get_abspath_source_file(file), newline='\n', encoding='utf-8', errors='replace') as csv_file:
         sites = csv_file.readlines()[:10000]
 
     warninglist = {

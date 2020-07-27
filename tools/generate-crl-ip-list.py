@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from generator import download_to_file, get_version, write_to_file
+from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
 
 
 def process(files, dst):
@@ -16,7 +16,7 @@ def process(files, dst):
     }
 
     for file in files:
-        with open(file, 'r') as f:
+        with open(get_abspath_source_file(file), 'r') as f:
             ips = f.readlines()
         for ip in ips:
             warninglist['list'].append(ip.strip())

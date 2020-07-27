@@ -5,7 +5,7 @@ import json
 
 from bs4 import BeautifulSoup
 
-from generator import download, download_to_file, get_version, write_to_file
+from generator import download, download_to_file, get_version, write_to_file, get_abspath_source_file
 
 
 def get_json_url(page):
@@ -26,7 +26,7 @@ def process(file, dst):
         'type': 'cidr'
     }
 
-    with open(file, 'r') as json_file:
+    with open(get_abspath_source_file(file), 'r') as json_file:
         ms_azure_ip_list = json.load(json_file)
 
     for value in ms_azure_ip_list['values']:

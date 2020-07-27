@@ -3,11 +3,11 @@
 
 import json
 
-from generator import download_to_file, get_version, write_to_file
+from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
 
 
 def process(file, dst):
-    with open(file, 'r') as json_file:
+    with open(get_abspath_source_file(file), 'r') as json_file:
         amazon_aws_ip_list = json.load(json_file)
     l = []
 

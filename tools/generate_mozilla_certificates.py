@@ -5,7 +5,7 @@ import csv
 
 from OpenSSL.crypto import FILETYPE_PEM, load_certificate
 
-from generator import download_to_file, get_version, write_to_file
+from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
 
 
 def gethash(cert, digest):
@@ -14,7 +14,7 @@ def gethash(cert, digest):
 
 def process(file, dst, type):
     hashes = set()
-    with open(file, 'r') as f_in:
+    with open(get_abspath_source_file(file), 'r') as f_in:
         for obj in csv.DictReader(f_in):
             pem = obj['PEM Info'].strip("'").replace(
                 '\r', '').replace('\n\n', '\n')

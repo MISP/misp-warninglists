@@ -3,7 +3,7 @@
 
 import zipfile
 
-from generator import download_to_file, get_version, write_to_file
+from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
 
 
 def process(file):
@@ -53,7 +53,7 @@ def generate(sites, warninglist, dst):
 
 
 def get_lists(file):
-    with zipfile.ZipFile(file, 'r') as cisco_lists:
+    with zipfile.ZipFile(get_abspath_source_file(file), 'r') as cisco_lists:
         for name in cisco_lists.namelist():
             if name == "top-1m.csv":
                 with cisco_lists.open(name) as cisco_list:
