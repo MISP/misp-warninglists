@@ -21,7 +21,7 @@ def download_to_file(url, file):
 
         if(url_datetime > file_datetime):
             actual_download_to_file(url, file, user_agent)
-    except KeyError as ex:
+    except (KeyError, FileNotFoundError) as ex:
         logging.warning(str(ex))
         actual_download_to_file(url, file, user_agent)
         
