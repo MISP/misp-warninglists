@@ -787,7 +787,6 @@
     "MEN",
     "MENU",
     "MERCKMSD",
-    "METLIFE",
     "MG",
     "MH",
     "MIAMI",
@@ -1021,7 +1020,6 @@
     "RICH",
     "RICHARDLI",
     "RICOH",
-    "RIGHTATHOME",
     "RIL",
     "RIO",
     "RIP",
@@ -1519,5 +1517,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20200721
+  "version": 20200911
 }
