@@ -53,5 +53,5 @@
   ],
   "name": "List of known Wikimedia address ranges",
   "type": "cidr",
-  "version": 20200721
+  "version": 20200911
 }

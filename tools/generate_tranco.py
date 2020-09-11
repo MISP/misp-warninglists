@@ -3,7 +3,7 @@
 
 import zipfile
 
-from generator import download_to_file, get_version, write_to_file
+from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
 
 
 def process(file):
@@ -42,7 +42,7 @@ def generate(sites, warninglist, dst):
 
 
 def get_lists(file):
-    with zipfile.ZipFile(file, 'r') as tranco_lists:
+    with zipfile.ZipFile(get_abspath_source_file(file), 'r') as tranco_lists:
         for name in tranco_lists.namelist():
             if name == 'top-1m.csv':
                 with tranco_lists.open(name) as tranco:

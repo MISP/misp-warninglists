@@ -896,6 +896,7 @@
     "empireanime.ga",
     "emstjzh.com",
     "emz.net",
+    "enayu.com",
     "enterto.com",
     "envy17.com",
     "eoffice.top",
@@ -3143,5 +3144,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20200720
+  "version": 20200911
 }

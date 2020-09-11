@@ -1,4 +1,5 @@
 # files download by generators
+tmp/*
 alexa_top-1m.csv.zip
 amazon_ip-ranges.json
 cisco_top-1m.csv.zip
@@ -18,3 +19,5 @@ top500.pages.csv
 top-1m.csv.zip
 public-dns-nameservers.csv
 ms-azure.json
+moz-top500.pages.csv
+moz-top500.domains.csv

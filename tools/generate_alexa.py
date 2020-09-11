@@ -3,11 +3,12 @@
 
 import zipfile
 
-from generator import download_to_file, get_version, write_to_file
+from generator import (download_to_file, get_abspath_source_file, get_version,
+                       write_to_file)
 
 
 def process(file, dst):
-    with zipfile.ZipFile(file, 'r') as alexa_lists:
+    with zipfile.ZipFile(get_abspath_source_file(file), 'r') as alexa_lists:
         for name in alexa_lists.namelist():
             if name == "top-1m.csv":
                 with alexa_lists.open(name) as top:

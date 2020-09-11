@@ -787,7 +787,6 @@
     "MEN",
     "MENU",
     "MERCKMSD",
-    "METLIFE",
     "MG",
     "MH",
     "MIAMI",
@@ -1518,5 +1517,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20200811
+  "version": 20200911
 }

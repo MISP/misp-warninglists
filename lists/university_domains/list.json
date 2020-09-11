@@ -44,6 +44,7 @@
     "academiaga.ru",
     "academy.mia.by",
     "academy.sumy.ua",
+    "academyart.edu",
     "acadiau.ca",
     "accimt.ac.lk",
     "accrapolytechnic.edu.gh",
@@ -360,6 +361,7 @@
     "arosmu.org",
     "arquitecturaucv.cl",
     "art.ac.ir",
+    "art.edu",
     "art.olsztyn.pl",
     "artacademy.spb.ru",
     "arteiasi.ro",
@@ -3056,6 +3058,7 @@
     "impu.edu.cn",
     "imsciences.edu.pk",
     "imsu.edu.ng",
+    "imt-atlantique.net",
     "imtlucca.it",
     "imtu.edu",
     "imu.edu.cn",
@@ -9670,5 +9673,5 @@
   ],
   "name": "University domains",
   "type": "hostname",
-  "version": 20200721
+  "version": 20200911
 }

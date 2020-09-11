@@ -1,69 +1,44 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import requests
-import datetime
-import json
 import csv
-import os
+
+from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
+
 
 # TODO: Include MozRank
+def process(files, dst):
 
-moz_url_domains = "https://moz.com/top500/domains/csv"
-moz_url_pages = "https://moz.com/top500/pages/csv"
+    warninglist = {
+        'description': "Event contains one or more entries from the top 500 of the most used domains (Mozilla).",
+        'version': get_version(),
+        'name': "Top 500 domains and pages from https://moz.com/top500",
+        'type': 'hostname',
+        'list': [],
+        'matching_attributes': ['hostname', 'domain', 'uri', 'url']
+    }
 
-moz_file_domains = "/tmp/top500.domains.csv"
-moz_file_pages = "/tmp/top500.pages.csv"
+    for file in files:
+        with open(get_abspath_source_file(file)) as csv_file:
+            csv_reader = csv.reader(csv_file, delimiter=',')
+            for row in csv_reader:
+                v = row[1]
+                warninglist['list'].append(v.rstrip().rstrip('/'))
 
-user_agent = {"User-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0"}
+    write_to_file(warninglist, dst)
 
-rDomains = requests.get(moz_url_domains, headers=user_agent)
-rPages = requests.get(moz_url_pages, headers=user_agent)
-open(moz_file_domains, 'wb').write(rDomains.content)
-open(moz_file_pages, 'wb').write(rPages.content)
 
-moz_warninglist = {}
-version = int(datetime.date.today().strftime('%Y%m%d'))
+if __name__ == '__main__':
+    moz_domains_url = "https://moz.com/top-500/download/?table=top500Domains"
+    #moz_pages_url = "https://moz.com/top500/pages/csv"
 
-moz_warninglist['description'] = "Event contains one or more entries from the top 500 of the most used domains (Mozilla)."
-d = datetime.datetime.now()
-moz_warninglist['version'] = version
-moz_warninglist['name'] = "Top 500 domains and pages from https://moz.com/top500"
-moz_warninglist['type'] = 'hostname'
-moz_warninglist['list'] = []
-moz_warninglist['matching_attributes'] = ['hostname', 'domain', 'uri', 'url']
+    moz_domains_file = "moz-top500.domains.csv"
+    #moz_pages_file = "moz-top500.pages.csv"
 
-with open(moz_file_domains) as csv_file:
-    csv_reader = csv.reader(csv_file, delimiter=',')
-    line_count = 0
-    for row in csv_reader:
-        if line_count == 0:
-            #print(f'Column names are {", ".join(row)}')
-            line_count += 1
-        else:
-            #print(f'\t{row[0]}. {row[1]}, MozTrust: {row[5]}.')
-            v = row[1]
-            moz_warninglist['list'].append(v.rstrip().rstrip('/'))
-            line_count += 1
+    moz_dst = 'moz-top500'
 
-with open(moz_file_pages) as csv_file:
-    csv_reader = csv.reader(csv_file, delimiter=',')
-    line_count = 0
-    for row in csv_reader:
-        if line_count == 0:
-            #print(f'Column names are {", ".join(row)}')
-            line_count += 1
-        else:
-            #print(f'\t{row[0]}. {row[1]}, MozTrust: {row[5]}.')
-            v = row[1]
-            moz_warninglist['list'].append(v.rstrip().rstrip('/'))
-            line_count += 1
+    download_to_file(moz_domains_url, moz_domains_file)
+    #download_to_file(moz_pages_url, moz_pages_file)
 
-moz_warninglist['list'] = sorted(set(moz_warninglist['list']))
-print(json.dumps(moz_warninglist))
-
-try:
-    os.remove(moz_file_domains)
-    os.remove(moz_file_pages)
-except:
-    print(f'Perhaps {moz_file_domains}/{moz_file_pages} does not exist.')
+    #process([moz_domains_file, moz_pages_file], moz_dst)
+    process([moz_domains_file], moz_dst)
