@@ -13,7 +13,7 @@ def process(files, dst):
         'description': "Event contains one or more entries from the top 500 of the most used domains (Mozilla).",
         'version': get_version(),
         'name': "Top 500 domains and pages from https://moz.com/top500",
-        'type': 'hostname',
+        'type': 'string',
         'list': [],
         'matching_attributes': ['hostname', 'domain', 'uri', 'url']
     }
