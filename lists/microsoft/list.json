@@ -199,6 +199,6 @@
     "domain|ip"
   ],
   "name": "List of known microsoft domains",
-  "type": "hostname",
+  "type": "string",
   "version": 3
 }
