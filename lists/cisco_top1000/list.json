@@ -1009,6 +1009,6 @@
     "domain|ip"
   ],
   "name": "Top 1000 websites from Cisco Umbrella",
-  "type": "hostname",
+  "type": "string",
   "version": 20200916
 }
