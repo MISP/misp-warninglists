@@ -9672,6 +9672,6 @@
     "domain|ip"
   ],
   "name": "University domains",
-  "type": "hostname",
-  "version": 20200916
+  "type": "string",
+  "version": 20200923
 }
