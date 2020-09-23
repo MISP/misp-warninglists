@@ -40,7 +40,7 @@ def process(file):
 
 def generate(sites, warninglist, dst):
     warninglist['version'] = get_version()
-    warninglist['type'] = 'hostname'
+    warninglist['type'] = 'string'
     warninglist['matching_attributes'] = [
         'hostname', 'domain', 'url', 'domain|ip']
     warninglist['list'] = []
