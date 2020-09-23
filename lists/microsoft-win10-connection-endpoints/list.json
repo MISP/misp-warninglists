@@ -153,5 +153,5 @@
   ],
   "name": "List of known Windows 10 connection endpoints",
   "type": "string",
-  "version": 1
+  "version": 2
 }
