@@ -14,7 +14,7 @@ def process(file, dst):
         'version': get_version(),
         'description': 'Event contains one or more entries from the top 10K of the most used websites (Majestic Million).',
         'matching_attributes': ['hostname', 'domain'],
-        'type': 'hostname',
+        'type': 'string',
         'list': []
     }
 
