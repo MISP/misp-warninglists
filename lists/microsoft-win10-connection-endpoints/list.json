@@ -152,6 +152,6 @@
     "domain|ip"
   ],
   "name": "List of known Windows 10 connection endpoints",
-  "type": "hostname",
+  "type": "string",
   "version": 1
 }
