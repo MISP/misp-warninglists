@@ -675,6 +675,6 @@
     "domain|ip"
   ],
   "name": "List of known google domains",
-  "type": "hostname",
-  "version": 4
+  "type": "string",
+  "version": 5
 }

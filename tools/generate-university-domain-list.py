@@ -9,7 +9,7 @@ def process(url, dst):
     university_list = download(url).json()
 
     warninglist = {
-        'type': "hostname",
+        'type': "string",
         'name': "University domains",
         'matching_attributes': ['hostname', 'domain', 'url', 'domain|ip'],
         'version': get_version(),
