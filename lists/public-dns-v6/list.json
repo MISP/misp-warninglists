@@ -1,11 +1,12 @@
 {
   "description": "Event contains one or more public IPv6 DNS resolvers as attribute with an IDS flag set",
   "list": [
+    "2001:148f:fffe::1",
+    "2001:148f:ffff::1",
     "2001:1608:10:25::1c04:b12f",
     "2001:1608:10:25::9249:d69b",
     "2001:19f0:6401:b3d:5400:2ff:fe5a:fb9f",
     "2001:41d0:203:4b1f:2:2:2:2",
-    "2001:428:101:100:205:171:2:65",
     "2001:428::1",
     "2001:470:1f06:10b::2",
     "2001:470:1f1a:78e::2",
@@ -39,7 +40,6 @@
     "2620:fe::9",
     "2620:fe::fe",
     "2a00:1508:0:4::9",
-    "2a00:aa40:0:225::2",
     "2a01:238:42f6:ac00:2a29:4f7f:b6d:ef46",
     "2a01:3a0:53:53::",
     "2a01:4f8:141:316d::117",
@@ -49,11 +49,9 @@
     "2a02:6b8:0:1::feed:bad",
     "2a02:6b8::feed:bad",
     "2a02:c205:3001:4558::1",
-    "2a03:8600:1001::2",
     "2a09::",
     "2a09::1",
-    "2a0d:2a00:1::2",
-    "2a0d:2a00:2::2"
+    "2a0d:2a00:1::2"
   ],
   "matching_attributes": [
     "ip-src",
@@ -62,5 +60,5 @@
   ],
   "name": "List of known IPv6 public DNS resolvers",
   "type": "string",
-  "version": 20200916
+  "version": 20200929
 }
