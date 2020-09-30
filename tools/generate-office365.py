@@ -45,7 +45,9 @@ def get_lists(url):
     for service in service_list:
         for url in service.get('urls', []):
             if url.find(".*.") == -1:
-                lurls.append(url.replace('*', ''))
+                lurls.append(url.replace('*.', '').replace('*-', '').replace('*', ''))
+            else:
+                lurls.append(url.rsplit('.*.',1)[1])
         for ip in service.get('ips', []):
             lips.append(ip)
 
