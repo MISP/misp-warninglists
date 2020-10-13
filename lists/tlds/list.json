@@ -615,7 +615,6 @@
     "INSURANCE",
     "INSURE",
     "INT",
-    "INTEL",
     "INTERNATIONAL",
     "INTUIT",
     "INVESTMENTS",
@@ -1517,5 +1516,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20200930
+  "version": 20201013
 }

@@ -771,6 +771,7 @@
     "drivetagdev.com",
     "droolingfanboy.de",
     "dropcake.de",
+    "dropjar.com",
     "droplar.com",
     "dropmail.me",
     "dsiay.com",
@@ -2280,6 +2281,7 @@
     "rnailinator.com",
     "ro.lt",
     "robertspcrepair.com",
+    "robot-mail.com",
     "rollindo.agency",
     "ronnierage.net",
     "rootfest.net",
@@ -3143,5 +3145,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20200930
+  "version": 20201013
 }
