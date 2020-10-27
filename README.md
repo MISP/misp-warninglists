@@ -38,6 +38,7 @@ are available in one of the list. The list can be globally enabled or disabled i
 - [lists/mozilla-IntermediateCA](lists/mozilla-IntermediateCA) - Mozilla keystore Intermediate CA
 - [lists/multicast](lists/multicast) - known IPv4 multicast CIDR blocks
 - [lists/ovh-cluster](lists/ovh-cluster) - List of known OVH Cluster IP
+- [lists/phone_numbers](lists/phone_numbers) - Unattributed phone number, reserved for different purposes
 - [lists/public-dns-v4](lists/public-dns-v4) - IPv4 addresses and reverse of public DNS resolver
 - [lists/public-dns-v6](lists/public-dns-v6) - IPv6 addresses and reverse of public DNS resolver
 - [lists/rfc1918](lists/rfc1918) - RFC 1918 network subnets
