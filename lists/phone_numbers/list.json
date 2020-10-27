@@ -1,5 +1,5 @@
 {
-  "description": "Numbers that should never be attributed.",
+  "description": "Numbers that cannot be attributed because they reserved for different purposes.",
   "list": [
     "/((?:\\+|00)33?|0?)(19900|26191|35301|46571|53649|63998)([0-9]{4})/g",
     "/((?:\\+|00)33?|0?)(999)([0-9]{6})/g"
@@ -8,7 +8,7 @@
     "phone-number",
     "whois-registrant-phone"
   ],
-  "name": "List of phone numbers that cannot be used.",
+  "name": "Unattributed phone number.",
   "type": "regex",
   "version": 20201027
 }

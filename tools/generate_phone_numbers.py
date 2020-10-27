@@ -19,8 +19,8 @@ def generate_french_warninglist():
 
 def process(warninglist_name):
     description = {
-        'description': 'Numbers that should never be attributed.',
-        'name': 'List of phone numbers that cannot be used.',
+        'description': 'Numbers that cannot be attributed because they reserved for different purposes.',
+        'name': 'Unattributed phone number.',
         'matching_attributes': [
             'phone-number',
             'whois-registrant-phone'
