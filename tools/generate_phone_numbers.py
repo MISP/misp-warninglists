@@ -12,7 +12,7 @@ def generate_french_warninglist():
 
     # Warning list for numbers dedicated to audiovisual works: starting with any of the following list
     prefixes = ('19900', '26191', '35301', '46571', '53649', '63998')
-    warninglist.extend(regex % (prefix, '4') for prefix in prefixes)
+    warninglist.append(regex % ('|'.join(prefixes), '4'))
 
     return warninglist
 
