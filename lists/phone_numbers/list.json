@@ -1,0 +1,19 @@
+{
+  "description": "Numbers that should never be attributed.",
+  "list": [
+    "/((?:\\+|00)33?|0?)(19900)([0-9]{4})/g",
+    "/((?:\\+|00)33?|0?)(26191)([0-9]{4})/g",
+    "/((?:\\+|00)33?|0?)(35301)([0-9]{4})/g",
+    "/((?:\\+|00)33?|0?)(46571)([0-9]{4})/g",
+    "/((?:\\+|00)33?|0?)(53649)([0-9]{4})/g",
+    "/((?:\\+|00)33?|0?)(63998)([0-9]{4})/g",
+    "/((?:\\+|00)33?|0?)(999)([0-9]{6})/g"
+  ],
+  "matching_attributes": [
+    "phone-number",
+    "whois-registrant-phone"
+  ],
+  "name": "List of phone numbers that cannot be used.",
+  "type": "regex",
+  "version": 20201027
+}

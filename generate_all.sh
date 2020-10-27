@@ -21,6 +21,7 @@ python3 generate_moz-top500.py
 # Deprecate?
 #python3 generate-office365-cn.py > lists/microsoft-office365-cn/list.json
 python3 generate-office365.py
+python3 generate_phone_numbers.py
 python3 generate-publicdns.py
 python3 generate-tlds.py
 python3 generate_tranco.py
