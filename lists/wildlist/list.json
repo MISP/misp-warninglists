@@ -2,7 +2,6 @@
   "description": "List will exclude all subdomains from warninglist if domain or subdomain exist in other warning lists.",
   "list": [
     "!.appspot.com",
-    "!.cloudapp.azure.com",
     "!.sytes.net",
     "!.weebly.com"
   ],
