@@ -29,7 +29,8 @@
         "substring",
         "hostname",
         "cidr",
-        "regex"
+        "regex",
+        "wildmask"
       ],
       "type": "string"
     },
