@@ -3017,5 +3017,5 @@
   ],
   "name": "Specialized list of IPv6 addresses belonging to common VPN providers and datacenters",
   "type": "cidr",
-  "version": 20201016
+  "version": 20201028
 }
