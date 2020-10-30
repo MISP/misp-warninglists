@@ -1,6 +1,8 @@
 {
   "description": "Numbers that cannot be attributed because they reserved for different purposes.",
   "list": [
+    "/((?:\\+|00)1?)([0-9]{3})55501([0-9]{2})/g",
+    "/((?:\\+|00)1?)55501([0-9]{2})/g",
     "/((?:\\+|00)33?|0?)(19900|26191|35301|46571|53649|63998)([0-9]{4})/g",
     "/((?:\\+|00)33?|0?)(999)([0-9]{6})/g"
   ],
@@ -10,5 +12,5 @@
   ],
   "name": "Unattributed phone number.",
   "type": "regex",
-  "version": 20201028
+  "version": 20201030
 }

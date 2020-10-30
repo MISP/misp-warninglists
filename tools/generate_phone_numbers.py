@@ -4,6 +4,15 @@
 from generator import get_version, write_to_file
 
 
+def generate_american_warninglist():
+    # Warning list for fictitious telephone numbers in the US
+    warninglist = [
+        '/((?:\+|00)1?)55501([0-9]{2})/g',
+        '/((?:\+|00)1?)([0-9]{3})55501([0-9]{2})/g'
+    ]
+    return warninglist
+
+
 def generate_french_warninglist():
     regex = '/((?:\+|00)33?|0?)(%s)([0-9]{%s})/g'
 
@@ -30,6 +39,7 @@ def process(warninglist_name):
     }
 
     warninglist = generate_french_warninglist()
+    warninglist.extend(generate_american_warninglist())
     # The list can be extended by adding other entries: `warninglist.extend(generate_some_warninglist())`
 
     description['list'] = warninglist
