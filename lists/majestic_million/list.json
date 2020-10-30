@@ -10004,7 +10004,8 @@
   ],
   "matching_attributes": [
     "hostname",
-    "domain"
+    "domain",
+    "URL"
   ],
   "name": "Top 10K websites from Majestic Million",
   "type": "string",
