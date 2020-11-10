@@ -11,6 +11,7 @@
     "acompli.helpshift.com",
     "acompli.net",
     "activation.sls.microsoft.com",
+    "activity.windows.com",
     "ad.atdmt.com",
     "adl.windows.com",
     "admin.microsoft.com",
@@ -20,8 +21,8 @@
     "ajax.microsoft.com",
     "aka.ms",
     "amp.azure.net",
-    "amsglob0cdnstream11.azureedge.net",
-    "amsglob0cdnstream12.azureedge.net",
+    "amsglob0cdnstream13.azureedge.net",
+    "amsglob0cdnstream14.azureedge.net",
     "analytics.localytics.com",
     "api.dropboxapi.com",
     "api.localytics.com",
@@ -235,7 +236,6 @@
     "provisioningapi.microsoftonline.com",
     "public-trust.com",
     "publiccdn.sharepointonline.com",
-    "quicktips.skypeforbusiness.com",
     "r.office.microsoft.com",
     "r1.res.office365.com",
     "r3.res.office365.com",
@@ -299,6 +299,7 @@
     "videoplayercdn.osi.office.net",
     "view.atdmt.com",
     "view.officeapps.live.com",
+    "virtualearth.net",
     "visio.officeapps.live.com",
     "vortex.data.microsoft.com",
     "watson.microsoft.com",
@@ -340,5 +341,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20201028
+  "version": 20201110
 }

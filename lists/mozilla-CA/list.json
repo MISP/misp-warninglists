@@ -459,5 +459,5 @@
   ],
   "name": "Fingerprint of trusted CA certificates",
   "type": "string",
-  "version": 20201028
+  "version": 20201110
 }

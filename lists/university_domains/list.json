@@ -4108,6 +4108,7 @@
     "lpru.ac.th",
     "lpu.edu.ph",
     "lpu.in",
+    "lr.edu",
     "lrc.edu",
     "lrcc.edu",
     "lrguas.ch",
@@ -9688,5 +9689,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20201028
+  "version": 20201110
 }
