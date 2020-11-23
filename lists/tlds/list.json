@@ -634,7 +634,6 @@
     "JAGUAR",
     "JAVA",
     "JCB",
-    "JCP",
     "JE",
     "JEEP",
     "JETZT",
@@ -1517,5 +1516,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20201116
+  "version": 20201123
 }

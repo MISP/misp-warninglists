@@ -1784,6 +1784,7 @@
     "ehs-dresden.de",
     "ehsal.be",
     "ehu.es",
+    "ehu.eus",
     "eia.edu.co",
     "eicc.edu",
     "eichi-u.ac.jp",
@@ -4599,6 +4600,7 @@
     "mul.edu.pk",
     "mum.edu",
     "mums.ac.ir",
+    "mundragon.edu",
     "muni.cz",
     "muni.es",
     "muq.ac.ir",
@@ -9689,5 +9691,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20201116
+  "version": 20201123
 }
