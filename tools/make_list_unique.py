@@ -7,7 +7,7 @@ import json
 
 for p in Path('../lists/').glob('*/*.json'):
     with p.open() as _f:
-        warninglist = json.load(_f, encoding="utf-8")
+        warninglist = json.load(_f)
     warninglist['list'] = sorted(list(set(warninglist['list'])))
 
     with p.open('w') as _f:
