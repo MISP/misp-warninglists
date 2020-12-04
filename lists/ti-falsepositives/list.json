@@ -24656,5 +24656,5 @@
   ],
   "name": "Hashes that are often included in IOC lists but are false positives.",
   "type": "string",
-  "version": 0.1
+  "version": 1
 }
