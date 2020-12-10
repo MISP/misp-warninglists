@@ -2,7 +2,7 @@
 
 misp-warninglists are lists of well-known indicators that can be associated to potential false positives, errors or mistakes.
 
-[![Build Status](https://travis-ci.org/MISP/misp-warninglists.svg?branch=master)](https://travis-ci.org/MISP/misp-warninglists)
+![Python application](https://github.com/MISP/misp-warninglists/workflows/Python%20application/badge.svg)
 
 The warning lists are integrated in MISP to display an info/warning box at the event and attribute level if such indicators
 are available in one of the list. The list can be globally enabled or disabled in MISP following the practices of the organization.
