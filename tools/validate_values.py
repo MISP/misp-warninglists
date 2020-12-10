@@ -54,7 +54,7 @@ def validate(values: List[str], func) -> Iterator[Tuple[str, ValueError]]:
 def validate_file(p: Path) -> Iterator[InvalidListValue]:
     invalid_values = []
     with p.open() as f:
-        warninglist = json.load(f, encoding="utf-8")
+        warninglist = json.load(f)
         if warninglist["type"] == "cidr":
             invalid_values = validate(warninglist["list"], lambda value: ip_network(value, strict=True))
         elif warninglist["type"] == "regexp":
