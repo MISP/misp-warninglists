@@ -4694,6 +4694,7 @@
     "nashcc.edu",
     "nashuacc.edu",
     "natfiz.bg",
+    "nation.ac.th",
     "nationalmuseumindia.org",
     "nau.edu",
     "nau.edu.ua",
@@ -9601,7 +9602,6 @@
     "ynu.edu.cn",
     "yokkaichi-u.ac.jp",
     "yokohama-cu.ac.jp",
-    "yonok.ac.th",
     "yonsei.ac.kr",
     "york.ac.uk",
     "yorktech.edu",
@@ -9691,5 +9691,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20201123
+  "version": 20201210
 }
