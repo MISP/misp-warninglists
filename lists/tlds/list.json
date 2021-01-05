@@ -1513,5 +1513,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20201224
+  "version": 20210105
 }

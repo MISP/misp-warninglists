@@ -1,7 +1,6 @@
 {
   "description": "Office 365 URLs and IP address ranges",
   "list": [
-    "a.wunderlist.com",
     "aadrm.com",
     "account.activedirectory.windowsazure.com",
     "account.live.com",
@@ -329,7 +328,6 @@
     "www.onedrive.com",
     "www.outlook.com",
     "www.sway.com",
-    "www.wunderlist.com",
     "www.youtube.com",
     "yammer.com",
     "yammerusercontent.com"
@@ -341,5 +339,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20201224
+  "version": 20210105
 }
