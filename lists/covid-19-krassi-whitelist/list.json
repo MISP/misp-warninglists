@@ -63,7 +63,9 @@
     "covid19nasfavelas.meurio.org.br",
     "covid19sa.org",
     "covidcuritiba.com.br",
+    "covidwa.com",
     "cucovid19.ie",
+    "findyourphasewa.org",
     "foph-coronavirus.ch",
     "gov.ie",
     "hcacovid19form.com",
@@ -106,5 +108,5 @@
   ],
   "name": "Covid-19 Krassi's Whitelist",
   "type": "hostname",
-  "version": 20210115
+  "version": 20210329
 }

@@ -214,7 +214,6 @@
     "CARS",
     "CASA",
     "CASE",
-    "CASEIH",
     "CASH",
     "CASINO",
     "CAT",
@@ -463,7 +462,6 @@
     "FRONTIER",
     "FTR",
     "FUJITSU",
-    "FUJIXEROX",
     "FUN",
     "FUND",
     "FURNITURE",
@@ -849,7 +847,6 @@
     "NETWORK",
     "NEUSTAR",
     "NEW",
-    "NEWHOLLAND",
     "NEWS",
     "NEXT",
     "NEXTDIRECT",
@@ -1344,6 +1341,7 @@
     "XN--45BR5CYL",
     "XN--45BRJ9C",
     "XN--45Q11C",
+    "XN--4DBRK0CE",
     "XN--4GBRIM",
     "XN--54B7FTA0CC",
     "XN--55QW42G",
@@ -1513,5 +1511,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20210115
+  "version": 20210329
 }
