@@ -33023,5 +33023,5 @@
   ],
   "name": "Specialized list of IPv4 addresses belonging to common VPN providers and datacenters",
   "type": "cidr",
-  "version": 20210420
+  "version": 20210421
 }

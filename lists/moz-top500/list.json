@@ -511,5 +511,5 @@
   ],
   "name": "Top 500 domains and pages from https://moz.com/top500",
   "type": "string",
-  "version": 20210420
+  "version": 20210421
 }
