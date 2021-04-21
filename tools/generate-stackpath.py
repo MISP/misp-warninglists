@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
-
+import ipaddress
 
 def process(files, dst):
     warninglist = {
@@ -18,10 +18,14 @@ def process(files, dst):
         with open(get_abspath_source_file(file), 'r') as f:
             ips = f.readlines()
         for ip in ips:
-            warninglist['list'].append(ip.strip())
+            iptoadd = ip.strip()
+            try:
+                ipaddress.ip_network(ip.strip())
+            except ValueError as err:# if it's host given strip to the subnet
+                iptoadd = str(ipaddress.IPv6Interface(ip.strip()).ip)
+            warninglist['list'].append(iptoadd)
 
     write_to_file(warninglist, dst)
-
 
 if __name__ == '__main__':
     sp_base_url = "https://support.stackpath.com/hc/en-us/article_attachments/360083735711/"
