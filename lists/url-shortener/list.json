@@ -16,6 +16,7 @@
     "buff.ly",
     "buzurl.com",
     "cektkp.com",
+    "clck.ru",
     "cur.lv",
     "cut.by",
     "cutt.ly",
@@ -31,6 +32,7 @@
     "hit.my",
     "hyperurl.co",
     "id.tl",
+    "iii.im",
     "iplogger.com",
     "iplogger.org",
     "is.gd",
@@ -90,5 +92,5 @@
   ],
   "name": "List of known URL Shorteners domains",
   "type": "hostname",
-  "version": 7
+  "version": 8
 }
