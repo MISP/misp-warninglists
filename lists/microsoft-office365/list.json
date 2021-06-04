@@ -111,7 +111,6 @@
     "helpshift.com",
     "hip.live.com",
     "hockeyapp.net",
-    "home.office.com",
     "informationprotection.azure.com",
     "informationprotection.hosting.portal.azure.net",
     "insertmedia.bing.office.net",
@@ -134,7 +133,6 @@
     "mail.google.com",
     "mail.protection.outlook.com",
     "manage.microsoft.com",
-    "manage.office.com",
     "management.azure.com",
     "media.azure.net",
     "mem.gfx.ms",
@@ -207,7 +205,6 @@
     "policykeyservice.dc.ad.msft.net",
     "portal.cloudappsecurity.com",
     "portal.microsoftonline.com",
-    "portal.office.com",
     "powerapps.com",
     "privatecdn.sharepointonline.com",
     "prod.firstpartyapps.oaspapps.com.akadns.net",
@@ -244,7 +241,6 @@
     "signup.microsoft.com",
     "skype.com",
     "skypeforbusiness.com",
-    "skypemaprdsitus.trafficmanager.net",
     "smtp.office365.com",
     "social.yahooapis.com",
     "spoprod-a.akamaihd.net",
@@ -296,7 +292,6 @@
     "www.google-analytics.com",
     "www.googleapis.com",
     "www.microsoft.com",
-    "www.office.com",
     "www.onedrive.com",
     "www.outlook.com",
     "www.sway.com",
@@ -311,5 +306,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20210526
+  "version": 20210604
 }
