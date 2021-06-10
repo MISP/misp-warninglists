@@ -53,4 +53,4 @@ if __name__ == '__main__':
     process(Included_CA_file, Included_CA_dst, 'trusted CA certificates')
     download_to_file(CA_known_intermediate_url, CA_known_intermediate_file)
     process(CA_known_intermediate_file, CA_known_intermediate_dst,
-            'known intermedicate of trusted certificates')
+            'known intermediate of trusted certificates')

@@ -1,5 +1,5 @@
 {
-  "description": "Fingerprint of known intermedicate of trusted certificates taken from Mozilla's lists at https://wiki.mozilla.org/CA",
+  "description": "Fingerprint of known intermediate of trusted certificates taken from Mozilla's lists at https://wiki.mozilla.org/CA",
   "list": [
     "000555cdcf3b5faac807b975bf2eb722b77876c797385aec00a8767daaba900f",
     "000cf657b374afa36610df4a183c90b2",
@@ -7270,7 +7270,7 @@
     "x509-fingerprint-sha1",
     "x509-fingerprint-sha256"
   ],
-  "name": "Fingerprint of known intermedicate of trusted certificates",
+  "name": "Fingerprint of known intermediate of trusted certificates",
   "type": "string",
   "version": 20210604
 }
