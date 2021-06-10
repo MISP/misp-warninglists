@@ -15,13 +15,11 @@ def get_json_url(page):
     return retry_links[0].get('href')
 
 
-def process(file, dst):
-
+def process(file, dst, name: str, description: str):
     warninglist = {
-        'name': 'List of known Microsoft Azure Datacenter IP Ranges',
+        'name': name,
         'version': get_version(),
-        'description': 'Microsoft Azure Datacenter IP Ranges',
-        'list': [],
+        'description': description,
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip"],
         'type': 'cidr'
     }
@@ -29,17 +27,48 @@ def process(file, dst):
     with open(get_abspath_source_file(file), 'r') as json_file:
         ms_azure_ip_list = json.load(json_file)
 
+    values = []
     for value in ms_azure_ip_list['values']:
-        warninglist['list'] += value['properties']['addressPrefixes']
+        values += value['properties']['addressPrefixes']
+
+    warninglist['list'] = values
 
     write_to_file(warninglist, dst)
 
 
 if __name__ == '__main__':
-    ms_azure_url = 'https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519'
-    ms_azure_file = 'ms-azure.json'
-    ms_azure_dst = 'microsoft-azure'
+    TYPES = [
+        {
+            "name": "List of known Microsoft Azure Datacenter IP Ranges",
+            "description": "Microsoft Azure Datacenter IP Ranges",
+            "url": "https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519",
+            "file": "ms-azure.json",
+            "destination_folder": "microsoft-azure",
+        },
+        {
+            "name": "List of known Microsoft Azure US Government Cloud Datacenter IP Ranges",
+            "description": "Microsoft Azure US Government Cloud Datacenter IP Ranges",
+            "url": "https://www.microsoft.com/en-us/download/confirmation.aspx?id=57063",
+            "file": "ms-azure-us-gov.json",
+            "destination_folder": "microsoft-azure-us-gov",
+        },
+        {
+            "name": "List of known Microsoft Azure Germany Datacenter IP Ranges",
+            "description": "Microsoft Azure Germany Datacenter IP Ranges",
+            "url": "https://www.microsoft.com/en-us/download/confirmation.aspx?id=57064",
+            "file": "ms-azure-germany.json",
+            "destination_folder": "microsoft-azure-germany",
+        },
+        {
+            "name": "List of known Microsoft Azure China Datacenter IP Ranges",
+            "description": "Microsoft Azure China Datacenter IP Ranges",
+            "url": "https://www.microsoft.com/en-us/download/confirmation.aspx?id=57062",
+            "file": "ms-azure-china.json",
+            "destination_folder": "microsoft-azure-china",
+        }
+    ]
 
-    ms_azure_json_url = get_json_url(download(ms_azure_url))
-    download_to_file(ms_azure_json_url, ms_azure_file)
-    process(ms_azure_file, ms_azure_dst)
+    for type in TYPES:
+        ms_azure_json_url = get_json_url(download(type["url"]))
+        download_to_file(ms_azure_json_url, type["file"])
+        process(type["file"], type["destination_folder"], type["name"], type["description"])

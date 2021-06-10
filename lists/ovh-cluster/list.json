@@ -439,6 +439,6 @@
     "domain|ip"
   ],
   "name": "List of known Ovh Cluster IP",
-  "type": "string",
+  "type": "cidr",
   "version": 20180222
 }

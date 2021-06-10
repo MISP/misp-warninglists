@@ -10,7 +10,7 @@ from generator import download_to_file, get_version, write_to_file, get_abspath_
 def process(files, dst):
 
     warninglist = {
-        'description': "Event contains one or more entries from the top 500 of the most used domains (Mozilla).",
+        'description': "Event contains one or more entries from the top 500 of the most used domains from Moz.",
         'version': get_version(),
         'name': "Top 500 domains and pages from https://moz.com/top500",
         'type': 'string',

@@ -26,7 +26,7 @@ def process(file):
     publicdns_ipv4_warninglist = {
         'description': 'Event contains one or more public IPv4 DNS resolvers as attribute with an IDS flag set',
         'name': 'List of known IPv4 public DNS resolvers',
-        'type': 'string',
+        'type': 'cidr',
         'matching_attributes': ['ip-src', 'ip-dst', 'domain|ip']
     }
     generate(lipv4, publicdns_ipv4_warninglist, publicdns_ipv4_dst)
@@ -36,7 +36,7 @@ def process(file):
     publicdns_ipv6_warninglist = {
         'description': 'Event contains one or more public IPv6 DNS resolvers as attribute with an IDS flag set',
         'name': 'List of known IPv6 public DNS resolvers',
-        'type': 'string',
+        'type': 'cidr',
         'matching_attributes': ['ip-src', 'ip-dst', 'domain|ip']
     }
     generate(lipv6, publicdns_ipv6_warninglist, publicdns_ipv6_dst)
