@@ -29,7 +29,7 @@ python3 generate_tranco.py
 python3 generate-university-domain-list.py
 python3 generate-vpn.py
 python3 generate-wikimedia.py
-python3 genetate-second-level-tlds.py
+python3 generate-second-level-tlds.py
 python3 generate-google-gcp.py
 python3 generate-google-gmail-sending-ips.py
 popd
