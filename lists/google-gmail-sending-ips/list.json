@@ -1,5 +1,5 @@
 {
-  "description": "List of known gmail sending IP ranges (https://support.google.com/a/answer/27642?hl=en )",
+  "description": "List of known gmail sending IP ranges (https://support.google.com/a/answer/27642?hl=en)",
   "list": [
     "108.177.8.0/21",
     "172.217.0.0/19",
