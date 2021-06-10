@@ -13,6 +13,7 @@ are reused in many other open source projects.
 - [akamai/list.json](./lists/akamai/list.json) - **List of known Akamai IP ranges** - _Akamai IP ranges from BGP search_
 - [alexa/list.json](./lists/alexa/list.json) - **Top 1000 website from Alexa** - _Event contains one or more entries from the top 1000 of the most used website (Alexa)._
 - [amazon-aws/list.json](./lists/amazon-aws/list.json) - **List of known Amazon AWS IP address ranges** - _Amazon AWS IP address ranges (https://ip-ranges.amazonaws.com/ip-ranges.json)_
+- [apple/list.json](./lists/apple/list.json) - **List of known Apple IP ranges** - _IP ranges assigned to Apple_
 - [automated-malware-analysis/list.json](./lists/automated-malware-analysis/list.json) - **List of known domains used by automated malware analysis services & security vendors** - _Domains used by automated malware analysis services & security vendors_
 - [bank-website/list.json](./lists/bank-website/list.json) - **List of known bank domains** - _Event contains one or more entries of known banking website_
 - [cisco_top1000/list.json](./lists/cisco_top1000/list.json) - **Top 1000 websites from Cisco Umbrella** - _Event contains one or more entries from the top 1000 of the most used websites (Cisco Umbrella)._
@@ -33,21 +34,24 @@ are reused in many other open source projects.
 - [empty-hashes/list.json](./lists/empty-hashes/list.json) - **List of known hashes for empty files** - _Event contains one or more entries of empty files based on known hashed_
 - [fastly/list.json](./lists/fastly/list.json) - **List of known Fastly IP address ranges** - _Fastly IP address ranges (https://api.fastly.com/public-ip-list)_
 - [google-gcp/list.json](./lists/google-gcp/list.json) - **List of known GCP (Google Cloud Platform) IP address ranges** - _GCP (Google Cloud Platform) IP address ranges (https://www.gstatic.com/ipranges/cloud.json)_
-- [google-gmail-sending-ips/list.json](./lists/google-gmail-sending-ips/list.json) - **List of known gmail sending IP ranges** - _List of known gmail sending IP ranges (https://support.google.com/a/answer/27642?hl=en )_
+- [google-gmail-sending-ips/list.json](./lists/google-gmail-sending-ips/list.json) - **List of known Gmail sending IP ranges** - _List of known Gmail sending IP ranges (https://support.google.com/a/answer/27642?hl=en)_
 - [google/list.json](./lists/google/list.json) - **List of known google domains** - _Event contains one or more entries of known google domains_
 - [googlebot/list.json](./lists/googlebot/list.json) - **List of known Googlebot IP ranges** - _List of known Googlebot IP ranges (https://www.lifewire.com/what-is-the-ip-address-of-google-818153 )_
 - [ipv6-linklocal/list.json](./lists/ipv6-linklocal/list.json) - **List of IPv6 link local blocks** - _Event contains one or more entries part of the IPv6 link local prefix (RFC 4291)_
 - [majestic_million/list.json](./lists/majestic_million/list.json) - **Top 10K websites from Majestic Million** - _Event contains one or more entries from the top 10K of the most used websites (Majestic Million)._
 - [microsoft-attack-simulator/list.json](./lists/microsoft-attack-simulator/list.json) - **List of known Office 365 Attack Simulator used for phishing awareness campaigns** - _Office 365 URLs and IP address ranges used for their attack simulator in Office 365 Threat Intelligence_
+- [microsoft-azure-china/list.json](./lists/microsoft-azure-china/list.json) - **List of known Microsoft Azure China Datacenter IP Ranges** - _Microsoft Azure China Datacenter IP Ranges_
+- [microsoft-azure-germany/list.json](./lists/microsoft-azure-germany/list.json) - **List of known Microsoft Azure Germany Datacenter IP Ranges** - _Microsoft Azure Germany Datacenter IP Ranges_
+- [microsoft-azure-us-gov/list.json](./lists/microsoft-azure-us-gov/list.json) - **List of known Microsoft Azure US Government Cloud Datacenter IP Ranges** - _Microsoft Azure US Government Cloud Datacenter IP Ranges_
 - [microsoft-azure/list.json](./lists/microsoft-azure/list.json) - **List of known Microsoft Azure Datacenter IP Ranges** - _Microsoft Azure Datacenter IP Ranges_
 - [microsoft-office365-cn/list.json](./lists/microsoft-office365-cn/list.json) - **List of known Office 365 IP address ranges in China** - _Office 365 IP address ranges in China_
 - [microsoft-office365-ip/list.json](./lists/microsoft-office365-ip/list.json) - **List of known Office 365 IP address ranges** - _Office 365 IP address ranges_
 - [microsoft-office365/list.json](./lists/microsoft-office365/list.json) - **List of known Office 365 URLs** - _Office 365 URLs and IP address ranges_
 - [microsoft-win10-connection-endpoints/list.json](./lists/microsoft-win10-connection-endpoints/list.json) - **List of known Windows 10 connection endpoints** - _Event contains one or more entries of known Windows 10 connection endpoints (https://docs.microsoft.com/en-us/windows/privacy/manage-windows-endpoints)_
 - [microsoft/list.json](./lists/microsoft/list.json) - **List of known microsoft domains** - _Event contains one or more entries of known microsoft domains_
-- [moz-top500/list.json](./lists/moz-top500/list.json) - **Top 500 domains and pages from https://moz.com/top500** - _Event contains one or more entries from the top 500 of the most used domains (Mozilla)._
+- [moz-top500/list.json](./lists/moz-top500/list.json) - **Top 500 domains and pages from https://moz.com/top500** - _Event contains one or more entries from the top 500 of the most used domains from Moz._
 - [mozilla-CA/list.json](./lists/mozilla-CA/list.json) - **Fingerprint of trusted CA certificates** - _Fingerprint of trusted CA certificates taken from Mozilla's lists at https://wiki.mozilla.org/CA_
-- [mozilla-IntermediateCA/list.json](./lists/mozilla-IntermediateCA/list.json) - **Fingerprint of known intermedicate of trusted certificates** - _Fingerprint of known intermedicate of trusted certificates taken from Mozilla's lists at https://wiki.mozilla.org/CA_
+- [mozilla-IntermediateCA/list.json](./lists/mozilla-IntermediateCA/list.json) - **Fingerprint of known intermediate of trusted certificates** - _Fingerprint of known intermediate of trusted certificates taken from Mozilla's lists at https://wiki.mozilla.org/CA_
 - [multicast/list.json](./lists/multicast/list.json) - **List of RFC 5771 multicast CIDR blocks** - _Event contains one or more entries part of the RFC 5771 multicast CIDR blocks_
 - [nioc-filehash/list.json](./lists/nioc-filehash/list.json) - **List of known hashes for benign files** - _Event contains one or more benign files based on known hashes, see https://github.com/RichieB2B/nioc_
 - [ovh-cluster/list.json](./lists/ovh-cluster/list.json) - **List of known Ovh Cluster IP** - _OVH Cluster IP address (https://docs.ovh.com/fr/hosting/liste-des-adresses-ip-des-clusters-et-hebergements-web/)_
@@ -55,12 +59,12 @@ are reused in many other open source projects.
 - [public-dns-hostname/list.json](./lists/public-dns-hostname/list.json) - **List of known public DNS resolvers expressed as hostname** - _Event contains one or more public DNS resolvers (expressed as hostname) as attribute with an IDS flag set_
 - [public-dns-v4/list.json](./lists/public-dns-v4/list.json) - **List of known IPv4 public DNS resolvers** - _Event contains one or more public IPv4 DNS resolvers as attribute with an IDS flag set_
 - [public-dns-v6/list.json](./lists/public-dns-v6/list.json) - **List of known IPv6 public DNS resolvers** - _Event contains one or more public IPv6 DNS resolvers as attribute with an IDS flag set_
-- [rfc1918/list.json](./lists/rfc1918/list.json) - **List of RFC 1918 CIDR blocks** - _Event contains one or more entries part of the RFC 1918 CIDR blocks_
+- [rfc1918/list.json](./lists/rfc1918/list.json) - **List of RFC 1918 CIDR blocks** - _Event contains one or more entries part of the private network CIDR blocks (RFC 1918)_
 - [rfc3849/list.json](./lists/rfc3849/list.json) - **List of RFC 3849 CIDR blocks** - _Event contains one or more entries part of the IPv6 documentation prefix (RFC 3849)_
-- [rfc5735/list.json](./lists/rfc5735/list.json) - **List of RFC 5735 CIDR blocks** - _Event contains one or more entries part of the RFC 5735 CIDR blocks - Special Use IPv4 Addresses_
-- [rfc6598/list.json](./lists/rfc6598/list.json) - **List of RFC 6598 CIDR blocks** - _Event contains one or more entries part of the RFC 6598 CIDR blocks - Special Use IPv4 Addresses_
-- [rfc6761/list.json](./lists/rfc6761/list.json) - **List of RFC 6761 Special-Use Domain Names** - _Event contains one or more entries part of the RFC 6761 Special-Use Domain Names_
-- [second-level-tlds/list.json](./lists/second-level-tlds/list.json) - **Second level TLDs as known by Mozilla Foundation** - _Event contains one or more second level TLDs as attribute with an IDS flag set_
+- [rfc5735/list.json](./lists/rfc5735/list.json) - **List of RFC 5735 CIDR blocks** - _Event contains one or more entries part of the Special Use IPv4 Addresses CIDR blocks (RFC 5735)_
+- [rfc6598/list.json](./lists/rfc6598/list.json) - **List of RFC 6598 CIDR blocks** - _Event contains one or more entries part of the Shared Address Space CIDR blocks (RFC 6598)_
+- [rfc6761/list.json](./lists/rfc6761/list.json) - **List of RFC 6761 Special-Use Domain Names** - _Event contains one or more entries part of the Special-Use Domain Names (RFC 6761)_
+- [second-level-tlds/list.json](./lists/second-level-tlds/list.json) - **Second level TLDs as known by Mozilla Foundation** - _Event contains one or more second level TLDs as attribute with an IDS flag set._
 - [security-provider-blogpost/list.json](./lists/security-provider-blogpost/list.json) - **List of known security providers/vendors blog domain** - _Event contains one or more entries of known security providers/vendors blog domain with an IDS flag set_
 - [sinkholes/list.json](./lists/sinkholes/list.json) - **List of known sinkholes** - _List of known sinkholes_
 - [stackpath/list.json](./lists/stackpath/list.json) - **List of known Stackpath CDN IP ranges** - _List of known Stackpath (Highwinds) CDN IP ranges (https://support.stackpath.com/hc/en-us/articles/360001091666-Whitelist-CDN-WAF-IP-Blocks)_
@@ -74,6 +78,7 @@ are reused in many other open source projects.
 - [vpn-ipv6/list.json](./lists/vpn-ipv6/list.json) - **Specialized list of IPv6 addresses belonging to common VPN providers and datacenters** - _Specialized list of IPv6 addresses belonging to common VPN providers and datacenters_
 - [whats-my-ip/list.json](./lists/whats-my-ip/list.json) - **List of known domains to know external IP** - _Event contains one or more entries of known 'what's my ip' domains_
 - [wikimedia/list.json](./lists/wikimedia/list.json) - **List of known Wikimedia address ranges** - _Wikimedia address ranges (http://noc.wikimedia.org/conf/reverse-proxy.php.txt)_
+
 # Format of a warning list
 
 ~~~~json
