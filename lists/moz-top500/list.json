@@ -1,5 +1,5 @@
 {
-  "description": "Event contains one or more entries from the top 500 of the most used domains (Mozilla).",
+  "description": "Event contains one or more entries from the top 500 of the most used domains from Moz.",
   "list": [
     "20minutos.es",
     "4shared.com",
