@@ -1,5 +1,5 @@
 {
-  "description": "Event contains one or more entries part of the RFC 5735 CIDR blocks - Special Use IPv4 Addresses",
+  "description": "Event contains one or more entries part of the Special Use IPv4 Addresses CIDR blocks (RFC 5735)",
   "list": [
     "0.0.0.0/8",
     "10.0.0.0/8",
@@ -24,5 +24,5 @@
   ],
   "name": "List of RFC 5735 CIDR blocks",
   "type": "cidr",
-  "version": 3
+  "version": 4
 }
