@@ -132,7 +132,7 @@ def write_to_file(warninglist, dst):
             get_abspath_list_file(dst)))
     except Exception as exc:
         logging.error(
-            '{} General exception occured: {}.'.format(caller, str(exc)))
+            '{} General exception occurred: {}.'.format(caller, str(exc)))
 
 
 def main():
