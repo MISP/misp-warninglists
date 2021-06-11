@@ -9,7 +9,7 @@ python3 generate-amazon-aws.py
 python3 generate-cisco.py
 python3 generate-cloudflare.py
 python3 generate-covid.py
-python3 generate-crl-ip-list.py
+python3 generate-crl-ip-domains.py
 python3 generate-disposal.py
 # TODO: Google page on Wikipedia does not exist anymore
 # Suggestion came to use a passivetotal whois search for org:Google LLC

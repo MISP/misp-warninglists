@@ -2,3 +2,6 @@ beautifulsoup4==4.9.1
 pyOpenSSL==19.1.0
 python-dateutil==2.8.1
 requests==2.24.0
+dnspython
+pyasn1
+pyasn1-modules
