@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from generator import process_stream, get_version, write_to_file
+from generator import process_stream, get_version, write_to_file, consolidate_networks
 
 
 def process(url, dst):
@@ -9,7 +9,7 @@ def process(url, dst):
         'name': 'Specialized list of {} addresses belonging to common VPN providers and datacenters'.format(dst.split('-')[1].replace('ip', 'IP')),
         'version': get_version(),
         'description': 'Specialized list of {} addresses belonging to common VPN providers and datacenters'.format(dst.split('-')[1].replace('ip', 'IP')),
-        'list': process_stream(url),
+        'list': consolidate_networks(process_stream(url)),
         'type': 'cidr',
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
     }

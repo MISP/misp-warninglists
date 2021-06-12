@@ -5,7 +5,7 @@ import json
 
 from bs4 import BeautifulSoup
 
-from generator import download, download_to_file, get_version, write_to_file, get_abspath_source_file
+from generator import download, download_to_file, get_version, write_to_file, get_abspath_source_file, consolidate_networks
 
 
 def get_json_url(page):
@@ -31,7 +31,7 @@ def process(file, dst, name: str, description: str):
     for value in ms_azure_ip_list['values']:
         values += value['properties']['addressPrefixes']
 
-    warninglist['list'] = values
+    warninglist['list'] = consolidate_networks(values)
 
     write_to_file(warninglist, dst)
 
