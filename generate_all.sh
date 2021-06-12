@@ -18,8 +18,6 @@ python3 generate_majestic-million.py
 python3 generate-microsoft-azure.py
 python3 generate_mozilla_certificates.py
 python3 generate_moz-top500.py
-# Deprecate?
-#python3 generate-office365-cn.py > lists/microsoft-office365-cn/list.json
 python3 generate-office365.py
 python3 generate_phone_numbers.py
 python3 generate-publicdns.py
