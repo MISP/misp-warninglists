@@ -55,6 +55,16 @@ def get_lists(url):
 
 
 if __name__ == '__main__':
+    # For more info see https://docs.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-ip-web-service?view=o365-worldwide
     office365_url = 'https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7'
-
     process(office365_url)
+
+    office365_url_china = 'https://endpoints.office.com/endpoints/China?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7'
+    _, lips = get_lists(office365_url_china)
+    warninglist = {
+        'name': 'List of known Office 365 IP address ranges in China',
+        'description': 'Office 365 IP address ranges in China',
+        'type': 'cidr',
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
+    }
+    generate(lips, "microsoft-office365-cn", warninglist)
