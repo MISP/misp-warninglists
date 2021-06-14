@@ -166,7 +166,7 @@ def create_resolver() -> dns.resolver.Resolver:
     return resolver
 
 
-class Spf:
+class Dns:
     def __init__(self, resolver: dns.resolver.Resolver):
         self.__resolver = resolver
 
@@ -189,35 +189,35 @@ class Spf:
                 output["ranges"].append(ipaddress.ip_network(part.split(":", 1)[1], strict=False))
         return output
 
-    def _get_ip_for_domain(self, domain: str) -> List[Union[ipaddress.IPv4Network, ipaddress.IPv6Network]]:
+    def get_ip_for_domain(self, domain: str) -> List[Union[ipaddress.IPv4Address, ipaddress.IPv6Address]]:
         ranges = []
         try:
             for ip in self.__resolver.query(domain, "a"):
-                ranges.append(ipaddress.ip_network(str(ip)))
-        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.exception.Timeout):
+                ranges.append(ipaddress.IPv4Address(str(ip)))
+        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.exception.Timeout, dns.resolver.NoNameservers):
             pass
 
         try:
             for ip in self.__resolver.query(domain, "aaaa"):
-                ranges.append(ipaddress.ip_network(str(ip)))
-        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.exception.Timeout):
+                ranges.append(ipaddress.IPv6Address(str(ip)))
+        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.exception.Timeout, dns.resolver.NoNameservers):
             pass
 
         return ranges
 
-    def _get_mx_ips_for_domain(self, domain: str) -> List[Union[ipaddress.IPv4Network, ipaddress.IPv6Network]]:
+    def get_mx_ips_for_domain(self, domain: str) -> List[Union[ipaddress.IPv4Address, ipaddress.IPv6Address]]:
         ranges = []
         try:
             for rdata in self.__resolver.query(domain, "mx"):
-                ranges += self._get_ip_for_domain(rdata.exchange)
-        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.exception.Timeout):
+                ranges += self.get_ip_for_domain(rdata.exchange)
+        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.exception.Timeout, dns.resolver.NoNameservers):
             pass
         return ranges
 
-    def get_ip_ranges(self, domain: str) -> List[Union[ipaddress.IPv4Network, ipaddress.IPv6Network]]:
+    def get_ip_ranges_from_spf(self, domain: str) -> List[Union[ipaddress.IPv4Network, ipaddress.IPv6Network]]:
         try:
             txt_records = self.__resolver.query(domain, "TXT")
-        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.exception.Timeout) as e:
+        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.exception.Timeout, dns.resolver.NoNameservers) as e:
             logging.info("Could not fetch TXT record for domain {}: {}".format(domain, str(e)))
             return []
 
@@ -231,13 +231,13 @@ class Spf:
             ranges += parsed["ranges"]
 
             for include in parsed["include"]:
-                ranges += self.get_ip_ranges(include)
+                ranges += self.get_ip_ranges_from_spf(include)
 
             for domain in parsed["a"]:
-                ranges += self._get_ip_for_domain(domain)
+                ranges += map(ipaddress.ip_network, self.get_ip_for_domain(domain))
 
             for mx in parsed["mx"]:
-                ranges += self._get_mx_ips_for_domain(mx)
+                ranges += map(ipaddress.ip_network, self.get_mx_ips_for_domain(mx))
 
         return ranges
 

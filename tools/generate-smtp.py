@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import multiprocessing.dummy
-from generator import get_version, write_to_file, Spf, consolidate_networks, create_resolver
+from generator import get_version, write_to_file, Dns, consolidate_networks, create_resolver
 
 # Source: https://github.com/mailcheck/mailcheck/wiki/List-of-Popular-Domains
 domains = [
@@ -68,20 +68,33 @@ domains = [
 
 
 if __name__ == '__main__':
-    spf = Spf(create_resolver())
+    dns = Dns(create_resolver())
 
-    ranges = []
-    p = multiprocessing.dummy.Pool(20)
-    for domain_ranges in p.map(lambda d: spf.get_ip_ranges(d), domains):
-        ranges.extend(domain_ranges)
+    spf_ranges = []
+    p = multiprocessing.dummy.Pool(40)
+    for domain_ranges in p.map(lambda d: dns.get_ip_ranges_from_spf(d), domains):
+        spf_ranges.extend(domain_ranges)
 
     warninglist = {
         'name': "List of known SMTP sending IP ranges",
         'version': get_version(),
-        'description': "List of IP ranges for known SMTP servers-",
+        'description': "List of IP ranges for known SMTP servers.",
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip"],
         'type': 'cidr',
-        'list': consolidate_networks(ranges),
+        'list': consolidate_networks(spf_ranges),
     }
-
     write_to_file(warninglist, "smtp-sending-ips")
+
+    mx_ips = []
+    for domain_ranges in p.map(lambda d: dns.get_mx_ips_for_domain(d), domains):
+        mx_ips.extend(domain_ranges)
+
+    warninglist = {
+        'name': "List of known SMTP receiving IP addresses",
+        'version': get_version(),
+        'description': "List of IP addresses for known SMTP servers.",
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"],
+        'type': 'cidr',
+        'list': map(str, mx_ips),
+    }
+    write_to_file(warninglist, "smtp-receiving-ips")

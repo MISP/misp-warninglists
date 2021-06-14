@@ -30,7 +30,7 @@ python3 generate-wikimedia.py
 python3 generate-second-level-tlds.py
 python3 generate-google-gcp.py
 python3 generate-google-gmail-sending-ips.py
-python3 generate-smtp-sending-ips.py
+python3 generate-smtp.py
 popd
 
 ./jq_all_the_things.sh
