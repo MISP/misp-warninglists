@@ -26,7 +26,8 @@ are reused in many other open source projects.
 - [covid-19-cyber-threat-coalition-whitelist/list.json](./lists/covid-19-cyber-threat-coalition-whitelist/list.json) - **Covid-19 Cyber Threat Coalition's Whitelist** - _The Cyber Threat Coalition's whitelist of COVID-19 related websites._
 - [covid-19-krassi-whitelist/list.json](./lists/covid-19-krassi-whitelist/list.json) - **Covid-19 Krassi's Whitelist** - _Krassimir's Covid-19 whitelist of known good Covid-19 related websites._
 - [covid/list.json](./lists/covid/list.json) - **Valid covid-19 related domains** - _Maintained using different lists (such as Jaime Blasco's and Krassimir's lists)._
-- [crl-ip-hostname/list.json](./lists/crl-ip-hostname/list.json) - **CRL Warninglist** - _CRL Warninglist from threatstop (https://github.com/threatstop/crl-ocsp-whitelist/)_
+- [crl-hostname/list.json](./lists/crl-hostname/list.json) - **CRL and OCSP domains** - _Domains that belongs to CRL or OCSP_
+- [crl-ip/list.json](./lists/crl-ip/list.json) - **CRL and OCSP IP addresses** - _IP addresses that belongs to CRL or OCSP_
 - [dax30/list.json](./lists/dax30/list.json) - **List of known dax30 webpages** - _Event contains one or more entries of known dax30 webpages_
 - [disposable-email/list.json](./lists/disposable-email/list.json) - **List of disposable email domains** - _List of disposable email domains_
 - [dynamic-dns/list.json](./lists/dynamic-dns/list.json) - **List of known dynamic DNS domains** - _Event contains one or more entries of known dynamic DNS domains._
