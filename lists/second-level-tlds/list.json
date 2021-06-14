@@ -4792,6 +4792,8 @@
     "media.hu",
     "media.museum",
     "media.pl",
+    "mediatech.by",
+    "mediatech.dev",
     "medical.museum",
     "medicina.bo",
     "medio-campidano.it",
@@ -7241,6 +7243,7 @@
     "shonai.yamagata.jp",
     "shoo.okayama.jp",
     "shop",
+    "shop.brendly.rs",
     "shop.ht",
     "shop.hu",
     "shop.pl",
@@ -9178,5 +9181,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20210610
+  "version": 20210614
 }

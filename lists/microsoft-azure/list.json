@@ -2346,5 +2346,5 @@
   ],
   "name": "List of known Microsoft Azure Datacenter IP Ranges",
   "type": "cidr",
-  "version": 20210613
+  "version": 20210614
 }

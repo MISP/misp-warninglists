@@ -31,5 +31,5 @@
   ],
   "name": "List of known Cloudflare IP ranges",
   "type": "cidr",
-  "version": 20210604
+  "version": 20210614
 }
