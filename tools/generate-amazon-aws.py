@@ -3,7 +3,7 @@
 
 import json
 
-from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
+from generator import download_to_file, get_version, write_to_file, get_abspath_source_file, consolidate_networks
 
 
 def process(file, dst):
@@ -22,7 +22,7 @@ def process(file, dst):
         'version': get_version(),
         'description': 'Amazon AWS IP address ranges (https://ip-ranges.amazonaws.com/ip-ranges.json)',
         'type': 'cidr',
-        'list': l,
+        'list': consolidate_networks(l),
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
     }
 

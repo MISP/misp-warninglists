@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from generator import download, get_version, write_to_file
+from generator import download, get_version, write_to_file, consolidate_networks
 
 
 def process(url):
@@ -25,7 +25,7 @@ def process(url):
         'type': 'cidr',
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
     }
-    generate(lips, office365_ips_dst, office365_ips_warninglist)
+    generate(consolidate_networks(lips), office365_ips_dst, office365_ips_warninglist)
 
 
 def generate(data_list, dst, warninglist):
@@ -67,4 +67,4 @@ if __name__ == '__main__':
         'type': 'cidr',
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
     }
-    generate(lips, "microsoft-office365-cn", warninglist)
+    generate(consolidate_networks(lips), "microsoft-office365-cn", warninglist)

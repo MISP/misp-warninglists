@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import datetime
+import ipaddress
 import json
 import logging
 from inspect import currentframe, getframeinfo, getmodulename, stack
@@ -124,15 +125,33 @@ def write_to_file(warninglist, dst):
     caller = getmodulename(frame_records[1]).upper()
 
     try:
+        warninglist = unique_sorted_warninglist(warninglist)
         with open(get_abspath_list_file(dst), 'w') as data_file:
-            json.dump(unique_sorted_warninglist(warninglist),
-                      data_file, indent=2, sort_keys=True)
+            json.dump(warninglist, data_file, indent=2, sort_keys=True)
             data_file.write("\n")
         logging.info('New warninglist written to {}.'.format(
             get_abspath_list_file(dst)))
     except Exception as exc:
         logging.error(
             '{} General exception occurred: {}.'.format(caller, str(exc)))
+
+
+def consolidate_networks(networks):
+    # Convert to IpNetwork
+    ipv4_networks = []
+    ipv6_networks = []
+    for network in networks:
+        network = ipaddress.ip_network(network)
+        if network.version == 4:
+            ipv4_networks.append(network)
+        else:
+            ipv6_networks.append(network)
+
+    # Collapse
+    networks_to_keep = list(map(str, ipaddress.collapse_addresses(ipv4_networks)))
+    networks_to_keep.extend(map(str, ipaddress.collapse_addresses(ipv6_networks)))
+
+    return networks_to_keep
 
 
 def main():

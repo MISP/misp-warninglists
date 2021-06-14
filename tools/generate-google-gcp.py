@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import json
-from generator import download, get_version, write_to_file
+from generator import download, get_version, write_to_file, consolidate_networks
 
 
 if __name__ == '__main__':
@@ -17,7 +17,7 @@ if __name__ == '__main__':
         'description': "GCP (Google Cloud Platform) IP address ranges (https://www.gstatic.com/ipranges/cloud.json)",
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip"],
         'type': 'cidr',
-        'list': ranges,
+        'list': consolidate_networks(ranges),
     }
 
     write_to_file(warninglist, "google-gcp")
