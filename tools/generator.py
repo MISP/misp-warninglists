@@ -1,14 +1,14 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import datetime
 import ipaddress
 import json
 import logging
 from inspect import currentframe, getframeinfo, getmodulename, stack
 from os import mkdir, path
+from typing import List, Union
 
 import requests
+import dns.exception
+import dns.resolver
 from dateutil.parser import parse as parsedate
 
 
@@ -137,21 +137,109 @@ def write_to_file(warninglist, dst):
 
 
 def consolidate_networks(networks):
-    # Convert to IpNetwork
+    # Split to IPv4 and IPv6 ranges
     ipv4_networks = []
     ipv6_networks = []
     for network in networks:
-        network = ipaddress.ip_network(network)
+        if isinstance(network, str):
+            # Convert string to IpNetwork
+            network = ipaddress.ip_network(network)
+
         if network.version == 4:
             ipv4_networks.append(network)
         else:
             ipv6_networks.append(network)
 
-    # Collapse
+    # Collapse ranges
     networks_to_keep = list(map(str, ipaddress.collapse_addresses(ipv4_networks)))
     networks_to_keep.extend(map(str, ipaddress.collapse_addresses(ipv6_networks)))
 
     return networks_to_keep
+
+
+def create_resolver() -> dns.resolver.Resolver:
+    resolver = dns.resolver.Resolver(configure=False)
+    resolver.timeout = 30
+    resolver.lifetime = 30
+    resolver.cache = dns.resolver.LRUCache()
+    resolver.nameservers = ["193.17.47.1", "185.43.135.1"]  # CZ.NIC nameservers
+    return resolver
+
+
+class Dns:
+    def __init__(self, resolver: dns.resolver.Resolver):
+        self.__resolver = resolver
+
+    def _parse_spf(self, domain: str, spf: str) -> dict:
+        output = {"include": [], "ranges": [], "a": [], "mx": []}
+        for part in spf.split(" "):
+            if part.startswith("include:"):
+                output["include"].append(part.split(":", 1)[1])
+            elif part.startswith("redirect="):
+                output["include"].append(part.split("=", 1)[1])
+            elif part == "a":
+                output["a"].append(domain)
+            elif part.startswith("a:"):
+                output["a"].append(part.split(":", 1)[1])
+            elif part == "mx":
+                output["mx"].append(domain)
+            elif part.startswith("mx:"):
+                output["mx"].append(part.split(":", 1)[1])
+            elif part.startswith("ip4:") or part.startswith("ip6:"):
+                output["ranges"].append(ipaddress.ip_network(part.split(":", 1)[1], strict=False))
+        return output
+
+    def get_ip_for_domain(self, domain: str) -> List[Union[ipaddress.IPv4Address, ipaddress.IPv6Address]]:
+        ranges = []
+        try:
+            for ip in self.__resolver.query(domain, "a"):
+                ranges.append(ipaddress.IPv4Address(str(ip)))
+        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.exception.Timeout, dns.resolver.NoNameservers):
+            pass
+
+        try:
+            for ip in self.__resolver.query(domain, "aaaa"):
+                ranges.append(ipaddress.IPv6Address(str(ip)))
+        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.exception.Timeout, dns.resolver.NoNameservers):
+            pass
+
+        return ranges
+
+    def get_mx_ips_for_domain(self, domain: str) -> List[Union[ipaddress.IPv4Address, ipaddress.IPv6Address]]:
+        ranges = []
+        try:
+            for rdata in self.__resolver.query(domain, "mx"):
+                ranges += self.get_ip_for_domain(rdata.exchange)
+        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.exception.Timeout, dns.resolver.NoNameservers):
+            pass
+        return ranges
+
+    def get_ip_ranges_from_spf(self, domain: str) -> List[Union[ipaddress.IPv4Network, ipaddress.IPv6Network]]:
+        try:
+            txt_records = self.__resolver.query(domain, "TXT")
+        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.exception.Timeout, dns.resolver.NoNameservers) as e:
+            logging.info("Could not fetch TXT record for domain {}: {}".format(domain, str(e)))
+            return []
+
+        ranges = []
+        for rdata in txt_records:
+            record = "".join([s.decode("utf-8") for s in rdata.strings])
+            if not record.startswith("v=spf1"):
+                continue
+
+            parsed = self._parse_spf(domain, record)
+            ranges += parsed["ranges"]
+
+            for include in parsed["include"]:
+                ranges += self.get_ip_ranges_from_spf(include)
+
+            for domain in parsed["a"]:
+                ranges += map(ipaddress.ip_network, self.get_ip_for_domain(domain))
+
+            for mx in parsed["mx"]:
+                ranges += map(ipaddress.ip_network, self.get_mx_ips_for_domain(mx))
+
+        return ranges
 
 
 def main():

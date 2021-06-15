@@ -7,9 +7,9 @@ from OpenSSL.crypto import FILETYPE_PEM, load_certificate, X509
 from pyasn1.codec.der.decoder import decode as asn1_decoder
 from pyasn1_modules.rfc2459 import CRLDistPointsSyntax, AuthorityInfoAccessSyntax
 from typing import List, Set
-from dns.resolver import Resolver, NoAnswer, NXDOMAIN
+from dns.resolver import NoAnswer, NXDOMAIN
 from dns.exception import Timeout
-from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
+from generator import download_to_file, get_version, write_to_file, get_abspath_source_file, create_resolver
 
 
 def get_domain(url: str) -> str:
@@ -44,9 +44,7 @@ def get_crl_ocsp_domains(cert: X509) -> List[str]:
 
 
 def get_ips_from_domain(domain: str) -> Set[str]:
-    resolver = Resolver()
-    resolver.timeout = 5
-    resolver.lifetime = 5
+    resolver = create_resolver()
 
     ips = set()
 
@@ -65,10 +63,6 @@ def get_ips_from_domain(domain: str) -> Set[str]:
 
 
 def get_ips_from_domains(domains) -> Set[str]:
-    resolver = Resolver()
-    resolver.timeout = 5
-    resolver.lifetime = 5
-
     p = multiprocessing.dummy.Pool(10)
     ips = set()
     for ips_for_domain in p.map(get_ips_from_domain, domains):
