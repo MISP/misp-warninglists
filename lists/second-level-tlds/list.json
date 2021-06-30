@@ -358,7 +358,6 @@
     "appspaceusercontent.com",
     "appspot.com",
     "appudo.net",
-    "aprendemas.cl",
     "aq",
     "aq.it",
     "aquarelle",
@@ -1740,6 +1739,7 @@
     "dd-dns.de",
     "ddns.me",
     "ddns.net",
+    "ddns5.com",
     "ddnsfree.com",
     "ddnsgeek.com",
     "ddnsking.com",
@@ -9181,5 +9181,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20210614
+  "version": 20210630
 }

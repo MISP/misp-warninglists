@@ -1507,5 +1507,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20210614
+  "version": 20210630
 }
