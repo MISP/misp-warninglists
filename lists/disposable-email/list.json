@@ -3045,6 +3045,7 @@
     "web2mailco.com",
     "webcontact-france.eu",
     "webemail.me",
+    "webhook.site",
     "webm4il.info",
     "webmail24.top",
     "webtrip.ch",
@@ -3260,5 +3261,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20210630
+  "version": 20210713
 }

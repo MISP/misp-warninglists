@@ -223,7 +223,6 @@
     "dns.shecan.ir.",
     "dns.taipei.",
     "dns.vaguthu.mv.",
-    "dns01.iad01.acndigital.net.",
     "dns01.prd.kista.ovpn.com.",
     "dns1.adam.es.",
     "dns1.begzar.ir.",
@@ -688,5 +687,5 @@
   ],
   "name": "List of known public DNS resolvers expressed as hostname",
   "type": "hostname",
-  "version": 20210630
+  "version": 20210713
 }
