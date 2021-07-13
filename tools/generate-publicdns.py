@@ -7,6 +7,7 @@ import logging
 
 from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
 
+golden_servers_ipv4 = ['9.9.9.9', '8.8.8.8']
 
 def process(file):
     lipv4, lipv6, lhostname = get_lists(file)
@@ -72,6 +73,10 @@ def get_lists(file):
                         lhostname.append(row[1])
                 except ValueError as exc:
                     logging.warning(str(exc))
+
+        for golden in golden_servers_ipv4:
+            if golden not in lipv4:
+                lipv4.append(golden)
 
     return lipv4, lipv6, lhostname
 
