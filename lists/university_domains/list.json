@@ -2449,6 +2449,7 @@
     "grenoble-em.com",
     "grenoble-inp.fr",
     "gretsauniversity.ac.ke",
+    "griffith.edu.au",
     "grinnell.edu",
     "grossmont.edu",
     "groupe-esa.com",
@@ -2479,7 +2480,6 @@
     "gturp.spb.ru",
     "gu.ac.ug",
     "gu.edu.af",
-    "gu.edu.au",
     "gu.edu.lb",
     "gu.edu.pk",
     "gu.nic.in",
@@ -9795,5 +9795,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20210719
+  "version": 20210731
 }

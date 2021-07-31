@@ -15,6 +15,7 @@
     "adl.windows.com",
     "admin.microsoft.com",
     "admin.onedrive.com",
+    "admin.sharepoint.com",
     "adminwebservice.microsoftonline.com",
     "ajax.aspnetcdn.com",
     "ajax.microsoft.com",
@@ -304,5 +305,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20210719
+  "version": 20210731
 }

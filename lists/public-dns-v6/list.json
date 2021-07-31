@@ -58,5 +58,5 @@
   ],
   "name": "List of known IPv6 public DNS resolvers",
   "type": "cidr",
-  "version": 20210719
+  "version": 20210731
 }
