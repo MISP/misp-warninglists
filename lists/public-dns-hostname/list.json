@@ -687,5 +687,5 @@
   ],
   "name": "List of known public DNS resolvers expressed as hostname",
   "type": "hostname",
-  "version": 20210731
+  "version": 20210817
 }
