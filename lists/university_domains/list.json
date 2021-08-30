@@ -1671,6 +1671,7 @@
     "dstu.edu.ru",
     "dsu.ac.kr",
     "dsu.edu",
+    "dsu.edu.pk",
     "dswe.wroc.pl",
     "dtcc.edu",
     "dti.sk",
@@ -3312,6 +3313,7 @@
     "itq.edu.mx",
     "its.ac.id",
     "itslp.edu.mx",
+    "itsncg.edu.mx",
     "itsoeh.edu.mx",
     "itson.mx",
     "itt-tech.edu",
@@ -6325,6 +6327,7 @@
     "smcsc.edu",
     "smcvt.edu",
     "smith.edu",
+    "smiu.edu.pk",
     "smkfomra.net",
     "smmu.edu.cn",
     "smolny-un.spb.ru",
@@ -9804,5 +9807,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20210817
+  "version": 20210830
 }
