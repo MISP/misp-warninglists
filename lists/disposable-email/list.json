@@ -467,6 +467,7 @@
     "boxformail.in",
     "boximail.com",
     "boxtemp.com.br",
+    "bptfp.net",
     "brandallday.net",
     "brasx.org",
     "breakthru.com",
@@ -3261,5 +3262,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20210830
+  "version": 20210917
 }

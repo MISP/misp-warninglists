@@ -364,6 +364,7 @@
     "art.olsztyn.pl",
     "artacademy.spb.ru",
     "arteiasi.ro",
+    "arts.ac.uk",
     "arts.bg.ac.rs",
     "arts7.hu",
     "artuklu.edu.tr",
@@ -4193,6 +4194,7 @@
     "lu.ac.ir",
     "lu.lv",
     "lu.se",
+    "luanar.ac.mw",
     "luc.edu",
     "lucknowuniv.org",
     "luiss.it",
@@ -4652,6 +4654,7 @@
     "mu.edu.tr",
     "mu.fapenet.org",
     "mubabol.ac.ir",
+    "mubas.ac.mw",
     "muc.edu",
     "muc.edu.iq",
     "muccobs.ac.tz",
@@ -4686,6 +4689,7 @@
     "muskegoncc.edu",
     "muskingum.edu",
     "must.ac.ke",
+    "must.ac.mw",
     "must.ac.ug",
     "must.edu.eg",
     "must.edu.mn",
@@ -8251,6 +8255,7 @@
     "unilurio.ac.mz",
     "unilus.ac.zm",
     "unima.ac.id",
+    "unima.ac.mw",
     "unima.mw",
     "unimaas.nl",
     "unimagdalena.edu.co",
@@ -9807,5 +9812,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20210830
+  "version": 20210917
 }
