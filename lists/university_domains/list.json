@@ -4720,6 +4720,7 @@
     "myongji.ac.kr",
     "myscc.ca",
     "myseneca.ca",
+    "mytum.de",
     "myu.ac.jp",
     "myuct.ac.za",
     "mzumbe.ac.tz",
@@ -9812,5 +9813,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20210917
+  "version": 20210923
 }
