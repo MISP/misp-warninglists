@@ -1013,7 +1013,6 @@
     "RIL",
     "RIO",
     "RIP",
-    "RMIT",
     "RO",
     "ROCHER",
     "ROCKS",
@@ -1507,5 +1506,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20210923
+  "version": 20210930
 }

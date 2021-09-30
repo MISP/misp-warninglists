@@ -189,5 +189,5 @@
   ],
   "name": "List of known Microsoft Azure China Datacenter IP Ranges",
   "type": "cidr",
-  "version": 20210923
+  "version": 20210930
 }

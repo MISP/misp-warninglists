@@ -1274,7 +1274,6 @@
     "clerk.app",
     "clerkstage.app",
     "cleverapps.io",
-    "clic2000.net",
     "click",
     "clicketcloud.com",
     "clickrising.net",
@@ -6468,6 +6467,7 @@
     "prd.fr",
     "prd.km",
     "prd.mg",
+    "prequalifyme.today",
     "preservation.museum",
     "presidio.museum",
     "press",
@@ -6728,7 +6728,6 @@
     "rj.leg.br",
     "rl.no",
     "rm.it",
-    "rmit",
     "rn.gov.br",
     "rn.it",
     "rn.leg.br",
@@ -8185,6 +8184,7 @@
     "user.aseinet.ne.jp",
     "user.party.eus",
     "user.srcf.net",
+    "usercontent.goog",
     "usercontent.jp",
     "users.scale.virtualcloud.com.br",
     "usgarden.museum",
@@ -9192,5 +9192,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20210923
+  "version": 20210930
 }
