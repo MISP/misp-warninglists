@@ -41,5 +41,5 @@
   ],
   "name": "Unattributed phone number.",
   "type": "regex",
-  "version": 20210930
+  "version": 20211005
 }

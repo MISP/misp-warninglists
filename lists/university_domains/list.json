@@ -6847,6 +6847,7 @@
     "thierryschool.org",
     "thiqaruni.org",
     "thk.edu.tr",
+    "thm.de",
     "thmu.edu.tw",
     "thomas.edu",
     "thomasmore.edu",
@@ -9813,5 +9814,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20210930
+  "version": 20211005
 }

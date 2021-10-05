@@ -85,6 +85,7 @@
     "crl.trust-provider.com",
     "crl.trustcor.ca",
     "crl.trustwave.com",
+    "crl.tuntrust.tn",
     "crl.usertrust.com",
     "crl.verisign.co.jp",
     "crl.verisign.com",
@@ -277,6 +278,7 @@
     "uispki.unisys.com",
     "uniper-group-ca-2-2015.ocsp.d-trust.net",
     "uniper-group-ca-3-2020.ocsp.d-trust.net",
+    "va.tuntrust.tn",
     "validation.identrust.com",
     "www.accv.es",
     "www.anf.es",
@@ -296,5 +298,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20210930
+  "version": 20211005
 }
