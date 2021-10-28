@@ -978,7 +978,6 @@
     "QPON",
     "QUEBEC",
     "QUEST",
-    "QVC",
     "RACING",
     "RADIO",
     "RAID",
@@ -1151,7 +1150,6 @@
     "SUZUKI",
     "SV",
     "SWATCH",
-    "SWIFTCOVER",
     "SWISS",
     "SX",
     "SY",
@@ -1506,5 +1504,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20211005
+  "version": 20211028
 }

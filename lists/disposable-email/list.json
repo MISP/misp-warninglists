@@ -2312,6 +2312,7 @@
     "quickemail.info",
     "quickinbox.com",
     "quickmail.nl",
+    "quicksend.ch",
     "ququb.com",
     "qvy.me",
     "qwickmail.com",
@@ -3267,5 +3268,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20211005
+  "version": 20211028
 }
