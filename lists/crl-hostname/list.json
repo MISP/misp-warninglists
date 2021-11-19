@@ -177,6 +177,7 @@
     "ocsp.rootca4.amazontrust.com",
     "ocsp.rootg2.amazontrust.com",
     "ocsp.securetrust.com",
+    "ocsp.siemens.com",
     "ocsp.starfieldtech.com",
     "ocsp.swisssign.net",
     "ocsp.taica.com.tw",
@@ -298,5 +299,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20211028
+  "version": 20211119
 }

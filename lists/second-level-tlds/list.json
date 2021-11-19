@@ -2409,6 +2409,7 @@
     "flanders.museum",
     "flap.id",
     "flatanger.no",
+    "fldrv.com",
     "flekkefjord.no",
     "flesberg.no",
     "flickr",
@@ -2685,7 +2686,6 @@
     "gausdal.no",
     "gay",
     "gb",
-    "gb.com",
     "gb.net",
     "gbiz",
     "gc.ca",
@@ -5954,6 +5954,7 @@
     "ondigitalocean.app",
     "one",
     "onfabrica.com",
+    "onflashdrive.app",
     "ong",
     "ong.br",
     "onga.fukuoka.jp",
@@ -8573,7 +8574,6 @@
     "xn--3ds443g",
     "xn--3e0b707e",
     "xn--3hcrj9c",
-    "xn--3oq18vl8pn36a",
     "xn--3pxu8k",
     "xn--41a.xn--p1acf",
     "xn--42c2d9a",
@@ -9198,5 +9198,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20211028
+  "version": 20211119
 }

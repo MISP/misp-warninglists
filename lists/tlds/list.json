@@ -823,6 +823,7 @@
     "MTR",
     "MU",
     "MUSEUM",
+    "MUSIC",
     "MUTUAL",
     "MV",
     "MW",
@@ -1328,7 +1329,6 @@
     "XN--3DS443G",
     "XN--3E0B707E",
     "XN--3HCRJ9C",
-    "XN--3OQ18VL8PN36A",
     "XN--3PXU8K",
     "XN--42C2D9A",
     "XN--45BR5CYL",
@@ -1504,5 +1504,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20211028
+  "version": 20211119
 }
