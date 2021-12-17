@@ -1291,6 +1291,7 @@
     "cloud.interhostsolutions.be",
     "cloud.jelastic.open.tim.it",
     "cloud.metacentrum.cz",
+    "cloud.nospamproxy.com",
     "cloud66.ws",
     "cloud66.zone",
     "cloudaccess.host",
@@ -2257,6 +2258,7 @@
     "eu-west-3.elasticbeanstalk.com",
     "eu.ax",
     "eu.com",
+    "eu.encoway.cloud",
     "eu.int",
     "eu.meteorapp.com",
     "eu.org",
@@ -6508,6 +6510,7 @@
     "pro.om",
     "pro.pr",
     "pro.tt",
+    "pro.typeform.com",
     "pro.vn",
     "prochowice.pl",
     "prod",
@@ -6615,6 +6618,7 @@
     "rar.ve",
     "ras.ru",
     "rauma.no",
+    "ravendb.cloud",
     "ravendb.community",
     "ravendb.me",
     "ravendb.run",
@@ -9201,5 +9205,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20211206
+  "version": 20211217
 }
