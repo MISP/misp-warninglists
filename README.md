@@ -68,6 +68,8 @@ are reused in many other open source projects.
 - [second-level-tlds/list.json](./lists/second-level-tlds/list.json) - **Second level TLDs as known by Mozilla Foundation** - _Event contains one or more second level TLDs as attribute with an IDS flag set._
 - [security-provider-blogpost/list.json](./lists/security-provider-blogpost/list.json) - **List of known security providers/vendors blog domain** - _Event contains one or more entries of known security providers/vendors blog domain with an IDS flag set_
 - [sinkholes/list.json](./lists/sinkholes/list.json) - **List of known sinkholes** - _List of known sinkholes_
+- [smtp-receiving-ips/list.json](./lists/smtp-receiving-ips/list.json) - **List of known SMTP receiving IP addresses** - _List of IP addresses for known SMTP servers._
+- [smtp-sending-ips/list.json](./lists/smtp-sending-ips/list.json) - **List of known SMTP sending IP ranges** - _List of IP ranges for known SMTP servers._
 - [stackpath/list.json](./lists/stackpath/list.json) - **List of known Stackpath CDN IP ranges** - _List of known Stackpath (Highwinds) CDN IP ranges (https://support.stackpath.com/hc/en-us/articles/360001091666-Whitelist-CDN-WAF-IP-Blocks)_
 - [ti-falsepositives/list.json](./lists/ti-falsepositives/list.json) - **Hashes that are often included in IOC lists but are false positives.** - _Hashes that are often included in IOC lists but are false positives._
 - [tlds/list.json](./lists/tlds/list.json) - **TLDs as known by IANA** - _Event contains one or more TLDs as attribute with an IDS flag set_
