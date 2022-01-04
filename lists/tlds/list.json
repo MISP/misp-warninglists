@@ -719,7 +719,6 @@
     "LIPSY",
     "LIVE",
     "LIVING",
-    "LIXIL",
     "LK",
     "LLC",
     "LLP",
@@ -1498,5 +1497,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20211217
+  "version": 20220104
 }
