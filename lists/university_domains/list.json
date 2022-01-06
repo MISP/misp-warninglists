@@ -1995,6 +1995,8 @@
     "etsmtl.ca",
     "etsu.edu",
     "etu.edu.tr",
+    "etu.sorbonne-universite.fr",
+    "etu.upmc.fr",
     "etud.u-pem.fr",
     "eu.ac.rs",
     "eu.spb.ru",
@@ -2558,6 +2560,7 @@
     "hamdard.edu",
     "hamdard.edu.pk",
     "hamilton.edu",
+    "hamk.fi",
     "hamline.edu",
     "hampshire.edu",
     "hamptonu.edu",
@@ -3883,6 +3886,7 @@
     "ktokai-u.ac.jp",
     "ktu.edu.tr",
     "ktu.lt",
+    "ktun.edu.tr",
     "ku-eichstaett.de",
     "ku.ac.ae",
     "ku.ac.bd",
@@ -6391,6 +6395,7 @@
     "sophia.ac.jp",
     "soran.edu.iq",
     "sorbon.fr",
+    "sorbonne-universite.fr",
     "sorbonne.ae",
     "sote.hu",
     "sothebysinstitutelondon.com",
@@ -8861,6 +8866,7 @@
     "upm.ro",
     "upmc.com",
     "upmc.edu",
+    "upmc.fr",
     "upmin.edu.ph",
     "upn.mx",
     "upnfm.edu.hn",
@@ -9824,5 +9830,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20211217
+  "version": 20220104
 }

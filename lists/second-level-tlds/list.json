@@ -4570,7 +4570,6 @@
     "living.museum",
     "livinghistory.museum",
     "livorno.it",
-    "lixil",
     "lk",
     "lk3.ru",
     "llc",
@@ -9205,5 +9204,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20211217
+  "version": 20220104
 }
