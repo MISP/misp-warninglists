@@ -5605,6 +5605,7 @@
     "psu.edu.ph",
     "psu.edu.sa",
     "psu.kz",
+    "psu.palawan.edu.ph",
     "psu.ru",
     "psut.edu.jo",
     "psy.lv",
@@ -7561,6 +7562,7 @@
     "uespi.br",
     "uestc.edu.cn",
     "uet.edu",
+    "uet.vnu.edu.vn",
     "uettaxila.edu.pk",
     "uevora.pt",
     "uew.edu.gh",
@@ -9830,5 +9832,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20220104
+  "version": 20220201
 }
