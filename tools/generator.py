@@ -42,6 +42,7 @@ def download_to_file(url, file):
     user_agent = {
         "User-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0"}
     try:
+        logging.info(f'download_to_file - fetching url: {url}')
         r = requests.head(url, headers=user_agent)
         url_datetime = parsedate(r.headers['Last-Modified']).astimezone()
         file_datetime = datetime.datetime.fromtimestamp(
