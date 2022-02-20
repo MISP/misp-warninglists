@@ -178,7 +178,6 @@
     "BRUSSELS",
     "BS",
     "BT",
-    "BUDAPEST",
     "BUGATTI",
     "BUILD",
     "BUILDERS",
@@ -302,7 +301,6 @@
     "CRS",
     "CRUISE",
     "CRUISES",
-    "CSC",
     "CU",
     "CUISINELLA",
     "CV",
@@ -1497,5 +1495,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20220201
+  "version": 20220220
 }
