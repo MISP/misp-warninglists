@@ -235,5 +235,5 @@
   ],
   "name": "List of known GCP (Google Cloud Platform) IP address ranges",
   "type": "cidr",
-  "version": 20220226
+  "version": 20220311
 }
