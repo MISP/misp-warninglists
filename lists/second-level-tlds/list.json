@@ -1045,6 +1045,7 @@
     "camdvr.org",
     "camera",
     "camp",
+    "campaign.gov.uk",
     "campania.it",
     "campidano-medio.it",
     "campidanomedio.it",
@@ -9327,5 +9328,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20220311
+  "version": 20220324
 }

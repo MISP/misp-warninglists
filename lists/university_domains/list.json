@@ -7816,6 +7816,7 @@
     "um.ac.ir",
     "um.cityu.edu.hk",
     "um.edu.ar",
+    "um.edu.mo",
     "um.edu.mt",
     "um.edu.my",
     "um.edu.uy",
@@ -7833,7 +7834,6 @@
     "uma.es",
     "uma.pt",
     "uma.rnu.tn",
-    "umac.mo",
     "umad.edu.mx",
     "umag.cl",
     "umaha.ac.id",
@@ -9841,5 +9841,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20220311
+  "version": 20220324
 }
