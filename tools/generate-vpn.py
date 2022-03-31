@@ -18,10 +18,10 @@ def process(url, dst):
 
 
 if __name__ == '__main__':
-    vpn_base_url = 'https://raw.githubusercontent.com/ejrv/VPNs/master/'
-    uri_list = ['vpn-ipv4', 'vpn-ipv6']
+    vpn_base_url_v4 = 'https://raw.githubusercontent.com/X4BNet/lists_vpn/main/vpn-ipv4.txt'
+    vpn_base_url_v6 = 'https://raw.githubusercontent.com/ejrv/VPNs/master/vpn-ipv6.txt'
 
-    for uri in uri_list:
-        url = vpn_base_url + uri + '.txt'
+    for url in [vpn_base_url_v4, vpn_base_url_v6]:
+        uri = url.split('/')[-1]
         uri.split('-')[1].replace('ip', 'IP')
         process(url, uri)
