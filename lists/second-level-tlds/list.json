@@ -193,6 +193,9 @@
     "aircraft.aero",
     "airforce",
     "airguard.museum",
+    "airkitapps-au.com",
+    "airkitapps.com",
+    "airkitapps.eu",
     "airline.aero",
     "airport.aero",
     "airtel",
@@ -2221,6 +2224,8 @@
     "en-root.fr",
     "en.it",
     "ena.gifu.jp",
+    "encoreapi.com",
+    "encr.app",
     "encyclopedic.museum",
     "endofinternet.net",
     "endofinternet.org",
@@ -8313,6 +8318,7 @@
     "usculture.museum",
     "usdecorativearts.museum",
     "user.aseinet.ne.jp",
+    "user.localcert.dev",
     "user.party.eus",
     "user.srcf.net",
     "usercontent.goog",
@@ -9328,5 +9334,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20220324
+  "version": 20220331
 }

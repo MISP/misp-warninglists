@@ -2,6 +2,7 @@
   "description": "Domains that belongs to CRL or OCSP",
   "list": [
     "atospki",
+    "br-root-ca1-2020.ocsp.d-trust.net",
     "cdp-ldap.intranet.eon.com",
     "cdp-ldap.intranet.uniper.energy",
     "cdp.elektronicznypodpis.pl",
@@ -94,6 +95,7 @@
     "epki.com.tw",
     "epscd.catcert.net",
     "epscd2.catcert.net",
+    "ev-root-ca1-2020.ocsp.d-trust.net",
     "evrootocsp.pkioverheid.nl",
     "gold-ev-g2.ocsp.swisssign.net",
     "grcl2.crl.telesec.de",
@@ -256,5 +258,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20220324
+  "version": 20220331
 }
