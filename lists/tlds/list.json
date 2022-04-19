@@ -655,6 +655,7 @@
     "KH",
     "KI",
     "KIA",
+    "KIDS",
     "KIM",
     "KINDER",
     "KINDLE",
@@ -1495,5 +1496,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20220331
+  "version": 20220419
 }
