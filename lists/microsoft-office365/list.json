@@ -28,6 +28,7 @@
     "assets.onestore.ms",
     "attachments.office.net",
     "auth.gfx.ms",
+    "auth.microsoft.com",
     "autologon.microsoftazuread-sso.com",
     "azure-apim.net",
     "azureedge.net",
@@ -40,6 +41,7 @@
     "c.live.com",
     "c1.microsoft.com",
     "cacerts.digicert.com",
+    "ccs.login.microsoftonline.com",
     "cdn.odc.officeapps.live.com",
     "cdn.office.net",
     "cdn.onenote.net",
@@ -62,6 +64,7 @@
     "crl4.digicert.com",
     "d.docs.live.net",
     "dc.services.visualstudio.com",
+    "defender.microsoft.com",
     "device.login.microsoftonline.com",
     "dgps.support.microsoft.com",
     "directory.services.live.com",
@@ -235,5 +238,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20220419
+  "version": 20220429
 }
