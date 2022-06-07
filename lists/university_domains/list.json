@@ -599,6 +599,7 @@
     "bates.ctc.edu",
     "bates.edu",
     "bath.ac.uk",
+    "bathspa.ac.uk",
     "batman.edu.tr",
     "batu.edu.by",
     "bau.edu.bd",
@@ -1363,6 +1364,7 @@
     "csmd.edu",
     "csmrouen.com",
     "csmrouen.net",
+    "csn.edu",
     "csopp.edu",
     "csp.edu",
     "cspi.urc.ac.ru",
@@ -1801,6 +1803,7 @@
     "egs.edu",
     "eh-darmstadt.de",
     "ehb.be",
+    "ehc.edu",
     "ehf.hu",
     "ehime-u.ac.jp",
     "ehl.ch",
@@ -4588,6 +4591,7 @@
     "mpc.edu",
     "mpcc.edu",
     "mpei.ac.ru",
+    "mpgu.su",
     "mpkv.mah.nic.in",
     "mpu-prague.cz",
     "mpu.ac.jp",
@@ -8428,6 +8432,7 @@
     "univ-ag.fr",
     "univ-alger.dz",
     "univ-alger3.dz",
+    "univ-amu.fr",
     "univ-angers.fr",
     "univ-annaba.dz",
     "univ-antananarivo.mg",
@@ -9841,5 +9846,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20220429
+  "version": 20220607
 }

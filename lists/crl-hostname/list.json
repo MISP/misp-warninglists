@@ -177,7 +177,6 @@
     "ocsp4.gdca.com.cn",
     "ocsp5.gdca.com.cn",
     "ocsp6.gdca.com.cn",
-    "ocspape.cert.fnmt.es",
     "ocspfnmtrcmca.cert.fnmt.es",
     "ocspfnmtssr.cert.fnmt.es",
     "ocsps.ssl.com",
@@ -258,5 +257,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20220429
+  "version": 20220607
 }
