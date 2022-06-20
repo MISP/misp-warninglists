@@ -92,15 +92,16 @@ def process(files, dst):
 
 
 if __name__ == '__main__':
-    sp_base_url = "https://support.stackpath.com/hc/en-us/articles/360001091666-Whitelist-CDN-WAF-IP-Blocks"
+    # Base url where a text file is attached https://support.stackpath.com/hc/en-us/articles/360001091666-Whitelist-CDN-WAF-IP-Blocks"
+    sp_base_url = "https://support.stackpath.com/hc/en-us/article_attachments/360096407372/ipblocks.txt"
     filename = 'ipblocks.txt'
     sp_dst = 'stackpath'
 
     to_process = list()
 
-    url = get_file_link(sp_base_url, filename)
+    #url = get_file_link(sp_base_url, filename)
     file = 'stackpath_{}'.format(filename)
-    download_to_file(url, file)
+    download_to_file(sp_base_url, file)
     to_process.append(file)
 
     process(to_process, sp_dst)

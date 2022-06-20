@@ -6,9 +6,9 @@ from generator import process_stream, get_version, write_to_file, consolidate_ne
 
 def process(url, dst):
     warninglist = {
-        'name': 'Specialized list of {} addresses belonging to common VPN providers and datacenters'.format(dst.split('-')[1].replace('ip', 'IP')),
+        'name': 'Specialized list of {} addresses belonging to common VPN providers and datacenters'.format(dst),
         'version': get_version(),
-        'description': 'Specialized list of {} addresses belonging to common VPN providers and datacenters'.format(dst.split('-')[1].replace('ip', 'IP')),
+        'description': 'Specialized list of {} addresses belonging to common VPN providers and datacenters'.format(dst),
         'list': consolidate_networks(process_stream(url)),
         'type': 'cidr',
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
@@ -18,10 +18,10 @@ def process(url, dst):
 
 
 if __name__ == '__main__':
-    vpn_base_url = 'https://raw.githubusercontent.com/ejrv/VPNs/master/'
-    uri_list = ['vpn-ipv4', 'vpn-ipv6']
-
-    for uri in uri_list:
-        url = vpn_base_url + uri + '.txt'
-        uri.split('-')[1].replace('ip', 'IP')
+    vpn_base_url_v4 = 'https://raw.githubusercontent.com/X4BNet/lists_vpn/main/ipv4.txt'
+    vpn_base_url_v6 = 'https://raw.githubusercontent.com/ejrv/VPNs/master/vpn-ipv6.txt'
+    vpns = ['https://raw.githubusercontent.com/X4BNet/lists_vpn/main/ipv4.txt', 'https://raw.githubusercontent.com/ejrv/VPNs/master/vpn-ipv6.txt']
+    for url in vpns:
+        uri = url.split('/')[-1]
+        uri.split('.')[0]
         process(url, uri)
