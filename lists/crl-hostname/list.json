@@ -73,6 +73,7 @@
     "crl.usertrust.com",
     "crl.verisign.co.jp",
     "crl.verisign.com",
+    "crl.vikingcloud.com",
     "crl.ws.symantec.com",
     "crl05.actalis.it",
     "crl1.camerfirma.com",
@@ -100,6 +101,8 @@
     "gold-ev-g2.ocsp.swisssign.net",
     "grcl2.crl.telesec.de",
     "grcl2.ocsp.telesec.de",
+    "grcl3.crl.telesec.de",
+    "grcl3.ocsp.telesec.de",
     "httpcrl.trust.telia.com",
     "ldap-cpki.telekom.de",
     "ldap.actalis.it",
@@ -162,6 +165,7 @@
     "ocsp.trustcor.ca",
     "ocsp.trustwave.com",
     "ocsp.usertrust.com",
+    "ocsp.vikingcloud.com",
     "ocsp.wisekey.com",
     "ocsp0336.telesec.de",
     "ocsp04.telesec.de",
@@ -257,5 +261,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20220607
+  "version": 20220626
 }

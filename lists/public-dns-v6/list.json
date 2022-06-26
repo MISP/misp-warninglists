@@ -9,6 +9,7 @@
     "2001:19f0:6401:d6e:5400:3ff:fea9:d45e",
     "2001:19f0:6c01:2b17:5400:3ff:fea9:d42f",
     "2001:19f0:7402:1574:5400:2ff:fe66:2cff",
+    "2001:19f0:9002:1d74:5400:3ff:fe35:774a",
     "2001:1a68::d911:2244",
     "2001:1bc0::ffff:aaaa:2",
     "2001:1bc0::ffff:bbbb:2",
@@ -174,5 +175,5 @@
   ],
   "name": "List of known IPv6 public DNS resolvers",
   "type": "cidr",
-  "version": 20220607
+  "version": 20220626
 }
