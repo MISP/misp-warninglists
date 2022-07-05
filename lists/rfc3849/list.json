@@ -6,9 +6,11 @@
   "matching_attributes": [
     "ip-src",
     "ip-dst",
-    "domain|ip"
+    "domain|ip",
+    "ip-dst|port",
+    "ip-src|port"
   ],
   "name": "List of RFC 3849 CIDR blocks",
   "type": "cidr",
-  "version": 3
+  "version": 4
 }
