@@ -6,9 +6,11 @@
   "matching_attributes": [
     "ip-src",
     "ip-dst",
-    "domain|ip"
+    "domain|ip",
+    "ip-dst|port",
+    "ip-src|port"
   ],
   "name": "List of IPv6 link local blocks",
   "type": "cidr",
-  "version": 2
+  "version": 3
 }
