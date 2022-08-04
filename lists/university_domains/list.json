@@ -5587,7 +5587,6 @@
     "pratt.edu",
     "prattcc.edu",
     "prcc.edu",
-    "prempeh-college.com",
     "presby.edu",
     "presbyuniversity.edu.gh",
     "prescott.edu",
@@ -9867,5 +9866,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20220727
+  "version": 20220804
 }
