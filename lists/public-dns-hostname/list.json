@@ -3832,5 +3832,5 @@
   ],
   "name": "List of known public DNS resolvers expressed as hostname",
   "type": "hostname",
-  "version": 20220804
+  "version": 20220807
 }
