@@ -2487,6 +2487,7 @@
     "gsu.unibel.by",
     "gsut.edu.cn",
     "gsw.edu",
+    "gsyc.es",
     "gtc.edu",
     "gtcc.edu",
     "gti.spb.ru",
@@ -6579,6 +6580,7 @@
     "stu.ac.kr",
     "stu.edu",
     "stu.edu.cn",
+    "stu.edu.gh",
     "stu.gcu.edu.cn",
     "stu.lipetsk.ru",
     "stu.ru",
@@ -9866,5 +9868,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20220804
+  "version": 20220810
 }
