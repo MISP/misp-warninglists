@@ -66,7 +66,8 @@ def get_lists_publidns(file) -> Tuple[List, List, List]:
                     elif ip.version == 6:
                         lipv6.append(ip.compressed)
 
-                    if row[1] not in (None, "", '.'):
+                    if row[1] not in (None, '', '.', '-.'):
+                        row[1] = row[1].rstrip('.')
                         lhostname.append(row[1])
                 except ValueError as exc:
                     logging.warning(str(exc))
