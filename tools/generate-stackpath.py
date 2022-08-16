@@ -93,7 +93,7 @@ def process(files, dst):
 
 if __name__ == '__main__':
     # Base url where a text file is attached https://support.stackpath.com/hc/en-us/articles/360001091666-Whitelist-CDN-WAF-IP-Blocks"
-    sp_base_url = "https://support.stackpath.com/hc/en-us/article_attachments/360096407372/ipblocks.txt"
+    sp_base_url = "https://k3t9x2h3.map2.ssl.hwcdn.net/ipblocks.txt"
     filename = 'ipblocks.txt'
     sp_dst = 'stackpath'
 
