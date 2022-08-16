@@ -102,7 +102,6 @@
     "modern.watson.data.microsoft.com.akadns.net",
     "msftconnecttest.com",
     "msftsrvcs.vo.llnwd.net",
-    "msnbot-.search.msn.com",
     "msnbot-65-52-108-198.search.msn.com",
     "ocos-office365-s2s.msedge.net",
     "ocsp.digicert.com",
@@ -119,6 +118,7 @@
     "query.prod.cms.rt.microsoft.com",
     "ris.api.iris.microsoft.com",
     "ris.api.iris.microsoft.com.akadns.net",
+    "search.msn.com",
     "settings-win.data.microsoft.com",
     "settings.data.microsoft.com",
     "sls.update.microsoft.com",
@@ -153,5 +153,5 @@
   ],
   "name": "List of known Windows 10 connection endpoints",
   "type": "string",
-  "version": 2
+  "version": 3
 }
