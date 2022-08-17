@@ -4265,6 +4265,7 @@
     "mahidol.ac.th",
     "mahsa.edu.my",
     "mahshahriau.ac.ir",
+    "mail.polimi.it",
     "mail.xhu.edu.cn",
     "maimonides.edu.ar",
     "maine.edu",
@@ -7617,6 +7618,7 @@
     "ufmg.br",
     "ufms.br",
     "ufmt.br",
+    "ufn.edu.br",
     "ufop.br",
     "ufp.nc",
     "ufp.pt",
@@ -9868,5 +9870,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20220810
+  "version": 20220817
 }

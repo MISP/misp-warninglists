@@ -178,5 +178,5 @@
   ],
   "name": "List of known IPv6 public DNS resolvers",
   "type": "cidr",
-  "version": 20220816
+  "version": 20220817
 }
