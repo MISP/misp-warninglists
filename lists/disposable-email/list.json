@@ -485,6 +485,7 @@
     "bouncr.com",
     "boxformail.in",
     "boximail.com",
+    "boxomail.live",
     "boxtemp.com.br",
     "bptfp.net",
     "brandallday.net",
@@ -3441,5 +3442,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20220817
+  "version": 20220901
 }

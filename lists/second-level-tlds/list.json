@@ -677,6 +677,7 @@
     "be.ax",
     "be.eu.org",
     "be.gy",
+    "beagleboard.io",
     "bearalvahki.no",
     "beardu.no",
     "beats",
@@ -2040,6 +2041,8 @@
     "eastasia.azurestaticapps.net",
     "eastcoast.museum",
     "eastus2.azurestaticapps.net",
+    "easypanel.app",
+    "easypanel.host",
     "eat",
     "eating-organic.net",
     "eaton.mi.us",
@@ -2555,6 +2558,10 @@
     "fr.it",
     "fra1-de.cloudjiffy.net",
     "framer.app",
+    "framer.media",
+    "framer.photos",
+    "framer.website",
+    "framer.wiki",
     "framercanvas.com",
     "frana.no",
     "francaise.museum",
@@ -7677,6 +7684,7 @@
     "strand.no",
     "stranda.no",
     "stream",
+    "streamlitapp.com",
     "stripper.jp",
     "stryn.no",
     "student.aero",
@@ -9409,5 +9417,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20220817
+  "version": 20220901
 }
