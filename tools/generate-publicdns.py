@@ -7,7 +7,7 @@ from typing import List, Tuple
 
 from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
 
-golden_servers_ipv4 = ['9.9.9.9', '8.8.8.8', '1.0.0.1', '1.1.1.3', '8.8.4.4']
+golden_servers_ipv4 = ['9.9.9.9', '8.8.8.8', '1.0.0.1', '1.1.1.3', '8.8.4.4', '1.1.1.1']
 
 
 def process(ipv4: List, ipv6: List, hostname: List):
