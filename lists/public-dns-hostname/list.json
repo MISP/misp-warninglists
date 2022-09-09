@@ -9,5 +9,5 @@
   ],
   "name": "List of known public DNS resolvers expressed as hostname",
   "type": "hostname",
-  "version": 20220901
+  "version": 20220909
 }
