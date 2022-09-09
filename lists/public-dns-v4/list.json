@@ -2,6 +2,7 @@
   "description": "Event contains one or more public IPv4 DNS resolvers as attribute with an IDS flag set",
   "list": [
     "1.0.0.1",
+    "1.1.1.1",
     "1.1.1.3",
     "103.14.26.190",
     "103.158.223.162",
