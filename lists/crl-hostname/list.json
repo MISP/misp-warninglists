@@ -209,6 +209,8 @@
     "root-c3-ca2-2009.ocsp.d-trust.net",
     "root-c3-ca2-ev-2009.ocsp.d-trust.net",
     "root-ca-3-2013.ocsp.d-trust.net",
+    "root-ecdsa.digitalsign.pt",
+    "root-rsa.digitalsign.pt",
     "rootca.twca.com.tw",
     "rootca2009-crl1.e-szigno.hu",
     "rootca2009-crl2.e-szigno.hu",
@@ -229,8 +231,10 @@
     "s.ss2.us",
     "s.symcb.com",
     "s.symcd.com",
+    "sceccrootca1.ocsp.secomtrust.net",
     "scrootca1.ocsp.secomtrust.net",
     "scrootca2.ocsp.secomtrust.net",
+    "scrootca3.ocsp.secomtrust.net",
     "service.globaltrust.eu",
     "sslcom.crl.certum.pl",
     "sslcom.ocsp-certum.com",
@@ -262,5 +266,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20220909
+  "version": 20220925
 }

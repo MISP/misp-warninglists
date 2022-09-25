@@ -608,7 +608,6 @@
     "bau.nic.in",
     "bayamon.inter.edu",
     "bayantech.edu",
-    "bayar.edu.tr",
     "bayburt.edu.tr",
     "baycollege.edu",
     "baylor.edu",
@@ -1004,6 +1003,7 @@
     "cbs.de",
     "cbs.dk",
     "cbu.edu",
+    "cbu.edu.tr",
     "cbu.edu.zm",
     "cbu2000.com",
     "ccaa.edu",
@@ -3066,6 +3066,7 @@
     "iit.com.na",
     "iit.edu",
     "iitb.ac.in",
+    "iitbbs.ac.in",
     "iitd.ac.in",
     "iitd.ernet.in",
     "iitg.ac.in",
@@ -4347,6 +4348,7 @@
     "mc.edu",
     "mc3.edu",
     "mcad.edu",
+    "mcbu.edu.tr",
     "mcc.commnet.edu",
     "mcc.edu",
     "mccc.edu",
@@ -9870,5 +9872,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20220909
+  "version": 20220925
 }
