@@ -1,5 +1,5 @@
 {
-  "description": "Tenable IPv4 Cloud Sensors addresses used for scanning Internet-facing infrastructure",
+  "description": "Tenable IPv4 Cloud Sensor addresses used for scanning Internet-facing infrastructure",
   "list": [
     "13.115.104.128/25",
     "13.210.1.64/26",
