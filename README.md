@@ -71,6 +71,7 @@ are reused in many other open source projects.
 - [smtp-receiving-ips/list.json](./lists/smtp-receiving-ips/list.json) - **List of known SMTP receiving IP addresses** - _List of IP addresses for known SMTP servers._
 - [smtp-sending-ips/list.json](./lists/smtp-sending-ips/list.json) - **List of known SMTP sending IP ranges** - _List of IP ranges for known SMTP servers._
 - [stackpath/list.json](./lists/stackpath/list.json) - **List of known Stackpath CDN IP ranges** - _List of known Stackpath (Highwinds) CDN IP ranges (https://support.stackpath.com/hc/en-us/articles/360001091666-Whitelist-CDN-WAF-IP-Blocks)_
+- [tenable/list.json](./lists/tenable/list.json) - **List of known Tenable.io Cloud Sensors** - _List of known Tenable.io Cloud Sensor/Scanner IP ranges (https://docs.tenable.com/tenableio/Content/Platform/Settings/Sensors/CloudSensors.htm)_
 - [ti-falsepositives/list.json](./lists/ti-falsepositives/list.json) - **Hashes that are often included in IOC lists but are false positives.** - _Hashes that are often included in IOC lists but are false positives._
 - [tlds/list.json](./lists/tlds/list.json) - **TLDs as known by IANA** - _Event contains one or more TLDs as attribute with an IDS flag set_
 - [tranco/list.json](./lists/tranco/list.json) - **Top 1,000,000 most-used sites from Tranco** - _Event contains one or more entries from the top 1,000,000 most-used sites (https://tranco-list.eu/)._
