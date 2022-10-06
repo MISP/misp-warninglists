@@ -31,6 +31,7 @@ python3 generate-second-level-tlds.py
 python3 generate-google-gcp.py
 python3 generate-google-gmail-sending-ips.py
 python3 generate-smtp.py
+python3 generate-tenable.py
 popd
 
 ./jq_all_the_things.sh
