@@ -2,15 +2,16 @@
 # -*- coding: utf-8 -*-
 
 from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
+import argparse
 
 
-def process(file, dst):
+def process(file, dst, numbers):
 
     with open(get_abspath_source_file(file), newline='\n', encoding='utf-8', errors='replace') as csv_file:
-        sites = csv_file.readlines()[:10000]
+        sites = csv_file.readlines()[:numbers]
 
     warninglist = {
-        'name': 'Top 10K websites from Majestic Million',
+        'name': f'Top {numbers} websites from Majestic Million',
         'version': get_version(),
         'description': 'Event contains one or more entries from the top 10K of the most used websites (Majestic Million).',
         'matching_attributes': ['hostname', 'domain'],
@@ -26,9 +27,14 @@ def process(file, dst):
 
 
 if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-n", help="number of website to process", required=True)
+    args = parser.parse_args()
+
     majestic_url = 'http://downloads.majestic.com/majestic_million.csv'
     majestic_file = 'majestic_million.csv'
     majestic_dst = 'majestic_million'
 
     download_to_file(majestic_url, majestic_file)
-    process(majestic_file, majestic_dst)
+    process(majestic_file, majestic_dst, int(args.n))
