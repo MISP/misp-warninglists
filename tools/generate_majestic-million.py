@@ -8,7 +8,7 @@ import argparse
 def process(file, dst, numbers):
 
     with open(get_abspath_source_file(file), newline='\n', encoding='utf-8', errors='replace') as csv_file:
-        sites = csv_file.readlines()[:numbers]
+        sites = csv_file.readlines()[1:numbers]
 
     warninglist = {
         'name': f'Top {numbers} websites from Majestic Million',
