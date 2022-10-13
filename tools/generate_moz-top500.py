@@ -18,10 +18,16 @@ def process(files, dst):
         'matching_attributes': ['hostname', 'domain', 'uri', 'url']
     }
 
+    flag = True
+
     for file in files:
         with open(get_abspath_source_file(file)) as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             for row in csv_reader:
+                if flag:
+                    flag = False
+                    print(True)
+                    continue
                 v = row[1]
                 warninglist['list'].append(v.rstrip().rstrip('/'))
 
