@@ -1,0 +1,25 @@
+{
+  "description": "List of parking domain's name server",
+  "list": [
+    "parkingcrew.net",
+    "sedoparking.com",
+    "above.com",
+    "afternic.com",
+    "dan.com",
+    "parking1.ovh.net",
+    "parking2.ovh.net",
+    "domainmarket.com",
+    "uniregistrymarket.link",
+    "parklogic.com",
+    "markmonitor.com",
+    "ztomy.com"
+  ],
+  "matching_attributes": [
+    "domain|ip",
+    "domain",
+    "hostname"
+  ],
+  "name": "Parking domains name server",
+  "type": "hostname",
+  "version": 20221024
+}
