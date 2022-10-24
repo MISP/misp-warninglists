@@ -178,7 +178,6 @@
     "BRUSSELS",
     "BS",
     "BT",
-    "BUGATTI",
     "BUILD",
     "BUILDERS",
     "BUSINESS",
@@ -198,7 +197,6 @@
     "CAM",
     "CAMERA",
     "CAMP",
-    "CANCERRESEARCH",
     "CANON",
     "CAPETOWN",
     "CAPITAL",
@@ -1496,5 +1494,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20220925
+  "version": 20221024
 }
