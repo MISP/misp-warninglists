@@ -11,3 +11,4 @@
 - parklogic.com
 - markmonitor.com
 - ztomy.com
+- sedo.com
