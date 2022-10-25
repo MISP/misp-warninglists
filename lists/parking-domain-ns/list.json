@@ -14,7 +14,8 @@
     "markmonitor.com",
     "ztomy.com",
     "sedo.com",
-    "freenom.com"
+    "freenom.com",
+    "bodis.com"
   ],
   "matching_attributes": [
     "domain|ip",
