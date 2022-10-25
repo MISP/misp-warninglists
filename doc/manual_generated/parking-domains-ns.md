@@ -14,3 +14,4 @@ Source: https://trends.builtwith.com/parked/traffic/Entire-Internet
 - markmonitor.com
 - ztomy.com
 - sedo.com
+- freenom.com

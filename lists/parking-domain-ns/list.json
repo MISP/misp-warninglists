@@ -13,7 +13,8 @@
     "parklogic.com",
     "markmonitor.com",
     "ztomy.com",
-    "sedo.com"
+    "sedo.com",
+    "freenom.com"
   ],
   "matching_attributes": [
     "domain|ip",
