@@ -246,6 +246,7 @@
     "aheadwe.us",
     "ahem.email",
     "ahk.jp",
+    "ahmedkhlef.com",
     "air2token.com",
     "airmailbox.website",
     "airsi.de",
@@ -741,6 +742,7 @@
     "dhy.cc",
     "dialogus.com",
     "diapaulpainting.com",
+    "dicopto.com",
     "digdig.org",
     "digital-message.com",
     "digitalesbusiness.info",
@@ -1822,6 +1824,7 @@
     "mailcatch.com",
     "mailchop.com",
     "mailcker.com",
+    "maildax.me",
     "mailde.de",
     "mailde.info",
     "maildrop.cc",
@@ -2860,6 +2863,7 @@
     "teleworm.com",
     "teleworm.us",
     "tellos.xyz",
+    "teml.net",
     "temp-link.net",
     "temp-mail.com",
     "temp-mail.de",
@@ -2970,6 +2974,7 @@
     "tmails.net",
     "tmpbox.net",
     "tmpemails.com",
+    "tmpeml.com",
     "tmpeml.info",
     "tmpjr.me",
     "tmpmail.net",
@@ -3458,5 +3463,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20220925
+  "version": 20221024
 }

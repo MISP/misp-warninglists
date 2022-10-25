@@ -65,6 +65,7 @@
     "directory.services.live.com",
     "docs.live.net",
     "docs.microsoft.com",
+    "ecdn.microsoft.com",
     "ecn.dev.virtualearth.net",
     "enterpriseregistration.windows.net",
     "entrust.net",
@@ -111,7 +112,6 @@
     "mscrl.microsoft.com",
     "msdn.microsoft.com",
     "msecnd.net",
-    "msedge.net",
     "msftauth.net",
     "msftauthimages.net",
     "msftidentity.com",
@@ -221,5 +221,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20220925
+  "version": 20221024
 }

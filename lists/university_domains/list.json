@@ -6070,6 +6070,7 @@
     "schoolcraft.edu",
     "schreiner.edu",
     "sciences-po.fr",
+    "sciencespo-rennes.fr",
     "sciencespo.fr",
     "sckans.edu",
     "sclondon.ac",
@@ -9872,5 +9873,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20220925
+  "version": 20221024
 }
