@@ -64,3 +64,11 @@ Source: https://trends.builtwith.com/parked/traffic/Entire-Internet
 
 ## subdomain
 - 95.217.58.108 
+
+## name.com
+
+- 91.195.240.94
+
+## OVH
+
+- 213.186.33.5

@@ -15,7 +15,13 @@
     "ztomy.com",
     "sedo.com",
     "freenom.com",
-    "bodis.com"
+    "bodis.com",
+    "dnsowl.com",
+    "dsredirection.com",
+    "dsredirects.com",
+    "gname.net",
+    "bookmyname.com",
+    "day.biz"
   ],
   "matching_attributes": [
     "domain|ip",
