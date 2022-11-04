@@ -39,7 +39,7 @@ are reused in many other open source projects.
 - [google/list.json](./lists/google/list.json) - **List of known google domains** - _Event contains one or more entries of known google domains_
 - [googlebot/list.json](./lists/googlebot/list.json) - **List of known Googlebot IP ranges** - _List of known Googlebot IP ranges (https://www.lifewire.com/what-is-the-ip-address-of-google-818153 )_
 - [ipv6-linklocal/list.json](./lists/ipv6-linklocal/list.json) - **List of IPv6 link local blocks** - _Event contains one or more entries part of the IPv6 link local prefix (RFC 4291)_
-- [majestic_million/list.json](./lists/majestic_million/list.json) - **Top 10K websites from Majestic Million** - _Event contains one or more entries from the top 10K of the most used websites (Majestic Million)._
+- [majestic_million/list.json](./lists/majestic_million/list.json) - **Top 10000 websites from Majestic Million** - _Event contains one or more entries from the top 10K of the most used websites (Majestic Million)._
 - [microsoft-attack-simulator/list.json](./lists/microsoft-attack-simulator/list.json) - **List of known Office 365 Attack Simulator used for phishing awareness campaigns** - _Office 365 URLs and IP address ranges used for their attack simulator in Office 365 Threat Intelligence_
 - [microsoft-azure-china/list.json](./lists/microsoft-azure-china/list.json) - **List of known Microsoft Azure China Datacenter IP Ranges** - _Microsoft Azure China Datacenter IP Ranges_
 - [microsoft-azure-germany/list.json](./lists/microsoft-azure-germany/list.json) - **List of known Microsoft Azure Germany Datacenter IP Ranges** - _Microsoft Azure Germany Datacenter IP Ranges_
@@ -56,6 +56,8 @@ are reused in many other open source projects.
 - [multicast/list.json](./lists/multicast/list.json) - **List of RFC 5771 multicast CIDR blocks** - _Event contains one or more entries part of the RFC 5771 multicast CIDR blocks_
 - [nioc-filehash/list.json](./lists/nioc-filehash/list.json) - **List of known hashes for benign files** - _Event contains one or more benign files based on known hashes, see https://github.com/RichieB2B/nioc_
 - [ovh-cluster/list.json](./lists/ovh-cluster/list.json) - **List of known Ovh Cluster IP** - _OVH Cluster IP address (https://docs.ovh.com/fr/hosting/liste-des-adresses-ip-des-clusters-et-hebergements-web/)_
+- [parking-domain-ns/list.json](./lists/parking-domain-ns/list.json) - **Parking domains name server** - _List of parking domain's name server_
+- [parking-domain/list.json](./lists/parking-domain/list.json) - **Parking domains** - _List of parking domain's ip adresses_
 - [phone_numbers/list.json](./lists/phone_numbers/list.json) - **Unattributed phone number.** - _Numbers that cannot be attributed because they reserved for different purposes._
 - [public-dns-hostname/list.json](./lists/public-dns-hostname/list.json) - **List of known public DNS resolvers expressed as hostname** - _Event contains one or more public DNS resolvers (expressed as hostname) as attribute with an IDS flag set_
 - [public-dns-v4/list.json](./lists/public-dns-v4/list.json) - **List of known IPv4 public DNS resolvers** - _Event contains one or more public IPv4 DNS resolvers as attribute with an IDS flag set_
@@ -71,7 +73,8 @@ are reused in many other open source projects.
 - [smtp-receiving-ips/list.json](./lists/smtp-receiving-ips/list.json) - **List of known SMTP receiving IP addresses** - _List of IP addresses for known SMTP servers._
 - [smtp-sending-ips/list.json](./lists/smtp-sending-ips/list.json) - **List of known SMTP sending IP ranges** - _List of IP ranges for known SMTP servers._
 - [stackpath/list.json](./lists/stackpath/list.json) - **List of known Stackpath CDN IP ranges** - _List of known Stackpath (Highwinds) CDN IP ranges (https://support.stackpath.com/hc/en-us/articles/360001091666-Whitelist-CDN-WAF-IP-Blocks)_
-- [tenable/list.json](./lists/tenable/list.json) - **List of known Tenable.io Cloud Sensors** - _List of known Tenable.io Cloud Sensor/Scanner IP ranges (https://docs.tenable.com/tenableio/Content/Platform/Settings/Sensors/CloudSensors.htm)_
+- [tenable-cloud-ipv4/list.json](./lists/tenable-cloud-ipv4/list.json) - **List of known Tenable Cloud Sensors IPv4** - _Tenable IPv4 Cloud Sensor addresses used for scanning Internet-facing infrastructure_
+- [tenable-cloud-ipv6/list.json](./lists/tenable-cloud-ipv6/list.json) - **List of known Tenable Cloud Sensors IPv6** - _Tenable IPv6 Cloud Sensor addresses used for scanning Internet-facing infrastructure_
 - [ti-falsepositives/list.json](./lists/ti-falsepositives/list.json) - **Hashes that are often included in IOC lists but are false positives.** - _Hashes that are often included in IOC lists but are false positives._
 - [tlds/list.json](./lists/tlds/list.json) - **TLDs as known by IANA** - _Event contains one or more TLDs as attribute with an IDS flag set_
 - [tranco/list.json](./lists/tranco/list.json) - **Top 1,000,000 most-used sites from Tranco** - _Event contains one or more entries from the top 1,000,000 most-used sites (https://tranco-list.eu/)._
