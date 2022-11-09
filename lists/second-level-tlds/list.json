@@ -3171,7 +3171,6 @@
     "gv.vc",
     "gw",
     "gwangju.kr",
-    "gwiddle.co.uk",
     "gx.cn",
     "gy",
     "gyeongbuk.kr",
@@ -5363,6 +5362,7 @@
     "my.eu.org",
     "my.id",
     "myactivedirectory.com",
+    "myamaze.net",
     "myasustor.com",
     "mycd.eu",
     "mycloud.by",
@@ -5394,7 +5394,6 @@
     "mypi.co",
     "mypsx.net",
     "myqnapcloud.com",
-    "myravendb.com",
     "mysecuritycamera.com",
     "mysecuritycamera.net",
     "mysecuritycamera.org",
@@ -9465,5 +9464,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20221024
+  "version": 20221109
 }
