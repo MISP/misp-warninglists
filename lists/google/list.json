@@ -194,6 +194,7 @@
     ".google.vg",
     ".google.vu",
     ".google.ws",
+    ".translate.goog",
     "1e100.net",
     "466453.com",
     "abc.xyz",
@@ -676,5 +677,5 @@
   ],
   "name": "List of known google domains",
   "type": "string",
-  "version": 5
+  "version": 6
 }
