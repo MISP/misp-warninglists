@@ -32,6 +32,7 @@ python3 generate-google-gcp.py
 python3 generate-google-gmail-sending-ips.py
 python3 generate-smtp.py
 python3 generate-tenable.py
+python3 generate-microsoft-azure-appid.py
 popd
 
 ./jq_all_the_things.sh
