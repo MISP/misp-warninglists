@@ -28,8 +28,7 @@
         "substring",
         "hostname",
         "cidr",
-        "regex",
-        "azure-application-ids"
+        "regex"
       ],
       "type": "string"
     },
