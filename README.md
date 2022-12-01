@@ -41,6 +41,7 @@ are reused in many other open source projects.
 - [ipv6-linklocal/list.json](./lists/ipv6-linklocal/list.json) - **List of IPv6 link local blocks** - _Event contains one or more entries part of the IPv6 link local prefix (RFC 4291)_
 - [majestic_million/list.json](./lists/majestic_million/list.json) - **Top 10000 websites from Majestic Million** - _Event contains one or more entries from the top 10K of the most used websites (Majestic Million)._
 - [microsoft-attack-simulator/list.json](./lists/microsoft-attack-simulator/list.json) - **List of known Office 365 Attack Simulator used for phishing awareness campaigns** - _Office 365 URLs and IP address ranges used for their attack simulator in Office 365 Threat Intelligence_
+- [microsoft-azure-appid/list.json](./lists/microsoft-azure-appid/list.json) - **List of Azure Applicaiton IDs** - _List of Azure Applicaiton IDs (https://learn.microsoft.com/en-us/troubleshoot/azure/active-directory/verify-first-party-apps-sign-in)_
 - [microsoft-azure-china/list.json](./lists/microsoft-azure-china/list.json) - **List of known Microsoft Azure China Datacenter IP Ranges** - _Microsoft Azure China Datacenter IP Ranges_
 - [microsoft-azure-germany/list.json](./lists/microsoft-azure-germany/list.json) - **List of known Microsoft Azure Germany Datacenter IP Ranges** - _Microsoft Azure Germany Datacenter IP Ranges_
 - [microsoft-azure-us-gov/list.json](./lists/microsoft-azure-us-gov/list.json) - **List of known Microsoft Azure US Government Cloud Datacenter IP Ranges** - _Microsoft Azure US Government Cloud Datacenter IP Ranges_
@@ -62,6 +63,7 @@ are reused in many other open source projects.
 - [public-dns-hostname/list.json](./lists/public-dns-hostname/list.json) - **List of known public DNS resolvers expressed as hostname** - _Event contains one or more public DNS resolvers (expressed as hostname) as attribute with an IDS flag set_
 - [public-dns-v4/list.json](./lists/public-dns-v4/list.json) - **List of known IPv4 public DNS resolvers** - _Event contains one or more public IPv4 DNS resolvers as attribute with an IDS flag set_
 - [public-dns-v6/list.json](./lists/public-dns-v6/list.json) - **List of known IPv6 public DNS resolvers** - _Event contains one or more public IPv6 DNS resolvers as attribute with an IDS flag set_
+- [public-ipfs-gateways/list.json](./lists/public-ipfs-gateways/list.json) - **List of known public IPFS gateways** - _Event contains one or more entries of known public IPFS gateways_
 - [rfc1918/list.json](./lists/rfc1918/list.json) - **List of RFC 1918 CIDR blocks** - _Event contains one or more entries part of the private network CIDR blocks (RFC 1918)_
 - [rfc3849/list.json](./lists/rfc3849/list.json) - **List of RFC 3849 CIDR blocks** - _Event contains one or more entries part of the IPv6 documentation prefix (RFC 3849)_
 - [rfc5735/list.json](./lists/rfc5735/list.json) - **List of RFC 5735 CIDR blocks** - _Event contains one or more entries part of the Special Use IPv4 Addresses CIDR blocks (RFC 5735)_
