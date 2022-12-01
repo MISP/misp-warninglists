@@ -97,6 +97,6 @@
     "azure-application-id"
   ],
   "name": "List of Azure Applicaiton IDs",
-  "type": "azure-application-ids",
+  "type": "string",
   "version": 20221201
 }

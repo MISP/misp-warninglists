@@ -13,7 +13,7 @@ def process(url, dst):
         'name': 'List of Azure Applicaiton IDs',
         'version': get_version(),
         'description': 'List of Azure Application IDs (https://learn.microsoft.com/en-us/troubleshoot/azure/active-directory/verify-first-party-apps-sign-in)',
-        'type': 'azure-application-ids',
+        'type': 'string',
         'list': [],
         'matching_attributes': ["azure-application-id"]
     }
