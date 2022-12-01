@@ -12,7 +12,7 @@ def process(url, dst):
     warninglist = {
         'name': 'List of Azure Applicaiton IDs',
         'version': get_version(),
-        'description': 'List of Azure Applicaiton IDs (https://learn.microsoft.com/en-us/troubleshoot/azure/active-directory/verify-first-party-apps-sign-in)',
+        'description': 'List of Azure Application IDs (https://learn.microsoft.com/en-us/troubleshoot/azure/active-directory/verify-first-party-apps-sign-in)',
         'type': 'azure-application-ids',
         'list': [],
         'matching_attributes': ["azure-application-id"]
