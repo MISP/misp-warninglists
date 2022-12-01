@@ -19,7 +19,6 @@
     "ACO",
     "ACTOR",
     "AD",
-    "ADAC",
     "ADS",
     "ADULT",
     "AE",
@@ -1494,5 +1493,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20221109
+  "version": 20221201
 }

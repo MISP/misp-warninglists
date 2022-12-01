@@ -1050,6 +1050,7 @@
     "fakemail.io",
     "fakemailgenerator.com",
     "fakemailz.com",
+    "fallinhay.com",
     "fammix.com",
     "fanclub.pm",
     "fangoh.com",
@@ -3074,6 +3075,7 @@
     "tuofs.com",
     "turoid.com",
     "turual.com",
+    "turuma.com",
     "tvchd.com",
     "tverya.com",
     "twinmail.de",
@@ -3467,5 +3469,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20221109
+  "version": 20221201
 }

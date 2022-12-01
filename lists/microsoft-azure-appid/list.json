@@ -1,5 +1,5 @@
 {
-  "description": "List of Azure Applicaiton IDs (https://learn.microsoft.com/en-us/troubleshoot/azure/active-directory/verify-first-party-apps-sign-in)",
+  "description": "List of Azure Application IDs (https://learn.microsoft.com/en-us/troubleshoot/azure/active-directory/verify-first-party-apps-sign-in)",
   "list": [
     "00000002-0000-0000-c000-000000000000",
     "00000002-0000-0ff1-ce00-000000000000",
@@ -16,6 +16,7 @@
     "00b41c95-dab0-4487-9791-b9d2c32c80f2",
     "04b07795-8ddb-461a-bbee-02f9e1bf7b46",
     "08e18876-6177-487e-b8b5-cf950c1e598c",
+    "0cb7b9ec-5336-483b-bc31-b15b5788de71",
     "0cd196ee-71bf-4fd6-a57c-b491ffd4fb1e",
     "0f698dd4-f011-4d23-a33e-b36416dcb1e6",
     "16aeb910-ce68-41d1-9ac3-9e1673ac9575",
@@ -74,6 +75,7 @@
     "b4bddae8-ab25-483e-8670-df09b9f1d0ea",
     "b6e69c34-5f1f-4c34-8cdf-7fea120b8670",
     "bb2a2e3a-c5e7-4f0a-88e0-8e01fd3fc1f4",
+    "bdd48c81-3a58-4ea9-849c-ebea7f6b6360",
     "c1c74fed-04c9-4704-80dc-9f79a2e515cb",
     "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
     "c9a559d2-7aab-4f13-a6ed-e7e9c52aec87",
@@ -96,5 +98,5 @@
   ],
   "name": "List of Azure Applicaiton IDs",
   "type": "azure-application-ids",
-  "version": 20221118
+  "version": 20221201
 }
