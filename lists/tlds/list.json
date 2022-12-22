@@ -722,7 +722,6 @@
     "LOANS",
     "LOCKER",
     "LOCUS",
-    "LOFT",
     "LOL",
     "LONDON",
     "LOTTE",
@@ -1059,7 +1058,6 @@
     "SELECT",
     "SENER",
     "SERVICES",
-    "SES",
     "SEVEN",
     "SEW",
     "SEX",
@@ -1386,7 +1384,6 @@
     "XN--J1AMH",
     "XN--J6W193G",
     "XN--JLQ480N2RG",
-    "XN--JLQ61U9W7B",
     "XN--JVR189M",
     "XN--KCRX77D1X4A",
     "XN--KPRW13D",
@@ -1493,5 +1490,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20221201
+  "version": 20221222
 }

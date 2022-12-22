@@ -2531,7 +2531,6 @@
     "rtrtr.com",
     "rtskiya.xyz",
     "rudymail.ml",
-    "ruffrey.com",
     "rumgel.com",
     "runi.ca",
     "rupayamail.com",
@@ -3469,5 +3468,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20221201
+  "version": 20221222
 }

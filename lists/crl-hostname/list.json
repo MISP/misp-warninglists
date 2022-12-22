@@ -1,7 +1,6 @@
 {
   "description": "Domains that belongs to CRL or OCSP",
   "list": [
-    "atospki",
     "br-root-ca1-2020.ocsp.d-trust.net",
     "cdp-ldap.intranet.eon.com",
     "cdp-ldap.intranet.uniper.energy",
@@ -24,7 +23,6 @@
     "crl.affirmtrust.com",
     "crl.anf.es",
     "crl.buypass.no",
-    "crl.ca.pki.africa",
     "crl.camerfirma.com",
     "crl.certigna.fr",
     "crl.certsign.ro",
@@ -92,14 +90,12 @@
     "directory.d-trust.net",
     "directory.swisssign.net",
     "domorganisatieservicesocsp-g3.pkioverheid.nl",
-    "domserver2020ocsp.pkioverheid.nl",
     "eca.hinet.net",
     "eon-group-ca-2-2013.ocsp.d-trust.net",
     "epki.com.tw",
     "epscd.catcert.net",
     "epscd2.catcert.net",
     "ev-root-ca1-2020.ocsp.d-trust.net",
-    "evrootocsp.pkioverheid.nl",
     "gold-ev-g2.ocsp.swisssign.net",
     "grcl2.crl.telesec.de",
     "grcl2.ocsp.telesec.de",
@@ -118,7 +114,6 @@
     "ocsp.affirmtrust.com",
     "ocsp.anf.es",
     "ocsp.buypass.com",
-    "ocsp.ca.pki.africa",
     "ocsp.camerfirma.com",
     "ocsp.catcert.cat",
     "ocsp.certsign.ro",
@@ -266,5 +261,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20221201
+  "version": 20221222
 }

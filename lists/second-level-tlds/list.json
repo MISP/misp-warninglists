@@ -9022,7 +9022,6 @@
     "xn--j1amh",
     "xn--j6w193g",
     "xn--jlq480n2rg",
-    "xn--jlq61u9w7b",
     "xn--jlster-bya.no",
     "xn--jrpeland-54a.no",
     "xn--jvr189m",
@@ -9468,5 +9467,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20221201
+  "version": 20221222
 }
