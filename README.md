@@ -34,6 +34,7 @@ are reused in many other open source projects.
 - [eicar.com/list.json](./lists/eicar.com/list.json) - **List of hashes for EICAR test virus** - _Event contains one or more entries based on hashes for EICAR test virus_
 - [empty-hashes/list.json](./lists/empty-hashes/list.json) - **List of known hashes for empty files** - _Event contains one or more entries of empty files based on known hashed_
 - [fastly/list.json](./lists/fastly/list.json) - **List of known Fastly IP address ranges** - _Fastly IP address ranges (https://api.fastly.com/public-ip-list)_
+- [google-chrome-crux-1million/list.json](./lists/google-chrome-crux-1million/list.json) - **google-chrome-crux-1million** - _Cached Chrome Top Million Websites - top 1 million_
 - [google-gcp/list.json](./lists/google-gcp/list.json) - **List of known GCP (Google Cloud Platform) IP address ranges** - _GCP (Google Cloud Platform) IP address ranges (https://www.gstatic.com/ipranges/cloud.json)_
 - [google-gmail-sending-ips/list.json](./lists/google-gmail-sending-ips/list.json) - **List of known Gmail sending IP ranges** - _List of known Gmail sending IP ranges (https://support.google.com/a/answer/27642?hl=en)_
 - [google/list.json](./lists/google/list.json) - **List of known google domains** - _Event contains one or more entries of known google domains_
@@ -41,7 +42,7 @@ are reused in many other open source projects.
 - [ipv6-linklocal/list.json](./lists/ipv6-linklocal/list.json) - **List of IPv6 link local blocks** - _Event contains one or more entries part of the IPv6 link local prefix (RFC 4291)_
 - [majestic_million/list.json](./lists/majestic_million/list.json) - **Top 10000 websites from Majestic Million** - _Event contains one or more entries from the top 10K of the most used websites (Majestic Million)._
 - [microsoft-attack-simulator/list.json](./lists/microsoft-attack-simulator/list.json) - **List of known Office 365 Attack Simulator used for phishing awareness campaigns** - _Office 365 URLs and IP address ranges used for their attack simulator in Office 365 Threat Intelligence_
-- [microsoft-azure-appid/list.json](./lists/microsoft-azure-appid/list.json) - **List of Azure Applicaiton IDs** - _List of Azure Applicaiton IDs (https://learn.microsoft.com/en-us/troubleshoot/azure/active-directory/verify-first-party-apps-sign-in)_
+- [microsoft-azure-appid/list.json](./lists/microsoft-azure-appid/list.json) - **List of Azure Applicaiton IDs** - _List of Azure Application IDs (https://learn.microsoft.com/en-us/troubleshoot/azure/active-directory/verify-first-party-apps-sign-in)_
 - [microsoft-azure-china/list.json](./lists/microsoft-azure-china/list.json) - **List of known Microsoft Azure China Datacenter IP Ranges** - _Microsoft Azure China Datacenter IP Ranges_
 - [microsoft-azure-germany/list.json](./lists/microsoft-azure-germany/list.json) - **List of known Microsoft Azure Germany Datacenter IP Ranges** - _Microsoft Azure Germany Datacenter IP Ranges_
 - [microsoft-azure-us-gov/list.json](./lists/microsoft-azure-us-gov/list.json) - **List of known Microsoft Azure US Government Cloud Datacenter IP Ranges** - _Microsoft Azure US Government Cloud Datacenter IP Ranges_
