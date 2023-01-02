@@ -842,6 +842,7 @@
     "dropjar.com",
     "droplar.com",
     "dropmail.me",
+    "dropsin.net",
     "dsgvo.ru",
     "dsiay.com",
     "dspwebservices.com",
@@ -2240,6 +2241,7 @@
     "obobbo.com",
     "oborudovanieizturcii.ru",
     "obxpestcontrol.com",
+    "octovie.com",
     "odaymail.com",
     "odem.com",
     "odnorazovoe.ru",
@@ -2405,6 +2407,7 @@
     "privy-mail.de",
     "privymail.de",
     "pro-tag.org",
+    "pro5g.com",
     "procrackers.com",
     "profast.top",
     "projectcl.com",
@@ -2469,6 +2472,7 @@
     "rax.la",
     "raxtest.com",
     "razemail.com",
+    "razuz.com",
     "rbb.org",
     "rcasd.com",
     "rcpt.at",
@@ -2778,6 +2782,7 @@
     "spritzzone.de",
     "spruzme.com",
     "spybox.de",
+    "spymail.com",
     "squizzy.de",
     "squizzy.net",
     "sroff.com",
@@ -3468,5 +3473,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20221222
+  "version": 20230102
 }
