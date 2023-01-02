@@ -5,6 +5,7 @@ import logging
 from inspect import currentframe, getframeinfo, getmodulename, stack
 from os import mkdir, path
 from typing import List, Union
+import gzip
 
 import requests
 import dns.exception
@@ -35,7 +36,7 @@ def init_logging():
 init_logging()
 
 
-def download_to_file(url, file):
+def download_to_file(url, file, gzip_enable=False):
     frame_records = stack()[1]
     caller = getmodulename(frame_records[1]).upper()
 
@@ -51,30 +52,34 @@ def download_to_file(url, file):
         if(url_datetime > file_datetime):
             logging.info('{} File on server is newer, so downloading update to {}'.format(
                 caller, get_abspath_source_file(file)))
-            actual_download_to_file(url, file, user_agent)
+            actual_download_to_file(url, file, user_agent, gzip_enable=gzip_enable)
         else:
             logging.info(
                 '{} File on server is older, nothing to do'.format(caller))
     except KeyError as exc:
         logging.warning('{} KeyError in the headers. the {} header was not sent by server {}. Downloading file'.format(
             caller, str(exc), url))
-        actual_download_to_file(url, file, user_agent)
+        actual_download_to_file(url, file, user_agent, gzip_enable=gzip_enable)
     except FileNotFoundError as exc:
         logging.info(
             "{} File didn't exist, so downloading {} from {}".format(caller, file, url))
-        actual_download_to_file(url, file, user_agent)
+        actual_download_to_file(url, file, user_agent, gzip_enable=gzip_enable)
     except Exception as exc:
         logging.warning(
             '{} General exception occured: {}.'.format(caller, str(exc)))
-        actual_download_to_file(url, file, user_agent)
+        actual_download_to_file(url, file, user_agent, gzip_enable=gzip_enable)
 
 
-def actual_download_to_file(url, file, user_agent):
+def actual_download_to_file(url, file, user_agent, gzip_enable=False):
     r = requests.get(url, headers=user_agent)
     with open(get_abspath_source_file(file), 'wb') as fd:
         for chunk in r.iter_content(4096):
             fd.write(chunk)
-
+    if gzip_enable:
+        with gzip.open(get_abspath_source_file(file), 'rb') as fgzip:
+            file_content = fgzip.read()
+        with open(get_abspath_source_file(file), 'wb') as fd:
+            fd.write(file_content)
 
 def process_stream(url):
     r = requests.get(url, stream=True)
