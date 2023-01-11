@@ -18,9 +18,6 @@ def process(url, dst):
 
 
 if __name__ == '__main__':
-    vpn_base_url_v4 = 'https://raw.githubusercontent.com/X4BNet/lists_vpn/main/ipv4.txt'
-    vpns = ['https://raw.githubusercontent.com/X4BNet/lists_vpn/main/ipv4.txt']
-    for url in vpns:
-        uri = url.split('/')[-1]
-        uri.split('.')[0]
-        process(url, uri)
+    url = 'https://raw.githubusercontent.com/X4BNet/lists_vpn/main/ipv4.txt'
+    dst = 'vpn-ipv4'
+    process(url, dst)
