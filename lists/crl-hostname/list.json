@@ -49,7 +49,6 @@
     "crl.godaddy.com",
     "crl.harica.gr",
     "crl.izenpe.com",
-    "crl.netsolssl.com",
     "crl.pki.goog",
     "crl.pkioverheid.nl",
     "crl.quovadisglobal.com",
@@ -93,8 +92,6 @@
     "eca.hinet.net",
     "eon-group-ca-2-2013.ocsp.d-trust.net",
     "epki.com.tw",
-    "epscd.catcert.net",
-    "epscd2.catcert.net",
     "ev-root-ca1-2020.ocsp.d-trust.net",
     "gold-ev-g2.ocsp.swisssign.net",
     "grcl2.crl.telesec.de",
@@ -115,7 +112,6 @@
     "ocsp.anf.es",
     "ocsp.buypass.com",
     "ocsp.camerfirma.com",
-    "ocsp.catcert.cat",
     "ocsp.certsign.ro",
     "ocsp.cfca.com.cn",
     "ocsp.comodoca.com",
@@ -140,7 +136,6 @@
     "ocsp.godaddy.com",
     "ocsp.harica.gr",
     "ocsp.izenpe.com",
-    "ocsp.netsolssl.com",
     "ocsp.omniroot.com",
     "ocsp.pca.dfn.de",
     "ocsp.pki.goog",
@@ -195,7 +190,6 @@
     "pki.telesec.de",
     "pki0336.telesec.de",
     "pkicdp.uniperapps.com",
-    "platinum-g2.ocsp.swisssign.net",
     "portal.actalis.it",
     "public.ocsp.identrust.com",
     "public.wisekey.com",
@@ -261,5 +255,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20230102
+  "version": 20230111
 }
