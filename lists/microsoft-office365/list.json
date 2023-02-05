@@ -46,6 +46,7 @@
     "cdnprod.myanalytics.microsoft.com",
     "cert.int-x3.letsencrypt.org",
     "clientconfig.microsoftonline-p.net",
+    "cloud.microsoft",
     "cloudapp.net",
     "companymanager.microsoftonline.com",
     "compass-ssl.microsoft.com",
@@ -96,7 +97,6 @@
     "loginex.microsoftonline.com",
     "lync.com",
     "mail.protection.outlook.com",
-    "manage.microsoft.com",
     "management.azure.com",
     "media.azure.net",
     "mem.gfx.ms",
@@ -222,5 +222,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20230123
+  "version": 20230205
 }
