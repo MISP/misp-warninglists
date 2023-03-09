@@ -76,7 +76,6 @@
     "crl.ws.symantec.com",
     "crl05.actalis.it",
     "crl1.camerfirma.com",
-    "crl1.e-tugra.com",
     "crl1.hongkongpost.gov.hk",
     "crl1.netlock.hu",
     "crl2.netlock.hu",
@@ -123,7 +122,6 @@
     "ocsp.digicert-validation.com",
     "ocsp.digicert.cn",
     "ocsp.digicert.com",
-    "ocsp.e-tugra.com",
     "ocsp.eca.hinet.net",
     "ocsp.elektronicznypodpis.pl",
     "ocsp.emsign.com",
@@ -184,7 +182,6 @@
     "pki-ldap.atos.net",
     "pki-ocsp.atos.net",
     "pki-ocsp.symauth.com",
-    "pki-ocsp.verisign.com",
     "pki.intranet.eon.com",
     "pki.intranet.uniper.energy",
     "pki.telesec.de",
@@ -255,5 +252,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20230205
+  "version": 20230309
 }
