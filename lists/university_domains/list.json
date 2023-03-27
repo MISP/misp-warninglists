@@ -1425,6 +1425,7 @@
     "csuhayward.edu",
     "csulb.edu",
     "csum.edu",
+    "csumb.edu",
     "csun.edu",
     "csuohio.edu",
     "csus.edu",
@@ -2853,6 +2854,7 @@
     "hneu.edu.ua",
     "hnfjxy.cn",
     "hnluraipur.com",
+    "hnu.edu.cn",
     "hochschule-bonn-rhein-sieg.de",
     "hocking.edu",
     "hoduniv.net.ye",
@@ -4685,7 +4687,6 @@
     "montana.edu",
     "montcalm.edu",
     "montclair.edu",
-    "monterey.edu",
     "montesquieu.u-bordeaux.fr",
     "montgomery.edu",
     "montgomerycollege.edu",
@@ -4867,6 +4868,8 @@
     "mylcp.net",
     "mymail.mapua.edu.ph",
     "myongji.ac.kr",
+    "myport.ac.uk",
+    "myport.port.ac.uk",
     "myscc.ca",
     "myseneca.ca",
     "mytum.de",
@@ -9877,6 +9880,7 @@
     "wwu.de",
     "wwu.edu",
     "www-ecpm.u-strasbg.fr",
+    "www-en.hnu.edu.cn",
     "www-engees.u-strasbg.fr",
     "www-ensais.u-strasbg.fr",
     "www-ensps.u-strasbg.fr",
@@ -10063,5 +10067,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20230309
+  "version": 20230326
 }

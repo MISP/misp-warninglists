@@ -710,7 +710,6 @@
     "LIMITED",
     "LIMO",
     "LINCOLN",
-    "LINDE",
     "LINK",
     "LIPSY",
     "LIVE",
@@ -1489,5 +1488,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20230309
+  "version": 20230326
 }

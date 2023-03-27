@@ -59,6 +59,7 @@
     "835b2a73-6e10-4aa5-a979-21dfda45231c",
     "871c010f-5e61-4fb1-83ac-98610a7e9110",
     "89bee1f7-5e6e-4d8a-9f3d-ecd601259da7",
+    "8edd93e1-2103-40b4-bd70-6e34e586362d",
     "905fcf26-4eb7-48a0-9ff0-8dcc7194b5ba",
     "93625bc8-bfe2-437a-97e0-3d0060024faa",
     "93d53678-613d-4013-afc1-62e9e444a0a5",
@@ -99,5 +100,5 @@
   ],
   "name": "List of Azure Applicaiton IDs",
   "type": "string",
-  "version": 20230309
+  "version": 20230326
 }

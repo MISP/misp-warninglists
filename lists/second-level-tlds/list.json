@@ -4733,7 +4733,6 @@
     "lincoln",
     "lincoln.museum",
     "lindas.no",
-    "linde",
     "lindesnes.no",
     "link",
     "linkyard-cloud.ch",
@@ -9567,5 +9566,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20230309
+  "version": 20230326
 }
