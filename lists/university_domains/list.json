@@ -5958,6 +5958,7 @@
     "rhbnc.ac.uk",
     "rhodes.edu",
     "rhodesstate.edu",
+    "rhul.ac.uk",
     "riarauniversity.ac.ke",
     "riau.ac.ir",
     "ribat.edu.sd",
@@ -10067,5 +10068,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20230326
+  "version": 20230402
 }
