@@ -87,5 +87,5 @@
   ],
   "name": "List of known Office 365 IP address ranges",
   "type": "cidr",
-  "version": 20230410
+  "version": 20230412
 }
