@@ -96,7 +96,6 @@
     "loginex.microsoftonline.com",
     "lync.com",
     "mail.protection.outlook.com",
-    "management.azure.com",
     "media.azure.net",
     "mem.gfx.ms",
     "microsoft.com",
@@ -221,5 +220,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20230412
+  "version": 20230429
 }

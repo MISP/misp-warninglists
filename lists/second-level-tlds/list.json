@@ -4202,6 +4202,7 @@
     "kristiansund.no",
     "krodsherad.no",
     "krokstadelva.no",
+    "kropyvnytskyi.ua",
     "krym.ua",
     "ks.ua",
     "ks.us",
@@ -9021,5 +9022,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20230412
+  "version": 20230429
 }
