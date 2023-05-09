@@ -20,6 +20,7 @@
     "0cb7b9ec-5336-483b-bc31-b15b5788de71",
     "0cd196ee-71bf-4fd6-a57c-b491ffd4fb1e",
     "0f698dd4-f011-4d23-a33e-b36416dcb1e6",
+    "14d82eec-204b-4c2f-b7e8-296a70dab67e",
     "16aeb910-ce68-41d1-9ac3-9e1673ac9575",
     "1786c5ed-9644-47b2-8aa0-7201292175b6",
     "17d5e35f-655b-4fb0-8ae6-86356e9a49f5",
@@ -88,6 +89,7 @@
     "d176f6e7-38e5-40c9-8a78-3998aab820e7",
     "d3590ed6-52b3-4102-aeff-aad2292ab01c",
     "d73f4b35-55c9-48c7-8b10-651f6f2acb2e",
+    "de8bc8b5-d9f9-48b1-a8ad-b748da725064",
     "e1ef36fd-b883-4dbf-97f0-9ece4b576fc6",
     "e64aa8bc-8eb4-40e2-898b-cf261a25954f",
     "e9f49c6b-5ce5-44c8-925d-015017e9f7ad",
@@ -101,5 +103,5 @@
   ],
   "name": "List of Azure Applicaiton IDs",
   "type": "string",
-  "version": 20230429
+  "version": 20230509
 }
