@@ -26,7 +26,6 @@ def process(files, dst):
             for row in csv_reader:
                 if flag:
                     flag = False
-                    print(True)
                     continue
                 v = row[1]
                 warninglist['list'].append(v.rstrip().rstrip('/'))
