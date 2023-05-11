@@ -425,6 +425,7 @@
     "bcb.ro",
     "bccto.me",
     "bdmuzic.pw",
+    "beaconmessenger.com",
     "bearsarefuzzy.com",
     "beddly.com",
     "beefmilk.com",
@@ -649,6 +650,7 @@
     "crazymailing.com",
     "cream.pink",
     "crepeau12.com",
+    "cringemonster.com",
     "cross-law.ga",
     "cross-law.gq",
     "crossmailjet.com",
@@ -1473,6 +1475,7 @@
     "imstations.com",
     "imul.info",
     "in-ulm.de",
+    "inactivemachine.com",
     "inbax.tk",
     "inbound.plus",
     "inbox.si",
@@ -1698,6 +1701,7 @@
     "lak.pp.ua",
     "lakelivingstonrealestate.com",
     "lakqs.com",
+    "lamasticots.com",
     "landmail.co",
     "laoeq.com",
     "larisia.com",
@@ -2939,6 +2943,7 @@
     "thecloudindex.com",
     "thediamants.org",
     "thedirhq.info",
+    "theeyeoftruth.com",
     "thejoker5.com",
     "thelightningmail.net",
     "thelimestones.com",
@@ -3480,5 +3485,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20230509
+  "version": 20230511
 }

@@ -109,6 +109,7 @@
     "ocsp.accv.es",
     "ocsp.affirmtrust.com",
     "ocsp.anf.es",
+    "ocsp.bjca.cn",
     "ocsp.buypass.com",
     "ocsp.camerfirma.com",
     "ocsp.certsign.ro",
@@ -191,6 +192,7 @@
     "public.ocsp.identrust.com",
     "public.wisekey.com",
     "rca.navercorp.com",
+    "repo.bjca.cn",
     "repository.secomtrust.net",
     "root-c3-ca2-2009.ocsp.d-trust.net",
     "root-c3-ca2-ev-2009.ocsp.d-trust.net",
@@ -249,5 +251,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20230509
+  "version": 20230511
 }
