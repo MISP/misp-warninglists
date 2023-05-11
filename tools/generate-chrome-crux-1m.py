@@ -27,7 +27,6 @@ def process(files, dst):
             for row in csv_reader:
                 if flag:
                     flag = False
-                    print(True)
                     continue
                 v = row[0]
                 p = urlparse(v)
