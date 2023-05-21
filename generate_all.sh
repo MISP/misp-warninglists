@@ -4,7 +4,7 @@ set -e
 set -x
 
 pushd tools
-python3 generate_alexa.py
+# python3 generate_alexa.py  # not updated since February 1, 2023 and offline after July 31, 2023
 python3 generate-amazon-aws.py
 python3 generate-cisco.py
 python3 generate-cloudflare.py
