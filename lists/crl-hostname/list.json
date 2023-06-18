@@ -61,7 +61,6 @@
     "crl.rootg2.amazontrust.com",
     "crl.sbca.telesec.de",
     "crl.securetrust.com",
-    "crl.sslcom.cn",
     "crl.starfieldtech.com",
     "crl.swisssign.ch",
     "crl.swisssign.net",
@@ -71,7 +70,6 @@
     "crl.trustwave.com",
     "crl.tuntrust.tn",
     "crl.usertrust.com",
-    "crl.verisign.com",
     "crl.vikingcloud.com",
     "crl.ws.symantec.com",
     "crl05.actalis.it",
@@ -251,5 +249,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20230511
+  "version": 20230618
 }
