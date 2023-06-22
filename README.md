@@ -89,7 +89,7 @@ are reused in many other open source projects.
 - [vpn-ipv6/list.json](./lists/vpn-ipv6/list.json) - **Specialized list of IPv6 addresses belonging to common VPN providers and datacenters** - _Specialized list of IPv6 addresses belonging to common VPN providers and datacenters_
 - [whats-my-ip/list.json](./lists/whats-my-ip/list.json) - **List of known domains to know external IP** - _Event contains one or more entries of known 'what's my ip' domains_
 - [wikimedia/list.json](./lists/wikimedia/list.json) - **List of known Wikimedia address ranges** - _Wikimedia address ranges (http://noc.wikimedia.org/conf/reverse-proxy.php.txt)_
-
+- [digitalside/list.json](./lists/digitalside/list.json) - **List of known domains to be marked as false positive** - _Malicious urls are spread using legitimate domains. File sharing services, CDN hosts and social netowrks are common examples._
 # Format of a warning list
 
 ~~~~json
