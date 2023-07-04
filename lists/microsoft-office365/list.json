@@ -122,7 +122,6 @@
     "ocos-office365-s2s.msedge.net",
     "ocsp.digicert.com",
     "ocsp.globalsign.com",
-    "ocsp.int-x3.letsencrypt.org",
     "ocsp.msocsp.com",
     "ocsp2.globalsign.com",
     "ocspx.digicert.com",
@@ -180,6 +179,7 @@
     "spoprod-a.akamaihd.net",
     "ssw.live.com",
     "staffhub.ms",
+    "static.microsoft",
     "storage.live.com",
     "streaming.mediaservices.windows.net",
     "support.microsoft.com",
@@ -218,5 +218,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20230622
+  "version": 20230704
 }

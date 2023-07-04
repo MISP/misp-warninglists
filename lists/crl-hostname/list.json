@@ -90,7 +90,6 @@
     "eon-group-ca-2-2013.ocsp.d-trust.net",
     "epki.com.tw",
     "ev-root-ca1-2020.ocsp.d-trust.net",
-    "gold-ev-g2.ocsp.swisssign.net",
     "grcl2.crl.telesec.de",
     "grcl2.ocsp.telesec.de",
     "grcl3.crl.telesec.de",
@@ -249,5 +248,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20230622
+  "version": 20230704
 }
