@@ -3,12 +3,14 @@ import csv
 import logging
 import multiprocessing.dummy
 import urllib.parse
+import sys
 from OpenSSL.crypto import FILETYPE_PEM, load_certificate, X509
 from pyasn1.codec.der.decoder import decode as asn1_decoder
 from pyasn1_modules.rfc2459 import CRLDistPointsSyntax, AuthorityInfoAccessSyntax
 from typing import List, Set
-from dns.resolver import NoAnswer, NXDOMAIN
+from dns.resolver import NoAnswer, NXDOMAIN, NoNameservers
 from dns.exception import Timeout
+import dns
 from generator import download_to_file, get_version, write_to_file, get_abspath_source_file, create_resolver
 
 
@@ -45,18 +47,19 @@ def get_crl_ocsp_domains(cert: X509) -> List[str]:
 
 def get_ips_from_domain(domain: str) -> Set[str]:
     resolver = create_resolver()
-
     ips = set()
 
     try:
-        for rdata in resolver.query(domain, 'A'):
+        answers = dns.resolver.resolve(domain, 'A')
+        for rdata in answers:
             ips.add(str(rdata))
-    except (NoAnswer, NXDOMAIN, Timeout):
+    except (NoAnswer, NXDOMAIN, NoNameservers, Timeout):
         pass
     try:
-        for rdata in resolver.query(domain, 'AAAA'):
+        answers = dns.resolver.resolve(domain, 'AAAA')
+        for rdata in answers:
             ips.add(str(rdata))
-    except (NoAnswer, NXDOMAIN, Timeout):
+    except (NoAnswer, NXDOMAIN, NoNameservers, Timeout):
         pass
 
     return ips
