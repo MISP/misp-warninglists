@@ -25,6 +25,7 @@
     "media.discordapp.net",
     "pastebin.com",
     "raw.githubusercontent.com",
+    "repository.eset.com",
     "s3.amazonaws.com",
     "s3.eu-central-2.wasabisys.com",
     "sptrack.trello.com",
@@ -43,5 +44,5 @@
   ],
   "name": "OSINT.DigitalSide.IT Warning List",
   "type": "hostname",
-  "version": 20230704
+  "version": 20230728
 }

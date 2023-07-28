@@ -560,7 +560,6 @@
     "HOST",
     "HOSTING",
     "HOT",
-    "HOTELES",
     "HOTELS",
     "HOTMAIL",
     "HOUSE",
@@ -892,7 +891,6 @@
     "PARTNERS",
     "PARTS",
     "PARTY",
-    "PASSAGENS",
     "PAY",
     "PCCW",
     "PE",
@@ -1164,7 +1162,6 @@
     "TIAA",
     "TICKETS",
     "TIENDA",
-    "TIFFANY",
     "TIPS",
     "TIRES",
     "TIROL",
@@ -1255,7 +1252,6 @@
     "VOTO",
     "VOYAGE",
     "VU",
-    "VUELOS",
     "WALES",
     "WALMART",
     "WALTER",
@@ -1479,5 +1475,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20230704
+  "version": 20230728
 }
