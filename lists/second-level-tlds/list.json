@@ -7632,7 +7632,6 @@
     "tickets.io",
     "tienda",
     "tiengiang.vn",
-    "tiffany",
     "time.no",
     "tingvoll.no",
     "tinn.no",
@@ -9108,5 +9107,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20230728
+  "version": 20230731
 }

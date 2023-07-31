@@ -37617,5 +37617,5 @@
   ],
   "name": "List of known public DNS resolvers expressed as hostname",
   "type": "hostname",
-  "version": 20230728
+  "version": 20230731
 }
