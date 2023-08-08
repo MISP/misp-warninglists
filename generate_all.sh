@@ -36,6 +36,7 @@ python3 generate-tenable.py
 python3 generate-microsoft-azure-appid.py
 python3 generate-chrome-crux-1m.py
 python3 generate-digitalside.py
+python3 generate-gptbot.py
 popd
 
 ./jq_all_the_things.sh
