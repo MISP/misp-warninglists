@@ -8,5 +8,5 @@
   ],
   "name": "List of known SMTP receiving IP addresses",
   "type": "cidr",
-  "version": 20230731
+  "version": 20230808
 }

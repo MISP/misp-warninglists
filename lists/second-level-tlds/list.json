@@ -5101,7 +5101,6 @@
     "musician.io",
     "mutsu.aomori.jp",
     "mutsuzawa.chiba.jp",
-    "mutual",
     "mutual.ar",
     "mv",
     "mw",
@@ -9107,5 +9106,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20230731
+  "version": 20230808
 }
