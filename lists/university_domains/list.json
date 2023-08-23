@@ -2072,6 +2072,7 @@
     "esim.imt-mrs.fr",
     "esitpa.org",
     "esm-tbilisi.ge",
+    "esmad.ipp.pt",
     "esme.fr",
     "esn.ac.lk",
     "espam-formationuc.org",
@@ -4692,6 +4693,7 @@
     "miu.ru",
     "miuegypt.edu.eg",
     "miun.se",
+    "miva.university",
     "miyakyo-u.ac.jp",
     "miyasankei-u.ac.jp",
     "miyazaki-med.ac.jp",
@@ -10009,6 +10011,7 @@
     "www.clcmn.edu",
     "www.cuesta.edu",
     "www.eacc.edu",
+    "www.esmad.ipp.pt",
     "www.fdtc.edu",
     "www.ojc.edu",
     "www.sunyacc.edu",
@@ -10186,5 +10189,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20230808
+  "version": 20230823
 }

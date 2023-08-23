@@ -844,7 +844,6 @@
     "NL",
     "NO",
     "NOKIA",
-    "NORTHWESTERNMUTUAL",
     "NORTON",
     "NOW",
     "NOWRUZ",
@@ -1474,5 +1473,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20230808
+  "version": 20230823
 }

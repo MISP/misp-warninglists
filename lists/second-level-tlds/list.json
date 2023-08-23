@@ -5641,7 +5641,6 @@
     "nore-og-uvdal.no",
     "north-kazakhstan.su",
     "northflank.app",
-    "northwesternmutual",
     "norton",
     "nose.osaka.jp",
     "nosegawa.nara.jp",
@@ -9106,5 +9105,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20230808
+  "version": 20230823
 }
