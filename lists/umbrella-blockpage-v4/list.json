@@ -1,0 +1,19 @@
+{
+  "description": "Cisco Umbrella blockpage in IPv4",
+  "list": [
+    "146.112.61.104",
+    "146.112.61.105",
+    "146.112.61.106",
+    "146.112.61.107",
+    "146.112.61.108",
+    "146.112.61.110"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip"
+  ],
+  "name": "cisco-umbrella-blockpage-ipv4",
+  "type": "cidr",
+  "version": 20230825
+}
