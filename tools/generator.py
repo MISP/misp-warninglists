@@ -10,6 +10,7 @@ import gzip
 import requests
 import dns.exception
 import dns.resolver
+import dns.reversename
 from dateutil.parser import parse as parsedate
 
 
@@ -246,6 +247,15 @@ class Dns:
                 ranges += map(ipaddress.ip_network, self.get_mx_ips_for_domain(mx))
 
         return ranges
+
+    def get_domain_from_ip(self, ip: str) -> str:
+        try:
+            records = dns.reversename.from_address(ip)
+        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.exception.Timeout, dns.resolver.NoNameservers) as e:
+            logging.info("Could not fetch PTR record for IP {}: {}".format(ip, str(e)))
+            return []          
+
+        return str(dns.resolver.resolve(records,"PTR")[0]).rstrip('.')
 
 
 def main():
