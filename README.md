@@ -85,12 +85,16 @@ are reused in many other open source projects.
 - [tlds/list.json](./lists/tlds/list.json) - **TLDs as known by IANA** - _Event contains one or more TLDs as attribute with an IDS flag set_
 - [tranco/list.json](./lists/tranco/list.json) - **Top 1,000,000 most-used sites from Tranco** - _Event contains one or more entries from the top 1,000,000 most-used sites (https://tranco-list.eu/)._
 - [tranco10k/list.json](./lists/tranco10k/list.json) - **Top 10K most-used sites from Tranco** - _Event contains one or more entries from the top 10K most-used sites (https://tranco-list.eu/)._
+- [umbrella-blockpage-hostname/list.json](./lists/umbrella-blockpage-hostname/list.json) - **cisco-umbrella-blockpage-hostname** - _Umbrella blockpage hostnames_
+- [umbrella-blockpage-v4/list.json](./lists/umbrella-blockpage-v4/list.json) - **cisco-umbrella-blockpage-ipv4** - _Cisco Umbrella blockpage in IPv4_
+- [umbrella-blockpage-v6/list.json](./lists/umbrella-blockpage-v6/list.json) - **cisco-umbrella-blockpage-ipv6** - _Cisco Umbrella blockpage in IPv6_
 - [university_domains/list.json](./lists/university_domains/list.json) - **University domains** - _List of University domains from https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json_
 - [url-shortener/list.json](./lists/url-shortener/list.json) - **List of known URL Shorteners domains** - _Event contains one or more entries of known Shorteners domains_
 - [vpn-ipv4/list.json](./lists/vpn-ipv4/list.json) - **Specialized list of vpn-ipv4 addresses belonging to common VPN providers and datacenters** - _Specialized list of vpn-ipv4 addresses belonging to common VPN providers and datacenters_
 - [vpn-ipv6/list.json](./lists/vpn-ipv6/list.json) - **Specialized list of IPv6 addresses belonging to common VPN providers and datacenters** - _Specialized list of IPv6 addresses belonging to common VPN providers and datacenters_
 - [whats-my-ip/list.json](./lists/whats-my-ip/list.json) - **List of known domains to know external IP** - _Event contains one or more entries of known 'what's my ip' domains_
 - [wikimedia/list.json](./lists/wikimedia/list.json) - **List of known Wikimedia address ranges** - _Wikimedia address ranges (http://noc.wikimedia.org/conf/reverse-proxy.php.txt)_
+- [zscaler/list.json](./lists/zscaler/list.json) - **List of known Zscaler IP address ranges** - _Zscaler IP address ranges (https://config.zscaler.com/api/zscaler.net/hubs/cidr/json/required)_
 
 # Format of a warning list
 
