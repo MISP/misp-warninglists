@@ -1,0 +1,19 @@
+{
+  "description": "Umbrella blockpage hostnames",
+  "list": [
+    "hit-adult.opendns.com",
+    "hit-block.opendns.com",
+    "hit-botnet.opendns.com",
+    "hit-malware.opendns.com",
+    "hit-phish.opendns.com"
+  ],
+  "matching_attributes": [
+    "hostname",
+    "domain",
+    "url",
+    "domain|ip"
+  ],
+  "name": "cisco-umbrella-blockpage-hostname",
+  "type": "hostname",
+  "version": 20230825
+}

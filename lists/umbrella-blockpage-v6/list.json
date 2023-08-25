@@ -1,0 +1,19 @@
+{
+  "description": "Cisco Umbrella blockpage in IPv6",
+  "list": [
+    "::ffff:9270:3d68",
+    "::ffff:9270:3d69",
+    "::ffff:9270:3d6a",
+    "::ffff:9270:3d6b",
+    "::ffff:9270:3d6c",
+    "::ffff:9270:3d6e"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip"
+  ],
+  "name": "cisco-umbrella-blockpage-ipv6",
+  "type": "cidr",
+  "version": 20230825
+}
