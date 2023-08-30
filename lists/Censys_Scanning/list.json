@@ -2,7 +2,7 @@
   "name": "Censys IP Ranges Used for Scanning",
   "type": "cidr",
   "version": 1,
-  "description": "List containing IP's accocaited with Censys scanning",
+  "description": "List containing IP's accocaited with Censys scanning [https://support.censys.io/hc/en-us/articles/360043177092-Opt-Out-of-Data-Collection#Can_I_opt_out_of_Censys_data_collection?]",
   "matching_attributes": [
     "ip-src",
     "ip-dst",
