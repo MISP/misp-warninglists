@@ -1,0 +1,22 @@
+{
+  "description": "List containing IP's associated with Censys scanning [https://support.censys.io/hc/en-us/articles/360043177092-Opt-Out-of-Data-Collection#Can_I_opt_out_of_Censys_data_collection?]",
+  "list": [
+    "162.142.125.0/24",
+    "167.248.133.0/24",
+    "167.94.138.0/24",
+    "167.94.145.0/24",
+    "167.94.146.0/24",
+    "2602:80d:1000:b0cc:e::/80",
+    "2620:96:e000:b0cc:e::/80"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-dst|port",
+    "ip-src|port"
+  ],
+  "name": "Censys IP Ranges Used for Scanning",
+  "type": "cidr",
+  "version": 1
+}
