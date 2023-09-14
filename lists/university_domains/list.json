@@ -41,6 +41,7 @@
     "abuad.edu.ng",
     "ac-aix-marseille.fr",
     "ac-besancon.fr",
+    "ac-bordeaux.fr",
     "ac-mayotte.fr",
     "ac-orleans-tours.fr",
     "ac-paris.fr",
@@ -3166,6 +3167,7 @@
     "ieseg.fr",
     "iet.ru",
     "ieu.edu.tr",
+    "if-pan.krakow.pl",
     "ifdtung.if.ua",
     "ifg.com.pl",
     "ifheindia.org",
@@ -8903,6 +8905,7 @@
     "universityofsomalia.net",
     "universo.br",
     "universum-ks.org",
+    "univesp.br",
     "univet.hu",
     "univgb.rnu.tn",
     "univie.ac.at",
@@ -10189,5 +10192,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20230823
+  "version": 20230914
 }

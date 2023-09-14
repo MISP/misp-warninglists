@@ -45,7 +45,6 @@
     "cert.int-x3.letsencrypt.org",
     "clientconfig.microsoftonline-p.net",
     "cloud.microsoft",
-    "cloudapp.net",
     "companymanager.microsoftonline.com",
     "compass-ssl.microsoft.com",
     "compliance.microsoft.com",
@@ -216,5 +215,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20230823
+  "version": 20230914
 }

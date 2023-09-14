@@ -2,6 +2,7 @@
   "description": "\"OSINT DigitalSide Threat-Intel Repository - MISP Warninglist - List of domains should be marked as false positive in the related MISP event with IDS attribute not flagged",
   "list": [
     "amazonaws.com",
+    "assets-global.website-files.com",
     "backblaze.com",
     "backblazeb2.com",
     "bitbucket.org",
@@ -44,5 +45,5 @@
   ],
   "name": "OSINT.DigitalSide.IT Warning List",
   "type": "hostname",
-  "version": 20230823
+  "version": 20230914
 }

@@ -522,5 +522,5 @@
   ],
   "name": "Fingerprint of trusted CA certificates",
   "type": "string",
-  "version": 20230823
+  "version": 20230914
 }

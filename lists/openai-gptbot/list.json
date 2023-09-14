@@ -7,6 +7,7 @@
     "20.15.241.0/28",
     "20.15.242.128/27",
     "20.15.242.192/28",
+    "20.9.164.0/24",
     "40.83.2.64/28"
   ],
   "matching_attributes": [
@@ -16,5 +17,5 @@
   ],
   "name": "List of known IP address ranges for OpenAI GPT crawler bot",
   "type": "cidr",
-  "version": 20230823
+  "version": 20230914
 }

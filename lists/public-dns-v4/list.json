@@ -62706,5 +62706,5 @@
   ],
   "name": "List of known IPv4 public DNS resolvers",
   "type": "cidr",
-  "version": 20230823
+  "version": 20230914
 }
