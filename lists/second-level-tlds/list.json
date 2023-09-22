@@ -3838,7 +3838,6 @@
     "k12.co.us",
     "k12.ct.us",
     "k12.dc.us",
-    "k12.de.us",
     "k12.ec",
     "k12.fl.us",
     "k12.ga.us",
@@ -8411,7 +8410,9 @@
     "withgoogle.com",
     "withyoutube.com",
     "wiw.gov.pl",
+    "wix.run",
     "wixsite.com",
+    "wixstudio.io",
     "wkz.gov.pl",
     "wlocl.pl",
     "wloclawek.pl",
@@ -9105,5 +9106,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20230914
+  "version": 20230922
 }
