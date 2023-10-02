@@ -32,7 +32,6 @@
     "azurerms.com",
     "becws.microsoftonline.com",
     "blob.core.windows.net",
-    "broadcast.skype.com",
     "c.bing.com",
     "c.bing.net",
     "c.live.com",
@@ -165,13 +164,11 @@
     "secure.globalsign.com",
     "secure.skypeassets.com",
     "security.microsoft.com",
-    "sfbassets.com",
     "sharepoint.com",
     "sharepointonline.com",
     "shellprod.msocdn.com",
     "signup.live.com",
     "skype.com",
-    "skypeforbusiness.com",
     "smtp.office365.com",
     "spoprod-a.akamaihd.net",
     "ssw.live.com",
@@ -215,5 +212,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20230922
+  "version": 20231002
 }

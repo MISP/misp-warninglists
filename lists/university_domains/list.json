@@ -42,6 +42,7 @@
     "ac-aix-marseille.fr",
     "ac-besancon.fr",
     "ac-bordeaux.fr",
+    "ac-creteil.fr",
     "ac-mayotte.fr",
     "ac-orleans-tours.fr",
     "ac-paris.fr",
@@ -886,7 +887,6 @@
     "bsmmu.edu.bd",
     "bsmrau.edu.bd",
     "bsmu.by",
-    "bspa.unibel.by",
     "bspu.ru",
     "bspu.unibel.by",
     "bstu.by",
@@ -1592,7 +1592,6 @@
     "dartmouth.edu",
     "darton.edu",
     "darulhuda.com",
-    "data.minsk.by",
     "dau.edu.sa",
     "dau.lv",
     "dauphine.fr",
@@ -10192,5 +10191,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20230922
+  "version": 20231002
 }
