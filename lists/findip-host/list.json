@@ -1,0 +1,16 @@
+{
+  "description": "Event contains one or more entries of known hostname querying your source IP.",
+  "list": [
+    "whoami.akamai.net",
+    "ip.parrotdns.com",
+    "api.extralargecoffee.com"
+  ],
+  "matching_attributes": [
+    "domain",
+    "hostname",
+    "domain|ip"
+  ],
+  "name": "List of known hostname used for querying your source IP. This can be used as exclusion for your Passive DNS lookup.",
+  "type": "hostname",
+  "version": 1
+}
