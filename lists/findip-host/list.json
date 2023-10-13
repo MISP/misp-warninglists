@@ -1,9 +1,9 @@
 {
   "description": "Event contains one or more entries of known hostname querying your source IP.",
   "list": [
-    "whoami.akamai.net",
+    "api.extralargecoffee.com",
     "ip.parrotdns.com",
-    "api.extralargecoffee.com"
+    "whoami.akamai.net"
   ],
   "matching_attributes": [
     "domain",
