@@ -3,6 +3,8 @@
   "list": [
     "api.extralargecoffee.com",
     "ip.parrotdns.com",
+    "ns.rydgames.com",
+    "o-o.myaddr.l.google.com",
     "whoami.akamai.net"
   ],
   "matching_attributes": [
@@ -12,5 +14,5 @@
   ],
   "name": "List of known hostname used for querying your source IP. This can be used as exclusion for your Passive DNS lookup.",
   "type": "hostname",
-  "version": 1
+  "version": 2
 }
