@@ -244,7 +244,6 @@
     "CITI",
     "CITIC",
     "CITY",
-    "CITYEATS",
     "CK",
     "CL",
     "CLAIMS",
@@ -446,7 +445,6 @@
     "FRESENIUS",
     "FRL",
     "FROGANS",
-    "FRONTDOOR",
     "FRONTIER",
     "FTR",
     "FUJITSU",
@@ -1473,5 +1471,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20231002
+  "version": 20231023
 }

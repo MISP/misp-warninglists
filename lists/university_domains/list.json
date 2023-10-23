@@ -1902,6 +1902,7 @@
     "ehl.ch",
     "ehs-dresden.de",
     "ehsal.be",
+    "ehtp.ac.ma",
     "ehu.es",
     "ehu.eus",
     "eia.edu.co",
@@ -3154,6 +3155,7 @@
     "icu.ac.jp",
     "icu.ac.kr",
     "idc.ac.il",
+    "idti.edu",
     "idu.edu.tr",
     "ie.edu",
     "iecc.edu",
@@ -4190,6 +4192,7 @@
     "lakemichigancollege.edu",
     "lama.lv",
     "lamar.edu",
+    "lamar.org.mx",
     "lamarcc.edu",
     "lamarpa.edu",
     "lambtoncollege.ca",
@@ -5438,6 +5441,7 @@
     "ogasa.odessa.ua",
     "ogeecheetech.edu",
     "ogi.edu",
+    "ogr.iu.edu.tr",
     "ogu.edu.tr",
     "ohio.edu",
     "ohkagakuen-u.ac.jp",
@@ -5799,6 +5803,7 @@
     "pratt.edu",
     "prattcc.edu",
     "prcc.edu",
+    "pref.shiga.lg.jp",
     "presby.edu",
     "presbyuniversity.edu.gh",
     "prescott.edu",
@@ -10191,5 +10196,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20231002
+  "version": 20231023
 }

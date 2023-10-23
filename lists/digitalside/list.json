@@ -34,6 +34,7 @@
     "storage.googleapis.com",
     "transfer.sh",
     "trello.com",
+    "vimeo.com",
     "vk.com",
     "www.dl.dropboxusercontent.com",
     "www.zipshare.com",
@@ -45,5 +46,5 @@
   ],
   "name": "OSINT.DigitalSide.IT Warning List",
   "type": "hostname",
-  "version": 20231002
+  "version": 20231023
 }

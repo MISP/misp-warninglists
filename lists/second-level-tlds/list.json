@@ -1247,7 +1247,6 @@
     "citic",
     "city",
     "city.hu",
-    "cityeats",
     "civilaviation.aero",
     "ck",
     "ck.ua",
@@ -2523,7 +2522,6 @@
     "from-wy.com",
     "from.hr",
     "from.tv",
-    "frontdoor",
     "frontier",
     "frosinone.it",
     "frosta.no",
@@ -9108,5 +9106,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20231002
+  "version": 20231023
 }
