@@ -2,10 +2,15 @@
   "description": "Event contains one or more entries of known hostname querying your source IP.",
   "list": [
     "api.extralargecoffee.com",
+    "ip.dyn.bortzmeyer.fr",
     "ip.parrotdns.com",
     "ns.rydgames.com",
     "o-o.myaddr.l.google.com",
-    "whoami.akamai.net"
+    "resolver-identity.cloudfront.net",
+    "resolver.00f.net",
+    "whoami.akamai.net",
+    "whoami.nisl-research.com",
+    "whoami.v4.powerdns.org"
   ],
   "matching_attributes": [
     "domain",
@@ -14,5 +19,5 @@
   ],
   "name": "List of known hostname used for querying your source IP. This can be used as exclusion for your Passive DNS lookup.",
   "type": "hostname",
-  "version": 2
+  "version": 3
 }
