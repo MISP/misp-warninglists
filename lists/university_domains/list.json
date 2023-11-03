@@ -1658,6 +1658,7 @@
     "depauw.edu",
     "deraya.edu.eg",
     "derby.ac.uk",
+    "desu.edu",
     "deu.ac.kr",
     "deu.edu.tr",
     "deusto.es",
@@ -1757,7 +1758,6 @@
     "drk.hu",
     "drury.edu",
     "dsc.dm",
-    "dsc.edu",
     "dscc.edu",
     "dshs-koeln.de",
     "dslcc.edu",
@@ -8895,6 +8895,7 @@
     "universidadsanjosecr.com",
     "universitas-trilogi.ac.id",
     "universitateamaritima.ro",
+    "universite-paris-saclay.fr",
     "universite-yde2.org",
     "universiteitleiden.nl",
     "universitekongo.org",
@@ -10196,5 +10197,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20231023
+  "version": 20231103
 }

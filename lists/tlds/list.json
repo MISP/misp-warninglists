@@ -215,7 +215,6 @@
     "CBA",
     "CBN",
     "CBRE",
-    "CBS",
     "CC",
     "CD",
     "CENTER",
@@ -645,7 +644,6 @@
     "KIA",
     "KIDS",
     "KIM",
-    "KINDER",
     "KINDLE",
     "KITCHEN",
     "KIWI",
@@ -987,7 +985,6 @@
     "RIO",
     "RIP",
     "RO",
-    "ROCHER",
     "ROCKS",
     "RODEO",
     "ROGERS",
@@ -1060,7 +1057,6 @@
     "SHOPPING",
     "SHOUJI",
     "SHOW",
-    "SHOWTIME",
     "SI",
     "SILK",
     "SINA",
@@ -1471,5 +1467,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20231023
+  "version": 20231103
 }

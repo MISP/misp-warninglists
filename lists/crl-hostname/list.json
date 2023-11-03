@@ -173,6 +173,7 @@
     "ocspfnmtssr.cert.fnmt.es",
     "ocsps.ssl.com",
     "ocspsslkoks1.kamusm.gov.tr",
+    "oneocsp.microsoft.com",
     "onsitecrl.trustwise.com",
     "pki-crl.atos.net",
     "pki-ldap.atos.net",
@@ -231,6 +232,7 @@
     "www.cert.fnmt.es",
     "www.d-trust.net",
     "www.gdca.com.cn",
+    "www.microsoft.com",
     "www2.public-trust.com",
     "x1.c.lencr.org",
     "x2.c.lencr.org"
@@ -242,5 +244,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20231023
+  "version": 20231103
 }
