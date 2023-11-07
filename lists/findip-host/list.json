@@ -8,9 +8,11 @@
     "o-o.myaddr.l.google.com",
     "resolver-identity.cloudfront.net",
     "resolver.00f.net",
+    "resolver.dnscrypt.info",
     "whoami.akamai.net",
     "whoami.nisl-research.com",
-    "whoami.v4.powerdns.org"
+    "whoami.v4.powerdns.org",
+    "rr-mirror.research.nawrocki.berlin"
   ],
   "matching_attributes": [
     "domain",
@@ -19,5 +21,5 @@
   ],
   "name": "List of known hostname used for querying your source IP. This can be used as exclusion for your Passive DNS lookup.",
   "type": "hostname",
-  "version": 3
+  "version": 4
 }
