@@ -9,10 +9,10 @@
     "resolver-identity.cloudfront.net",
     "resolver.00f.net",
     "resolver.dnscrypt.info",
+    "rr-mirror.research.nawrocki.berlin",
     "whoami.akamai.net",
     "whoami.nisl-research.com",
-    "whoami.v4.powerdns.org",
-    "rr-mirror.research.nawrocki.berlin"
+    "whoami.v4.powerdns.org"
   ],
   "matching_attributes": [
     "domain",
