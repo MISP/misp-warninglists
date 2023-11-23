@@ -18,5 +18,5 @@
   ],
   "name": "List of known IP address ranges for OpenAI GPT crawler bot",
   "type": "cidr",
-  "version": 20231103
+  "version": 20231123
 }

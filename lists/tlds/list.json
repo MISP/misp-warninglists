@@ -381,7 +381,6 @@
     "ESQ",
     "ESTATE",
     "ET",
-    "ETISALAT",
     "EU",
     "EUROVISION",
     "EUS",
@@ -1237,7 +1236,6 @@
     "VLAANDEREN",
     "VN",
     "VODKA",
-    "VOLKSWAGEN",
     "VOLVO",
     "VOTE",
     "VOTING",
@@ -1372,7 +1370,6 @@
     "XN--MGBA3A3EJT",
     "XN--MGBA3A4F16A",
     "XN--MGBA7C0BBN0A",
-    "XN--MGBAAKC7DVF",
     "XN--MGBAAM7A8H",
     "XN--MGBAB2BD",
     "XN--MGBAH1A3HJKRD",
@@ -1467,5 +1464,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20231103
+  "version": 20231123
 }

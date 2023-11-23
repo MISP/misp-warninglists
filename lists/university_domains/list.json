@@ -879,6 +879,7 @@
     "bs.naist.jp",
     "bsa.edu.lv",
     "bsaa.ru",
+    "bsaoe.de",
     "bsauniv.ac.in",
     "bsc.edu",
     "bscc.edu",
@@ -2677,6 +2678,7 @@
     "halifaxcc.edu",
     "halifaxuni.ac",
     "halla.ac.kr",
+    "hallco.org",
     "hallmarkuniversity.edu",
     "hallym.ac.kr",
     "hama-med.ac.jp",
@@ -4093,8 +4095,8 @@
     "kuk.edu.ng",
     "kukinfo.com",
     "kul.lublin.pl",
-    "kulak.ac.be",
-    "kuleuven.ac.be",
+    "kulak.kuleuven.be",
+    "kuleuven.be",
     "kumagaku.ac.jp",
     "kumamoto-u.ac.jp",
     "kumaununiversity.org",
@@ -7709,6 +7711,7 @@
     "ucla.edu.ve",
     "uclah.edu.mx",
     "uclan.ac.uk",
+    "uclive.ac.nz",
     "uclm.es",
     "uclouvain.be",
     "uclv.edu.cu",
@@ -10197,5 +10200,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20231103
+  "version": 20231123
 }
