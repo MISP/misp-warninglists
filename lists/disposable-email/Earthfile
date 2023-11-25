@@ -1,4 +1,5 @@
 VERSION 0.7
+FROM alpine:3.18.4
 
 export:
     COPY list.json ./
