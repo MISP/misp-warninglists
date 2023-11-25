@@ -1,0 +1,5 @@
+VERSION 0.7
+
+export:
+    COPY list.json ./
+    SAVE ARTIFACT list.json
