@@ -133,6 +133,13 @@ If matching_attributes are not set, the list is matched against any type of attr
 See [PyMISPWarningLists](https://github.com/MISP/PyMISPWarningLists) for a
 python interface to warning lists.
 
+# Using warning lists in Earthly builds
+
+Lists are exposed to Earthly builds through the target `export-lists`. Earthfiles can directly reference them in their copy statements as follows:
+```earthly
+COPY github.com/MISP/misp-warninglists[:commit]+export-lists/lists/<list-name>/list.json ./
+```
+
 # License
 
 MISP warning-lists are licensed under [CC0 1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/) -  Public Domain Dedication. If a specific author of a warning-list (or associated source) wants to license it under a different license, a pull request can be requested.
