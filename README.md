@@ -135,7 +135,7 @@ python interface to warning lists.
 
 # Using warning lists in Earthly builds
 
-Lists are exposed to Earthly builds through the target `export-lists`. Earthfiles can directly reference them in their copy statements as follows:
+Lists are exposed to [Earthly](https://github.com/earthly/earthly) builds through the target `export-lists`. Earthfiles can directly reference them in their copy statements as follows:
 ```earthly
 COPY github.com/MISP/misp-warninglists[:commit]+export-lists/lists/<list-name>/list.json ./
 ```
