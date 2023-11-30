@@ -4443,6 +4443,7 @@
     "mahsa.edu.my",
     "mahshahriau.ac.ir",
     "mail.polimi.it",
+    "mail.sacredheart.edu",
     "mail.sysu.edu.cn",
     "mail.xhu.edu.cn",
     "mail2.sysu.edu.cn",
@@ -10200,5 +10201,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20231123
+  "version": 20231129
 }

@@ -1436,7 +1436,6 @@
     "heros3.com",
     "herp.in",
     "herpderp.nl",
-    "hexv.com",
     "hezll.com",
     "hi5.si",
     "hiddentragedy.com",
@@ -1449,7 +1448,6 @@
     "highbros.org",
     "hiltonvr.com",
     "himail.online",
-    "hldrive.com",
     "hmail.us",
     "hmamail.com",
     "hmh.ro",
@@ -3456,7 +3454,6 @@
     "wimsg.com",
     "winemaven.info",
     "wins.com.br",
-    "wireconnected.com",
     "wlist.ro",
     "wmail.cf",
     "wmail.club",
@@ -3628,5 +3625,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20231123
+  "version": 20231129
 }
