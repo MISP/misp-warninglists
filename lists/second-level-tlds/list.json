@@ -7308,7 +7308,6 @@
     "sc.tz",
     "sc.ug",
     "sc.us",
-    "sca",
     "scalebook.scw.cloud",
     "scb",
     "sch.ae",
@@ -9567,5 +9566,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20231129
+  "version": 20231214
 }

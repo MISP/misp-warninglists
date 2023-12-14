@@ -1018,7 +1018,6 @@
     "SBI",
     "SBS",
     "SC",
-    "SCA",
     "SCB",
     "SCHAEFFLER",
     "SCHMIDT",
@@ -1464,5 +1463,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20231129
+  "version": 20231214
 }

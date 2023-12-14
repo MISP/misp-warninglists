@@ -61,7 +61,6 @@
     "dgps.support.microsoft.com",
     "docs.live.net",
     "docs.microsoft.com",
-    "ecdn.microsoft.com",
     "ecn.dev.virtualearth.net",
     "enterpriseregistration.windows.net",
     "entrust.net",
@@ -211,5 +210,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20231129
+  "version": 20231214
 }
