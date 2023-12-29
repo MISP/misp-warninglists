@@ -20,6 +20,7 @@
     "github.com",
     "gitlab.com",
     "google.com",
+    "i.ibb.co",
     "i.imgur.com",
     "icloud.com",
     "link.storjshare.io",
@@ -46,5 +47,5 @@
   ],
   "name": "OSINT.DigitalSide.IT Warning List",
   "type": "hostname",
-  "version": 20231214
+  "version": 20231229
 }
