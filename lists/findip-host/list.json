@@ -3,17 +3,21 @@
   "list": [
     "api.extralargecoffee.com",
     "api.ipify.org",
+    "helper.rumble.network",
     "ip.circl.lu",
     "ip.dyn.bortzmeyer.fr",
     "ip.parrotdns.com",
     "ns.rydgames.com",
     "o-o.myaddr.l.google.com",
+    "openresolver.dnslab.cn",
     "resolver-identity.cloudfront.net",
     "resolver.00f.net",
     "resolver.dnscrypt.info",
+    "role.secshow.net",
     "rr-mirror.research.nawrocki.berlin",
     "uplo.ad",
     "whoami.akamai.net",
+    "whoami.cryptostorm.is",
     "whoami.nisl-research.com",
     "whoami.v4.powerdns.org"
   ],
@@ -24,5 +28,5 @@
   ],
   "name": "List of known hostname used for querying your source IP. This can be used as exclusion for your Passive DNS lookup.",
   "type": "hostname",
-  "version": 6
+  "version": 7
 }
