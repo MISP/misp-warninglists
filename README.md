@@ -17,6 +17,7 @@ are reused in many other open source projects.
 - [automated-malware-analysis/list.json](./lists/automated-malware-analysis/list.json) - **List of known domains used by automated malware analysis services & security vendors** - _Domains used by automated malware analysis services & security vendors_
 - [bank-website/list.json](./lists/bank-website/list.json) - **List of known bank domains** - _Event contains one or more entries of known banking website_
 - [captive-portals/list.json](./lists/captive-portals/list.json) - **Captive Portal Detection Hostnames** - _Hostnames used by different desktop and mobile device operating systems for captive portal detection as documented by the Wireless Broadband Alliance._
+- [censys-scanning/list.json](./lists/censys-scanning/list.json) - **Censys IP Ranges Used for Scanning** - _List containing IP's associated with Censys scanning [https://support.censys.io/hc/en-us/articles/360043177092-Opt-Out-of-Data-Collection#Can_I_opt_out_of_Censys_data_collection?]_
 - [cisco_top1000/list.json](./lists/cisco_top1000/list.json) - **Top 1000 websites from Cisco Umbrella** - _Event contains one or more entries from the top 1000 of the most used websites (Cisco Umbrella)._
 - [cisco_top10k/list.json](./lists/cisco_top10k/list.json) - **Top 10 000 websites from Cisco Umbrella** - _Event contains one or more entries from the top 10 000 of the most used websites (Cisco Umbrella)._
 - [cisco_top20k/list.json](./lists/cisco_top20k/list.json) - **Top 20 000 websites from Cisco Umbrella** - _Event contains one or more entries from the top 20 000 of the most used websites (Cisco Umbrella)._
@@ -36,6 +37,7 @@ are reused in many other open source projects.
 - [eicar.com/list.json](./lists/eicar.com/list.json) - **List of hashes for EICAR test virus** - _Event contains one or more entries based on hashes for EICAR test virus_
 - [empty-hashes/list.json](./lists/empty-hashes/list.json) - **List of known hashes for empty files** - _Event contains one or more entries of empty files based on known hashed_
 - [fastly/list.json](./lists/fastly/list.json) - **List of known Fastly IP address ranges** - _Fastly IP address ranges (https://api.fastly.com/public-ip-list)_
+- [findip-host/list.json](./lists/findip-host/list.json) - **List of known hostname used for querying your source IP. This can be used as exclusion for your Passive DNS lookup.** - _Event contains one or more entries of known hostname querying your source IP._
 - [google-chrome-crux-1million/list.json](./lists/google-chrome-crux-1million/list.json) - **google-chrome-crux-1million** - _Cached Chrome Top Million Websites - top 1 million_
 - [google-gcp/list.json](./lists/google-gcp/list.json) - **List of known GCP (Google Cloud Platform) IP address ranges** - _GCP (Google Cloud Platform) IP address ranges (https://www.gstatic.com/ipranges/cloud.json)_
 - [google-gmail-sending-ips/list.json](./lists/google-gmail-sending-ips/list.json) - **List of known Gmail sending IP ranges** - _List of known Gmail sending IP ranges (https://support.google.com/a/answer/27642?hl=en)_
