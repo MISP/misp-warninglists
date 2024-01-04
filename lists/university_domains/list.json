@@ -320,6 +320,8 @@
     "anglia.ac.uk",
     "angrau.net",
     "ankara.edu.tr",
+    "ankarabilim.edu.tr",
+    "ankaramedipol.edu.tr",
     "annamalaiuniversity.ac.in",
     "annauniv.edu",
     "annauniv.edu.in",
@@ -3455,6 +3457,7 @@
     "ist.edu.pk",
     "ista.ac.id",
     "istanbul.edu.tr",
+    "istanbulticaret.edu.tr",
     "iste.edu.tr",
     "istec.pt",
     "istp.pt",
@@ -3492,7 +3495,6 @@
     "iteso.mx",
     "ithaca.edu",
     "iti.is",
-    "iticu.edu.tr",
     "itismalta.com",
     "itla.edu.do",
     "itleon.edu.mx",
@@ -5552,6 +5554,7 @@
     "osmaniye.edu.tr",
     "osmu.odessa.ua",
     "ostfalia.de",
+    "ostimteknik.edu.tr",
     "osu.ac.jp",
     "osu.cz",
     "osu.edu",
@@ -7193,6 +7196,7 @@
     "thuniv.net",
     "tiaa.edu.ge",
     "tiau.ac.ir",
+    "ticaret.edu.tr",
     "ties.com.mx",
     "tiet.ac.in",
     "tietgen.dk",
@@ -10228,5 +10232,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20231229
+  "version": 20240104
 }
