@@ -69,7 +69,6 @@
     "crl.vikingcloud.com",
     "crl.wt.trustasia.com",
     "crl05.actalis.it",
-    "crl07.actalis.it",
     "crl1.hongkongpost.gov.hk",
     "crl1.netlock.hu",
     "crl2.netlock.hu",
@@ -95,7 +94,6 @@
     "ldap.actalis.it",
     "ldap.sbca.telesec.de",
     "ldap05.actalis.it",
-    "ldap07.actalis.it",
     "ldap2.sheca.com",
     "ldapfnmt.cert.fnmt.es",
     "o.ss2.us",
@@ -155,7 +153,6 @@
     "ocsp0336.telesec.de",
     "ocsp04.telesec.de",
     "ocsp05.actalis.it",
-    "ocsp07.actalis.it",
     "ocsp1.hongkongpost.gov.hk",
     "ocsp1.netlock.hu",
     "ocsp2.gdca.com.cn",
@@ -235,5 +232,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20240104
+  "version": 20240131
 }

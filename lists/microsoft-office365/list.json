@@ -109,6 +109,7 @@
     "msftidentity.com",
     "msidentity.com",
     "msocdn.com",
+    "mx.microsoft",
     "nexus.microsoftonline-p.com",
     "nps.onyx.azure.net",
     "o15.officeredir.microsoft.com",
@@ -210,5 +211,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20240104
+  "version": 20240131
 }

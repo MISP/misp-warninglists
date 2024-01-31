@@ -98,7 +98,6 @@
     "BABY",
     "BAIDU",
     "BANAMEX",
-    "BANANAREPUBLIC",
     "BAND",
     "BANK",
     "BAR",
@@ -857,7 +856,6 @@
     "OKINAWA",
     "OLAYAN",
     "OLAYANGROUP",
-    "OLDNAVY",
     "OLLO",
     "OM",
     "OMEGA",
@@ -1463,5 +1461,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20240104
+  "version": 20240131
 }

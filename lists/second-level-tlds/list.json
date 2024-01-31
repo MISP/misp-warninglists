@@ -2,6 +2,7 @@
   "description": "Event contains one or more second level TLDs as attribute with an IDS flag set.",
   "list": [
     "0.bg",
+    "001.test.code-builder-stg.platform.salesforce.com",
     "001www.com",
     "0e.vc",
     "0emm.com",
@@ -170,6 +171,8 @@
     "ae.org",
     "aeg",
     "aejrie.no",
+    "aem.live",
+    "aem.page",
     "aero",
     "aero.mv",
     "aero.tt",
@@ -512,6 +515,7 @@
     "athleta",
     "atl.jelastic.vps-host.net",
     "atm.pl",
+    "atmeta.com",
     "ato.br",
     "atsugi.kanagawa.jp",
     "atsuma.hokkaido.jp",
@@ -639,7 +643,6 @@
     "bambina.jp",
     "bamble.no",
     "banamex",
-    "bananarepublic",
     "band",
     "bandai.fukushima.jp",
     "bando.ibaraki.jp",
@@ -3423,7 +3426,6 @@
     "homelinux.com",
     "homelinux.net",
     "homelinux.org",
-    "homeoffice.gov.uk",
     "homes",
     "homesecuritymac.com",
     "homesecuritypc.com",
@@ -6011,7 +6013,6 @@
     "olayangroup",
     "olbia-tempio.it",
     "olbiatempio.it",
-    "oldnavy",
     "olecko.pl",
     "olkusz.pl",
     "ollo",
@@ -9566,5 +9567,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20240104
+  "version": 20240131
 }
