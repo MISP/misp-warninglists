@@ -77,6 +77,8 @@
     "crl4.digicert.com",
     "crls.ssl.com",
     "crlv1.harica.gr",
+    "d-trust-sbr-root-ca-1-2022.ocsp.d-trust.net",
+    "d-trust-sbr-root-ca-2-2022.ocsp.d-trust.net",
     "depo.kamusm.gov.tr",
     "directory.d-trust.net",
     "directory.swisssign.net",
@@ -212,6 +214,14 @@
     "subca.crl.certum.pl",
     "subca.ocsp-certum.com",
     "trustidcaas.ocsp.identrust.com",
+    "tssmer21.crl.telesec.de",
+    "tssmer21.ocsp.telesec.de",
+    "tssmrr23.crl.telesec.de",
+    "tssmrr23.ocsp.telesec.de",
+    "tstlser20.crl.telesec.de",
+    "tstlser20.ocsp.telesec.de",
+    "tstlsrr23.crl.telesec.de",
+    "tstlsrr23.ocsp.telesec.de",
     "validation.identrust.com",
     "wtca-cafiles.itrus.com.cn",
     "wtocsp-cdn.itrus.com.cn",
@@ -232,5 +242,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20240131
+  "version": 20240202
 }
