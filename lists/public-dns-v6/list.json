@@ -86,7 +86,6 @@
     "2602:fc24:19:74b0:5285::12",
     "2602:fcc0:2222:0:ff24:a2c7:19c:1",
     "2602:fe54:22:57::5bd:134",
-    "2602:fe69:a2a::e550:a4a1:17",
     "2602:fea7:e0c:e:bff:6:70:194c",
     "2602:ff75:7:b79::b4b4",
     "2602:ffc5:407:7ff::1647",
@@ -275,5 +274,5 @@
   ],
   "name": "List of known IPv6 public DNS resolvers",
   "type": "cidr",
-  "version": 20240202
+  "version": 20240216
 }

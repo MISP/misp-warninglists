@@ -262,7 +262,6 @@
     "COLLEGE",
     "COLOGNE",
     "COM",
-    "COMCAST",
     "COMMBANK",
     "COMMUNITY",
     "COMPANY",
@@ -1276,7 +1275,6 @@
     "WTF",
     "XBOX",
     "XEROX",
-    "XFINITY",
     "XIHUAN",
     "XIN",
     "XN--11B4C3D",
@@ -1461,5 +1459,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20240202
+  "version": 20240216
 }

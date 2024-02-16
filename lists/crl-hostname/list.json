@@ -93,7 +93,6 @@
     "grcl3.ocsp.telesec.de",
     "httpcrl.trust.telia.com",
     "ldap-cpki.telekom.de",
-    "ldap.actalis.it",
     "ldap.sbca.telesec.de",
     "ldap05.actalis.it",
     "ldap2.sheca.com",
@@ -143,7 +142,6 @@
     "ocsp.starfieldtech.com",
     "ocsp.swisssign.net",
     "ocsp.telekom.de",
-    "ocsp.telesec.de",
     "ocsp.trust-provider.com",
     "ocsp.trust.telia.com",
     "ocsp.trust.teliasonera.com",
@@ -176,11 +174,10 @@
     "pki-ldap.atos.net",
     "pki-ocsp.atos.net",
     "pki.intranet.eon.com",
-    "pki.telesec.de",
     "pki0336.telesec.de",
-    "portal.actalis.it",
     "public.ocsp.identrust.com",
     "public.wisekey.com",
+    "qventca3g3.ocsp.quovadisglobal.com",
     "rca.navercorp.com",
     "repo.bjca.cn",
     "repository.secomtrust.net",
@@ -242,5 +239,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20240202
+  "version": 20240216
 }
