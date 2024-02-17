@@ -8,6 +8,7 @@
     "adflav.com",
     "aka.gr",
     "amzn.to",
+    "b2n.ir",
     "bc.vc",
     "bee4.biz",
     "bit.do",
@@ -32,6 +33,7 @@
     "hit.my",
     "hyperurl.co",
     "id.tl",
+    "idm.in",
     "iii.im",
     "iplogger.com",
     "iplogger.org",
@@ -54,6 +56,7 @@
     "q.gs",
     "qr.ae",
     "qr.net",
+    "rb.gy",
     "s.rlp.de",
     "scrnch.me",
     "shortquik.com",
@@ -82,10 +85,7 @@
     "yourls.org",
     "youtu.be",
     "yu2.it",
-    "zpag.es",
-    "rb.gy",
-    "b2n.ir",
-    "idm.in"
+    "zpag.es"
   ],
   "matching_attributes": [
     "domain",
