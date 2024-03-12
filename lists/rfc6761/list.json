@@ -26,7 +26,8 @@
   "matching_attributes": [
     "hostname",
     "domain",
-    "domain|ip"
+    "domain|ip",
+    "URL"
   ],
   "name": "List of RFC 6761 Special-Use Domain Names",
   "type": "string",
