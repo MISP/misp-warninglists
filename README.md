@@ -44,6 +44,7 @@ are reused in many other open source projects.
 - [google/list.json](./lists/google/list.json) - **List of known google domains** - _Event contains one or more entries of known google domains_
 - [googlebot/list.json](./lists/googlebot/list.json) - **List of known Googlebot IP ranges (https://developers.google.com/search/apis/ipranges/googlebot.json)** - _Google Bot IP address ranges (https://developers.google.com/search/apis/ipranges/googlebot.json)_
 - [ipv6-linklocal/list.json](./lists/ipv6-linklocal/list.json) - **List of IPv6 link local blocks** - _Event contains one or more entries part of the IPv6 link local prefix (RFC 4291)_
+- [Link-in-Bio/list.json](./lists/Link-in-Bio/list.json) - **List of known Link in Bio domains** - _Event contains one or more entries of known Link in Bio domains_
 - [majestic_million/list.json](./lists/majestic_million/list.json) - **Top 10000 websites from Majestic Million** - _Event contains one or more entries from the top 10K of the most used websites (Majestic Million)._
 - [microsoft-attack-simulator/list.json](./lists/microsoft-attack-simulator/list.json) - **List of known Office 365 Attack Simulator used for phishing awareness campaigns** - _Office 365 URLs and IP address ranges used for their attack simulator in Office 365 Threat Intelligence_
 - [microsoft-azure-appid/list.json](./lists/microsoft-azure-appid/list.json) - **List of Azure Applicaiton IDs** - _List of Azure Application IDs (https://learn.microsoft.com/en-us/troubleshoot/azure/active-directory/verify-first-party-apps-sign-in)_
