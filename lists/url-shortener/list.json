@@ -44,6 +44,7 @@
     "idm.in",
     "iii.im",
     "ilang.in",
+    "insprl.com",
     "iplogger.com",
     "iplogger.org",
     "is.gd",
@@ -76,13 +77,18 @@
     "s.id",
     "s.rlp.de",
     "scrnch.me",
+    "shly.link",
     "shortquik.com",
     "shorturl.at",
     "sk.gy",
     "smarturl.it",
     "snip.ly",
+    "spoo.me",
+    "sprl.in",
+    "srink.co",
     "su.pr",
     "t.co",
+    "tg.pe",
     "tiny.cc",
     "tinyarrows.com",
     "tinyurl.com",
@@ -95,6 +101,7 @@
     "u.to",
     "urltin.com",
     "urlz.fr",
+    "ux9.de",
     "v.gd",
     "v.ht",
     "vzturl.com",
@@ -107,7 +114,8 @@
     "yourls.org",
     "youtu.be",
     "yu2.it",
-    "zpag.es"
+    "zpag.es",
+    "zzb.bz"
   ],
   "matching_attributes": [
     "domain",
@@ -118,5 +126,5 @@
   ],
   "name": "List of known URL Shorteners domains",
   "type": "hostname",
-  "version": 11
+  "version": 12
 }
