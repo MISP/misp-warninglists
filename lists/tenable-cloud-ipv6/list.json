@@ -2,6 +2,7 @@
   "description": "Tenable IPv6 Cloud Sensor addresses used for scanning Internet-facing infrastructure",
   "list": [
     "2406:da14:e76:5b00::/56",
+    "2406:da17:524:dd00::/56",
     "2406:da18:844:7100::/56",
     "2406:da1a:5b2:8500::/56",
     "2406:da1c:20f:2f00::/56",
@@ -25,5 +26,5 @@
   ],
   "name": "List of known Tenable Cloud Sensors IPv6",
   "type": "cidr",
-  "version": 20240227
+  "version": 20240320
 }

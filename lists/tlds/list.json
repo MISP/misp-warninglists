@@ -512,7 +512,6 @@
     "GS",
     "GT",
     "GU",
-    "GUARDIAN",
     "GUCCI",
     "GUGE",
     "GUIDE",
@@ -1459,5 +1458,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20240227
+  "version": 20240320
 }

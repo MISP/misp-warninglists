@@ -24,6 +24,7 @@
     "crl.affirmtrust.com",
     "crl.anf.es",
     "crl.buypass.no",
+    "crl.certigna.com",
     "crl.certigna.fr",
     "crl.certsign.ro",
     "crl.certum.pl",
@@ -104,6 +105,7 @@
     "ocsp.anf.es",
     "ocsp.bjca.cn",
     "ocsp.buypass.com",
+    "ocsp.certigna.com",
     "ocsp.certsign.ro",
     "ocsp.cfca.com.cn",
     "ocsp.comodoca.com",
@@ -239,5 +241,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20240227
+  "version": 20240320
 }

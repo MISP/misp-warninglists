@@ -31,5 +31,5 @@
   ],
   "name": "List of known Cloudflare IP ranges",
   "type": "cidr",
-  "version": 20240227
+  "version": 20240320
 }
