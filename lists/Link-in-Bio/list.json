@@ -1,5 +1,5 @@
 {
-  "description": "Event contains one or more entries of known Link in Bio domains",
+  "description": "Event contains one or more entries of known Link in bio domains. Those shorten links are a reference to a list of links.",
   "list": [
     "beacons.ai",
     "bio.fm",
@@ -42,7 +42,6 @@
     "snipfeed.co",
     "taplink.at",
     "uniqode.com"
-
   ],
   "matching_attributes": [
     "domain",
@@ -50,7 +49,7 @@
     "domain|ip",
     "url"
   ],
-  "name": "List of known Link in Bio domains",
+  "name": "List of known link in Bio domains",
   "type": "hostname",
   "version": 1
 }
