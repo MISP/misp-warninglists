@@ -87,7 +87,6 @@
     "AUTHOR",
     "AUTO",
     "AUTOS",
-    "AVIANCA",
     "AW",
     "AWS",
     "AX",
@@ -1458,5 +1457,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20240320
+  "version": 20240405
 }

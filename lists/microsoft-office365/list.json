@@ -138,6 +138,7 @@
     "online.office.com",
     "onmicrosoft.com",
     "otelrules.azureedge.net",
+    "outlook.cloud.microsoft",
     "outlook.com",
     "outlook.office.com",
     "outlook.office365.com",
@@ -211,5 +212,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20240320
+  "version": 20240405
 }

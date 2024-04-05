@@ -308,5 +308,5 @@
   ],
   "name": "List of known GCP (Google Cloud Platform) IP address ranges",
   "type": "cidr",
-  "version": 20240320
+  "version": 20240405
 }
