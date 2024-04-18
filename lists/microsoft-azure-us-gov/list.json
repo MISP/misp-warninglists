@@ -4,6 +4,7 @@
     "104.210.16.0/21",
     "104.210.24.0/24",
     "104.210.26.0/24",
+    "104.212.60.0/23",
     "13.72.0.0/18",
     "13.72.128.0/18",
     "13.73.208.0/20",
@@ -184,5 +185,5 @@
   ],
   "name": "List of known Microsoft Azure US Government Cloud Datacenter IP Ranges",
   "type": "cidr",
-  "version": 20240405
+  "version": 20240418
 }
