@@ -1067,7 +1067,6 @@
     "ezstest.com",
     "ezztt.com",
     "f4k.es",
-    "f5.si",
     "facebook-email.cf",
     "facebook-email.ga",
     "facebook-email.ml",
@@ -1774,6 +1773,7 @@
     "l-c-a.us",
     "l33r.eu",
     "l6factors.com",
+    "laafd.com",
     "labetteraverouge.at",
     "labworld.org",
     "lacedmail.com",
@@ -3267,6 +3267,7 @@
     "twocowmail.net",
     "twoweirdtricks.com",
     "twzhhq.online",
+    "txcct.com",
     "txen.de",
     "txtadvertise.com",
     "tyhe.ro",
@@ -3383,6 +3384,7 @@
     "visignal.com",
     "vixletdev.com",
     "vixtricks.com",
+    "vjuum.com",
     "vkcode.ru",
     "vkr1.com",
     "vmailing.info",
@@ -3669,5 +3671,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20240320
+  "version": 20240418
 }
