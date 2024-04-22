@@ -72,7 +72,7 @@ if __name__ == '__main__':
         'description': 'Akamai IP ranges from BGP search',
         'type': 'cidr',
         'list': consolidate_networks(networks),
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }
     write_to_file(warninglist, "akamai")
 

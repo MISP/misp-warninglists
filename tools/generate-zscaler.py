@@ -20,7 +20,7 @@ def process(file, dst):
         'description': 'Zscaler IP address ranges (https://config.zscaler.com/api/zscaler.net/hubs/cidr/json/required)',
         'type': 'cidr',
         'list': consolidate_networks(l),
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }
 
     write_to_file(warninglist, dst)

@@ -273,9 +273,11 @@
   "matching_attributes": [
     "ip-src",
     "ip-dst",
-    "domain|ip"
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
   ],
   "name": "List of known Akamai IP ranges",
   "type": "cidr",
-  "version": 20210613
+  "version": 20240422
 }

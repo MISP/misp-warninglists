@@ -1255,9 +1255,11 @@
   "matching_attributes": [
     "ip-src",
     "ip-dst",
-    "domain|ip"
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
   ],
   "name": "Specialized list of IPv6 addresses belonging to common VPN providers and datacenters",
   "type": "cidr",
-  "version": 20220324
+  "version": 20240422
 }

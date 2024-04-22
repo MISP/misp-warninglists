@@ -25,11 +25,13 @@
     "2c0f:f248::/32"
   ],
   "matching_attributes": [
-    "ip-dst",
     "ip-src",
-    "domain|ip"
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
   ],
   "name": "List of known Cloudflare IP ranges",
   "type": "cidr",
-  "version": 20240418
+  "version": 20240422
 }

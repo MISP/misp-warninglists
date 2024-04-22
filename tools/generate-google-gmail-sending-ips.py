@@ -9,7 +9,7 @@ if __name__ == '__main__':
         'name': "List of known Gmail sending IP ranges",
         'version': get_version(),
         'description': "List of known Gmail sending IP ranges (https://support.google.com/a/answer/27642?hl=en)",
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"],
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"],
         'type': 'cidr',
         'list': consolidate_networks(spf.get_ip_ranges_from_spf("gmail.com")),
     }

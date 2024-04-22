@@ -20,7 +20,7 @@ def process(file, dst, name: str, description: str):
         'name': name,
         'version': get_version(),
         'description': description,
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"],
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"],
         'type': 'cidr'
     }
 

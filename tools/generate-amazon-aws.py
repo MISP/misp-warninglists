@@ -23,7 +23,7 @@ def process(file, dst):
         'description': 'Amazon AWS IP address ranges (https://ip-ranges.amazonaws.com/ip-ranges.json)',
         'type': 'cidr',
         'list': consolidate_networks(l),
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }
 
     write_to_file(warninglist, dst)

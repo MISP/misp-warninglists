@@ -250,11 +250,13 @@
     "98.190.94.128/25"
   ],
   "matching_attributes": [
-    "ip-dst",
     "ip-src",
-    "domain|ip"
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
   ],
   "name": "List of known Stackpath CDN IP ranges",
   "type": "cidr",
-  "version": 20240405
+  "version": 20240422
 }
