@@ -79,7 +79,7 @@ if __name__ == '__main__':
         'name': "List of known SMTP sending IP ranges",
         'version': get_version(),
         'description': "List of IP ranges for known SMTP servers.",
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"],
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"],
         'type': 'cidr',
         'list': consolidate_networks(spf_ranges),
     }
@@ -93,7 +93,7 @@ if __name__ == '__main__':
         'name': "List of known SMTP receiving IP addresses",
         'version': get_version(),
         'description': "List of IP addresses for known SMTP servers.",
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"],
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"],
         'type': 'cidr',
         'list': map(str, mx_ips),
     }

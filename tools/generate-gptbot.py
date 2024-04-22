@@ -19,7 +19,7 @@ def process(file, dst):
         'description': 'OpenAI gptbot crawler (https://openai.com/gptbot-ranges.txt)',
         'type': 'cidr',
         'list': consolidate_networks(l),
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }
 
     write_to_file(warninglist, dst)

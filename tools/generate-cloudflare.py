@@ -11,7 +11,7 @@ def process(files, dst):
         'description': "List of known Cloudflare IP ranges (https://www.cloudflare.com/ips/)",
         'type': "cidr",
         'list': [],
-        'matching_attributes': ["ip-dst", "ip-src", "domain|ip"]
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }
 
     for file in files:

@@ -74,7 +74,7 @@ def process(files, dst):
         'description': "List of known Stackpath (Highwinds) CDN IP ranges (https://support.stackpath.com/hc/en-us/articles/360001091666-Whitelist-CDN-WAF-IP-Blocks)",
         'type': "cidr",
         'list': [],
-        'matching_attributes': ["ip-dst", "ip-src", "domain|ip"]
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }
 
     for file in files:

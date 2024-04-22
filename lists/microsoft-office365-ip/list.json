@@ -89,9 +89,11 @@
   "matching_attributes": [
     "ip-src",
     "ip-dst",
-    "domain|ip"
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
   ],
   "name": "List of known Office 365 IP address ranges",
   "type": "cidr",
-  "version": 20240418
+  "version": 20240422
 }

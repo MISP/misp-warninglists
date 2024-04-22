@@ -21,9 +21,11 @@
   "matching_attributes": [
     "ip-src",
     "ip-dst",
-    "domain|ip"
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
   ],
   "name": "List of RFC 5771 multicast CIDR blocks",
   "type": "cidr",
-  "version": 3
+  "version": 4
 }

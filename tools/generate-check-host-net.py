@@ -20,7 +20,7 @@ def process(file, dst):
         'description': 'check-host IP addresses (https://check-host.net/nodes/ips)',
         'type': 'cidr',
         'list': consolidate_networks(l),
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }
 
     write_to_file(warninglist, dst)

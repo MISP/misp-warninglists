@@ -105,11 +105,13 @@
     "99.83.154.118/32"
   ],
   "matching_attributes": [
-    "domain|ip",
+    "ip-src",
     "ip-dst",
-    "ip-src"
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
   ],
   "name": "Parking domains",
   "type": "cidr",
-  "version": 20221024
+  "version": 20240422
 }

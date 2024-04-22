@@ -23,7 +23,7 @@ def process(url):
         'name': 'List of known Office 365 IP address ranges',
         'description': 'Office 365 IP address ranges',
         'type': 'cidr',
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }
     generate(consolidate_networks(lips), office365_ips_dst, office365_ips_warninglist)
 
@@ -65,6 +65,6 @@ if __name__ == '__main__':
         'name': 'List of known Office 365 IP address ranges in China',
         'description': 'Office 365 IP address ranges in China',
         'type': 'cidr',
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }
     generate(consolidate_networks(lips), "microsoft-office365-cn", warninglist)

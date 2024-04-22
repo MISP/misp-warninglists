@@ -11,7 +11,7 @@ def process(url, dst):
         'description': 'Specialized list of {} addresses belonging to common VPN providers and datacenters'.format(dst),
         'list': consolidate_networks(process_stream(url)),
         'type': 'cidr',
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }
 
     write_to_file(warninglist, dst)

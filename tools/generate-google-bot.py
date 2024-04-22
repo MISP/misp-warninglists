@@ -15,7 +15,7 @@ if __name__ == '__main__':
         'name': 'List of known Googlebot IP ranges (https://developers.google.com/search/apis/ipranges/googlebot.json)',
         'version': get_version(),
         'description': "Google Bot IP address ranges (https://developers.google.com/search/apis/ipranges/googlebot.json)",
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"],
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"],
         'type': 'cidr',
         'list': consolidate_networks(ranges),
     }

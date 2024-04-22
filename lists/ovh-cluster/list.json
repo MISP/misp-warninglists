@@ -436,9 +436,11 @@
   "matching_attributes": [
     "ip-src",
     "ip-dst",
-    "domain|ip"
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
   ],
   "name": "List of known Ovh Cluster IP",
   "type": "cidr",
-  "version": 20180222
+  "version": 20240422
 }

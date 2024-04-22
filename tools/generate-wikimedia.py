@@ -15,7 +15,7 @@ def process(url, dst):
         'description': 'Wikimedia address ranges (http://noc.wikimedia.org/conf/reverse-proxy.php.txt)',
         'type': 'cidr',
         'list': [],
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"]
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }
 
     matched = re.findall(

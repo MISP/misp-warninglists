@@ -99,7 +99,7 @@ def process(file):
         'version': get_version(),
         'description': 'IP addresses that belongs to CRL or OCSP',
         'list': get_ips_from_domains(crl_ocsp_domains),
-        'matching_attributes': ["ip-src", "ip-dst", "domain|ip"],
+        'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"],
         'type': 'cidr',
     }
     write_to_file(warninglist, "crl-ip")

@@ -111,9 +111,12 @@
   ],
   "matching_attributes": [
     "ip-src",
-    "ip-dst"
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
   ],
   "name": "List of known sinkholes",
   "type": "cidr",
-  "version": 1
+  "version": 2
 }
