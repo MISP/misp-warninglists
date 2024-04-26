@@ -11,11 +11,9 @@
   "matching_attributes": [
     "ip-src",
     "ip-dst",
-    "domain|ip",
-    "ip-src|port",
-    "ip-dst|port"
+    "domain|ip"
   ],
   "name": "cisco-umbrella-blockpage-ipv4",
   "type": "cidr",
-  "version": 20240422
+  "version": 20240426
 }

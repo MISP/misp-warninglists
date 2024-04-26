@@ -4137,7 +4137,6 @@
     "ku.edu.tr",
     "ku.lt",
     "ku.sk",
-    "kuas.edu.tw",
     "kubagro.ru",
     "kubrussel.ac.be",
     "kubstu.ru",
@@ -5277,13 +5276,13 @@
     "njust.edu.cn",
     "njutcm.edu.cn",
     "njuts.cn",
-    "nkfu.edu.tw",
     "nknu.edu.tw",
     "nkrriwf.pl",
     "nku.edu",
     "nku.edu.tr",
     "nku.nankai.edu.cn",
     "nkumbauniversity.ac.ug",
+    "nkust.edu.tw",
     "nkzu.kz",
     "nl.edu",
     "nla.no",
@@ -10311,5 +10310,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20240405
+  "version": 20240426
 }
