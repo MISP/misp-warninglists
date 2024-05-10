@@ -18,6 +18,7 @@
     "later.com",
     "lift.bio",
     "liinks.co",
+    "link.gallery",
     "link.space",
     "link.umode.com.br",
     "linkbio.co",
@@ -40,9 +41,12 @@
     "shor.by",
     "shorby.com",
     "snipfeed.co",
+    "tapk.it",
+    "tapkit.com",
     "taplink.at",
     "taplink.cc",
-    "uniqode.com"
+    "uniqode.com",
+    "usebiolink.com"
   ],
   "matching_attributes": [
     "domain",
@@ -52,5 +56,5 @@
   ],
   "name": "List of known link in Bio domains",
   "type": "hostname",
-  "version": 1
+  "version": 2
 }
