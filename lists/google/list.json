@@ -673,9 +673,10 @@
   "matching_attributes": [
     "domain",
     "hostname",
-    "domain|ip"
+    "domain|ip",
+    "url"
   ],
   "name": "List of known google domains",
   "type": "string",
-  "version": 6
+  "version": 7
 }

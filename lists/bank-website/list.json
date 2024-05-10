@@ -1975,9 +1975,10 @@
   "matching_attributes": [
     "domain",
     "hostname",
-    "domain|ip"
+    "domain|ip",
+    "url"
   ],
   "name": "List of known bank domains",
   "type": "hostname",
-  "version": 4
+  "version": 5
 }
