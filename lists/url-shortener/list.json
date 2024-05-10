@@ -38,6 +38,7 @@
     "golinks.co",
     "goo.by",
     "goo.gl",
+    "han.gl",
     "hit.my",
     "hyperurl.co",
     "id.tl",
@@ -78,6 +79,10 @@
     "qr.net",
     "qrco.de",
     "rb.gy",
+    "rebrand.ly",
+    "rebrandly.com",
+    "rebrandly.info",
+    "ricardo.news",
     "s.id",
     "s.rlp.de",
     "scrnch.me",
@@ -130,5 +135,5 @@
   ],
   "name": "List of known URL Shorteners domains",
   "type": "hostname",
-  "version": 13
+  "version": 14
 }
