@@ -1006,7 +1006,8 @@
     "hostname",
     "domain",
     "url",
-    "domain|ip"
+    "domain|ip",
+    "URL"
   ],
   "name": "Top 1000 websites from Cisco Umbrella",
   "type": "string",

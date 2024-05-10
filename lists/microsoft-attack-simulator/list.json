@@ -18,7 +18,8 @@
     "ip-dst",
     "domain",
     "domain|ip",
-    "hostname"
+    "hostname",
+    "URL"
   ],
   "name": "List of known Office 365 Attack Simulator used for phishing awareness campaigns",
   "type": "substring",

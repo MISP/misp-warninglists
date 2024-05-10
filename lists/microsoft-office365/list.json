@@ -208,7 +208,8 @@
   "matching_attributes": [
     "domain",
     "domain|ip",
-    "hostname"
+    "hostname",
+    "URL"
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
