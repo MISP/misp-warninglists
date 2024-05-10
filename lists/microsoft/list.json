@@ -196,9 +196,10 @@
   "matching_attributes": [
     "domain",
     "hostname",
-    "domain|ip"
+    "domain|ip",
+    "url"
   ],
   "name": "List of known microsoft domains",
   "type": "string",
-  "version": 4
+  "version": 5
 }
