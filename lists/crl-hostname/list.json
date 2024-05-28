@@ -78,12 +78,14 @@
     "crl4.digicert.com",
     "crls.ssl.com",
     "crlv1.harica.gr",
+    "d-trust-root-ca-3-2013.ocsp.d-trust.net",
     "d-trust-sbr-root-ca-1-2022.ocsp.d-trust.net",
     "d-trust-sbr-root-ca-2-2022.ocsp.d-trust.net",
     "depo.kamusm.gov.tr",
     "directory.d-trust.net",
     "directory.swisssign.net",
     "domorganisatieservicesocsp-g3.pkioverheid.nl",
+    "e.on-group-ca-2-2013.ocsp.d-trust.net",
     "eca.hinet.net",
     "eon-group-ca-2-2013.ocsp.d-trust.net",
     "epki.com.tw",
@@ -241,5 +243,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20240426
+  "version": 20240528
 }

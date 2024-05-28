@@ -20,8 +20,8 @@ python3 generate_mozilla_certificates.py
 python3 generate_moz-top500.py
 python3 generate-office365.py
 python3 generate_phone_numbers.py
-python3 generate-publicdns.py
-python3 generate-stackpath.py
+#python3 generate-publicdns.py
+#python3 generate-stackpath.py
 python3 generate-tlds.py
 python3 generate_tranco.py
 python3 generate-university-domain-list.py
@@ -36,7 +36,7 @@ python3 generate-tenable.py
 python3 generate-microsoft-azure-appid.py
 python3 generate-chrome-crux-1m.py
 python3 generate-digitalside.py
-python3 generate-gptbot.py
+#python3 generate-gptbot.py
 python3 generate-cisco-umbrella-blockpage.py
 popd
 

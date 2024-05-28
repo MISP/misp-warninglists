@@ -1471,6 +1471,7 @@
     "herp.in",
     "herpderp.nl",
     "hezll.com",
+    "hi2.in",
     "hi5.si",
     "hiddentragedy.com",
     "hidebox.org",
@@ -3093,6 +3094,7 @@
     "tefl.ro",
     "telecomix.pl",
     "teleg.eu",
+    "telegmail.com",
     "teleworm.com",
     "teleworm.us",
     "tellos.xyz",
@@ -3760,5 +3762,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20240426
+  "version": 20240528
 }

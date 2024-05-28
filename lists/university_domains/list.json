@@ -7762,6 +7762,7 @@
     "ucd.ac.ma",
     "ucd.ie",
     "ucdavis.edu",
+    "ucdconnect.ie",
     "ucdenver.edu",
     "uce.edu.do",
     "ucel.edu.ar",
@@ -10310,5 +10311,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20240426
+  "version": 20240528
 }
