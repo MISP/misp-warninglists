@@ -491,6 +491,7 @@
     ".cbo-oman.org",
     ".cboktulsa.com",
     ".cbonline.co.uk",
+    ".cbq.qa",
     ".cbq.com.qa",
     ".cbr.ru",
     ".cbt.net",
@@ -1980,5 +1981,5 @@
   ],
   "name": "List of known bank domains",
   "type": "hostname",
-  "version": 5
+  "version": 6
 }
