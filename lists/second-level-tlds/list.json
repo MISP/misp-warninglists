@@ -1207,6 +1207,10 @@
     "cd",
     "cd.eu.org",
     "cdn-edges.net",
+    "cdn.cloudflare.net",
+    "cdn.cloudflareanycast.net",
+    "cdn.cloudflarecn.net",
+    "cdn.cloudflareglobal.net",
     "cdn.prod.atlassian-dev.net",
     "cdn77-ssl.net",
     "cdn77-storage.com",
@@ -1348,6 +1352,7 @@
     "cloudcontrolled.com",
     "cloudera.site",
     "cloudflare-ipfs.com",
+    "cloudflare.net",
     "cloudfront.net",
     "cloudfunctions.net",
     "cloudjiffy.net",
@@ -9755,5 +9760,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20240528
+  "version": 20240606
 }

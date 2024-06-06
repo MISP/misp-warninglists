@@ -40,6 +40,7 @@
     "crl.emsign.com",
     "crl.ensuredca.com",
     "crl.entrust.net",
+    "crl.firmaprofesional.com",
     "crl.gdca.com.cn",
     "crl.global.sheca.com",
     "crl.globalsign.com",
@@ -124,6 +125,7 @@
     "ocsp.emsign.com",
     "ocsp.ensuredca.com",
     "ocsp.entrust.net",
+    "ocsp.firmaprofesional.com",
     "ocsp.global.sheca.com",
     "ocsp.globalsign.com",
     "ocsp.globaltrust.eu",
@@ -243,5 +245,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20240528
+  "version": 20240606
 }

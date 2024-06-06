@@ -24,6 +24,7 @@
     "i.ibb.co",
     "i.imgur.com",
     "icloud.com",
+    "ipfs.io",
     "link.storjshare.io",
     "media.discordapp.net",
     "pastebin.com",
@@ -38,6 +39,7 @@
     "trello.com",
     "vimeo.com",
     "vk.com",
+    "www.autohotkey.com",
     "www.dl.dropboxusercontent.com",
     "www.zipshare.com",
     "zipshare.com"
@@ -48,5 +50,5 @@
   ],
   "name": "OSINT.DigitalSide.IT Warning List",
   "type": "hostname",
-  "version": 20240528
+  "version": 20240606
 }

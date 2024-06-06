@@ -366,6 +366,7 @@
     "ar.lublin.pl",
     "ar.szczecin.pl",
     "ar.wroc.pl",
+    "ara.ac.nz",
     "arabou-lb.edu.lb",
     "arabou.edu.sa",
     "arakmu.ac.ir",
@@ -3707,7 +3708,7 @@
     "jmu.edu.cn",
     "jncasr.ac.in",
     "jnkvv.nic.in",
-    "jntu.ac.in",
+    "jntuh.ac.in",
     "jnu.ac.bd",
     "jnu.ac.in",
     "jnu.ac.kr",
@@ -4831,6 +4832,7 @@
     "montgomery.edu",
     "montgomerycollege.edu",
     "montreat.edu",
+    "moodle.ara.ac.nz",
     "moorelanduniversity.com",
     "moorparkcollege.edu",
     "morainepark.edu",
@@ -5003,6 +5005,7 @@
     "my-pharm.ac.jp",
     "my.cityu.edu.hk",
     "my.ipleiria.pt",
+    "myara.ara.ac.nz",
     "mybrcc.edu",
     "mylambton.ca",
     "mylaurier.ca",
@@ -10311,5 +10314,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20240528
+  "version": 20240606
 }
