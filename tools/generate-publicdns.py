@@ -27,7 +27,7 @@ def process(ipv4: List, ipv6: List, hostname: List):
         'description': 'Event contains one or more public IPv4 DNS resolvers as attribute with an IDS flag set',
         'name': 'List of known IPv4 public DNS resolvers',
         'type': 'cidr',
-        'matching_attributes': ['ip-src', 'ip-dst', 'domain|ip']
+        'matching_attributes': ['ip-src', 'ip-dst', 'domain|ip', 'ip-src|port', 'ip-dst|port']
     }
     generate(ipv4, publicdns_ipv4_warninglist, publicdns_ipv4_dst)
 
@@ -37,7 +37,7 @@ def process(ipv4: List, ipv6: List, hostname: List):
         'description': 'Event contains one or more public IPv6 DNS resolvers as attribute with an IDS flag set',
         'name': 'List of known IPv6 public DNS resolvers',
         'type': 'cidr',
-        'matching_attributes': ['ip-src', 'ip-dst', 'domain|ip']
+        'matching_attributes': ['ip-src', 'ip-dst', 'domain|ip', 'ip-src|port', 'ip-dst|port']
     }
     generate(ipv6, publicdns_ipv6_warninglist, publicdns_ipv6_dst)
 
