@@ -876,6 +876,7 @@
     "douchelounge.com",
     "dozvon-spb.ru",
     "dp76.com",
+    "dpptd.com",
     "dr69.site",
     "drdrb.com",
     "drdrb.net",
@@ -2727,6 +2728,7 @@
     "royandk.com",
     "rppkn.com",
     "rsvhr.com",
+    "rteet.com",
     "rtrtr.com",
     "rtskiya.xyz",
     "rudymail.ml",
@@ -3762,5 +3764,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20240606
+  "version": 20240621
 }

@@ -2,10 +2,8 @@
   "description": "Google Bot IP address ranges (https://developers.google.com/search/apis/ipranges/googlebot.json)",
   "list": [
     "192.178.5.0/27",
-    "2001:4860:4801:10::/61",
-    "2001:4860:4801:18::/62",
-    "2001:4860:4801:1c::/63",
-    "2001:4860:4801:1e::/64",
+    "192.178.6.0/27",
+    "2001:4860:4801:10::/60",
     "2001:4860:4801:20::/60",
     "2001:4860:4801:2::/64",
     "2001:4860:4801:31::/64",
@@ -81,5 +79,5 @@
   ],
   "name": "List of known Googlebot IP ranges (https://developers.google.com/search/apis/ipranges/googlebot.json)",
   "type": "cidr",
-  "version": 20240606
+  "version": 20240621
 }

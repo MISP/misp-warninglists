@@ -804,7 +804,6 @@
     "NAB",
     "NAGOYA",
     "NAME",
-    "NATURA",
     "NAVY",
     "NBA",
     "NC",
@@ -1457,5 +1456,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20240606
+  "version": 20240621
 }
