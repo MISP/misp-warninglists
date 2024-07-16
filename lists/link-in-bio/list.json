@@ -1,10 +1,12 @@
 {
   "description": "Event contains one or more entries of known Link in bio domains. Those shorten links are a reference to a list of links.",
   "list": [
+    "artist.link",
     "beacons.ai",
     "bio.fm",
     "bio.site",
     "biolink.site",
+    "biolinky.co",
     "bit.ly",
     "bitly.com",
     "campsite.bio",
@@ -41,6 +43,7 @@
     "magic.ly",
     "milkshake.app",
     "muse.io",
+    "odesli.co",
     "set.page",
     "shor.by",
     "shorby.com",
@@ -48,6 +51,7 @@
     "snapto.link",
     "snipfeed.co",
     "socprofile.com",
+    "song.link",
     "tapk.it",
     "tapkit.com",
     "taplink.at",
@@ -63,5 +67,5 @@
   ],
   "name": "List of known link in Bio domains",
   "type": "hostname",
-  "version": 4
+  "version": 5
 }
