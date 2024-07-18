@@ -37,6 +37,7 @@
     "crl.digicert-validation.com",
     "crl.digicert.cn",
     "crl.e-szigno.hu",
+    "crl.ecc.netlock.hu",
     "crl.emsign.com",
     "crl.ensuredca.com",
     "crl.entrust.net",
@@ -121,6 +122,7 @@
     "ocsp.digicert.cn",
     "ocsp.digicert.com",
     "ocsp.eca.hinet.net",
+    "ocsp.ecc.netlock.hu",
     "ocsp.elektronicznypodpis.pl",
     "ocsp.emsign.com",
     "ocsp.ensuredca.com",
@@ -245,5 +247,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20240621
+  "version": 20240718
 }

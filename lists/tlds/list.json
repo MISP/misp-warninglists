@@ -1040,7 +1040,6 @@
     "SH",
     "SHANGRILA",
     "SHARP",
-    "SHAW",
     "SHELL",
     "SHIA",
     "SHIKSHA",
@@ -1456,5 +1455,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20240621
+  "version": 20240718
 }
