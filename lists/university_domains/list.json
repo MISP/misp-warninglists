@@ -3677,6 +3677,7 @@
     "jdcc.edu",
     "jedlik.eu",
     "jeffco.edu",
+    "jefferson.edu",
     "jefferson.edu.mx",
     "jefferson.kctcs.edu",
     "jeffstateonline.com",
@@ -6990,6 +6991,7 @@
     "students.finki.ukim.mk",
     "students.jedlik.eu",
     "students.olin.edu",
+    "students.vizja.pl",
     "stut.edu.tw",
     "stvincent.edu",
     "stw.de",
@@ -10337,5 +10339,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20240718
+  "version": 20240722
 }

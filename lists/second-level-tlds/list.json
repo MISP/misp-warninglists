@@ -8042,7 +8042,6 @@
     "stufftoread.com",
     "style",
     "su",
-    "su.paba.se",
     "sub.jp",
     "sucks",
     "sue.fukuoka.jp",
@@ -9808,5 +9807,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20240718
+  "version": 20240722
 }
