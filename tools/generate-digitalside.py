@@ -10,7 +10,7 @@ def process(url, dst):
     warninglist = {
         'name': 'OSINT.DigitalSide.IT Warning List',
         'version': get_version(),
-        'description': '"OSINT DigitalSide Threat-Intel Repository - MISP Warninglist - List of domains should be marked as false positive in the related MISP event with IDS attribute not flagged',
+        'description': 'OSINT DigitalSide Threat-Intel Repository - MISP Warninglist - List of domains should be marked as false positive in the related MISP event with IDS attribute not flagged',
         'type': 'hostname',
         'list': DSList,
         'matching_attributes': ["hostname", "domain"]
