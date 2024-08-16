@@ -114,6 +114,7 @@
     "srink.co",
     "su.pr",
     "t.co",
+    "t.ly",
     "tg.pe",
     "tiny.cc",
     "tinyarrows.com",
@@ -131,6 +132,7 @@
     "urled.cc",
     "urled.pro",
     "urless.com",
+    "urlr.me",
     "urlshort.dev",
     "urltin.com",
     "urlz.fr",
@@ -148,6 +150,7 @@
     "youtu.be",
     "yu2.it",
     "zpag.es",
+    "zpr.io",
     "zzb.bz"
   ],
   "matching_attributes": [
@@ -159,5 +162,5 @@
   ],
   "name": "List of known URL Shorteners domains",
   "type": "hostname",
-  "version": 16
+  "version": 17
 }
