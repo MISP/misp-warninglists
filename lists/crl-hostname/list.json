@@ -8,7 +8,6 @@
     "cdp.elektronicznypodpis.pl",
     "cdp1.disig.sk",
     "cdp1.pca.dfn.de",
-    "cdp1.public-trust.com",
     "cdp2.disig.sk",
     "cdp2.pca.dfn.de",
     "certificates.godaddy.com",
@@ -134,7 +133,6 @@
     "ocsp.godaddy.com",
     "ocsp.harica.gr",
     "ocsp.izenpe.com",
-    "ocsp.omniroot.com",
     "ocsp.pca.dfn.de",
     "ocsp.pki.goog",
     "ocsp.pkiworks.com",
@@ -247,5 +245,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20240722
+  "version": 20240816
 }

@@ -28,7 +28,6 @@
     "auth.microsoft.com",
     "autologon.microsoftazuread-sso.com",
     "azure-apim.net",
-    "azureedge.net",
     "azurerms.com",
     "becws.microsoftonline.com",
     "blob.core.windows.net",
@@ -90,12 +89,10 @@
     "loginex.microsoftonline.com",
     "lync.com",
     "mail.protection.outlook.com",
-    "media.azure.net",
     "mem.gfx.ms",
     "microsoft.com",
     "microsoftonline-p.com",
     "microsoftonline.com",
-    "microsoftstream.com",
     "microsoftusercontent.com",
     "mlccdn.blob.core.windows.net",
     "mlccdnprod.azureedge.net",
@@ -111,7 +108,6 @@
     "msocdn.com",
     "mx.microsoft",
     "nexus.microsoftonline-p.com",
-    "nps.onyx.azure.net",
     "o15.officeredir.microsoft.com",
     "o365weve.com",
     "ocos-office365-s2s.msedge.net",
@@ -173,6 +169,7 @@
     "spoprod-a.akamaihd.net",
     "ssw.live.com",
     "staffhub.ms",
+    "staffhubweb.azureedge.net",
     "static.microsoft",
     "storage.live.com",
     "streaming.mediaservices.windows.net",
@@ -212,5 +209,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20240722
+  "version": 20240816
 }
