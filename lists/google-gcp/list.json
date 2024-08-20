@@ -321,5 +321,5 @@
   ],
   "name": "List of known GCP (Google Cloud Platform) IP address ranges",
   "type": "cidr",
-  "version": 20240816
+  "version": 20240820
 }

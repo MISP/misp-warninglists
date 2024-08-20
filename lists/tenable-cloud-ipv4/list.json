@@ -50,5 +50,5 @@
   ],
   "name": "List of known Tenable Cloud Sensors IPv4",
   "type": "cidr",
-  "version": 20240816
+  "version": 20240820
 }
