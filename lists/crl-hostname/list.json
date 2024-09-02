@@ -209,6 +209,8 @@
     "rootocsp-g3.pkioverheid.nl",
     "rootocsp.twca.com.tw",
     "rootocsp2009.e-szigno.hu",
+    "rtcrl.cybertrust.ne.jp",
+    "rtocsp.cybertrust.ne.jp",
     "s.ss2.us",
     "sceccrootca1.ocsp.secomtrust.net",
     "scrootca2.ocsp.secomtrust.net",
@@ -245,5 +247,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20240820
+  "version": 20240902
 }
