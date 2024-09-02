@@ -12,6 +12,7 @@
     "codeberg.org",
     "codeload.github.com",
     "deac-ams.dl.sourceforge.net",
+    "discord.com",
     "dl.dropboxusercontent.com",
     "drive.google.com",
     "dropbox.com",
@@ -50,5 +51,5 @@
   ],
   "name": "OSINT.DigitalSide.IT Warning List",
   "type": "hostname",
-  "version": 20240820
+  "version": 20240902
 }
