@@ -20,6 +20,7 @@
     "bitly.com",
     "bitly.com.vn",
     "bitly.ws",
+    "bom.so",
     "buff.ly",
     "buzurl.com",
     "bx.ms",
@@ -71,6 +72,7 @@
     "lnkfi.re",
     "mcaf.ee",
     "merky.de",
+    "mtr.bio",
     "my5353.com",
     "n9.cl",
     "neya.io",
@@ -122,6 +124,7 @@
     "tinyurl.mobi",
     "tota2.com",
     "tr.im",
+    "tt.vg",
     "tweez.me",
     "twitthis.com",
     "twixar.com",
@@ -162,5 +165,5 @@
   ],
   "name": "List of known URL Shorteners domains",
   "type": "hostname",
-  "version": 17
+  "version": 18
 }

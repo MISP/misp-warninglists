@@ -14,6 +14,7 @@
     "evrl.ink",
     "feed.link",
     "hoo.be",
+    "hootbio.com",
     "hopp.co",
     "hyperfollow.com",
     "jingle.bio",
@@ -29,6 +30,7 @@
     "link.umode.com.br",
     "linkbio.co",
     "linkfire.com",
+    "linkflit.com",
     "linki.ee",
     "linkin-bio.digital",
     "linkin.bio",
@@ -68,5 +70,5 @@
   ],
   "name": "List of known link in Bio domains",
   "type": "hostname",
-  "version": 5
+  "version": 6
 }
