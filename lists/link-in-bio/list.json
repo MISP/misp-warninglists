@@ -5,7 +5,9 @@
     "beacons.ai",
     "bio.fm",
     "bio.site",
+    "biolink.info",
     "biolink.site",
+    "biolink.website",
     "biolinky.co",
     "bit.ly",
     "bitly.com",
@@ -46,7 +48,9 @@
     "magic.ly",
     "milkshake.app",
     "muse.io",
+    "mysoci.al",
     "odesli.co",
+    "ohmy.bio",
     "set.page",
     "shor.by",
     "shorby.com",
@@ -60,7 +64,8 @@
     "taplink.at",
     "taplink.cc",
     "uniqode.com",
-    "usebiolink.com"
+    "usebiolink.com",
+    "wonderlink.de"
   ],
   "matching_attributes": [
     "domain",
@@ -70,5 +75,5 @@
   ],
   "name": "List of known link in Bio domains",
   "type": "hostname",
-  "version": 6
+  "version": 7
 }
