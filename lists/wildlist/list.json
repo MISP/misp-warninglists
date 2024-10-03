@@ -1,0 +1,15 @@
+{
+  "description": "List will exclude all subdomains from warninglist if domain or subdomain exist in other warning lists.",
+  "list": [
+    "!.appspot.com",
+    "!.sytes.net",
+    "!.weebly.com"
+  ],
+  "matching_attributes": [
+    "domain",
+    "hostname"
+  ],
+  "name": "Exclude subdomain from warn",
+  "type": "wildmask",
+  "version": 1
+}
