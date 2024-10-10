@@ -1,6 +1,6 @@
 {
   "category": "Known identifier",
-  "description": "List of popular legitimate domains from LOTS (Living Off Trusted Sites) Project used to conduct phishing, C&C, exfiltration or downloading tools to evade detection",
+  "description": "List of popular legitimate domains from LOTS (Living Off Trusted Sites) Project used to conduct phishing, C&C, exfiltration or downloading tools to evade detection (https://lots-project.com)",
   "list": [
     ".000webhostapp.com",
     ".amazonaws.com",
