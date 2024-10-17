@@ -183,7 +183,6 @@
     "pki0336.telesec.de",
     "public.ocsp.identrust.com",
     "public.wisekey.com",
-    "qventca3g3.ocsp.quovadisglobal.com",
     "rca.navercorp.com",
     "repo.bjca.cn",
     "repository.secomtrust.net",
@@ -236,7 +235,6 @@
     "www.d-trust.net",
     "www.gdca.com.cn",
     "www.microsoft.com",
-    "www2.public-trust.com",
     "x1.c.lencr.org",
     "x2.c.lencr.org"
   ],
@@ -247,5 +245,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20240902
+  "version": 20241017
 }

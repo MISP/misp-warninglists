@@ -30,7 +30,6 @@
     "azure-apim.net",
     "azurerms.com",
     "becws.microsoftonline.com",
-    "blob.core.windows.net",
     "c.bing.com",
     "c.bing.net",
     "c.live.com",
@@ -153,6 +152,7 @@
     "protection.outlook.com",
     "provisioningapi.microsoftonline.com",
     "public-trust.com",
+    "purview.microsoft.com",
     "r.office.microsoft.com",
     "search.production.apac.trafficmanager.net",
     "search.production.emea.trafficmanager.net",
@@ -178,6 +178,7 @@
     "sway.com",
     "symcb.com",
     "symcd.com",
+    "teams.cloud.microsoft",
     "teams.microsoft.com",
     "technet.microsoft.com",
     "telemetryservice.firstpartyapps.oaspapps.com",
@@ -209,5 +210,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20240902
+  "version": 20241017
 }
