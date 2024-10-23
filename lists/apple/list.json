@@ -15,5 +15,5 @@
   ],
   "name": "List of known Apple IP ranges",
   "type": "cidr",
-  "version": 20240422
+  "version": 20241023
 }
