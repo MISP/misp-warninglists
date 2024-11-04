@@ -38,6 +38,7 @@ python3 generate-chrome-crux-1m.py
 python3 generate-digitalside.py
 #python3 generate-gptbot.py
 python3 generate-cisco-umbrella-blockpage.py
+python3 generate-zscaler.py
 popd
 
 ./jq_all_the_things.sh
