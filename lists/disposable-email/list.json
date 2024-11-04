@@ -976,6 +976,7 @@
     "emaildrop.io",
     "emailfake.com",
     "emailfake.ml",
+    "emailfoxi.pro",
     "emailfreedom.ml",
     "emailgenerator.de",
     "emailgo.de",
@@ -1529,6 +1530,7 @@
     "hpc.tw",
     "hs.vc",
     "ht.cx",
+    "hthlm.com",
     "huangniu8.com",
     "huizk.com",
     "hukkmu.tk",
@@ -3807,5 +3809,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20241017
+  "version": 20241104
 }

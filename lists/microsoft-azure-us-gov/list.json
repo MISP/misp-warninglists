@@ -1,9 +1,7 @@
 {
   "description": "Microsoft Azure US Government Cloud Datacenter IP Ranges",
   "list": [
-    "104.210.16.0/21",
-    "104.210.24.0/24",
-    "104.210.26.0/24",
+    "104.210.16.0/20",
     "104.212.60.0/23",
     "13.72.0.0/18",
     "13.72.168.128/27",
@@ -202,9 +200,8 @@
     "52.247.128.0/18",
     "52.249.96.0/19",
     "62.10.0.0/16",
-    "62.11.0.0/18",
-    "62.11.128.0/18",
-    "62.11.64.0/19"
+    "62.11.0.0/17",
+    "62.11.128.0/18"
   ],
   "matching_attributes": [
     "ip-src",
@@ -215,5 +212,5 @@
   ],
   "name": "List of known Microsoft Azure US Government Cloud Datacenter IP Ranges",
   "type": "cidr",
-  "version": 20241017
+  "version": 20241104
 }
