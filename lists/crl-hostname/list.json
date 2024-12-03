@@ -59,7 +59,6 @@
     "crl.rootca3.amazontrust.com",
     "crl.rootca4.amazontrust.com",
     "crl.rootg2.amazontrust.com",
-    "crl.sbca.telesec.de",
     "crl.sectigo.com",
     "crl.securetrust.com",
     "crl.starfieldtech.com",
@@ -97,11 +96,11 @@
     "grcl3.ocsp.telesec.de",
     "httpcrl.trust.telia.com",
     "ldap-cpki.telekom.de",
-    "ldap.sbca.telesec.de",
     "ldap05.actalis.it",
     "ldap2.sheca.com",
     "ldapfnmt.cert.fnmt.es",
     "o.ss2.us",
+    "ocsp-cpki.telekom.de",
     "ocsp-rca.navercorp.com",
     "ocsp.accv.es",
     "ocsp.affirmtrust.com",
@@ -157,7 +156,6 @@
     "ocsp.wisekey.com",
     "ocsp.wt.trustasia.com",
     "ocsp0336.telesec.de",
-    "ocsp04.telesec.de",
     "ocsp05.actalis.it",
     "ocsp1.hongkongpost.gov.hk",
     "ocsp1.netlock.hu",
@@ -213,7 +211,6 @@
     "s.ss2.us",
     "sceccrootca1.ocsp.secomtrust.net",
     "scrootca2.ocsp.secomtrust.net",
-    "scrootca3.ocsp.secomtrust.net",
     "service.globaltrust.eu",
     "subca.crl.certum.pl",
     "subca.ocsp-certum.com",
@@ -245,5 +242,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20241104
+  "version": 20241203
 }

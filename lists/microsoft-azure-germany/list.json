@@ -47,5 +47,5 @@
   ],
   "name": "List of known Microsoft Azure Germany Datacenter IP Ranges",
   "type": "cidr",
-  "version": 20241104
+  "version": 20241203
 }
