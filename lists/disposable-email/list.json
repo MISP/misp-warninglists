@@ -1864,7 +1864,6 @@
     "lellno.gq",
     "lenovog4.com",
     "lerbhe.com",
-    "letmeinonthis.com",
     "letthemeatspam.com",
     "lez.se",
     "lgxscreen.com",
@@ -3107,6 +3106,7 @@
     "syosetu.gq",
     "syujob.accountants",
     "szerz.com",
+    "tacomail.de",
     "tafmail.com",
     "tafoi.gr",
     "taglead.com",
@@ -3812,5 +3812,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20241203
+  "version": 20241218
 }

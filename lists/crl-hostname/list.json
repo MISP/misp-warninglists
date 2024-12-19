@@ -28,7 +28,6 @@
     "crl.certsign.ro",
     "crl.certum.pl",
     "crl.cfca.com.cn",
-    "crl.comodo.net",
     "crl.comodoca.com",
     "crl.d-trust.net",
     "crl.dhimyotis.com",
@@ -173,7 +172,6 @@
     "ocsps.ssl.com",
     "ocspsslkoks1.kamusm.gov.tr",
     "oneocsp.microsoft.com",
-    "onsitecrl.trustwise.com",
     "pki-crl.atos.net",
     "pki-ldap.atos.net",
     "pki-ocsp.atos.net",
@@ -242,5 +240,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20241203
+  "version": 20241218
 }

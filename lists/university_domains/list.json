@@ -4851,6 +4851,7 @@
     "ml.refer.org",
     "mlaw.edu",
     "mlqu.edu.ph",
+    "mlsbu.ac.uk",
     "mlsu.ac.in",
     "mma.ru",
     "mmarau.ac.ke",
@@ -6388,6 +6389,7 @@
     "salleurl.edu",
     "salu.edu.pk",
     "salvador.edu.ar",
+    "samara.university",
     "sambalpuruniversitypgc.in",
     "samchok.ac.kr",
     "samdu.uz",
@@ -7014,6 +7016,7 @@
     "stockton.edu",
     "stolaf.edu",
     "stonechild.edu",
+    "stonehill.edu",
     "stonybrook.edu",
     "stonybrookmedicine.edu",
     "stou.ac.th",
@@ -10435,5 +10438,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20241203
+  "version": 20241218
 }
