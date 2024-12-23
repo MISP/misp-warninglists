@@ -5074,6 +5074,7 @@
     "my-pharm.ac.jp",
     "my.cityu.edu.hk",
     "my.ipleiria.pt",
+    "my.sta.uwi.edu",
     "myara.ara.ac.nz",
     "mybrcc.edu",
     "mycambrian.ca",
@@ -6964,6 +6965,7 @@
     "st-aug.edu",
     "st-georgen.uni-frankfurt.de",
     "st-patricks.ac.uk",
+    "sta.uwi.edu",
     "staffs.ac.uk",
     "stallions.abac.edu",
     "stamford.edu",
@@ -10438,5 +10440,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20241218
+  "version": 20241223
 }
