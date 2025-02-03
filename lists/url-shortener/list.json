@@ -88,6 +88,7 @@
     "my5353.com",
     "mylinks.ai",
     "n9.cl",
+    "nanourly.in",
     "neya.io",
     "nov.io",
     "odesli.co",
@@ -107,6 +108,7 @@
     "rebrand.ly",
     "rebrandly.com",
     "rebrandly.info",
+    "relink.is",
     "ricardo.news",
     "s.devh.in",
     "s.id",
@@ -168,8 +170,10 @@
     "yourls.org",
     "youtu.be",
     "yu2.it",
+    "yu3.io",
     "zpag.es",
     "zpr.io",
+    "zurl.to",
     "zzb.bz"
   ],
   "matching_attributes": [
@@ -181,5 +185,5 @@
   ],
   "name": "List of known URL Shorteners domains",
   "type": "hostname",
-  "version": 20
+  "version": 21
 }
