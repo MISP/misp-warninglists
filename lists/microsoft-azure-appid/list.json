@@ -56,12 +56,14 @@
     "4d5c2d63-cf83-4365-853c-925fd1a64357",
     "51be292c-a17e-4f17-9a7e-4b661fb16dd2",
     "5572c4c0-d078-44ce-b81c-6cbf8d3ed39e",
+    "5d661950-3475-41cd-a2c3-d671a3162bc1",
     "5e3ce6c0-2b1f-4285-8d4b-75ee78787346",
     "60c8bde5-3167-4f92-8fdb-059f6176dc0f",
     "60ca1954-583c-4d1f-86de-39d835f3e452",
     "61109738-7d2b-4a0b-9fe3-660b1ff83505",
     "62256cef-54c0-4cb4-bcac-4c67989bdc40",
     "6253bca8-faf2-4587-8f2f-b056d80998a7",
+    "6326e366-9d6d-4c70-b22a-34c7ea72d73d",
     "65d91a3d-ab74-42e6-8a2f-0add61688c74",
     "66a88757-258c-4c72-893c-3e8bed4d6899",
     "67e3df25-268a-4324-a550-0de1c7f97287",
@@ -122,6 +124,7 @@
     "fb78d390-0c51-40cd-8e17-fdbfab77341b",
     "fc0f3af4-6835-4174-b806-f7db311fd2f3",
     "fdf9885b-dd37-42bf-82e5-c3129ef5a302",
+    "fe93bfe1-7947-460a-a5e0-7a5906b51360",
     "ffcb16e8-f789-467c-8ce9-f826a080d987"
   ],
   "matching_attributes": [
@@ -129,5 +132,5 @@
   ],
   "name": "List of Azure Applicaiton IDs",
   "type": "string",
-  "version": 20250115
+  "version": 20250212
 }

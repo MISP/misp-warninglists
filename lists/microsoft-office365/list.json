@@ -76,6 +76,7 @@
     "informationprotection.azure.com",
     "informationprotection.hosting.portal.azure.net",
     "isrg.trustid.ocsp.identrust.com",
+    "join.secure.skypeassets.com",
     "keydelivery.mediaservices.windows.net",
     "login-us.microsoftonline.com",
     "login.live.com",
@@ -93,7 +94,6 @@
     "microsoftonline-p.com",
     "microsoftonline.com",
     "microsoftusercontent.com",
-    "mlccdn.blob.core.windows.net",
     "mlccdnprod.azureedge.net",
     "msauth.net",
     "msauthimages.net",
@@ -142,7 +142,6 @@
     "passwordreset.microsoftonline.com",
     "phonefactor.net",
     "platform.linkedin.com",
-    "policykeyservice.dc.ad.msft.net",
     "portal.cloudappsecurity.com",
     "powerapps.com",
     "powerautomate.com",
@@ -158,7 +157,6 @@
     "search.production.emea.trafficmanager.net",
     "search.production.us.trafficmanager.net",
     "secure.globalsign.com",
-    "secure.skypeassets.com",
     "security.microsoft.com",
     "sharepoint.com",
     "sharepointonline.com",
@@ -210,5 +208,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20250115
+  "version": 20250212
 }

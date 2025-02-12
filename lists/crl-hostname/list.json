@@ -77,6 +77,8 @@
     "crl4.digicert.com",
     "crls.ssl.com",
     "crlv1.harica.gr",
+    "d-trust-br-root-ca-2-2023.ocsp.d-trust.net",
+    "d-trust-ev-root-ca-2-2023.ocsp.d-trust.net",
     "d-trust-root-ca-3-2013.ocsp.d-trust.net",
     "d-trust-sbr-root-ca-1-2022.ocsp.d-trust.net",
     "d-trust-sbr-root-ca-2-2022.ocsp.d-trust.net",
@@ -240,5 +242,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20250115
+  "version": 20250212
 }
