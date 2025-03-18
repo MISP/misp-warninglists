@@ -629,7 +629,6 @@
     "KDDI",
     "KE",
     "KERRYHOTELS",
-    "KERRYLOGISTICS",
     "KERRYPROPERTIES",
     "KFH",
     "KG",
@@ -693,7 +692,6 @@
     "LIMO",
     "LINCOLN",
     "LINK",
-    "LIPSY",
     "LIVE",
     "LIVING",
     "LK",
@@ -1454,5 +1452,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20250212
+  "version": 20250318
 }
