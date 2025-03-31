@@ -38,6 +38,7 @@ are reused in many other open source projects.
 - [empty-hashes/list.json](./lists/empty-hashes/list.json) - **List of known hashes for empty files** - _Event contains one or more entries of empty files based on known hashed_
 - [fastly/list.json](./lists/fastly/list.json) - **List of known Fastly IP address ranges** - _Fastly IP address ranges (https://api.fastly.com/public-ip-list)_
 - [findip-host/list.json](./lists/findip-host/list.json) - **List of known hostname used for querying your source IP. This can be used as exclusion for your Passive DNS lookup.** - _Event contains one or more entries of known hostname querying your source IP._
+- [github/list.json](./lists/github/list.json) - **List of known IP Address ranges used by GitHub** - _GitHub IP Address ranges (https://api.github.com/meta)_
 - [google-chrome-crux-1million/list.json](./lists/google-chrome-crux-1million/list.json) - **google-chrome-crux-1million** - _Cached Chrome Top Million Websites - top 1 million_
 - [google-gcp/list.json](./lists/google-gcp/list.json) - **List of known GCP (Google Cloud Platform) IP address ranges** - _GCP (Google Cloud Platform) IP address ranges (https://www.gstatic.com/ipranges/cloud.json)_
 - [google-gmail-sending-ips/list.json](./lists/google-gmail-sending-ips/list.json) - **List of known Gmail sending IP ranges** - _List of known Gmail sending IP ranges (https://support.google.com/a/answer/27642?hl=en)_
