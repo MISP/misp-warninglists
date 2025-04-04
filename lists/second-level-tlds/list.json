@@ -428,6 +428,8 @@
     "appspaceusercontent.com",
     "appspot.com",
     "appudo.net",
+    "appwrite.global",
+    "appwrite.run",
     "aq",
     "aq.it",
     "aquarelle",
@@ -3755,6 +3757,8 @@
     "ip.linodeusercontent.com",
     "ip6.arpa",
     "ipfs.nftstorage.link",
+    "ipfs.storacha.link",
+    "ipfs.w3s.link",
     "ipifony.net",
     "ipiranga",
     "iq",
@@ -6944,7 +6948,6 @@
     "roros.no",
     "rost.no",
     "rotorcraft.aero",
-    "router.management",
     "routingthecloud.com",
     "routingthecloud.net",
     "routingthecloud.org",
@@ -9747,5 +9750,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20250318
+  "version": 20250404
 }

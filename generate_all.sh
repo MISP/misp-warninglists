@@ -15,7 +15,7 @@ python3 generate-disposal.py
 # Suggestion came to use a passivetotal whois search for org:Google LLC
 #python3 generate-google.py > lists/google/list.json
 #python3 generate_majestic-million.py -n 10000
-python3 generate-microsoft-azure.py
+#python3 generate-microsoft-azure.py
 python3 generate_mozilla_certificates.py
 python3 generate_moz-top500.py
 python3 generate-office365.py
@@ -23,7 +23,8 @@ python3 generate_phone_numbers.py
 #python3 generate-publicdns.py
 #python3 generate-stackpath.py
 python3 generate-tlds.py
-python3 generate_tranco.py
+python3 generate-github.py
+#python3 generate_tranco.py
 python3 generate-university-domain-list.py
 python3 generate-vpn.py
 python3 generate-wikimedia.py
