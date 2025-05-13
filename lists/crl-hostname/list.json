@@ -109,7 +109,6 @@
     "ocsp.anf.es",
     "ocsp.bjca.cn",
     "ocsp.buypass.com",
-    "ocsp.certigna.com",
     "ocsp.certsign.ro",
     "ocsp.cfca.com.cn",
     "ocsp.comodoca.com",
@@ -244,5 +243,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20250404
+  "version": 20250513
 }

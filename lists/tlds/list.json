@@ -120,7 +120,6 @@
     "BEATS",
     "BEAUTY",
     "BEER",
-    "BENTLEY",
     "BERLIN",
     "BEST",
     "BESTBUY",
@@ -660,7 +659,6 @@
     "LACAIXA",
     "LAMBORGHINI",
     "LAMER",
-    "LANCASTER",
     "LAND",
     "LANDROVER",
     "LANXESS",
@@ -1452,5 +1450,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20250404
+  "version": 20250513
 }
