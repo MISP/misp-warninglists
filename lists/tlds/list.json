@@ -914,7 +914,6 @@
     "PORN",
     "POST",
     "PR",
-    "PRAMERICA",
     "PRAXI",
     "PRESS",
     "PRIME",
@@ -1450,5 +1449,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20250513
+  "version": 20250604
 }

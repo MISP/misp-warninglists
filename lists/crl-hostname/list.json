@@ -99,7 +99,6 @@
     "httpcrl.trust.telia.com",
     "ldap-cpki.telekom.de",
     "ldap05.actalis.it",
-    "ldap2.sheca.com",
     "ldapfnmt.cert.fnmt.es",
     "o.ss2.us",
     "ocsp-cpki.telekom.de",
@@ -166,7 +165,6 @@
     "ocsp2.netlock.hu",
     "ocsp3.gdca.com.cn",
     "ocsp3.netlock.hu",
-    "ocsp3.sheca.com",
     "ocsp4.gdca.com.cn",
     "ocsp5.gdca.com.cn",
     "ocsp6.gdca.com.cn",
@@ -243,5 +241,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20250513
+  "version": 20250604
 }

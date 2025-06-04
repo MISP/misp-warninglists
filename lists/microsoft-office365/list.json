@@ -164,7 +164,6 @@
     "smtp.office365.com",
     "spoprod-a.akamaihd.net",
     "ssw.live.com",
-    "staffhub.ms",
     "static.microsoft",
     "storage.live.com",
     "streaming.mediaservices.windows.net",
@@ -203,5 +202,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20250513
+  "version": 20250604
 }
