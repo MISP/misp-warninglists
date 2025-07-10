@@ -51,12 +51,10 @@
     "crl.microsoft.com",
     "crl3.digicert.com",
     "crl4.digicert.com",
-    "d.docs.live.net",
     "dc.services.visualstudio.com",
     "defender.microsoft.com",
     "device.login.microsoftonline.com",
     "dgps.support.microsoft.com",
-    "docs.live.net",
     "docs.microsoft.com",
     "ecn.dev.virtualearth.net",
     "enterpriseregistration.windows.net",
@@ -163,7 +161,6 @@
     "skype.com",
     "smtp.office365.com",
     "spoprod-a.akamaihd.net",
-    "ssw.live.com",
     "static.microsoft",
     "storage.live.com",
     "streaming.mediaservices.windows.net",
@@ -177,7 +174,6 @@
     "technet.microsoft.com",
     "tse1.mm.bing.net",
     "usercontent.microsoft",
-    "users.storage.live.com",
     "verisign.com",
     "verisign.net",
     "virtualearth.net",
@@ -202,5 +198,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20250619
+  "version": 20250710
 }
