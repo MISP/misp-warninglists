@@ -36676,5 +36676,5 @@
   ],
   "name": "Specialized list of vpn-ipv4 addresses belonging to common VPN providers and datacenters",
   "type": "cidr",
-  "version": 20250710
+  "version": 20250719
 }

@@ -10,5 +10,5 @@
   ],
   "name": "CRL and OCSP IP addresses",
   "type": "cidr",
-  "version": 20250710
+  "version": 20250719
 }

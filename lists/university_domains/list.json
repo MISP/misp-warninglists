@@ -1631,6 +1631,7 @@
     "dakotacollege.edu",
     "dal.ca",
     "dalanjuniversity.edu.sd",
+    "dallascollege.edu",
     "daltonstate.edu",
     "damanhour.edu.eg",
     "damascusuniversity.edu.sy",
@@ -8029,6 +8030,7 @@
     "udb.sn",
     "udc.edu",
     "udc.es",
+    "udc.gal",
     "udca.edu.co",
     "udch.edu.pe",
     "ude.edu.uy",
@@ -9302,6 +9304,7 @@
     "untagsmg.ac.id",
     "untan.ac.id",
     "untar.ac.id",
+    "untdallas.edu",
     "unthsc.edu",
     "untidar.ac.id",
     "untirta.ac.id",
@@ -9600,6 +9603,7 @@
     "usc.edu.ph",
     "usc.edu.tt",
     "usc.es",
+    "usc.gal",
     "usca.edu",
     "uscb.edu",
     "uscga.edu",
@@ -9838,6 +9842,7 @@
     "uvic.ca",
     "uvic.es",
     "uvigo.es",
+    "uvigo.gal",
     "uvipro.cl",
     "uvm.cl",
     "uvm.edu",
@@ -10487,5 +10492,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20250710
+  "version": 20250719
 }
