@@ -1,7 +1,6 @@
 {
   "description": "List containing IP's associated with Censys scanning [https://support.censys.io/hc/en-us/articles/360043177092-Opt-Out-of-Data-Collection#Can_I_opt_out_of_Censys_data_collection?]",
   "list": [
-    "66.132.159.0/24",
     "162.142.125.0/24",
     "167.248.133.0/24",
     "167.94.138.0/24",
@@ -13,7 +12,8 @@
     "2602:80d:1000:b0cc:e::/80",
     "2602:80d:1003::/112",
     "2602:80d:1004::/112",
-    "2620:96:e000:b0cc:e::/80"
+    "2620:96:e000:b0cc:e::/80",
+    "66.132.159.0/24"
   ],
   "matching_attributes": [
     "ip-src",
