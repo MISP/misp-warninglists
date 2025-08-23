@@ -12,7 +12,8 @@
     "2602:80d:1000:b0cc:e::/80",
     "2602:80d:1003::/112",
     "2602:80d:1004::/112",
-    "2620:96:e000:b0cc:e::/80"
+    "2620:96:e000:b0cc:e::/80",
+    "66.132.159.0/24"
   ],
   "matching_attributes": [
     "ip-src",
@@ -23,5 +24,5 @@
   ],
   "name": "Censys IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 2
+  "version": 3
 }
