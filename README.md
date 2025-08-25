@@ -79,6 +79,7 @@ are reused in many other open source projects.
 - [rfc6598/list.json](./lists/rfc6598/list.json) - **List of RFC 6598 CIDR blocks** - _Event contains one or more entries part of the Shared Address Space CIDR blocks (RFC 6598)_
 - [rfc6761/list.json](./lists/rfc6761/list.json) - **List of RFC 6761 Special-Use Domain Names** - _Event contains one or more entries part of the Special-Use Domain Names (RFC 6761)_
 - [second-level-tlds/list.json](./lists/second-level-tlds/list.json) - **Second level TLDs as known by Mozilla Foundation** - _Event contains one or more second level TLDs as attribute with an IDS flag set._
+- [shadowserver/list.json](./shadowserver/list.json) - **List of Shadowserver IP-Ranges. Potentially associated with Shadowserver scans.**  - Event contains public IPv4 and IPv6 addresses belonging to AS22168 - The Shadowserver Foundation, Inc.
 - [security-provider-blogpost/list.json](./lists/security-provider-blogpost/list.json) - **List of known security providers/vendors blog domain** - _Event contains one or more entries of known security providers/vendors blog domain with an IDS flag set_
 - [sinkholes/list.json](./lists/sinkholes/list.json) - **List of known sinkholes** - _List of known sinkholes_
 - [smtp-receiving-ips/list.json](./lists/smtp-receiving-ips/list.json) - **List of known SMTP receiving IP addresses** - _List of IP addresses for known SMTP servers._
