@@ -45,6 +45,7 @@ are reused in many other open source projects.
 - [google/list.json](./lists/google/list.json) - **List of known google domains** - _Event contains one or more entries of known google domains_
 - [googlebot/list.json](./lists/googlebot/list.json) - **List of known Googlebot IP ranges (https://developers.google.com/search/apis/ipranges/googlebot.json)** - _Google Bot IP address ranges (https://developers.google.com/search/apis/ipranges/googlebot.json)_
 - [ipv6-linklocal/list.json](./lists/ipv6-linklocal/list.json) - **List of IPv6 link local blocks** - _Event contains one or more entries part of the IPv6 link local prefix (RFC 4291)_
+- [lists/isc-sans-research/list.json](./lists/isc-sans-research/list.json) - **List of IPs from SANS ISC Research feed** (https://isc.sans.edu/api/threatcategory/research/)
 - [link-in-bio/list.json](./lists/link-in-bio/list.json) - **List of known Link in Bio domains** - _Event contains one or more entries of known Link in Bio domains_
 - [lots-project/list.json](./lists/lots-project/list.json) - **List of LOTS (Living Off Trusted Sites) Project Domains** - _Event contains one or more entries of known LOTS Project domains._
 - [majestic_million/list.json](./lists/majestic_million/list.json) - **Top 10000 websites from Majestic Million** - _Event contains one or more entries from the top 10K of the most used websites (Majestic Million)._
