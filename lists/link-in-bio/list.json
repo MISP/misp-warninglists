@@ -17,6 +17,7 @@
     "downsad.com",
     "evrl.ink",
     "feed.link",
+    "heylink.me",
     "hoo.be",
     "hootbio.com",
     "hopp.co",
@@ -45,6 +46,7 @@
     "linknbio.com",
     "linkpilot.in",
     "linkpop.com",
+    "linksta.cc",
     "linktr.ee",
     "ln.ki",
     "lnk.at",
@@ -64,6 +66,7 @@
     "set.page",
     "shor.by",
     "shorby.com",
+    "shorten.tv",
     "sleek.bio",
     "snapto.link",
     "snipfeed.co",
@@ -87,5 +90,5 @@
   ],
   "name": "List of known link in Bio domains",
   "type": "hostname",
-  "version": 9
+  "version": 10
 }
