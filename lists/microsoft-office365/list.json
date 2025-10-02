@@ -42,7 +42,6 @@
     "clientconfig.microsoftonline-p.net",
     "cloud.microsoft",
     "companymanager.microsoftonline.com",
-    "compass-ssl.microsoft.com",
     "compliance.microsoft.com",
     "cortana.ai",
     "crl.globalsign.com",
@@ -198,5 +197,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20250719
+  "version": 20251002
 }

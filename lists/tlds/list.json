@@ -947,7 +947,6 @@
     "REALTY",
     "RECIPES",
     "RED",
-    "REDSTONE",
     "REDUMBRELLA",
     "REHAB",
     "REISE",
@@ -1449,5 +1448,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20250719
+  "version": 20251002
 }
