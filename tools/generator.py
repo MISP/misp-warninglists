@@ -132,7 +132,13 @@ def get_version():
 
 
 def unique_sorted_warninglist(warninglist):
-    warninglist['list'] = sorted(set(warninglist['list']))
+    lst = warninglist.get("list")
+    if isinstance(lst, list):
+        warninglist["list"] = sorted(set(lst))
+    elif isinstance(lst, dict):
+        warninglist["list"] = {k: lst[k] for k in sorted(lst)}
+    else:
+        raise TypeError("warninglist[‘list’] must be list or dict")
     return warninglist
 
 
