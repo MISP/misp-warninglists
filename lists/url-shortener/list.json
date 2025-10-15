@@ -7,6 +7,7 @@
     "3c5.com",
     "4x.si",
     "7x.qa",
+    "9lick.me",
     "abre.ai",
     "adcraft.co",
     "adcrun.ch",
@@ -77,8 +78,10 @@
     "link.zip.net",
     "linksshortcut.com",
     "linkto.im",
+    "ln.run",
     "lnk.co",
     "lnk.direct",
+    "lnk.ink",
     "lnk.pw",
     "lnkd.in",
     "lnkfi.re",
@@ -117,6 +120,9 @@
     "s3r.io",
     "scrnch.me",
     "shly.link",
+    "shorten.ee",
+    "shorten.is",
+    "shorten.tv",
     "shortquik.com",
     "shorturl.ae",
     "shorturl.at",
@@ -186,5 +192,5 @@
   ],
   "name": "List of known URL Shorteners domains",
   "type": "hostname",
-  "version": 21
+  "version": 22
 }
