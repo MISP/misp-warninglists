@@ -1,6 +1,7 @@
 {
   "description": "Zscaler IP address ranges (https://config.zscaler.com/api/zscaler.net/hubs/cidr/json/required)",
   "list": [
+    "101.2.220.0/23",
     "104.129.192.0/22",
     "104.129.196.0/23",
     "104.129.202.0/23",
@@ -139,5 +140,5 @@
   ],
   "name": "List of known Zscaler IP address ranges",
   "type": "cidr",
-  "version": 20251002
+  "version": 20251015
 }
