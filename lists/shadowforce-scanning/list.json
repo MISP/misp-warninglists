@@ -1,0 +1,17 @@
+{
+  "description": "List of shadowforce.io scanners ",
+  "list": [
+    "192.165.198.32/27",
+    "193.235.193.32/27"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-dst|port",
+    "ip-src|port"
+  ],
+  "name": "Shadowforce IP-Ranges, pot. used for Scanning",
+  "type": "cidr",
+  "version": 1
+}

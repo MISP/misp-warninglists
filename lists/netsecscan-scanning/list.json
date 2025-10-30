@@ -1,0 +1,26 @@
+{
+  "description": "List of NetSecScan.net scanners ",
+  "list": [
+    "89.248.167.132/31",
+    "89.248.167.135/32",
+    "89.248.167.139/32",
+    "89.248.167.140/32",
+    "89.248.167.147/32",
+    "89.248.167.149/32",
+    "89.248.167.150/31",
+    "89.248.167.158/31",
+    "89.248.167.164/31",
+    "89.248.167.191/32",
+    "89.248.167.192/31"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-dst|port",
+    "ip-src|port"
+  ],
+  "name": "NetSecScan IP-Ranges, pot. used for Scanning",
+  "type": "cidr",
+  "version": 1
+}
