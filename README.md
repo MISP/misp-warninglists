@@ -12,6 +12,7 @@ are reused in many other open source projects.
 
 - [akamai/list.json](./lists/akamai/list.json) - **List of known Akamai IP ranges** - _Akamai IP ranges from BGP search_
 - [alexa/list.json](./lists/alexa/list.json) - **Top 1000 website from Alexa** - _Event contains one or more entries from the top 1000 of the most used website (Alexa)._
+- [alphastrike-scanning/list.json](./lists/alphastrike-scanning/list.json) - **Alpha Strike IP Ranges Used for Scanning** - _List containing IP's associated with Alpha Strike scanning [https://ipinfo.io/AS208843]_
 - [amazon-aws/list.json](./lists/amazon-aws/list.json) - **List of known Amazon AWS IP address ranges** - _Amazon AWS IP address ranges (https://ip-ranges.amazonaws.com/ip-ranges.json)_
 - [apple/list.json](./lists/apple/list.json) - **List of known Apple IP ranges** - _IP ranges assigned to Apple_
 - [automated-malware-analysis/list.json](./lists/automated-malware-analysis/list.json) - **List of known domains used by automated malware analysis services & security vendors** - _Domains used by automated malware analysis services & security vendors_
