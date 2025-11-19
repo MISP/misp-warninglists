@@ -346,7 +346,6 @@
     "DRIVE",
     "DTV",
     "DUBAI",
-    "DUNLOP",
     "DUPONT",
     "DURBAN",
     "DVAG",
@@ -1448,5 +1447,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20251015
+  "version": 20251119
 }

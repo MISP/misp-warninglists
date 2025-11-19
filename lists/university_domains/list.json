@@ -7281,6 +7281,7 @@
     "taejae.ac.kr",
     "taejon.ac.kr",
     "taeshin.ac.kr",
+    "tafe.wa.edu.au",
     "taftcollege.edu",
     "taftu.edu",
     "taibahu.edu.sa",
@@ -10503,5 +10504,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20251015
+  "version": 20251119
 }
