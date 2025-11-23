@@ -24,6 +24,7 @@
     "hyperfollow.com",
     "jingle.bio",
     "jinglebio.link",
+    "juicy.bio",
     "keepo.io",
     "komi.io",
     "kyte.bio",
@@ -55,7 +56,9 @@
     "lnkfy.co",
     "lynxinbio.com",
     "magic.ly",
+    "mez.ink",
     "milkshake.app",
+    "mssg.me",
     "muse.io",
     "mysoci.al",
     "odesli.co",
@@ -90,5 +93,5 @@
   ],
   "name": "List of known link in Bio domains",
   "type": "hostname",
-  "version": 10
+  "version": 11
 }
