@@ -1,0 +1,17 @@
+{
+  "description": "List containing IP ranges associated with Alpha Strike Labs scanning infrastructure. Alpha Strike Labs GmbH (AS208843) operates legitimate security research and internet-wide scanning services [https://ipinfo.io/AS208843]",
+  "list": [
+    "45.83.64.0/22",
+    "194.187.176.0/22"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-dst|port",
+    "ip-src|port"
+  ],
+  "name": "Alpha Strike Labs IP Ranges Used for Scanning",
+  "type": "cidr",
+  "version": 1
+}
