@@ -5545,6 +5545,7 @@
     "numed.ncl.ac.uk",
     "numl.edu.pk",
     "nunez.edu",
+    "nung.edu.ua",
     "nuol.edu.la",
     "nur.ac.rw",
     "nur.edu",
@@ -10504,5 +10505,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20251119
+  "version": 20251130
 }
