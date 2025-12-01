@@ -1,6 +1,7 @@
 {
   "description": "Event contains one or more entries of known Link in bio domains. Those shorten links are a reference to a list of links.",
   "list": [
+    "alllink.io",
     "artist.link",
     "beacons.ai",
     "bio.fm",
@@ -24,6 +25,7 @@
     "hyperfollow.com",
     "jingle.bio",
     "jinglebio.link",
+    "joy.link",
     "juicy.bio",
     "keepo.io",
     "komi.io",
@@ -47,6 +49,8 @@
     "linknbio.com",
     "linkpilot.in",
     "linkpop.com",
+    "linkr.bio",
+    "linkr.com",
     "linksta.cc",
     "linktr.ee",
     "ln.ki",
@@ -76,6 +80,8 @@
     "sociatap.com",
     "socprofile.com",
     "song.link",
+    "spf.bio",
+    "superprofile.bio",
     "tapk.it",
     "tapkit.com",
     "taplink.at",
@@ -93,5 +99,5 @@
   ],
   "name": "List of known link in Bio domains",
   "type": "hostname",
-  "version": 11
+  "version": 12
 }
