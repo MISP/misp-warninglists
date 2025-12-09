@@ -1,0 +1,36 @@
+{
+  "description": "List containing IP's associated with the Bufferover scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2025/12/09",
+  "list": [
+    "45.33.78.24/32",
+    "45.33.78.70/32",
+    "45.33.84.124/32",
+    "45.33.89.53/32",
+    "45.33.94.76/32",
+    "45.33.95.64/32",
+    "45.56.111.60/32",
+    "45.79.132.41/32",
+    "45.79.153.51/32",
+    "45.79.177.245/32",
+    "45.79.191.178/32",
+    "97.107.133.213/32",
+    "97.107.141.150/32",
+    "139.144.239.72/32",
+    "162.216.18.113/32",
+    "170.187.163.117/32",
+    "170.187.165.134/32",
+    "170.187.165.139/32",
+    "170.187.165.219/32",
+    "172.104.19.160/32",
+    "198.74.58.148/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-dst|port",
+    "ip-src|port"
+  ],
+  "name": "Bufferover IP Ranges Used for Scanning",
+  "type": "cidr",
+  "version": "25120917"
+}
