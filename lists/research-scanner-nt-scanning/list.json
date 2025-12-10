@@ -1,0 +1,17 @@
+{
+  "description": "List containing IP's associated with the Research scanner scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2025/12/10",
+  "list": [
+    "157.245.252.5/32",
+    "64.227.106.112/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-dst|port",
+    "ip-src|port"
+  ],
+  "name": "Research scanner IP Ranges Used for Scanning",
+  "type": "cidr",
+  "version": 25121017
+}
