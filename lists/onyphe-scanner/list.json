@@ -1,0 +1,27 @@
+{
+  "description": "Onyphe Scanner (https://www.onyphe.io/)",
+  "list": [
+    "139.99.35.32/28",
+    "15.235.154.64/28",
+    "15.235.175.112/28",
+    "15.235.189.144/28",
+    "195.184.76.0/24",
+    "2001:41d0:33a:a00::400/124",
+    "2a14:f100::/29",
+    "51.254.49.96/28",
+    "91.196.152.0/24",
+    "91.230.168.0/24",
+    "91.231.89.0/24",
+    "94.231.206.0/24"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "List of published IP address ranges for Onyphe Scanner",
+  "type": "cidr",
+  "version": 20251210
+}

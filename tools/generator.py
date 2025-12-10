@@ -3,7 +3,7 @@ import ipaddress
 import json
 import logging
 from inspect import currentframe, getframeinfo, getmodulename, stack
-from os import mkdir, path
+from os import mkdir, path, makedirs
 from typing import List, Union
 import gzip
 
@@ -128,6 +128,9 @@ def get_abspath_source_file(dst):
 
 
 def get_version():
+    '''
+        Return the YYYYMMDD as int for version.
+    '''
     return int(datetime.date.today().strftime('%Y%m%d'))
 
 
@@ -137,10 +140,13 @@ def unique_sorted_warninglist(warninglist):
 
 
 def write_to_file(warninglist, dst):
+    # Write the final Json file into the module folder name
     frame_records = stack()[1]
     caller = getmodulename(frame_records[1]).upper()
     try:
         warninglist = unique_sorted_warninglist(warninglist)
+        # Try to create the folder if it not exist yet
+        makedirs(path.dirname(get_abspath_list_file(dst)), exist_ok=True)
         with open(get_abspath_list_file(dst), 'w') as data_file:
             json.dump(warninglist, data_file, indent=2, sort_keys=True)
             data_file.write("\n")
