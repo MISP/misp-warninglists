@@ -773,5 +773,5 @@
   ],
   "name": "Coalition signals intelligence IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 25121020
+  "version": 25121022
 }
