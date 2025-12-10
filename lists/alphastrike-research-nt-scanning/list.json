@@ -1,5 +1,5 @@
 {
-  "description": "List containing IP's associated with the Alphastrike research scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2025/12/09",
+  "description": "List containing IP's associated with the Alphastrike research scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2025/12/10",
   "list": [
     "194.187.176.128/25",
     "194.187.176.16/28",
@@ -18,5 +18,5 @@
   ],
   "name": "Alphastrike research IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 25120918
+  "version": 25121020
 }

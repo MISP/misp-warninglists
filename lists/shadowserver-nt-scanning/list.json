@@ -1,5 +1,5 @@
 {
-  "description": "List containing IP's associated with the Shadowserver scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2025/12/09",
+  "description": "List containing IP's associated with the Shadowserver scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2025/12/10",
   "list": [
     "184.105.139.112/29",
     "184.105.139.120/30",
@@ -85,6 +85,7 @@
     "65.49.20.124/31",
     "65.49.20.126/32",
     "65.49.20.66/32",
+    "65.49.20.69/32",
     "65.49.20.70/31",
     "65.49.20.72/29",
     "65.49.20.80/28",
@@ -108,5 +109,5 @@
   ],
   "name": "Shadowserver IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 25120918
+  "version": 25121020
 }

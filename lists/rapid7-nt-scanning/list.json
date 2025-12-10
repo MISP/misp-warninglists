@@ -1,5 +1,5 @@
 {
-  "description": "List containing IP's associated with the Rapid7 scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2025/12/09",
+  "description": "List containing IP's associated with the Rapid7 scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2025/12/10",
   "list": [
     "109.123.117.228/30",
     "109.123.117.232/29",
@@ -35,5 +35,5 @@
   ],
   "name": "Rapid7 IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 25120918
+  "version": 25121020
 }
