@@ -1,0 +1,21 @@
+{
+  "description": "List containing IP's associated with the Probethenet scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2025/12/10",
+  "list": [
+    "104.128.144.201/32",
+    "104.128.144.202/31",
+    "104.128.144.204/30",
+    "104.128.144.208/29",
+    "104.128.144.216/30",
+    "104.128.144.220/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-dst|port",
+    "ip-src|port"
+  ],
+  "name": "Probethenet IP Ranges Used for Scanning",
+  "type": "cidr",
+  "version": 25121022
+}
