@@ -16,7 +16,8 @@ python3 generate-disposal.py
 #python3 generate-google.py > lists/google/list.json
 #python3 generate_majestic-million.py -n 10000
 #python3 generate-microsoft-azure.py
-python3 generate_mozilla_certificates.py
+# See https://github.com/MISP/misp-warninglists/issues/319
+# python3 generate_mozilla_certificates.py see 
 python3 generate_moz-top500.py
 python3 generate-office365.py
 python3 generate_phone_numbers.py
@@ -40,6 +41,8 @@ python3 generate-digitalside.py
 #python3 generate-gptbot.py
 python3 generate-cisco-umbrella-blockpage.py
 python3 generate-zscaler.py
+python3 generate-onyphe-scanner.py
+python3 generate-modat-scanner.py
 popd
 
 ./jq_all_the_things.sh
