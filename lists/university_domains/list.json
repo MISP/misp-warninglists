@@ -4195,6 +4195,7 @@
     "kth.se",
     "ktkt-haiduong.edu.vn",
     "ktokai-u.ac.jp",
+    "ktu.edu",
     "ktu.edu.gh",
     "ktu.edu.tr",
     "ktu.lt",
@@ -5671,6 +5672,7 @@
     "onu.edu",
     "onu.edu.ua",
     "oouagoiwoye.edu.ng",
+    "op.iitg.ac.in",
     "op.org",
     "open.ac.uk",
     "openpolytechnic.ac.nz",
@@ -6284,6 +6286,7 @@
     "rmu.edu",
     "rmutp.ac.th",
     "rmwc.edu",
+    "rnd.iitg.ac.in",
     "rnu.edu.ng",
     "roac.nl",
     "roanestate.edu",
@@ -10505,5 +10508,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20251130
+  "version": 20251223
 }

@@ -1,10 +1,6 @@
 {
   "description": "Onyphe Scanner (https://www.onyphe.io/)",
   "list": [
-    "139.99.35.32/28",
-    "15.235.154.64/28",
-    "15.235.175.112/28",
-    "15.235.189.144/28",
     "195.184.76.0/24",
     "2001:41d0:33a:a00::400/124",
     "2a14:f100::/29",
@@ -23,5 +19,5 @@
   ],
   "name": "List of published IP address ranges for Onyphe Scanner",
   "type": "cidr",
-  "version": 20251210
+  "version": 20251223
 }

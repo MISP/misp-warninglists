@@ -177,5 +177,5 @@
   ],
   "name": "List of known Wikimedia address ranges",
   "type": "cidr",
-  "version": 20251130
+  "version": 20251223
 }
