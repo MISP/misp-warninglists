@@ -1,0 +1,27 @@
+{
+  "description": "Palo Alto Networks Cortex Xpanse (https://www.paloaltonetworks.com/cortex/cortex-xpanse)",
+  "list": [
+    "35.203.210.0/23",
+    "144.86.173.0/24",
+    "147.185.132.0/23",
+    "162.216.149.0/24",
+    "162.216.150.0/24",
+    "172.105.147.0/24",
+    "198.235.24.0/24",
+    "205.210.31.0/24",
+    "216.25.88.0/21",
+    "2604:a940:300:5b6:0:0:0:0/64",
+    "2604:a940:301:225:0:0:0:0/64",
+    "2604:a940:302:118:0:0:0:0/64"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "List of published IP address ranges for Palo Alto Networks Cortex Xpanse. Source: https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity",
+  "type": "cidr",
+  "version": 20260208
+}
