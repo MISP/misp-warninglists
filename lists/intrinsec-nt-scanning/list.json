@@ -1,5 +1,5 @@
 {
-  "description": "List containing IP's associated with the Intrinsec scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2025/12/10",
+  "description": "List containing IP's associated with the Intrinsec scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/02/02",
   "list": [
     "46.105.132.32/30",
     "51.38.12.12/30",
@@ -14,5 +14,5 @@
   ],
   "name": "Intrinsec IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 25121022
+  "version": 26020206
 }

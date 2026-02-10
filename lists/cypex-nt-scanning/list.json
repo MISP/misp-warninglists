@@ -1,13 +1,18 @@
 {
-  "description": "List containing IP's associated with the Cypex scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2025/12/10",
+  "description": "List containing IP's associated with the Cypex scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/02/02",
   "list": [
     "18.117.57.162/32",
     "18.190.163.148/32",
     "18.217.194.148/32",
+    "18.221.137.47/32",
+    "18.223.104.85/32",
     "3.136.208.236/32",
     "3.136.67.107/32",
     "3.143.152.247/32",
-    "52.14.58.0/32"
+    "3.148.147.222/32",
+    "52.14.122.207/32",
+    "52.14.58.0/32",
+    "52.15.85.154/32"
   ],
   "matching_attributes": [
     "ip-src",
@@ -18,5 +23,5 @@
   ],
   "name": "Cypex IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 25121022
+  "version": 26020206
 }
