@@ -1,7 +1,10 @@
 {
-  "description": "List containing IP's associated with the Shodan scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/02/02",
+  "description": "List containing IP's associated with the Shodan scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/03/13",
   "list": [
+    "185.142.236.34/31",
+    "185.142.236.36/32",
     "185.142.236.41/32",
+    "185.142.239.16/32",
     "66.240.192.138/32",
     "66.240.205.34/32",
     "66.240.219.146/32",
@@ -25,6 +28,7 @@
     "86.54.31.42/32",
     "86.54.31.44/32",
     "89.248.167.131/32",
+    "89.248.172.16/32",
     "93.174.95.106/32",
     "94.102.49.193/32"
   ],
@@ -37,5 +41,5 @@
   ],
   "name": "Shodan IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 26020206
+  "version": 26031314
 }
