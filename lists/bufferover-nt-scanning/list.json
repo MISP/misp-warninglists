@@ -1,11 +1,13 @@
 {
-  "description": "List containing IP's associated with the Bufferover scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/02/02",
+  "description": "List containing IP's associated with the Bufferover scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/03/13",
   "list": [
     "139.144.235.132/32",
     "139.144.239.72/32",
+    "139.144.239.74/32",
     "162.216.18.113/32",
     "170.187.163.117/32",
     "170.187.163.133/32",
+    "170.187.163.90/32",
     "170.187.165.134/32",
     "170.187.165.139/32",
     "170.187.165.218/31",
@@ -14,6 +16,7 @@
     "198.74.58.148/32",
     "45.33.78.24/32",
     "45.33.78.70/32",
+    "45.33.83.115/32",
     "45.33.84.124/32",
     "45.33.89.53/32",
     "45.33.94.76/32",
@@ -39,5 +42,5 @@
   ],
   "name": "Bufferover IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 26020206
+  "version": 26031314
 }
