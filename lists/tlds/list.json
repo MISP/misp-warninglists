@@ -488,7 +488,6 @@
     "GOLD",
     "GOLDPOINT",
     "GOLF",
-    "GOO",
     "GOODYEAR",
     "GOOG",
     "GOOGLE",
@@ -1252,7 +1251,6 @@
     "WINE",
     "WINNERS",
     "WME",
-    "WOLTERSKLUWER",
     "WOODSIDE",
     "WORK",
     "WORKS",
@@ -1447,5 +1445,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20260111
+  "version": 20260313
 }
