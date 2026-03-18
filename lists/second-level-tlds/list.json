@@ -2532,6 +2532,7 @@
     "ex.ortsinfo.at",
     "exchange",
     "exchange.aero",
+    "exe.xyz",
     "execute-api.af-south-1.amazonaws.com",
     "execute-api.ap-east-1.amazonaws.com",
     "execute-api.ap-northeast-1.amazonaws.com",
@@ -10156,5 +10157,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20260313
+  "version": 20260318
 }
