@@ -4691,6 +4691,7 @@
     "mc.edu",
     "mc3.edu",
     "mcad.edu",
+    "mcast.edu.mt",
     "mcbu.edu.tr",
     "mcc.commnet.edu",
     "mcc.edu",
@@ -10553,5 +10554,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20260318
+  "version": 20260403
 }

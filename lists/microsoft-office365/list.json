@@ -148,7 +148,6 @@
     "public-trust.com",
     "purview.microsoft.com",
     "r.office.microsoft.com",
-    "search.production.apac.trafficmanager.net",
     "search.production.emea.trafficmanager.net",
     "search.production.us.trafficmanager.net",
     "secure.globalsign.com",
@@ -197,5 +196,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20260318
+  "version": 20260403
 }

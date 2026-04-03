@@ -6761,6 +6761,7 @@
     "patria.bo",
     "pavia.it",
     "pay",
+    "payload.dev",
     "paynow.cx",
     "paywhirl.com",
     "pb.ao",
@@ -6924,6 +6925,7 @@
     "pp.se",
     "pp.ua",
     "ppg.br",
+    "pplx.app",
     "pr",
     "pr.gov.br",
     "pr.gov.pl",
@@ -10157,5 +10159,5 @@
   ],
   "name": "Second level TLDs as known by Mozilla Foundation",
   "type": "string",
-  "version": 20260318
+  "version": 20260403
 }
