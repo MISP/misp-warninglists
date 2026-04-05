@@ -4703,6 +4703,7 @@
     "trangiabao.click",
     "trangzim.uk",
     "translateid.com",
+    "traodoinick.com",
     "trap-mail.de",
     "trash-amil.com",
     "trash-mail.at",
@@ -5370,5 +5371,5 @@
   ],
   "name": "List of disposable email domains",
   "type": "substring",
-  "version": 20260403
+  "version": 20260405
 }
