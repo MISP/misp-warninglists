@@ -1,5 +1,7 @@
 # misp-warninglist
 
+![logo for the MISP warning list](https://raw.githubusercontent.com/MISP/misp-warninglists/refs/heads/main/doc/misp-warning.png)
+
 misp-warninglists are lists of well-known indicators that can be associated to potential false positives, errors or mistakes.
 
 ![Python application](https://github.com/MISP/misp-warninglists/workflows/Python%20application/badge.svg)
