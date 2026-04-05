@@ -26,7 +26,7 @@ def generate_australian_warninglist():
     warninglist = [
         f'/{prefix}1900654321/g',
         f'/{prefix}1800160401/g',
-        f"/{prefix}1(3|8)009757{'|'.join(rate_numbers)}/g",
+        f"/{prefix}1(3|8)009757({'|'.join(rate_numbers)})/g",
         '/%s(%s)(%s)([0-9]{4})/g' % (prefix, '|'.join(location), '|'.join(numbers))
     ]
 
