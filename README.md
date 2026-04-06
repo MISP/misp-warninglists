@@ -6,9 +6,11 @@ misp-warninglists are lists of well-known indicators that can be associated to p
 
 ![Python application](https://github.com/MISP/misp-warninglists/workflows/Python%20application/badge.svg)
 
-The warning lists are integrated in MISP to display an info/warning box at the event and attribute level if such indicators
-are available in one of the list. The lists are also used to filter potential false-positive at API level. The list can be globally enabled or disabled in MISP following the practices of the organization. The warning lists
-are reused in many other open source projects.
+Warning lists are integrated into MISP to display an informational or warning box at both the event and attribute levels whenever matching indicators are found in one of the lists.
+
+These lists are also used at the API level to help filter potential false positives. In MISP, warning lists can be enabled or disabled globally, depending on an organization's practices. They are also reused by many other open-source projects.
+
+There is also a standalone software project called [misp-feedback](https://github.com/MISP/misp-feedback), which is designed to use warning lists, expose an API for other services, and provide a command-line interface.
 
 # lists
 
