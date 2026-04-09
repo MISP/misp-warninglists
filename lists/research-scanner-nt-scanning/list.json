@@ -1,5 +1,5 @@
 {
-  "description": "List containing IP's associated with the Research scanner scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/03/13",
+  "description": "List containing IP's associated with the Research scanner scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/04/09",
   "list": [
     "138.197.101.95/32",
     "138.197.118.33/32",
@@ -36,5 +36,5 @@
   ],
   "name": "Research scanner IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 26031314
+  "version": 26040914
 }
