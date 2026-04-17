@@ -105,6 +105,7 @@
     "lnk.direct",
     "lnk.ink",
     "lnk.pw",
+    "lnk.ua",
     "lnkd.in",
     "lnkfi.re",
     "long.af",
@@ -113,8 +114,10 @@
     "mcaf.ee",
     "me2.do",
     "merky.de",
+    "minlink.com.br",
     "mjt.lu",
     "mtr.bio",
+    "mub.me",
     "my5353.com",
     "mylinks.ai",
     "myqrcode.mobi",
@@ -243,5 +246,5 @@
   ],
   "name": "List of known URL Shorteners domains",
   "type": "hostname",
-  "version": 26
+  "version": 27
 }
