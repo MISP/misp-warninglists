@@ -1,29 +1,10 @@
 {
-  "description": "List containing IP's associated with the Ipip scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/04/09",
+  "description": "List containing IP's associated with the Ipip scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/05/04",
   "list": [
-    "103.203.56.0/32",
-    "103.203.57.13/32",
-    "103.203.57.15/32",
-    "103.203.57.16/31",
-    "103.203.57.2/31",
+    "103.203.57.2/32",
     "103.203.57.21/32",
     "103.203.57.22/32",
-    "103.203.57.28/32",
-    "103.203.57.4/32",
-    "103.203.58.1/32",
-    "103.203.59.0/32",
-    "103.29.70.204/32",
-    "139.162.113.212/32",
-    "139.162.116.22/32",
-    "139.162.117.40/32",
-    "139.162.119.61/32",
-    "139.162.66.65/32",
-    "139.162.70.53/32",
-    "139.162.78.6/32",
-    "172.104.100.117/32",
-    "172.105.197.151/32",
-    "172.105.218.179/32",
-    "172.105.224.72/32"
+    "103.203.57.28/32"
   ],
   "matching_attributes": [
     "ip-src",
@@ -34,5 +15,5 @@
   ],
   "name": "Ipip IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 26040914
+  "version": 26050407
 }
