@@ -44,6 +44,7 @@ python3 generate-cisco-umbrella-blockpage.py
 python3 generate-zscaler.py
 python3 generate-onyphe-scanner.py
 python3 generate-modat-scanner.py
+python3 generate-internetcleanup-scanner.py
 popd
 
 ./jq_all_the_things.sh
