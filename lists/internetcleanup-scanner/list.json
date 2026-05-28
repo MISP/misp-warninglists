@@ -1,6 +1,13 @@
 {
   "description": "Internet Cleanup Foundation scaninfo (https://internetcleanup.foundation/scaninfo/)",
-  "list": [],
+  "list": [
+    "145.220.76.240/32",
+    "145.220.91.28/31",
+    "185.71.61.126/31",
+    "185.71.61.129/32",
+    "185.71.61.140/32",
+    "37.97.145.112/32"
+  ],
   "matching_attributes": [
     "ip-src",
     "ip-dst",
@@ -10,5 +17,5 @@
   ],
   "name": "List of published IP address ranges for Internet Cleanup Foundation scanners",
   "type": "cidr",
-  "version": 0
+  "version": 20260528
 }
