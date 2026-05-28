@@ -1,0 +1,14 @@
+{
+  "description": "Internet Cleanup Foundation scaninfo (https://internetcleanup.foundation/scaninfo/)",
+  "list": [],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "List of published IP address ranges for Internet Cleanup Foundation scanners",
+  "type": "cidr",
+  "version": 0
+}
