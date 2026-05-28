@@ -1,0 +1,21 @@
+{
+  "description": "University of Michigan Computer Science and Engineering connection attempts page (https://cse.engin.umich.edu/about/resources/connection-attempts/)",
+  "list": [
+    "141.212.120.0/24",
+    "141.212.121.0/24",
+    "141.212.122.0/24",
+    "141.212.123.0/24",
+    "141.212.124.0/24",
+    "141.212.125.0/24"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "University of Michigan CSE connection-attempt network ranges",
+  "type": "cidr",
+  "version": 20260528
+}
