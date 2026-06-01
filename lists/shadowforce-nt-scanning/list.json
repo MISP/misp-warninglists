@@ -1,6 +1,7 @@
 {
-  "description": "List containing IP's associated with the Shadowforce scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/05/04",
+  "description": "List containing IP's associated with the Shadowforce scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/06/01",
   "list": [
+    "128.199.44.215/32",
     "142.93.135.160/32",
     "146.190.21.73/32",
     "152.42.136.22/32",
@@ -31,5 +32,5 @@
   ],
   "name": "Shadowforce IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 26050407
+  "version": 26060109
 }
