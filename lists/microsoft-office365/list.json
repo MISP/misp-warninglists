@@ -117,7 +117,6 @@
     "office365.com",
     "officeapps.live.com",
     "officecdn.microsoft.com",
-    "officecdn.microsoft.com.edgesuite.net",
     "officeclient.microsoft.com",
     "officepreviewredir.microsoft.com",
     "officeredir.microsoft.com",
@@ -194,5 +193,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20260520
+  "version": 20260611
 }
