@@ -46,6 +46,7 @@ python3 generate-onyphe-scanner.py
 python3 generate-modat-scanner.py
 python3 generate-internetcleanup-scanner.py
 python3 generate-umich-cse-connection-attempts.py
+python3 generate-icloud-private-relay.py
 popd
 
 ./jq_all_the_things.sh
