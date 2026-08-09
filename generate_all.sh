@@ -47,6 +47,7 @@ python3 generate-modat-scanner.py
 python3 generate-internetcleanup-scanner.py
 python3 generate-umich-cse-connection-attempts.py
 python3 generate-icloud-private-relay.py
+python3 generate-bunny-net.py
 popd
 
 ./jq_all_the_things.sh
