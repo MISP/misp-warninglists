@@ -89,6 +89,8 @@ There is also a standalone software project called [misp-feedback](https://githu
 - [onyphe-nt-scanning/list.json](./lists/onyphe-nt-scanning/list.json) - **Onyphe IP Ranges Used for Scanning** - _List containing IP's associated with the Onyphe scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/03/13_
 - [onyphe-scanner/list.json](./lists/onyphe-scanner/list.json) - **List of published IP address ranges for Onyphe Scanner** - _Onyphe Scanner (https://www.onyphe.io/)_
 - [openai-gptbot/list.json](./lists/openai-gptbot/list.json) - **List of known IP address ranges for OpenAI GPT crawler bot** - _OpenAI gptbot crawler (https://openai.com/gptbot-ranges.txt)_
+- [oracle-oci/list.json](./oracle-oci/list.json) - **List of known Oracle
+  Cloud Infrastructure (OCI) IP address ranges** - Oracle Cloud Infrastructure (OCI) IP address ranges (https://docs.oracle.com/en-us/iaas/Content/General/Concepts/addressranges.htm)
 - [ovh-cluster/list.json](./lists/ovh-cluster/list.json) - **List of known Ovh Cluster IP** - _OVH Cluster IP address (https://docs.ovh.com/fr/hosting/liste-des-adresses-ip-des-clusters-et-hebergements-web/)_
 - [palo-alto-networks-cortex-xpanse/list.json](./lists/palo-alto-networks-cortex-xpanse/list.json) - **List of known IP address ranges for Palo Alto Networks Cortex Xpanse** - _Palo Alto Networks Cortex Xpanse (https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity)_
 - [parking-domain-ns/list.json](./lists/parking-domain-ns/list.json) - **Parking domains name server** - _List of parking domain's name server_
