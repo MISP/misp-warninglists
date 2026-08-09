@@ -38,16 +38,17 @@ def init_logging():
 init_logging()
 
 
-def download_to_file(url, file, gzip_enable=False):
+def download_to_file(url, file, gzip_enable=False, additional_headers={}):
     frame_records = stack()[1]
     caller = getmodulename(frame_records[1]).upper()
 
     user_agent = {
         "User-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0"
     }
+    headers = user_agent | additional_headers
     try:
         logging.info(f'download_to_file - fetching url: {url}')
-        r = requests.head(url, headers=user_agent)
+        r = requests.head(url, headers=headers)
         url_datetime = parsedate(r.headers['Last-Modified']).astimezone()
         file_datetime = datetime.datetime.fromtimestamp(
             path.getmtime(get_abspath_source_file(file))
@@ -59,7 +60,7 @@ def download_to_file(url, file, gzip_enable=False):
                     caller, get_abspath_source_file(file)
                 )
             )
-            actual_download_to_file(url, file, user_agent, gzip_enable=gzip_enable)
+            actual_download_to_file(url, file, headers, gzip_enable=gzip_enable)
         else:
             logging.info('{} File on server is older, nothing to do'.format(caller))
     except KeyError as exc:
@@ -68,19 +69,19 @@ def download_to_file(url, file, gzip_enable=False):
                 caller, str(exc), url
             )
         )
-        actual_download_to_file(url, file, user_agent, gzip_enable=gzip_enable)
+        actual_download_to_file(url, file, headers, gzip_enable=gzip_enable)
     except FileNotFoundError as exc:
         logging.info(
             "{} File didn't exist, so downloading {} from {}".format(caller, file, url)
         )
-        actual_download_to_file(url, file, user_agent, gzip_enable=gzip_enable)
+        actual_download_to_file(url, file, headers, gzip_enable=gzip_enable)
     except Exception as exc:
         logging.warning('{} General exception occured: {}.'.format(caller, str(exc)))
-        actual_download_to_file(url, file, user_agent, gzip_enable=gzip_enable)
+        actual_download_to_file(url, file, headers, gzip_enable=gzip_enable)
 
 
-def actual_download_to_file(url, file, user_agent, gzip_enable=False):
-    r = requests.get(url, headers=user_agent)
+def actual_download_to_file(url, file, headers, gzip_enable=False):
+    r = requests.get(url, headers=headers)
     with open(get_abspath_source_file(file), 'wb') as fd:
         for chunk in r.iter_content(4096):
             fd.write(chunk)

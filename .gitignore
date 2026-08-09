@@ -1,4 +1,5 @@
 # files download by generators
+generators.log
 tmp/*
 alexa_top-1m.csv.zip
 amazon_ip-ranges.json
@@ -21,3 +22,9 @@ public-dns-nameservers.csv
 ms-azure.json
 moz-top500.pages.csv
 moz-top500.domains.csv
+
+# Other temp files
+__pycache__
+\#*#
+.#*
+*~
