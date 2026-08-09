@@ -16,10 +16,15 @@
     "role.secshow.net",
     "rr-mirror.research.nawrocki.berlin",
     "uplo.ad",
+    "whoami.akamai.com",
     "whoami.akamai.net",
     "whoami.cryptostorm.is",
+    "whoami.ds.akahelp.net",
+    "whoami.ipv4.akahelp.net",
+    "whoami.ipv6.akahelp.net",
     "whoami.nisl-research.com",
-    "whoami.v4.powerdns.org"
+    "whoami.v4.powerdns.org",
+    "whoami.v6.powerdns.org"
   ],
   "matching_attributes": [
     "domain",
@@ -28,5 +33,5 @@
   ],
   "name": "List of known hostname used for querying your source IP. This can be used as exclusion for your Passive DNS lookup.",
   "type": "hostname",
-  "version": 7
+  "version": 8
 }
