@@ -16,6 +16,7 @@
     "checkip.dyndns.com",
     "checkip.dyndns.es",
     "checkip.dyndns.org",
+    "checkip.global.api.aws",
     "checkip.narak.com",
     "checkmyip.com",
     "cmyip.com",
@@ -71,6 +72,7 @@
     "ip.cctv.pk",
     "ip.chinaz.com",
     "ip.cn",
+    "ip.mail.ru",
     "ip.my-proxy.com",
     "ip.taobao.com",
     "ip.tool.la",
@@ -243,5 +245,5 @@
   ],
   "name": "List of known domains to know external IP",
   "type": "hostname",
-  "version": 8
+  "version": 10
 }
