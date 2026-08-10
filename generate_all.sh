@@ -27,7 +27,7 @@ python3 generate-tlds.py
 python3 generate-github.py
 #python3 generate_tranco.py
 python3 generate-university-domain-list.py
-python3 generate-windows-binary-hashes.py
+# python3 generate-windows-binary-hashes.py  # ON HOLD DUE TO https://github.com/m417z/winbindex/commit/24dd6995fd1c8eacbf59b5ce658d34ccf00bae00
 python3 generate-vpn.py
 python3 generate-wikimedia.py
 python3 generate-second-level-tlds.py
@@ -45,7 +45,7 @@ python3 generate-zscaler.py
 python3 generate-onyphe-scanner.py
 python3 generate-modat-scanner.py
 python3 generate-internetcleanup-scanner.py
-python3 generate-umich-cse-connection-attempts.py
+#python3 generate-umich-cse-connection-attempts.py # ON HOLD DUE TO 403 (due to User-Agent)
 python3 generate-icloud-private-relay.py
 python3 generate-bunny-net.py
 popd
