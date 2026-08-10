@@ -1,5 +1,5 @@
 {
-  "description": "List containing IP's associated with the Internet census scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/07/08",
+  "description": "List containing IP's associated with the Internet census scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/08/10",
   "list": [
     "109.105.209.10/32",
     "109.105.209.12/30",
@@ -121,6 +121,7 @@
     "185.226.197.70/32",
     "185.226.197.72/30",
     "185.226.197.8/31",
+    "185.226.197.92/32",
     "45.156.128.10/32",
     "45.156.128.101/32",
     "45.156.128.102/31",
@@ -143,6 +144,8 @@
     "45.156.128.164/30",
     "45.156.128.168/29",
     "45.156.128.176/30",
+    "45.156.128.201/32",
+    "45.156.128.202/31",
     "45.156.128.37/32",
     "45.156.128.39/32",
     "45.156.128.41/32",
@@ -272,5 +275,5 @@
   ],
   "name": "Internet census IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 26070809
+  "version": 26081010
 }

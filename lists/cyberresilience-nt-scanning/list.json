@@ -1,5 +1,5 @@
 {
-  "description": "List containing IP's associated with the Cyberresilience scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/07/08",
+  "description": "List containing IP's associated with the Cyberresilience scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/08/10",
   "list": [
     "104.248.206.108/32",
     "143.198.115.76/32",
@@ -26,5 +26,5 @@
   ],
   "name": "Cyberresilience IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 26070809
+  "version": 26081010
 }
