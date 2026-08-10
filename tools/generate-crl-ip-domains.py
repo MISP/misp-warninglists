@@ -106,7 +106,7 @@ def process(file):
 
 
 if __name__ == '__main__':
-    CA_known_intermediate_url = 'https://ccadb-public.secure.force.com/mozilla/PublicAllIntermediateCertsWithPEMCSV'
+    CA_known_intermediate_url = 'https://ccadb.my.salesforce-sites.com/mozilla/PublicAllIntermediateCertsWithPEMCSV'
     CA_known_intermediate_file = 'PublicAllIntermediateCertsWithPEMCSV.csv'
 
     download_to_file(CA_known_intermediate_url, CA_known_intermediate_file)
