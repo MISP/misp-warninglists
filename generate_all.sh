@@ -17,7 +17,7 @@ python3 generate-disposal.py
 #python3 generate_majestic-million.py -n 10000
 #python3 generate-microsoft-azure.py
 # See https://github.com/MISP/misp-warninglists/issues/319
-# python3 generate_mozilla_certificates.py see 
+python3 generate_mozilla_certificates.py
 python3 generate_moz-top500.py
 python3 generate-office365.py
 python3 generate_phone_numbers.py
