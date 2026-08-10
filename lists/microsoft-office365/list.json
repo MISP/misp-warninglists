@@ -175,7 +175,6 @@
     "wns.windows.com",
     "wus-www.sway-cdn.com",
     "wus-www.sway-extensions.com",
-    "www.acompli.com",
     "www.bing.com",
     "www.digicert.com",
     "www.microsoft.com",
@@ -193,5 +192,5 @@
   ],
   "name": "List of known Office 365 URLs",
   "type": "string",
-  "version": 20260709
+  "version": 20260810
 }

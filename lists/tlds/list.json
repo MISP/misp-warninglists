@@ -1235,6 +1235,7 @@
     "WATCHES",
     "WEATHER",
     "WEATHERCHANNEL",
+    "WEB",
     "WEBCAM",
     "WEBER",
     "WEBSITE",
@@ -1446,5 +1447,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20260709
+  "version": 20260810
 }
