@@ -42,10 +42,10 @@ def process(file, dst, type):
 
 
 if __name__ == '__main__':
-    Included_CA_url = 'https://ccadb-public.secure.force.com/mozilla/IncludedCACertificateReportPEMCSV'
+    Included_CA_url = 'https://ccadb.my.salesforce-sites.com/mozilla/IncludedCACertificateReportPEMCSV'
     Included_CA_file = 'IncludedCACertificateReportPEMCSV.csv'
     Included_CA_dst = 'mozilla-CA'
-    CA_known_intermediate_url = 'https://ccadb-public.secure.force.com/mozilla/PublicAllIntermediateCertsWithPEMCSV'
+    CA_known_intermediate_url = 'https://ccadb.my.salesforce-sites.com/mozilla/PublicAllIntermediateCertsWithPEMCSV'
     CA_known_intermediate_file = 'PublicAllIntermediateCertsWithPEMCSV.csv'
     CA_known_intermediate_dst = 'mozilla-IntermediateCA'
 
