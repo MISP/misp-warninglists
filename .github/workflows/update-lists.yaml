@@ -1,0 +1,151 @@
+name: Update Lists
+
+on:
+  schedule:
+    - cron: '0 2 * * 1' # At 02:00 on Monday
+  workflow_dispatch: {}  
+
+permissions: {}
+
+# Allow only one concurrent deployment, skipping runs queued between the run
+# in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production
+# deployments to complete.
+concurrency:
+  group: auto-update
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Update Lists
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    outputs:
+      updated-lists-artifact-id: ${{ steps.upload-artifact.outputs.artifact-id }}
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          cache: pip
+      - name: Restore List Cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          key: lists-downloads-${{ github.run_id }}
+          restore-keys: lists-downloads-
+          path: ${{ github.workspace }}/tmp/
+      - name: Install Dependencies
+        run: |-
+          sudo apt update
+          sudo apt install -y moreutils
+          pip install -r pylock.toml --no-deps
+      - name: Update Lists
+        env:
+          CLOUDFLARE_DOMAINS_MUST_GENERATE: true
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_RADAR_API_TOKEN }}
+        run: |-
+          set -eux
+          set -o pipefail
+          ./generate_all.sh
+          if [ "$(git status --porcelain | wc -l)" -le 0 ]; then
+            echo 'No updates to publish. Exiting early.'
+            exit 1
+          fi
+          tar -czf ../repo-snapshot.tar.gz -C "$GITHUB_WORKSPACE" .
+          mv ../repo-snapshot.tar.gz "$GITHUB_WORKSPACE"
+      - name: Upload Changes
+        id: upload-artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: auto-updated-lists
+          path: ${{ github.workspace }}/repo-snapshot.tar.gz
+          overwrite: true
+          retention-days: 1
+  create-attestations:
+    name: Create Attestations
+    uses: $/.github/workflows/update-lists-attest.yaml
+    needs: build
+    permissions:
+      id-token: write
+      attestations: write
+      artifact-metadata: write
+    with:
+      artifact-id: ${{ needs.build.outputs.updated-lists-artifact-id }}
+    
+  publish-pr:
+    name: Commit Changes and Publish PR
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Download Changes
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          artifact-ids: ${{ needs.build.outputs.updated-lists-artifact-id }}
+      - name: Create PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_REF: ${{ github.base_ref || github.ref }}
+          HEAD_BRANCH_BASE: ci/update-lists-
+          PR_AUTHOR: app/github-actions
+        run: |-
+          set -eux
+          set -o pipefail
+
+          BASE_BRANCH="$(printf '%s' "$BASE_REF" | awk -F/ '{printf $3}')"
+          HEAD_BRANCH="$HEAD_BRANCH_BASE$BASE_BRANCH"
+
+          # Prepare Downloaded Artifact
+          tar -xzf repo-snapshot.tar.gz -C "$GITHUB_WORKSPACE"
+          rm repo-snapshot.tar.gz
+
+          # Setup Git
+          gh auth setup-git
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          # Create Commit
+          COMMIT_MSG="[$BASE_BRANCH] chg: [lists] updated $(date '+%Y-%m-%d')"
+          git add --all
+          git commit -m "$COMMIT_MSG"
+          git fetch
+          git push -u origin --force-with-lease @:"$HEAD_BRANCH"
+
+          # Check for existing PRs
+          EXISTING_OPEN_PR="$(gh pr list \
+            -R "$GITHUB_REPOSITORY" \
+            -A "$PR_AUTHOR" \
+            --json=baseRefName,headRepositoryOwner,headRepository,headRefName,number \
+            -q '.[] | (
+              .baseRefName + " "
+              + .headRepositoryOwner.login + "/"
+              + .headRepository.name + " "
+              + .headRefName + " "
+              + (.number | tostring))' \
+            | grep "^$BASE_BRANCH $GITHUB_REPOSITORY $HEAD_BRANCH" \
+            | head -n1)" || true
+
+          # Modify existing, open PR (if any)
+          if [ "$(printf '%s\n' "$EXISTING_OPEN_PR" | grep -c '')" -gt 0 ]; then
+            echo 'Existing PR found. Updating it...'
+            EXISTING_OPEN_PR_NUMBER="$(printf '%s' "$EXISTING_OPEN_PR" | awk '{printf $3}')"
+            gh pr edit "$EXISTING_OPEN_PR_NUMBER" \
+              -t "$COMMIT_MSG" \
+              -b 'Auto-update of lists.'
+
+          # Create new PR if there's no existing, open PR.
+          else
+            echo 'No existing PR found. Creating new PR...'
+            gh pr create \
+              -B "$BASE_BRANCH" \
+              -H "$HEAD_BRANCH" \
+              -t "$COMMIT_MSG" \
+              -b 'Auto-update of lists.'
+          fi

@@ -51,6 +51,17 @@ python3 generate-bunny-net.py
 python3 generate-ovh.py
 python3 generate-microsoft-mdca.py
 python3 generate-palo-alto-networks-cortex-cloud.py
+
+# Force-generate Cloudflare Radar top domains if requested.
+# Otherwise, generate only if token is set.
+#
+# CI pipelines usually don't track secret value changes in Git.
+# Hence, using the *_MUST_GENERATE (a regular, non-secret env var
+# who's value is tracked in Git) makes it clear when the generation
+# is turned on or off.
+if [ -n "$CLOUDFLARE_DOMAINS_MUST_GENERATE" -o -n "$CLOUDFLARE_API_TOKEN" ]; then
+    python3 generate-cloudflare-top-domains.py
+fi
 popd
 
 ./jq_all_the_things.sh
