@@ -82,6 +82,8 @@ def download_to_file(url, file, gzip_enable=False, additional_headers={}):
 
 def actual_download_to_file(url, file, headers, gzip_enable=False):
     r = requests.get(url, headers=headers)
+    if r.status_code != 200:
+      raise Exception("Request returned HTTP code {}".format(r.status_code))
     with open(get_abspath_source_file(file), 'wb') as fd:
         for chunk in r.iter_content(4096):
             fd.write(chunk)
