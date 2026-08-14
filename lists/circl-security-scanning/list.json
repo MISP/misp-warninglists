@@ -1,7 +1,4 @@
 {
-  "name": "CIRCL IP address used for security scanning",
-  "type": "cidr",
-  "version": 26081401,
   "description": "CIRCL IP address to conducting non-intrusive security scans on Luxembourg IP addresses",
   "list": [
     "185.194.94.170",
@@ -29,5 +26,8 @@
     "ip-src",
     "domain|ip",
     "ip-src|port"
-  ]
+  ],
+  "name": "CIRCL IP address used for security scanning",
+  "type": "cidr",
+  "version": 26081401
 }
