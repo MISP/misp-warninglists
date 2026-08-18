@@ -1,3 +1,5 @@
+# This workflow is managed by gh actions-lock.
+
 name: Python application
 
 on:
@@ -16,10 +18,10 @@ jobs:
 
     steps:
 
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.8.0
 
     - name: Set up Python ${{matrix.python-version}}
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v2.3.4
       with:
         python-version: ${{matrix.python-version}}
 

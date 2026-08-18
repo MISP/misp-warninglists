@@ -1,0 +1,38 @@
+# This workflow is managed by gh actions-lock.
+
+name: Validate Lists
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions: {}
+
+jobs:
+  validate:
+    name: Validate Lists
+    runs-on: ubuntu-latest
+    steps:
+      - uses: step-security/harden-runner@v2.20.1
+        with:
+          egress-policy: audit
+      - uses: actions/checkout@v6.0.3
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          cache: pip
+          python-version-file: pyproject.toml
+      - name: Install Dependencies
+        run: |-
+          sudo apt update
+          sudo apt install -y moreutils
+          pip install -r pylock.test.toml --no-deps
+      - name: Validate Lists
+        run: ./validate_all.sh
