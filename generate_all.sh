@@ -48,8 +48,9 @@ python3 generate-internetcleanup-scanner.py
 #python3 generate-umich-cse-connection-attempts.py # ON HOLD DUE TO 403 (due to User-Agent)
 python3 generate-icloud-private-relay.py
 python3 generate-bunny-net.py
-python generate-ovh.py
+python3 generate-ovh.py
 python3 generate-microsoft-mdca.py
+python3 generate-palo-alto-networks-cortex-cloud.py
 popd
 
 ./jq_all_the_things.sh
