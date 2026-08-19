@@ -82,6 +82,8 @@ def download_to_file(url, file, gzip_enable=False, additional_headers={}):
 
 def actual_download_to_file(url, file, headers, gzip_enable=False):
     r = requests.get(url, headers=headers)
+    if r.status_code != 200:
+      raise Exception("Request returned HTTP code {}".format(r.status_code))
     with open(get_abspath_source_file(file), 'wb') as fd:
         for chunk in r.iter_content(4096):
             fd.write(chunk)
@@ -144,16 +146,33 @@ def write_to_file(warninglist, dst):
     # Write the final Json file into the module folder name
     frame_records = stack()[1]
     caller = getmodulename(frame_records[1]).upper()
+    skip_updates = False
     try:
         warninglist = unique_sorted_warninglist(warninglist)
         # Try to create the folder if it not exist yet
         makedirs(path.dirname(get_abspath_list_file(dst)), exist_ok=True)
-        with open(get_abspath_list_file(dst), 'w') as data_file:
-            json.dump(warninglist, data_file, indent=2, sort_keys=True)
-            data_file.write("\n")
-        logging.info(
-            'New warninglist written to {}.'.format(get_abspath_list_file(dst))
-        )
+        # Test if there's any difference with existing warninglist
+        try:
+            with open(get_abspath_list_file(dst), 'r') as data_file:
+                existing_warninglist = unique_sorted_warninglist(json.load(data_file))
+                existing_warninglist['version'] = None
+                new_warninglist = warninglist.copy()
+                new_warninglist['version'] = None
+                if new_warninglist == existing_warninglist:
+                    logging.info("No changes to warninglist. Skiping version bump for {}.".format(get_abspath_list_file(dst)))
+                    skip_updates = True
+        except FileNotFoundError:
+            # No existing version of the warninglist to compare to,
+            # so always write the incoming version.
+            pass
+        # Write changes to file
+        if not skip_updates:
+            with open(get_abspath_list_file(dst), 'w') as data_file:
+                json.dump(warninglist, data_file, indent=2, sort_keys=True)
+                data_file.write("\n")
+                logging.info(
+                    'New warninglist written to {}.'.format(get_abspath_list_file(dst))
+                )
     except Exception as exc:
         logging.error('{} General exception occurred: {}.'.format(caller, str(exc)))
 
