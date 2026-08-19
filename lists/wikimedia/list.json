@@ -1,6 +1,17 @@
 {
-  "description": "Wikimedia address ranges (http://noc.wikimedia.org/conf/reverse-proxy.php.txt)",
-  "list": [],
+  "description": "Wikimedia address ranges (https://wikitech.wikimedia.org/w/api.php?action=parse&page=IP_and_AS_allocations&format=json&prop=wikitext)",
+  "list": [
+    "103.102.166.0/24",
+    "185.15.56.0/22",
+    "193.46.90.0/24",
+    "195.200.68.0/24",
+    "198.35.26.0/23",
+    "2001:df2:e500::/48",
+    "208.80.152.0/22",
+    "2620:0:860::/46",
+    "2a02:ec80::/29",
+    "91.198.174.0/24"
+  ],
   "matching_attributes": [
     "ip-src",
     "ip-dst",
@@ -10,5 +21,5 @@
   ],
   "name": "List of known Wikimedia address ranges",
   "type": "cidr",
-  "version": 20260811
+  "version": 20260819
 }
