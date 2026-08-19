@@ -49,6 +49,7 @@ python3 generate-internetcleanup-scanner.py
 python3 generate-icloud-private-relay.py
 python3 generate-bunny-net.py
 python generate-ovh.py
+python3 generate-microsoft-mdca.py
 popd
 
 ./jq_all_the_things.sh
