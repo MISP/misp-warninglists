@@ -87,6 +87,7 @@ There is also a standalone software project called [misp-feedback](https://githu
 - [microsoft-azure-germany/list.json](./lists/microsoft-azure-germany/list.json) - **List of known Microsoft Azure Germany Datacenter IP Ranges** - _Microsoft Azure Germany Datacenter IP Ranges_
 - [microsoft-azure-us-gov/list.json](./lists/microsoft-azure-us-gov/list.json) - **List of known Microsoft Azure US Government Cloud Datacenter IP Ranges** - _Microsoft Azure US Government Cloud Datacenter IP Ranges_
 - [microsoft-azure/list.json](./lists/microsoft-azure/list.json) - **List of known Microsoft Azure Datacenter IP Ranges** - _Microsoft Azure Datacenter IP Ranges_
+- [microsoft-mdca-proxy/list.json](./lists/microsoft-mdca-proxy/list.json) - **List of known Microsoft Defender for Cloud Apps (MDCA/MCAS) proxy hostnames** - _Microsoft Defender for Cloud Apps (MDCA/MCAS) hostnames (https://learn.microsoft.com/en-us/defender-cloud-apps/troubleshooting-proxy-url)_
 - [microsoft-office365-cn/list.json](./lists/microsoft-office365-cn/list.json) - **List of known Office 365 IP address ranges in China** - _Office 365 IP address ranges in China_
 - [microsoft-office365-ip/list.json](./lists/microsoft-office365-ip/list.json) - **List of known Office 365 IP address ranges** - _Office 365 IP address ranges_
 - [microsoft-office365/list.json](./lists/microsoft-office365/list.json) - **List of known Office 365 URLs** - _Office 365 URLs and IP address ranges_
@@ -105,7 +106,8 @@ There is also a standalone software project called [misp-feedback](https://githu
 - [onyphe-scanner/list.json](./lists/onyphe-scanner/list.json) - **List of published IP address ranges for Onyphe Scanner** - _Onyphe Scanner (https://www.onyphe.io/)_
 - [openai-gptbot/list.json](./lists/openai-gptbot/list.json) - **List of known IP address ranges for OpenAI GPT crawler bot** - _OpenAI gptbot crawler (https://openai.com/gptbot-ranges.txt)_
 - [oracle-oci/list.json](./lists/oracle-oci/list.json) - **List of known Oracle Cloud Infrastructure (OCI) IP address ranges** - _Oracle Cloud Infrastructure (OCI) IP address ranges (https://docs.oracle.com/en-us/iaas/Content/General/Concepts/addressranges.htm)_
-- [ovh-cluster/list.json](./lists/ovh-cluster/list.json) - **List of known Ovh Cluster IP** - _OVH Cluster IP address (https://docs.ovh.com/fr/hosting/liste-des-adresses-ip-des-clusters-et-hebergements-web/)_
+- [ovh-cluster/list.json](./lists/ovh-cluster/list.json) - **List of known OVH Cluster IPs** - _OVH Cluster IP address (https://docs.ovhcloud.com/en/guides/web-cloud/web-hosting/clusters-and-shared-hosting-ip)_
+- [palo-alto-networks-cortex-cloud/list.json](./lists/palo-alto-networks-cortex-cloud/list.json) - **List of known Palo Alto Cortex Cloud IP ranges** - _Palo Alto Cortex Cloud IP address ranges (https://docs.ovhcloud.com/en/guides/web-cloud/web-hosting/clusters-and-shared-hosting-ip)_
 - [palo-alto-networks-cortex-xpanse/list.json](./lists/palo-alto-networks-cortex-xpanse/list.json) - **List of known IP address ranges for Palo Alto Networks Cortex Xpanse** - _Palo Alto Networks Cortex Xpanse (https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity)_
 - [parking-domain-ns/list.json](./lists/parking-domain-ns/list.json) - **Parking domains name server** - _List of parking domain's name server_
 - [parking-domain/list.json](./lists/parking-domain/list.json) - **Parking domains** - _List of parking domain's ip adresses_
@@ -152,7 +154,7 @@ There is also a standalone software project called [misp-feedback](https://githu
 - [vpn-ipv4/list.json](./lists/vpn-ipv4/list.json) - **Specialized list of vpn-ipv4 addresses belonging to common VPN providers and datacenters** - _Specialized list of vpn-ipv4 addresses belonging to common VPN providers and datacenters_
 - [vpn-ipv6/list.json](./lists/vpn-ipv6/list.json) - **Specialized list of IPv6 addresses belonging to common VPN providers and datacenters** - _Specialized list of IPv6 addresses belonging to common VPN providers and datacenters_
 - [whats-my-ip/list.json](./lists/whats-my-ip/list.json) - **List of known domains to know external IP** - _Event contains one or more entries of known 'what's my ip' domains_
-- [wikimedia/list.json](./lists/wikimedia/list.json) - **List of known Wikimedia address ranges** - _Wikimedia address ranges (http://noc.wikimedia.org/conf/reverse-proxy.php.txt)_
+- [wikimedia/list.json](./lists/wikimedia/list.json) - **List of known Wikimedia address ranges** - _Wikimedia address ranges (https://wikitech.wikimedia.org/w/api.php?action=parse&page=IP_and_AS_allocations&format=json&prop=wikitext)_
 - [windows-binary-hashes/list.json](./lists/windows-binary-hashes/list.json) - **List of known hashes for Windows binaries** - _List of known Windows binaries based on hashes from winbindex (https://github.com/m417z/winbindex)_
 - [zscaler/list.json](./lists/zscaler/list.json) - **List of known Zscaler IP address ranges** - _Zscaler IP address ranges (https://config.zscaler.com/api/zscaler.net/hubs/cidr/json/recommended)_
 
