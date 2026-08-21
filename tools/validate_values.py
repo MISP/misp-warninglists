@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import asyncio
 import re
 import json
 import sys
@@ -66,13 +67,22 @@ def validate_file(p: Path) -> Iterator[InvalidListValue]:
     for (value, exception) in invalid_values:
         yield InvalidListValue(p, value, str(exception))
 
+async def collect_invalid_values(path):
+    invalid_values = []
+    invalid_values.extend(validate_file(path))
+    return invalid_values
+
+async def main():
+    invalid_values_tasks = []
+    for p in Path('../lists/').glob('*/*.json'):
+        invalid_values_tasks.append(collect_invalid_values(p))
+        
+    invalid_values = await asyncio.gather(*invalid_values_tasks)
+
+    for invalid_value in invalid_values:
+        if len(invalid_value) > 0:
+            print(invalid_value, file=sys.stderr)
+            sys.exit(1)
 
 if __name__ == "__main__":
-    invalid_values = []
-    for p in Path('../lists/').glob('*/*.json'):
-        invalid_values.extend(validate_file(p))
-
-    if invalid_values:
-        for invalid_value in invalid_values:
-            print(invalid_value, file=sys.stderr)
-        sys.exit(1)
+    asyncio.run(main())

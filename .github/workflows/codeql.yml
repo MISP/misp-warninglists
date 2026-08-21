@@ -10,6 +10,8 @@ on:
   schedule:
     - cron: "18 5 * * 6"
 
+permissions: {}
+
 jobs:
   analyze:
     name: Analyze
@@ -27,6 +29,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6.0.3
+        with:
+          persist-credentials: false
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v4.37.7

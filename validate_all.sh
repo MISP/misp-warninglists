@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eu
+set -eux
 set -o pipefail
 
 pushd tools
@@ -26,24 +26,19 @@ if ! [ "$diffs" -eq 0 ]; then
 fi
 
 # test filename
-(
-    trap 'kill 0' SIGINT
-    for dir in lists/*/*.json
-    do
-        if [ "$(basename "$(dir)")" != 'list.json' ]; then
-            echo "Invalid filename (should be list.json): $(dir)"
-            exit 1
-        fi
-        echo -n "${dir}: "
-        jsonschema -i ${dir} schema.json &
-    done
+for dir in lists/*/*.json
+do
+    if [ "$(basename "$dir")" != 'list.json' ]; then
+        echo "Invalid filename (should be list.json): $dir"
+        exit 1
+    fi
+    #echo -n "${dir}: "
+    check-jsonschema --schemafile=schema.json "$dir" &
+done
 
-    pushd tools
-    python3 validate_values.py &
-    popd
-)
+pushd tools
+python3 validate_values.py &
+popd
+
 
 wait
-
-
-

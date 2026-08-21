@@ -29,7 +29,6 @@ jobs:
     steps:
       - uses: step-security/harden-runner@v2.20.1
         with:
-          disable-sudo: true
           egress-policy: audit
       - uses: actions/checkout@v6.0.3
         with:
@@ -48,8 +47,8 @@ jobs:
           path: ${{ github.workspace }}/tmp/
       - name: Install Dependencies
         run: |-
-          sudo apt update
-          sudo apt install -y moreutils
+          sudo apt-get update
+          sudo apt-get install -y moreutils
           pip install -r pylock.toml --no-deps
       - name: Update Lists
         env:
@@ -73,6 +72,7 @@ jobs:
           path: ${{ github.workspace }}/repo-snapshot.tar.gz
           overwrite: true
           retention-days: 1
+
   create-attestations:
     name: Create Attestations
     runs-on: ubuntu-latest
@@ -99,7 +99,7 @@ jobs:
         uses: actions/attest@v4.2.2
         with:
           subject-path: lists/*/list.json
-    
+
   publish-pr:
     name: Commit Changes and Publish PR
     runs-on: ubuntu-latest

@@ -16,10 +16,20 @@ jobs:
   validate:
     name: Validate Lists
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: step-security/harden-runner@v2.20.1
         with:
-          egress-policy: audit
+          egress-policy: block
+          allowed-endpoints: >
+            *.archive.ubuntu.com:80
+            dl.google.com:443
+            esm.ubuntu.com:443
+            files.pythonhosted.org:443
+            github.com:443
+            packages.microsoft.com:443
+            pypi.org:443
       - uses: actions/checkout@v6.0.3
         with:
           fetch-depth: 1
@@ -31,8 +41,8 @@ jobs:
           python-version-file: pyproject.toml
       - name: Install Dependencies
         run: |-
-          sudo apt update
-          sudo apt install -y moreutils
+          sudo apt-get update
+          sudo apt-get install -y moreutils
           pip install -r pylock.test.toml --no-deps
       - name: Validate Lists
         run: ./validate_all.sh

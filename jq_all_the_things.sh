@@ -8,10 +8,10 @@ set -o pipefail
 
     for dir in lists/*/list.json
     do
-        cat ${dir} | jq -S . | sponge ${dir} &
+        jq -S . "$dir" | sponge "$dir" &
     done
     
-    cat schema.json | jq -S . | sponge schema.json &
+    jq -S . schema.json | sponge schema.json &
 )
 
 wait
