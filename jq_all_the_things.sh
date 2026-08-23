@@ -1,17 +1,13 @@
 #!/bin/bash
-set -eux
-set -o pipefail
+
+set -e
+set -x
 
 # Seeds sponge, from moreutils
-(
-    trap 'kill 0' SIGINT
 
-    for dir in lists/*/list.json
-    do
-        jq -S . "$dir" | sponge "$dir" &
-    done
-    
-    jq -S . schema.json | sponge schema.json &
-)
+for dir in lists/*/list.json
+do
+    cat ${dir} | jq -S . | sponge ${dir}
+done
 
-wait
+cat schema.json | jq -S . | sponge schema.json
