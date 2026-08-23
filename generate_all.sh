@@ -16,7 +16,6 @@ python3 generate-disposal.py
 #python3 generate-google.py > lists/google/list.json
 #python3 generate_majestic-million.py -n 10000
 #python3 generate-microsoft-azure.py
-# See https://github.com/MISP/misp-warninglists/issues/319
 python3 generate_mozilla_certificates.py
 python3 generate_moz-top500.py
 python3 generate-office365.py
@@ -40,7 +39,7 @@ python3 generate-microsoft-azure-appid.py
 python3 generate-chrome-crux-1m.py
 python3 generate-digitalside.py
 #python3 generate-gptbot.py
-python3 generate-cisco-umbrella-blockpage.py
+#python3 generate-cisco-umbrella-blockpage.py # Disabled due to failure when running in GitHub Actions
 python3 generate-zscaler.py
 python3 generate-onyphe-scanner.py
 python3 generate-modat-scanner.py
@@ -51,6 +50,17 @@ python3 generate-bunny-net.py
 python3 generate-ovh.py
 python3 generate-microsoft-mdca.py
 python3 generate-palo-alto-networks-cortex-cloud.py
+
+# Force-generate Cloudflare Radar top domains if requested.
+# Otherwise, generate only if token is set.
+#
+# CI pipelines usually don't track secret value changes in Git.
+# Hence, using the *_MUST_GENERATE (a regular, non-secret env var
+# who's value is tracked in Git) makes it clear when the generation
+# is turned on or off.
+if [ -n "$CLOUDFLARE_DOMAINS_MUST_GENERATE" -o -n "$CLOUDFLARE_API_TOKEN" ]; then
+    python3 generate-cloudflare-top-domains.py
+fi
 popd
 
 ./jq_all_the_things.sh
