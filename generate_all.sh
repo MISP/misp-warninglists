@@ -39,7 +39,7 @@ python3 generate-microsoft-azure-appid.py
 python3 generate-chrome-crux-1m.py
 python3 generate-digitalside.py
 #python3 generate-gptbot.py
-python3 generate-cisco-umbrella-blockpage.py
+#python3 generate-cisco-umbrella-blockpage.py # Disabled due to failure when running in GitHub Actions
 python3 generate-zscaler.py
 python3 generate-onyphe-scanner.py
 python3 generate-modat-scanner.py
