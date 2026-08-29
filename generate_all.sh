@@ -21,7 +21,7 @@ python3 generate_mozilla_certificates.py
 python3 generate_moz-top500.py
 python3 generate-office365.py
 python3 generate_phone_numbers.py
-#python3 generate-publicdns.py
+python3 generate-publicdns.py
 #python3 generate-stackpath.py
 python3 generate-tlds.py
 python3 generate-github.py
