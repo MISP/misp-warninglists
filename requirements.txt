@@ -1,7 +1,13 @@
 beautifulsoup4
 # pyOpenSSL==19.1.0 - broke generate-crl-ip-domains.py
+# cap confirmed still required: pyOpenSSL>=23 (verified against 26.4.0) removes
+# X509.get_extension(), which generate-crl-ip-domains.py calls directly - crashes
+# with AttributeError. pyopenssl<23.0.0 (22.1.0) itself installs fine via wheels
+# on Python 3.8 through 3.14, so no environment marker is needed here.
 pyopenssl<23.0.0
-python-dateutil==2.8.1
+# floor, not pin: no documented reason for ==2.8.1; verified generator.py's
+# parsedate(...).astimezone() usage still works unchanged on 2.9.0.post0
+python-dateutil>=2.8.1
 requests
 dnspython
 pyasn1
