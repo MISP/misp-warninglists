@@ -1,0 +1,26 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation Detectify (detectify.com), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "107.20.158.220/32",
+    "13.126.5.12/32",
+    "3.234.180.95/32",
+    "3.7.157.159/32",
+    "3.7.173.162/32",
+    "34.234.177.119/32",
+    "52.17.9.21/32",
+    "52.17.98.131/32",
+    "52.208.235.127/32",
+    "54.73.182.190/32",
+    "63.32.130.39/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "Detectify (detectify.com) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

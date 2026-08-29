@@ -1,0 +1,26 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation Rapid7 Project Sonar (rapid7.com), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "109.123.117.224/27",
+    "146.185.25.160/27",
+    "173.255.225.139/32",
+    "2607:ff10:c5:522::/64",
+    "2a02:2498:e004:23::/64",
+    "45.79.190.10/32",
+    "5.63.151.96/27",
+    "66.175.212.77/32",
+    "66.228.41.127/32",
+    "71.6.233.0/24",
+    "88.202.190.128/27"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "Rapid7 Project Sonar (rapid7.com) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

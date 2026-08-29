@@ -1,0 +1,18 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation Hacker Target Pty Ltd (hackertarget.com / hackertarget.io), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "143.198.179.104/32",
+    "159.223.98.198/32",
+    "198.211.109.100/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "Hacker Target Pty Ltd (hackertarget.com / hackertarget.io) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

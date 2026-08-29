@@ -1,0 +1,25 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation Recyber (recyber.net), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "89.248.163.0/24",
+    "89.248.165.0/24",
+    "89.248.173.170/32",
+    "89.248.173.173/32",
+    "89.248.173.177/32",
+    "89.248.174.130/31",
+    "89.248.174.171/32",
+    "89.248.174.178/32",
+    "89.248.174.183/32",
+    "89.248.174.188/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "Recyber (recyber.net) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

@@ -1,0 +1,21 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation CrowdStrike Falcon Surface (crowdstrike.com), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "18.97.19.128/25",
+    "18.97.26.0/24",
+    "18.97.5.0/25",
+    "44.220.185.0/24",
+    "44.220.188.0/24",
+    "98.80.4.0/25"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "CrowdStrike Falcon Surface (crowdstrike.com) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

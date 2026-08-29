@@ -1,0 +1,36 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation Cypex (cypex.ai), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "18.117.57.162/32",
+    "18.190.163.148/32",
+    "18.217.194.148/32",
+    "18.221.137.47/32",
+    "18.223.104.85/32",
+    "3.130.96.91/32",
+    "3.131.215.38/32",
+    "3.132.23.201/32",
+    "3.134.148.59/32",
+    "3.136.208.236/32",
+    "3.136.67.107/32",
+    "3.137.73.221/32",
+    "3.138.185.30/32",
+    "3.143.152.247/32",
+    "3.143.33.63/32",
+    "3.146.111.124/32",
+    "3.148.147.222/32",
+    "3.149.59.26/32",
+    "52.14.122.207/32",
+    "52.14.58.0/32",
+    "52.15.85.154/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "Cypex (cypex.ai) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

@@ -1,0 +1,21 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation Recorded Future / SecurityTrails (securitytrails.com), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "13.219.121.241/32",
+    "18.235.110.182/32",
+    "3.233.59.216/32",
+    "54.86.115.253/32",
+    "98.84.1.175/32",
+    "98.88.137.2/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "Recorded Future / SecurityTrails (securitytrails.com) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}
