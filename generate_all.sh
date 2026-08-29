@@ -46,6 +46,7 @@ python3 generate-onyphe-scanner.py
 python3 generate-modat-scanner.py
 python3 generate-internetcleanup-scanner.py
 #python3 generate-umich-cse-connection-attempts.py # ON HOLD DUE TO 403 (due to User-Agent)
+python3 generate-apple-domains.py
 python3 generate-icloud-private-relay.py
 python3 generate-bunny-net.py
 python3 generate-ovh.py
