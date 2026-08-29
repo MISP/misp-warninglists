@@ -25,6 +25,7 @@ python3 generate_phone_numbers.py
 #python3 generate-stackpath.py
 python3 generate-tlds.py
 python3 generate-github.py
+python3 generate-public-ipfs-gateways.py
 #python3 generate_tranco.py
 python3 generate-university-domain-list.py
 # python3 generate-windows-binary-hashes.py  # ON HOLD DUE TO https://github.com/m417z/winbindex/commit/24dd6995fd1c8eacbf59b5ce658d34ccf00bae00
