@@ -31,6 +31,7 @@ There is also a standalone software project called [misp-feedback](https://githu
 - [circl-ssh-scanning/list.json](./lists/circl-ssh-scanning/list.json) - **CIRCL IP address used for SSH scanning** - _CIRCL IP address to conducting non-intrusive SSH scans_
 - [cisco_top1000/list.json](./lists/cisco_top1000/list.json) - **Top 1000 websites from Cisco Umbrella** - _Event contains one or more entries from the top 1000 of the most used websites (Cisco Umbrella)._
 - [cisco_top10k/list.json](./lists/cisco_top10k/list.json) - **Top 10 000 websites from Cisco Umbrella** - _Event contains one or more entries from the top 10 000 of the most used websites (Cisco Umbrella)._
+- [cisco_top1m/list.json](./lists/cisco_top1m/list.json) - **Top 1 000 000 websites from Cisco Umbrella** - _Event contains one or more entries from the top 1 000 000 of the most used websites (Cisco Umbrella)._
 - [cisco_top20k/list.json](./lists/cisco_top20k/list.json) - **Top 20 000 websites from Cisco Umbrella** - _Event contains one or more entries from the top 20 000 of the most used websites (Cisco Umbrella)._
 - [cisco_top5k/list.json](./lists/cisco_top5k/list.json) - **Top 5000 websites from Cisco Umbrella** - _Event contains one or more entries from the top 5000 of the most used websites (Cisco Umbrella)._
 - [cloudflare-top100k/list.json](./lists/cloudflare-top100k/list.json) - **Top 100,000 domains from Cloudflare Radar** - _List of top 100,000 domains from Cloudflare Radar (https://developers.cloudflare.com/radar/investigate/domain-ranking-datasets/)_
