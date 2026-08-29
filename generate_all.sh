@@ -51,6 +51,7 @@ python3 generate-bunny-net.py
 python3 generate-ovh.py
 python3 generate-microsoft-mdca.py
 python3 generate-palo-alto-networks-cortex-cloud.py
+python3 generate-lots-project.py
 popd
 
 ./jq_all_the_things.sh
