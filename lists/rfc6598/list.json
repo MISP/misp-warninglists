@@ -12,5 +12,5 @@
   ],
   "name": "List of RFC 6598 CIDR blocks",
   "type": "cidr",
-  "version": 5
+  "version": 20220705
 }
