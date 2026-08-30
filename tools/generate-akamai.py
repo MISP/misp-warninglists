@@ -1,3 +1,7 @@
+# BROKEN: the sole upstream API, api.bgpview.io, no longer resolves (NXDOMAIN as of 2026-08-29),
+# so this generator cannot run. lists/akamai/list.json has therefore been frozen at version
+# 20240422 since 2024-04-22. Either port this to another BGP/ASN data source, or deprecate
+# the list: stale CDN allowlists suppress true alerts once the address space is reassigned.
 from generator import get_abspath_source_file, download, get_version, write_to_file, consolidate_networks
 from typing import List
 import json
