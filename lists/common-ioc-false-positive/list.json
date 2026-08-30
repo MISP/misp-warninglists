@@ -85,5 +85,5 @@
   ],
   "name": "List of known hashes with common false-positives (based on Florian Roth input list)",
   "type": "string",
-  "version": 2
+  "version": 20200403
 }
