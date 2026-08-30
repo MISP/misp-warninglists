@@ -245,5 +245,5 @@
   ],
   "name": "List of known domains to know external IP",
   "type": "hostname",
-  "version": 10
+  "version": 20260809
 }
