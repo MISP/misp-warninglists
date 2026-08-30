@@ -16,7 +16,7 @@ python3 generate-disposal.py
 # Suggestion came to use a passivetotal whois search for org:Google LLC
 #python3 generate-google.py > lists/google/list.json
 python3 generate_majestic-million.py -n 10000
-#python3 generate-microsoft-azure.py
+python3 generate-microsoft-azure.py
 # See https://github.com/MISP/misp-warninglists/issues/319
 python3 generate_mozilla_certificates.py
 python3 generate_moz-top500.py
