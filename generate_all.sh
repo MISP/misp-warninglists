@@ -59,6 +59,7 @@ python3 generate-palo-alto-networks-cortex-cloud.py
 python3 generate-openfilters-scanners.py
 python3 generate-lots-project.py
 python3 generate-check-host-net.py
+python3 generate-akamai.py
 popd
 
 ./jq_all_the_things.sh
