@@ -19,6 +19,8 @@ There is also a standalone software project called [misp-feedback](https://githu
 - [alphastrike-research-nt-scanning/list.json](./lists/alphastrike-research-nt-scanning/list.json) - **Alphastrike research IP Ranges Used for Scanning** - _List containing IP's associated with the Alphastrike research scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/08/10_
 - [alphastrike-scanning/list.json](./lists/alphastrike-scanning/list.json) - **Alpha Strike Labs IP Ranges Used for Scanning** - _List containing IP ranges associated with Alpha Strike Labs scanning infrastructure. Alpha Strike Labs GmbH (AS208843) operates legitimate security research and internet-wide scanning services [https://ipinfo.io/AS208843]_
 - [amazon-aws/list.json](./lists/amazon-aws/list.json) - **List of known Amazon AWS IP address ranges** - _Amazon AWS IP address ranges (https://ip-ranges.amazonaws.com/ip-ranges.json)_
+- [apple-ipv4/list.json](./lists/apple-ipv4/list.json) - **List of known Apple IPv4 ranges** - _Apple IPv4 ranges announced by AS714 and AS6185_
+- [apple-ipv6/list.json](./lists/apple-ipv6/list.json) - **List of known Apple IPv6 ranges** - _Apple IPv6 ranges announced by AS714 and AS6185_
 - [apple/list.json](./lists/apple/list.json) - **List of known Apple IP ranges** - _IP ranges assigned to Apple_
 - [automated-malware-analysis/list.json](./lists/automated-malware-analysis/list.json) - **List of known domains used by automated malware analysis services & security vendors** - _Domains used by automated malware analysis services & security vendors_
 - [bank-website/list.json](./lists/bank-website/list.json) - **List of known bank domains** - _Event contains one or more entries of known banking website_
@@ -31,6 +33,7 @@ There is also a standalone software project called [misp-feedback](https://githu
 - [circl-ssh-scanning/list.json](./lists/circl-ssh-scanning/list.json) - **CIRCL IP address used for SSH scanning** - _CIRCL IP address to conducting non-intrusive SSH scans_
 - [cisco_top1000/list.json](./lists/cisco_top1000/list.json) - **Top 1000 websites from Cisco Umbrella** - _Event contains one or more entries from the top 1000 of the most used websites (Cisco Umbrella)._
 - [cisco_top10k/list.json](./lists/cisco_top10k/list.json) - **Top 10 000 websites from Cisco Umbrella** - _Event contains one or more entries from the top 10 000 of the most used websites (Cisco Umbrella)._
+- [cisco_top1m/list.json](./lists/cisco_top1m/list.json) - **Top 1 000 000 websites from Cisco Umbrella** - _Event contains one or more entries from the top 1 000 000 of the most used websites (Cisco Umbrella)._
 - [cisco_top20k/list.json](./lists/cisco_top20k/list.json) - **Top 20 000 websites from Cisco Umbrella** - _Event contains one or more entries from the top 20 000 of the most used websites (Cisco Umbrella)._
 - [cisco_top5k/list.json](./lists/cisco_top5k/list.json) - **Top 5000 websites from Cisco Umbrella** - _Event contains one or more entries from the top 5000 of the most used websites (Cisco Umbrella)._
 - [cloudflare-top100k/list.json](./lists/cloudflare-top100k/list.json) - **Top 100,000 domains from Cloudflare Radar** - _List of top 100,000 domains from Cloudflare Radar (https://developers.cloudflare.com/radar/investigate/domain-ranking-datasets/)_
@@ -59,6 +62,7 @@ There is also a standalone software project called [misp-feedback](https://githu
 - [dax30/list.json](./lists/dax30/list.json) - **List of known dax30 webpages** - _Event contains one or more entries of known dax30 webpages_
 - [digitalside/list.json](./lists/digitalside/list.json) - **OSINT.DigitalSide.IT Warning List** - _OSINT DigitalSide Threat-Intel Repository - MISP Warninglist - List of domains should be marked as false positive in the related MISP event with IDS attribute not flagged_
 - [disposable-email/list.json](./lists/disposable-email/list.json) - **List of disposable email domains** - _List of disposable email domains_
+- [driftnet/list.json](./lists/driftnet/list.json) - **List of known Driftnet / Internet-Measurement IP ranges (https://internet-measurement.com/)** - _Driftnet / Internet-Measurement IP address ranges (https://internet-measurement.com/)_
 - [dynamic-dns/list.json](./lists/dynamic-dns/list.json) - **List of known dynamic DNS domains** - _Event contains one or more entries of known dynamic DNS domains._
 - [eicar.com/list.json](./lists/eicar.com/list.json) - **List of hashes for EICAR test virus** - _Event contains one or more entries based on hashes for EICAR test virus_
 - [empty-hashes/list.json](./lists/empty-hashes/list.json) - **List of known hashes for empty files** - _Event contains one or more entries of empty files based on known hashed_
@@ -92,6 +96,7 @@ There is also a standalone software project called [misp-feedback](https://githu
 - [microsoft-office365-ip/list.json](./lists/microsoft-office365-ip/list.json) - **List of known Office 365 IP address ranges** - _Office 365 IP address ranges_
 - [microsoft-office365/list.json](./lists/microsoft-office365/list.json) - **List of known Office 365 URLs** - _Office 365 URLs and IP address ranges_
 - [microsoft-win10-connection-endpoints/list.json](./lists/microsoft-win10-connection-endpoints/list.json) - **List of known Windows 10 connection endpoints** - _Event contains one or more entries of known Windows 10 connection endpoints (https://docs.microsoft.com/en-us/windows/privacy/manage-windows-endpoints)_
+- [microsoft-win11-connection-endpoints/list.json](./lists/microsoft-win11-connection-endpoints/list.json) - **List of known Windows 11 connection endpoints** - _Event contains one or more entries of known Windows 11 connection endpoints (https://learn.microsoft.com/en-us/windows/privacy/manage-windows-11-endpoints)_
 - [microsoft/list.json](./lists/microsoft/list.json) - **List of known microsoft domains** - _Event contains one or more entries of known microsoft domains_
 - [modat-nt-scanning/list.json](./lists/modat-nt-scanning/list.json) - **Modat IP Ranges Used for Scanning** - _List containing IP's associated with the Modat scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/08/10_
 - [modat-scanner/list.json](./lists/modat-scanner/list.json) - **List of published IP address ranges for Modat Scanner** - _Modat Scanner (https://www.modat.io/)_

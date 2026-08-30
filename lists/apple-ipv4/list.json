@@ -1,0 +1,20 @@
+{
+  "description": "Apple IPv4 ranges announced by AS714 and AS6185",
+  "list": [
+    "139.178.128.0/18",
+    "144.178.0.0/18",
+    "17.0.0.0/8",
+    "57.102.0.0/15",
+    "65.199.22.0/23"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "List of known Apple IPv4 ranges",
+  "type": "cidr",
+  "version": 20260829
+}
