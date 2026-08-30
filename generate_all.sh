@@ -6,9 +6,12 @@ set -x
 pushd tools
 # python3 generate_alexa.py  # not updated since February 1, 2023 and offline after July 31, 2023
 python3 generate-amazon-aws.py
+python3 generate-oracle-oci.py
 python3 generate-apple-ip-ranges.py
 python3 generate-cisco.py
 python3 generate-cloudflare.py
+python3 generate-fastly.py
+#python3 generate-cloudflare-top-domains.py  # requires a CLOUDFLARE_API_TOKEN env var (Cloudflare Radar API); raises KeyError: 'CLOUDFLARE_API_TOKEN' when unset
 python3 generate-covid.py
 python3 generate-crl-ip-domains.py
 python3 generate-disposal.py
@@ -46,8 +49,8 @@ python3 generate-zscaler.py
 python3 generate-onyphe-scanner.py
 python3 generate-modat-scanner.py
 python3 generate-internetcleanup-scanner.py
-#python3 generate-umich-cse-connection-attempts.py # ON HOLD: source protected by Cloudflare managed JS challenge (HTTP 403, Cf-Mitigated: challenge header) as of 2026-08-29; not a User-Agent issue, requests-based fetch cannot pass it
-python3 generate-icloud-private-relay.py
+python3 generate-driftnet.py
+#python3 generate-umich-cse-connection-attempts.py # ON HOLD: source protected by Cloudflare managed JS challenge (HTTP 403, Cf-Mitigated: challenge header) as of 2026-08-29; not a User-Agent issue, requests-based fetch cannot pass itpython3 generate-icloud-private-relay.py
 python3 generate-bunny-net.py
 python3 generate-ovh.py
 python3 generate-microsoft-mdca.py
