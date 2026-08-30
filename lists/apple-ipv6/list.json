@@ -1,0 +1,20 @@
+{
+  "description": "Apple IPv6 ranges announced by AS714 and AS6185",
+  "list": [
+    "2403:300::/32",
+    "2620:0:1b00::/48",
+    "2620:149::/32",
+    "2a01:b740::/32",
+    "2a01:b747::/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "List of known Apple IPv6 ranges",
+  "type": "cidr",
+  "version": 20260829
+}

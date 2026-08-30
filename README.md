@@ -19,6 +19,8 @@ There is also a standalone software project called [misp-feedback](https://githu
 - [alphastrike-research-nt-scanning/list.json](./lists/alphastrike-research-nt-scanning/list.json) - **Alphastrike research IP Ranges Used for Scanning** - _List containing IP's associated with the Alphastrike research scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/08/10_
 - [alphastrike-scanning/list.json](./lists/alphastrike-scanning/list.json) - **Alpha Strike Labs IP Ranges Used for Scanning** - _List containing IP ranges associated with Alpha Strike Labs scanning infrastructure. Alpha Strike Labs GmbH (AS208843) operates legitimate security research and internet-wide scanning services [https://ipinfo.io/AS208843]_
 - [amazon-aws/list.json](./lists/amazon-aws/list.json) - **List of known Amazon AWS IP address ranges** - _Amazon AWS IP address ranges (https://ip-ranges.amazonaws.com/ip-ranges.json)_
+- [apple-ipv4/list.json](./lists/apple-ipv4/list.json) - **List of known Apple IPv4 ranges** - _Apple IPv4 ranges announced by AS714 and AS6185_
+- [apple-ipv6/list.json](./lists/apple-ipv6/list.json) - **List of known Apple IPv6 ranges** - _Apple IPv6 ranges announced by AS714 and AS6185_
 - [apple/list.json](./lists/apple/list.json) - **List of known Apple IP ranges** - _IP ranges assigned to Apple_
 - [automated-malware-analysis/list.json](./lists/automated-malware-analysis/list.json) - **List of known domains used by automated malware analysis services & security vendors** - _Domains used by automated malware analysis services & security vendors_
 - [bank-website/list.json](./lists/bank-website/list.json) - **List of known bank domains** - _Event contains one or more entries of known banking website_
