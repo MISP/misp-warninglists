@@ -15,9 +15,7 @@ python3 generate-fastly.py
 python3 generate-covid.py
 python3 generate-crl-ip-domains.py
 python3 generate-disposal.py
-# TODO: Google page on Wikipedia does not exist anymore
-# Suggestion came to use a passivetotal whois search for org:Google LLC
-#python3 generate-google.py > lists/google/list.json
+python3 generate-google.py
 python3 generate_majestic-million.py -n 10000
 python3 generate-microsoft-azure.py
 # See https://github.com/MISP/misp-warninglists/issues/319
