@@ -28,6 +28,7 @@ python3 generate-github.py
 python3 generate_tranco.py
 python3 generate-university-domain-list.py
 # python3 generate-windows-binary-hashes.py  # ON HOLD DUE TO https://github.com/m417z/winbindex/commit/24dd6995fd1c8eacbf59b5ce658d34ccf00bae00
+python3 generate-microsoft-win11-endpoints.py
 python3 generate-vpn.py
 python3 generate-wikimedia.py
 python3 generate-second-level-tlds.py
