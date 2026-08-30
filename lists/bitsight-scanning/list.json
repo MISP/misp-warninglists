@@ -1,0 +1,21 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation BitSight Technologies Inc. / Internet Census Group (bitsight.com / internet-census.org), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "109.105.208.0/21",
+    "185.117.225.0/24",
+    "185.180.140.0/22",
+    "185.226.196.0/22",
+    "2a10:3c0::/29",
+    "45.156.128.0/22"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "BitSight Technologies Inc. / Internet Census Group (bitsight.com / internet-census.org) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

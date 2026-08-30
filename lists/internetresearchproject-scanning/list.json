@@ -1,0 +1,26 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation Internet Research Project (internet-research-project.net), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "104.237.150.176/32",
+    "104.237.151.244/32",
+    "172.104.210.143/32",
+    "172.104.211.111/32",
+    "172.104.23.19/32",
+    "23.239.12.138/32",
+    "23.239.14.238/32",
+    "23.239.15.172/32",
+    "45.79.133.252/32",
+    "45.79.156.130/32",
+    "97.107.136.165/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "Internet Research Project (internet-research-project.net) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

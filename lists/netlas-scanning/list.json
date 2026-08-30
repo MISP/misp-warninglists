@@ -1,0 +1,26 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation Netlas (netlas.io), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "93.123.109.120/30",
+    "93.123.109.124/31",
+    "93.123.109.17/32",
+    "93.123.109.18/31",
+    "93.123.109.20/30",
+    "93.123.109.219/32",
+    "93.123.109.24/29",
+    "93.123.109.32/30",
+    "93.123.109.36/31",
+    "93.123.109.39/32",
+    "93.123.109.40/31"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "Netlas (netlas.io) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

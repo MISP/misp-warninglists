@@ -1,0 +1,16 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation CyberOK (cyberok.ru), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "85.142.100.0/24"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "CyberOK (cyberok.ru) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

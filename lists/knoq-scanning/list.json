@@ -1,0 +1,16 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation Knoq (knoq.nl), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "88.80.189.24/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "Knoq (knoq.nl) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

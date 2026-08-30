@@ -1,0 +1,28 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation ZoomEye (zoomeye.ai), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "148.153.188.246/32",
+    "148.153.188.254/32",
+    "148.153.189.62/32",
+    "148.153.56.170/32",
+    "148.153.56.174/32",
+    "150.107.36.236/32",
+    "150.107.38.251/32",
+    "152.32.142.86/32",
+    "154.197.56.163/32",
+    "165.154.163.10/32",
+    "165.154.23.177/32",
+    "222.186.13.130/32",
+    "36.156.22.4/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "ZoomEye (zoomeye.ai) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

@@ -1,0 +1,16 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation securityresearch.net, as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "144.202.82.88/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "securityresearch.net IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

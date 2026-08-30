@@ -1,0 +1,16 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation pocnroll (pocnroll.com), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "45.79.38.219/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "pocnroll (pocnroll.com) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

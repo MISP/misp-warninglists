@@ -1,0 +1,27 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation ONLYSCANS (onlyscans.com / onlyscans.net), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "104.105.18.64/32",
+    "172.104.240.26/32",
+    "172.104.48.115/32",
+    "172.105.92.211/32",
+    "172.232.228.174/32",
+    "172.233.161.245/32",
+    "172.234.174.245/32",
+    "172.235.255.170/32",
+    "172.236.8.193/32",
+    "172.238.126.163/32",
+    "172.239.142.176/32",
+    "68.69.177.0/24"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "ONLYSCANS (onlyscans.com / onlyscans.net) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

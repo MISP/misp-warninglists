@@ -1,0 +1,25 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation Internet Measurement Research (internetmeasurementresearch.com), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "209.188.108.0/24",
+    "209.237.154.0/24",
+    "2620:96:a000::/46",
+    "2620:96:a004::/47",
+    "2620:96:a006::/48",
+    "64.94.153.0/24",
+    "64.94.156.0/24",
+    "64.94.159.0/24",
+    "64.95.14.0/24",
+    "64.95.9.0/24"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "Internet Measurement Research (internetmeasurementresearch.com) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}
