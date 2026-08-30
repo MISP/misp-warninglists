@@ -60,6 +60,7 @@ There is also a standalone software project called [misp-feedback](https://githu
 - [dax30/list.json](./lists/dax30/list.json) - **List of known dax30 webpages** - _Event contains one or more entries of known dax30 webpages_
 - [digitalside/list.json](./lists/digitalside/list.json) - **OSINT.DigitalSide.IT Warning List** - _OSINT DigitalSide Threat-Intel Repository - MISP Warninglist - List of domains should be marked as false positive in the related MISP event with IDS attribute not flagged_
 - [disposable-email/list.json](./lists/disposable-email/list.json) - **List of disposable email domains** - _List of disposable email domains_
+- [driftnet/list.json](./lists/driftnet/list.json) - **List of known Driftnet / Internet-Measurement IP ranges (https://internet-measurement.com/)** - _Driftnet / Internet-Measurement IP address ranges (https://internet-measurement.com/)_
 - [dynamic-dns/list.json](./lists/dynamic-dns/list.json) - **List of known dynamic DNS domains** - _Event contains one or more entries of known dynamic DNS domains._
 - [eicar.com/list.json](./lists/eicar.com/list.json) - **List of hashes for EICAR test virus** - _Event contains one or more entries based on hashes for EICAR test virus_
 - [empty-hashes/list.json](./lists/empty-hashes/list.json) - **List of known hashes for empty files** - _Event contains one or more entries of empty files based on known hashed_
