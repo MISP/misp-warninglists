@@ -22,8 +22,7 @@ python3 generate_mozilla_certificates.py
 python3 generate_moz-top500.py
 python3 generate-office365.py
 python3 generate_phone_numbers.py
-python3 generate-publicdns.py
-#python3 generate-stackpath.py
+#python3 generate-stackpath.py  # source https://k3t9x2h3.map2.ssl.hwcdn.net/ipblocks.txt is dead (NXDOMAIN); StackPath wound down its CDN and hwcdn.net is now a parked domain-for-sale page
 python3 generate-tlds.py
 python3 generate-github.py
 python3 generate_tranco.py
