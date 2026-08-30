@@ -21,3 +21,7 @@ if __name__ == '__main__':
     url = 'https://raw.githubusercontent.com/X4BNet/lists_vpn/main/ipv4.txt'
     dst = 'vpn-ipv4'
     process(url, dst)
+
+    url = 'https://raw.githubusercontent.com/X4BNet/lists_vpn/main/ipv6.txt'
+    dst = 'vpn-ipv6'
+    process(url, dst)

@@ -7,7 +7,7 @@ from generator import download_to_file, get_version, write_to_file, get_abspath_
 
 
 def process(file):
-    top1k, top5k, top10k, top20k = get_lists(file)
+    top1k, top5k, top10k, top20k, top1m = get_lists(file)
 
     cisco_dst_1k = 'cisco_top1000'
     cisco_1k_warninglist = {
@@ -37,6 +37,13 @@ def process(file):
     }
     generate(top20k, cisco_20k_warninglist, cisco_dst_20k)
 
+    cisco_dst_1m = 'cisco_top1m'
+    cisco_1m_warninglist = {
+        'name': 'Top 1 000 000 websites from Cisco Umbrella',
+        'description': 'Event contains one or more entries from the top 1 000 000 of the most used websites (Cisco Umbrella).'
+    }
+    generate(top1m, cisco_1m_warninglist, cisco_dst_1m)
+
 
 def generate(sites, warninglist, dst):
     warninglist['version'] = get_version()
@@ -62,10 +69,11 @@ def get_lists(file):
                     top5k = all[:5000]
                     top10k = all[:10000]
                     top20k = all[:20000]
+                    top1m = all
             else:
                 continue
 
-    return top1k, top5k, top10k, top20k
+    return top1k, top5k, top10k, top20k, top1m
 
 
 if __name__ == '__main__':
