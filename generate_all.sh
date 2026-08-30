@@ -48,6 +48,8 @@ python3 generate-zscaler.py
 python3 generate-onyphe-scanner.py
 python3 generate-modat-scanner.py
 python3 generate-internetcleanup-scanner.py
+python3 generate-apple-domains.py
+python3 generate-icloud-private-relay.py
 python3 generate-driftnet.py
 #python3 generate-umich-cse-connection-attempts.py # ON HOLD: source protected by Cloudflare managed JS challenge (HTTP 403, Cf-Mitigated: challenge header) as of 2026-08-29; not a User-Agent issue, requests-based fetch cannot pass itpython3 generate-icloud-private-relay.py
 python3 generate-bunny-net.py
