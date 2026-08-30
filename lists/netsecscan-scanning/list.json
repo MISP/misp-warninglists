@@ -22,5 +22,5 @@
   ],
   "name": "NetSecScan IP-Ranges, pot. used for Scanning",
   "type": "cidr",
-  "version": 1
+  "version": 20251029
 }

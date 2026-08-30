@@ -10,9 +10,8 @@ from generator import download, download_to_file, get_version, write_to_file, ge
 
 def get_json_url(page):
     soup = BeautifulSoup(page.text, 'html.parser')
-    retry_link_text = soup.find(class_='link-align')
-    retry_links = retry_link_text.find_all('a')
-    return retry_links[0].get('href')
+    download_link = soup.find('a', class_='dlcdetail__download-btn')
+    return download_link.get('href')
 
 
 def process(file, dst, name: str, description: str):
@@ -41,11 +40,32 @@ if __name__ == '__main__':
         {
             "name": "List of known Microsoft Azure Datacenter IP Ranges",
             "description": "Microsoft Azure Datacenter IP Ranges",
-            "url": "https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20241216.json",
+            "url": "https://www.microsoft.com/en-us/download/details.aspx?id=56519",
             "file": "ms-azure.json",
             "destination_folder": "microsoft-azure",
+        },
+        {
+            "name": "List of known Microsoft Azure US Government Cloud Datacenter IP Ranges",
+            "description": "Microsoft Azure US Government Cloud Datacenter IP Ranges",
+            "url": "https://www.microsoft.com/en-us/download/details.aspx?id=57063",
+            "file": "ms-azure-us-gov.json",
+            "destination_folder": "microsoft-azure-us-gov",
+        },
+        {
+            "name": "List of known Microsoft Azure Germany Datacenter IP Ranges",
+            "description": "Microsoft Azure Germany Datacenter IP Ranges",
+            "url": "https://www.microsoft.com/en-us/download/details.aspx?id=57064",
+            "file": "ms-azure-germany.json",
+            "destination_folder": "microsoft-azure-germany",
+        },
+        {
+            "name": "List of known Microsoft Azure China Datacenter IP Ranges",
+            "description": "Microsoft Azure China Datacenter IP Ranges",
+            "url": "https://www.microsoft.com/en-us/download/details.aspx?id=57062",
+            "file": "ms-azure-china.json",
+            "destination_folder": "microsoft-azure-china",
         }
-   ]
+    ]
 
     for type in TYPES:
         ms_azure_json_url = get_json_url(download(type["url"]))
