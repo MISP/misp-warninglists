@@ -1,6 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# BROKEN: the sole upstream source, http://s3.amazonaws.com/alexa-static/top-1m.csv.zip,
+# still answers HTTP 200 but no longer serves the real top-1m.csv dataset. As of 2026-08-29
+# it returns a 193-byte zip (Last-Modified: Sat, 06 Sep 2025) whose sole entry, top-1m.csv,
+# contains only the text "poc by @gopal_ethical" instead of ranked domains. This is worse
+# than the generate_all.sh comment ("not updated since February 1, 2023 and offline after
+# July 31, 2023") suggests: the endpoint has since been repurposed/squatted, not merely
+# stopped updating. lists/alexa/list.json has therefore been frozen at version 20230511
+# since 2023-05-11. Amazon retired the Alexa Rank product entirely in 2022, so there is no
+# equivalent replacement feed at the same source. Options: port this generator to another
+# top-sites ranking source (e.g. Tranco, https://tranco-list.eu/), or deprecate the list.
+# Note: this repo already ships lists/tranco/list.json and lists/tranco10k/list.json
+# (see tools/generate_tranco.py, itself currently commented out in generate_all.sh) which cover the same "well-known popular domain" use case
+# from a maintained source, so those are a plausible successor rather than a fresh port.
+
 import zipfile
 
 from generator import (download_to_file, get_abspath_source_file, get_version,

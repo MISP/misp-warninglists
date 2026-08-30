@@ -48,7 +48,7 @@ def download_to_file(url, file, gzip_enable=False, additional_headers={}):
     headers = user_agent | additional_headers
     try:
         logging.info(f'download_to_file - fetching url: {url}')
-        r = requests.head(url, headers=headers)
+        r = requests.head(url, headers=headers, allow_redirects=True)
         url_datetime = parsedate(r.headers['Last-Modified']).astimezone()
         file_datetime = datetime.datetime.fromtimestamp(
             path.getmtime(get_abspath_source_file(file))
