@@ -28,6 +28,7 @@ python3 generate_phone_numbers.py
 #python3 generate-stackpath.py  # source https://k3t9x2h3.map2.ssl.hwcdn.net/ipblocks.txt is dead (NXDOMAIN); StackPath wound down its CDN and hwcdn.net is now a parked domain-for-sale page
 python3 generate-tlds.py
 python3 generate-github.py
+python3 generate-public-ipfs-gateways.py
 python3 generate_tranco.py
 python3 generate-university-domain-list.py
 # python3 generate-windows-binary-hashes.py  # ON HOLD DUE TO https://github.com/m417z/winbindex/commit/24dd6995fd1c8eacbf59b5ce658d34ccf00bae00
