@@ -1,0 +1,20 @@
+{
+  "description": "Sucuri Website Firewall IP address ranges, scraped from https://docs.sucuri.net/website-firewall/sucuri-firewall-troubleshooting-guide/ (no machine-readable API is published)",
+  "list": [
+    "185.93.228.0/22",
+    "192.88.134.0/23",
+    "208.109.0.0/22",
+    "2a02:fe80::/29",
+    "66.248.200.0/22"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "List of known Sucuri (Website Firewall) IP address ranges",
+  "type": "cidr",
+  "version": 20260831
+}
