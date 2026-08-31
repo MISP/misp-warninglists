@@ -13,6 +13,7 @@ python3 generate-cloudflare.py
 python3 generate-fastly.py
 #python3 generate-cloudflare-top-domains.py  # requires a CLOUDFLARE_API_TOKEN env var (Cloudflare Radar API); raises KeyError: 'CLOUDFLARE_API_TOKEN' when unset
 python3 generate-covid.py
+python3 generate-ibm.py
 python3 generate-crl-ip-domains.py
 python3 generate-disposal.py
 python3 generate-google.py
