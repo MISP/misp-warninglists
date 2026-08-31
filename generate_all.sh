@@ -66,6 +66,7 @@ python3 generate-gcore.py
 python3 generate-cachefly.py
 python3 generate-cdn77.py
 python3 generate-sucuri.py
+python3 generate-linode.py
 popd
 
 ./jq_all_the_things.sh
