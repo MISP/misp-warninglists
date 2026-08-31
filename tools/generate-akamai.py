@@ -22,7 +22,9 @@ Akamai but announced by somebody else are no longer picked up. In practice the
 announced prefixes of the Akamai ASNs are the substantive coverage.
 """
 
+import ipaddress
 import json
+import logging
 from time import sleep
 from typing import List
 
@@ -37,18 +39,22 @@ from generator import (
 
 RIPESTAT = "https://stat.ripe.net/data/{call}/data.json?resource={resource}"
 
-# Autonomous systems that pass both checks below but should still be left out.
-# Empty by default: this mirrors the behaviour the generator has always had.
+# Autonomous systems that pass both checks below but are still left out.
 #
-# The obvious candidate for this dict is AS63949 (AKAMAI-LINODE-AP, "Akamai
-# Connected Cloud"). It is genuinely Akamai -- they acquired Linode -- and it
-# passes both tests, but it is general-purpose VPS space that anyone can rent by
-# the hour, not CDN edge capacity. It contributes roughly 1.36 million IPv4
-# addresses, and the list this generator replaces contained none of them.
-# Suppressing alerts across rentable VPS space is a different risk from
-# suppressing them across a CDN, so the choice is left to the maintainers rather
-# than made here.
-EXCLUDED_ASNS = {}
+# AS63949 (AKAMAI-LINODE-AP, "Akamai Connected Cloud") is genuinely Akamai --
+# they acquired Linode -- and it passes both the name and the abuse-contact
+# test. But it is general-purpose VPS space that anyone can rent by the hour,
+# not CDN edge capacity, and suppressing alerts across rentable hosting is a
+# different risk from suppressing them across a CDN: the tenant behind any
+# given address changes constantly, and an attacker can simply buy one.
+#
+# Linode's address space is still recognisable through lists/linode, which is
+# generated from Linode's own published geofeed and carries the semantics of
+# "this is rented compute" rather than "this is CDN edge".
+EXCLUDED_ASNS = {
+    63949: "AKAMAI-LINODE-AP / Akamai Connected Cloud is rentable VPS hosting, "
+           "not CDN edge capacity",
+}
 
 # If the search stops returning these, something changed upstream and the list
 # would silently lose most of its coverage. Fail instead.
@@ -116,6 +122,63 @@ def existing_entries() -> List[str]:
         return []
 
 
+def drop_excluded(networks):
+    """Remove entries that lie wholly inside an excluded AS's address space.
+
+    Only wholly-contained entries go. A large aggregate that merely *contains*
+    some excluded space is kept intact -- 104.64.0.0/10 is Akamai's own block
+    and stays Akamai's even though AS63949 announces a few prefixes inside it.
+    Subtracting those out would shatter one meaningful entry into dozens of
+    fragments to no benefit.
+    """
+    if not EXCLUDED_ASNS:
+        return networks
+
+    announced = []
+    for asn in EXCLUDED_ASNS:
+        for prefix in get_networks_for_asn(asn):
+            try:
+                announced.append(ipaddress.ip_network(prefix))
+            except ValueError:
+                continue
+    if not announced:
+        return networks
+
+    # Collapse before testing. An AS commonly announces one block as several
+    # adjacent prefixes, while the committed list carries the aggregate --
+    # 139.162.0.0/16 is a subnet of no single AS63949 announcement, but it is
+    # exactly the union of them, and it is plainly Linode space.
+    excluded = list(
+        ipaddress.collapse_addresses([n for n in announced if n.version == 4])
+    )
+    excluded += list(
+        ipaddress.collapse_addresses([n for n in announced if n.version == 6])
+    )
+
+    kept = set()
+    for entry in networks:
+        try:
+            network = ipaddress.ip_network(entry)
+        except ValueError:
+            continue
+        inside = False
+        for block in excluded:
+            if block.version == network.version and network.subnet_of(block):
+                inside = True
+                break
+        if not inside:
+            kept.add(entry)
+
+    dropped = len(networks) - len(kept)
+    if dropped:
+        logging.info(
+            "Dropped %d entries falling inside excluded ASNs %s",
+            dropped,
+            sorted(EXCLUDED_ASNS),
+        )
+    return kept
+
+
 def main():
     candidates = search_asns("AKAMAI")
     found = {candidate["asn"] for candidate in candidates}
@@ -151,9 +214,13 @@ def main():
     # today is a snapshot, and a prefix that has merely stopped being announced
     # for a while is still worth recognising. Note the tension: a range Akamai
     # has genuinely given up stays here too, and a stale CDN entry suppresses
-    # real alerts once the space is reassigned. The PR reports how much of the
-    # previous list the fresh data no longer covers so that can be judged.
+    # real alerts once the space is reassigned.
     networks.update(existing_entries())
+
+    # Excluding an AS has to subtract, not merely skip. Entries carried over
+    # from the committed list were added before the exclusion existed, so
+    # without this the exclusion would be a no-op on every run after the first.
+    networks = drop_excluded(networks)
 
     warninglist = {
         "name": "List of known Akamai IP ranges",
