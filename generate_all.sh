@@ -19,6 +19,7 @@ python3 generate-covid.py
 python3 generate-ibm.py
 python3 generate-crl-ip-domains.py
 python3 generate-disposal.py
+python3 generate-hetzner.py
 python3 generate-google.py
 python3 generate_majestic-million.py -n 10000
 python3 generate-microsoft-azure.py
