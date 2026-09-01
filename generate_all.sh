@@ -6,6 +6,7 @@ set -x
 pushd tools
 # python3 generate_alexa.py  # not updated since February 1, 2023 and offline after July 31, 2023
 python3 generate-amazon-aws.py
+python3 generate-alibaba.py
 python3 generate-oracle-oci.py
 python3 generate-apple-ip-ranges.py
 python3 generate-cisco.py
