@@ -35,6 +35,7 @@ python3 generate_phone_numbers.py
 python3 generate-tlds.py
 python3 generate-salesforce.py
 python3 generate-github.py
+python3 generate-vultr.py
 python3 generate-public-ipfs-gateways.py
 python3 generate_tranco.py
 python3 generate-university-domain-list.py
