@@ -5520,6 +5520,7 @@
     "nt.gov.au",
     "ntb.ch",
     "ntc.edu",
+    "ntc.edu.vn",
     "ntca.edu.tw",
     "ntcc.edu",
     "ntcmn.edu",
@@ -10588,5 +10589,5 @@
   ],
   "name": "University domains",
   "type": "string",
-  "version": 20260811
+  "version": 20260901
 }

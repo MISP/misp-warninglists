@@ -1,0 +1,27 @@
+{
+  "description": "Scaleway (formerly Online SAS) IP address ranges, from the ranges Scaleway documents itself (https://www.scaleway.com/en/docs/account/reference-content/scaleway-network-information.md). This is general-purpose rented compute: the tenant behind any given address changes constantly and an attacker can simply rent one. The list recognises that an address belongs to the provider; it is NOT grounds for treating traffic as benign.",
+  "list": [
+    "151.115.0.0/16",
+    "163.172.0.0/16",
+    "195.154.0.0/16",
+    "2001:bc8::/32",
+    "212.129.0.0/18",
+    "212.47.224.0/19",
+    "212.83.128.0/18",
+    "51.15.0.0/16",
+    "51.158.0.0/15",
+    "62.210.0.0/16",
+    "62.4.0.0/19",
+    "78.232.0.0/16"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "List of known Scaleway IP address ranges",
+  "type": "cidr",
+  "version": 20260901
+}
