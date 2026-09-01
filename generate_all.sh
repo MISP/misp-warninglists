@@ -10,6 +10,7 @@ python3 generate-alibaba.py
 python3 generate-oracle-oci.py
 python3 generate-apple-ip-ranges.py
 python3 generate-cisco.py
+python3 generate-tencent.py
 python3 generate-cloudflare.py
 python3 generate-fastly.py
 #python3 generate-cloudflare-top-domains.py  # requires a CLOUDFLARE_API_TOKEN env var (Cloudflare Radar API); raises KeyError: 'CLOUDFLARE_API_TOKEN' when unset
