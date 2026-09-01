@@ -37,15 +37,21 @@ def init_logging():
 
 init_logging()
 
+DEFAULT_HEADERS = {
+    # Wikimedia rejects generic or browser-impersonating user agents for API
+    # clients.  Keep the project and its contact URL identifiable, as requested
+    # by its user-agent policy.
+    "User-Agent": "MISP-Warninglists/1.0 (https://github.com/MISP/misp-warninglists)",
+}
 
-def download_to_file(url, file, gzip_enable=False, additional_headers={}):
+
+def download_to_file(url, file, gzip_enable=False, additional_headers=None):
     frame_records = stack()[1]
     caller = getmodulename(frame_records[1]).upper()
 
-    user_agent = {
-        "User-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0"
-    }
-    headers = user_agent | additional_headers
+    headers = DEFAULT_HEADERS.copy()
+    if additional_headers:
+        headers.update(additional_headers)
     try:
         logging.info(f'download_to_file - fetching url: {url}')
         r = requests.head(url, headers=headers, allow_redirects=True)
@@ -108,10 +114,7 @@ def process_stream(url):
 
 
 def download(url):
-    user_agent = {
-        "User-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0"
-    }
-    return requests.get(url, headers=user_agent)
+    return requests.get(url, headers=DEFAULT_HEADERS)
 
 
 def get_abspath_list_file(dst):

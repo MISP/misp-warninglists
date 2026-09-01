@@ -16,25 +16,34 @@ python3 generate-huawei.py
 python3 generate-fastly.py
 #python3 generate-cloudflare-top-domains.py  # requires a CLOUDFLARE_API_TOKEN env var (Cloudflare Radar API); raises KeyError: 'CLOUDFLARE_API_TOKEN' when unset
 python3 generate-covid.py
+python3 generate-ibm.py
 python3 generate-crl-ip-domains.py
 python3 generate-disposal.py
+python3 generate-hetzner.py
 python3 generate-google.py
+python3 generate-coreweave.py
 python3 generate_majestic-million.py -n 10000
 python3 generate-microsoft-azure.py
+python3 generate-scaleway.py
 # See https://github.com/MISP/misp-warninglists/issues/319
 python3 generate_mozilla_certificates.py
 python3 generate_moz-top500.py
 python3 generate-office365.py
+python3 generate-leaseweb.py
 python3 generate_phone_numbers.py
 #python3 generate-stackpath.py  # source https://k3t9x2h3.map2.ssl.hwcdn.net/ipblocks.txt is dead (NXDOMAIN); StackPath wound down its CDN and hwcdn.net is now a parked domain-for-sale page
 python3 generate-tlds.py
+python3 generate-salesforce.py
 python3 generate-github.py
+python3 generate-vultr.py
 python3 generate-public-ipfs-gateways.py
 python3 generate_tranco.py
 python3 generate-university-domain-list.py
+python3 generate-rackspace.py
 # python3 generate-windows-binary-hashes.py  # ON HOLD DUE TO https://github.com/m417z/winbindex/commit/24dd6995fd1c8eacbf59b5ce658d34ccf00bae00
 python3 generate-microsoft-win11-endpoints.py
 python3 generate-vpn.py
+python3 generate-godaddy.py
 python3 generate-wikimedia.py
 python3 generate-second-level-tlds.py
 python3 generate-google-gcp.py
