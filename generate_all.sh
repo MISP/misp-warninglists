@@ -33,6 +33,7 @@ python3 generate-leaseweb.py
 python3 generate_phone_numbers.py
 #python3 generate-stackpath.py  # source https://k3t9x2h3.map2.ssl.hwcdn.net/ipblocks.txt is dead (NXDOMAIN); StackPath wound down its CDN and hwcdn.net is now a parked domain-for-sale page
 python3 generate-tlds.py
+python3 generate-salesforce.py
 python3 generate-github.py
 python3 generate-public-ipfs-gateways.py
 python3 generate_tranco.py
