@@ -21,12 +21,14 @@ AS3059 IBMCANAS, AS19604 IBM-RALEIGH-CL and many more). None of that is cloud
 capacity and none of it is included here; a warninglist entry for an IBM office
 network would say something quite different from "this is rented compute".
 
-Holder verification happens at runtime, for every ASN, before its prefixes are
-used. Each AS must still be named "IBM Cloud" by RIPE's as-names data call and
-must still publish an @softlayer.com abuse contact -- softlayer.com, not
-ibm.com, is the domain IBM Cloud's network objects actually carry. If either
-check fails the generator raises rather than quietly listing address space that
-now belongs to somebody else.
+Holder verification happens at runtime for every ASN that currently announces
+prefixes, before those prefixes are used. Each active AS must still be named
+"IBM Cloud" by RIPE's as-names data call and must still publish an
+@softlayer.com abuse contact -- softlayer.com, not ibm.com, is the domain IBM
+Cloud's network objects actually carry. Dormant ASNs are skipped because
+RIPEstat's abuse-contact-finder can return HTTP 500 when an ASN has no routing
+data. If either check fails for an active ASN, the generator raises rather than
+quietly listing address space that now belongs to somebody else.
 
 A minority of the prefixes AS36351 announces are registered to third parties
 rather than to IBM Cloud -- 89.38.54.0/24, for instance, sits inside a RIPE
@@ -144,15 +146,18 @@ def valid_networks(prefixes):
 def main():
     networks = set()
     for asn in IBM_CLOUD_ASNS:
-        verify_holder(asn)
-
-        sleep(0.5)  # be gentle with the API between requests
         prefixes = get_networks_for_asn(asn)
+        sleep(0.5)  # be gentle with the API between requests
         if not prefixes:
             # Perfectly normal: an allocated AS need not announce anything.
-            # The per-datacentre SOFTLAYER ASNs are dormant in this way.
+            # The per-datacentre SOFTLAYER ASNs are dormant in this way. Do not
+            # ask abuse-contact-finder about them: RIPEstat returns HTTP 500 for
+            # some ASNs that have no routing data, and there are no prefixes
+            # from a dormant ASN that need holder verification.
             print("AS{} announces no prefixes".format(asn))
             continue
+
+        verify_holder(asn)
         networks.update(valid_networks(prefixes))
         sleep(0.5)
 
