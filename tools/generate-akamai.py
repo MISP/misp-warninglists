@@ -28,6 +28,8 @@ import logging
 from time import sleep
 from typing import List
 
+import requests
+
 from generator import (
     consolidate_networks,
     download,
@@ -38,6 +40,9 @@ from generator import (
 )
 
 RIPESTAT = "https://stat.ripe.net/data/{call}/data.json?resource={resource}"
+REQUEST_DELAY = 1.0
+MAX_REQUEST_ATTEMPTS = 5
+RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 
 # Autonomous systems that pass both checks below but are still left out.
 #
@@ -62,9 +67,45 @@ EXPECTED_ASNS = {16625, 20940, 21342}
 
 
 def ripestat(call: str, resource) -> dict:
-    response = download(RIPESTAT.format(call=call, resource=resource))
-    response.raise_for_status()
-    return response.json()
+    """Fetch a RIPEstat response, pacing and retrying transient failures."""
+    url = RIPESTAT.format(call=call, resource=resource)
+
+    for attempt in range(MAX_REQUEST_ATTEMPTS):
+        # searchcomplete and abuse-contact-finder used to be sent back-to-back.
+        # Pace *all* RIPEstat calls, rather than only prefix lookups, so a fresh
+        # run does not trip the service's traffic limits.
+        sleep(REQUEST_DELAY)
+        try:
+            response = download(url)
+            if response.status_code not in RETRYABLE_STATUS_CODES:
+                response.raise_for_status()
+                return response.json()
+
+            error = "HTTP {}".format(response.status_code)
+            retry_after = response.headers.get("Retry-After")
+        except requests.exceptions.RequestException as exc:
+            error = str(exc)
+            retry_after = None
+
+        if attempt == MAX_REQUEST_ATTEMPTS - 1:
+            raise RuntimeError(
+                "RIPEstat request failed after {} attempts: {} ({})".format(
+                    MAX_REQUEST_ATTEMPTS, url, error
+                )
+            )
+
+        try:
+            delay = float(retry_after) if retry_after is not None else 2 ** attempt
+        except ValueError:
+            delay = 2 ** attempt
+        logging.warning(
+            "RIPEstat request failed (%s); retrying in %.1f seconds",
+            error,
+            delay,
+        )
+        sleep(delay)
+
+    raise AssertionError("unreachable")
 
 
 def search_asns(term: str) -> List[dict]:
@@ -107,7 +148,6 @@ def get_networks_for_asn(asn: int) -> List[str]:
     try:
         prefixes = json.load(open(temp_file, "r"))
     except Exception:
-        sleep(0.5)  # be gentle with the API between requests
         prefixes = ripestat("announced-prefixes", asn)
         json.dump(prefixes, open(temp_file, "w"))
 
