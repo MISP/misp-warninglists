@@ -53,6 +53,7 @@ python3 generate-google-bot.py
 python3 generate-google-gmail-sending-ips.py
 python3 generate-smtp.py
 python3 generate-tenable.py
+python3 generate-telegram-ips.py
 python3 generate-microsoft-azure-appid.py
 python3 generate-chrome-crux-1m.py
 python3 generate-digitalside.py
