@@ -49,8 +49,25 @@ URL = (
 
 DST = "parking-domain-ns"
 
-# A host name made only of ordinary labels: no SQL wildcard anywhere.
-CLEAN_HOST = re.compile(r"^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$")
+# Structural validation is done with plain string operations rather than a
+# nested-quantifier regex: a pattern like
+# ^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$ backtracks
+# polynomially, and this runs over JSON fetched from the network.
+LABEL_CHARS = frozenset("abcdefghijklmnopqrstuvwxyz0123456789-")
+
+
+def is_clean_host(token):
+    """True for a host name of ordinary labels with no SQL wildcard."""
+    if not token or len(token) > 253 or token.count(".") < 1:
+        return False
+    for label in token.split("."):
+        if not label or len(label) > 63:
+            return False
+        if label[0] == "-" or label[-1] == "-":
+            return False
+        if not set(label) <= LABEL_CHARS:
+            return False
+    return True
 
 
 def registrable_domain(host):
@@ -106,7 +123,7 @@ def extract_ns_domains(services):
                     continue
                 candidate = value
 
-            if not CLEAN_HOST.match(candidate):
+            if not is_clean_host(candidate):
                 logging.warning("%s: skipping unparseable NS host: %s", key, indicator)
                 continue
             if candidate.endswith(MULTIPART_SUFFIXES):
