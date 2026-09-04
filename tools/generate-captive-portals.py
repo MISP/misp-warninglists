@@ -47,7 +47,32 @@ DST = "captive-portals"
 # for years. Refuse to act on such a run.
 MINIMUM_EXPECTED = 12
 
-HOSTNAME = re.compile(r"\b(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,}\b")
+# Deliberately NOT a nested-quantifier hostname regex. A pattern such as
+# (?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+ backtracks polynomially, and this runs
+# over HTML fetched from the network -- i.e. input this code does not control.
+# A flat character-class scan is linear, and the structural validation is done
+# in is_hostname() below with plain string operations that cannot backtrack.
+TOKEN = re.compile(r"[a-z0-9.-]+")
+
+LABEL_CHARS = frozenset("abcdefghijklmnopqrstuvwxyz0123456789-")
+
+
+def is_hostname(token, tlds):
+    """Structural hostname check using only linear string operations."""
+    if len(token) > 253 or token.count(".") < 1:
+        return False
+    labels = token.split(".")
+    if len(labels) < 2:
+        return False
+    for label in labels:
+        if not label or len(label) > 63:
+            return False
+        if label[0] == "-" or label[-1] == "-":
+            return False
+        if not set(label) <= LABEL_CHARS:
+            return False
+    return labels[-1] in tlds
+
 
 # Hosts belonging to the publishing site and its page furniture rather than to
 # captive-portal detection.
@@ -79,14 +104,13 @@ def extract_hostnames(html, tlds):
     text = re.sub(r"<[^>]+>", " ", text)
 
     hosts = set()
-    for match in HOSTNAME.finditer(text.lower()):
+    for match in TOKEN.finditer(text.lower()):
         host = match.group(0).strip(".")
-        if host.split(".")[-1] not in tlds:
-            # "hotspot-detect.html", "success.txt", "window.alert"
+        # is_hostname() rejects "hotspot-detect.html", "success.txt" and
+        # "window.alert": their last label is not a registered TLD.
+        if not is_hostname(host, tlds):
             continue
         if host.endswith(IGNORED_SUFFIXES) or host in IGNORED_SUFFIXES:
-            continue
-        if len(host.split(".")) < 2:
             continue
         hosts.add(host)
     return hosts
