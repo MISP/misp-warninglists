@@ -42,8 +42,6 @@ from __future__ import print_function
 
 import argparse
 import json
-import logging
-import os
 import re
 import sys
 
@@ -75,7 +73,29 @@ NOT_CANDIDATES = (
     "aws.amazon.com", "amazon.com", "google.com", "medium.com",
 )
 
-LINK = re.compile(r"https?://([a-z0-9.-]+\.[a-z]{2,})", re.I)
+# A flat scan plus linear validation, rather than a pattern like
+# ([a-z0-9.-]+\.[a-z]{2,}) whose ambiguity between the class and the literal
+# dot backtracks on network-fetched input.
+LINK = re.compile(r"https?://([a-z0-9.-]+)", re.I)
+
+LABEL_CHARS = frozenset("abcdefghijklmnopqrstuvwxyz0123456789-")
+
+
+def is_hostname(token):
+    """Structural host-name check using only linear string operations."""
+    if not token or len(token) > 253 or token.count(".") < 1:
+        return False
+    labels = token.split(".")
+    if len(labels) < 2 or len(labels[-1]) < 2:
+        return False
+    for label in labels:
+        if not label or len(label) > 63:
+            return False
+        if label[0] == "-" or label[-1] == "-":
+            return False
+        if not set(label) <= LABEL_CHARS:
+            return False
+    return not labels[-1].isdigit()
 
 
 def committed_entries():
@@ -94,6 +114,8 @@ def gather_candidates(existing):
             continue
         for match in LINK.finditer(response.text):
             host = match.group(1).lower().strip(".")
+            if not is_hostname(host):
+                continue
             if host in existing:
                 continue
             if host.endswith(NOT_CANDIDATES) or host in NOT_CANDIDATES:
