@@ -22,6 +22,7 @@ python3 generate-disposal.py
 python3 generate-dynamic-dns.py
 python3 generate-hetzner.py
 python3 generate-google.py
+python3 generate-sinkholes.py
 python3 generate-coreweave.py
 python3 generate_majestic-million.py -n 10000
 python3 generate-microsoft-azure.py
