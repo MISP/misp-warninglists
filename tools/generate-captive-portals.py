@@ -32,6 +32,8 @@ import json
 import logging
 import re
 
+from bs4 import BeautifulSoup
+
 from generator import download, get_abspath_list_file, get_version, write_to_file
 
 URL = "https://captivebehavior.wballiance.com/"
@@ -97,11 +99,15 @@ def fetch_tlds():
 
 
 def extract_hostnames(html, tlds):
-    # Strip tags so that attribute values (href, src) do not contribute hosts
-    # that belong to the page's own assets rather than to its subject matter.
-    text = re.sub(r"<script[^>]*>.*?</script>", " ", html, flags=re.S | re.I)
-    text = re.sub(r"<style[^>]*>.*?</style>", " ", text, flags=re.S | re.I)
-    text = re.sub(r"<[^>]+>", " ", text)
+    # Parse rather than regex-strip the markup. BeautifulSoup is already a
+    # dependency of this project, and it avoids running any backtracking-prone
+    # pattern (<script[^>]*>.*?</script> and friends) over network-fetched
+    # input. Taking .get_text() also drops href/src attribute values, so the
+    # page's own asset hosts never become candidates in the first place.
+    soup = BeautifulSoup(html, "html.parser")
+    for element in soup(["script", "style"]):
+        element.decompose()
+    text = soup.get_text(separator=" ")
 
     hosts = set()
     for match in TOKEN.finditer(text.lower()):
