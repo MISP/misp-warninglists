@@ -46,6 +46,7 @@ python3 generate-rackspace.py
 python3 generate-microsoft-win11-endpoints.py
 python3 generate-vpn.py
 python3 generate-godaddy.py
+python3 generate-parking-domain.py
 python3 generate-wikimedia.py
 python3 generate-second-level-tlds.py
 python3 generate-google-gcp.py
