@@ -38,6 +38,7 @@ python3 generate-tlds.py
 python3 generate-rfc6761.py
 python3 generate-salesforce.py
 python3 generate-github.py
+python3 generate-captive-portals.py
 python3 generate-vultr.py
 python3 generate-public-ipfs-gateways.py
 python3 generate_tranco.py
