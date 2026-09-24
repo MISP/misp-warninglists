@@ -8,6 +8,9 @@ from typing import List, Iterator, Optional, Tuple
 
 HOSTNAME_RE = re.compile("(?!-)[A-Z\d-]{1,63}(?<!-)$", re.IGNORECASE)
 
+PHP_DELIMITED_RE = re.compile(r"^(?P<delim>[^A-Za-z0-9\\\s])(?P<pattern>.*)(?P=delim)(?P<flags>[A-Za-z]*)$", re.DOTALL)
+PCRE_MODIFIERS = set("imsxuADSUXJn")
+
 
 class InvalidListValue:
     def __init__(self, file_path: Path, value: str, error: Optional[str] = None):
@@ -37,8 +40,18 @@ def is_valid_hostname(hostname: str):
 
 
 def is_valid_regexp(regexp: str):
+    # Entries are PHP delimited patterns ("/body/flags"), not bare regexes:
+    # re.compile() would happily accept "/body/g" as a literal pattern.
+    match = PHP_DELIMITED_RE.match(regexp)
+    if not match:
+        raise ValueError("Regexp {0!r} is not a delimited PHP pattern".format(regexp))
+
+    unknown = sorted(set(match.group("flags")) - PCRE_MODIFIERS)
+    if unknown:
+        raise ValueError("Regexp {0!r} uses modifier(s) {1!r} which PCRE does not support".format(regexp, "".join(unknown)))
+
     try:
-        re.compile(regexp)
+        re.compile(match.group("pattern"))
     except re.error:
         raise ValueError("Regexp {0!r} is not valid".format(regexp))
 
@@ -57,7 +70,7 @@ def validate_file(p: Path) -> Iterator[InvalidListValue]:
         warninglist = json.load(f)
         if warninglist["type"] == "cidr":
             invalid_values = validate(warninglist["list"], lambda value: ip_network(value, strict=True))
-        elif warninglist["type"] == "regexp":
+        elif warninglist["type"] == "regex":
             invalid_values = validate(warninglist["list"], lambda value: is_valid_regexp(value))
     # Disabled, because current lists contains invalid domains
     #    elif warninglist["type"] == "hostname":
