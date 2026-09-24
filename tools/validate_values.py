@@ -6,7 +6,7 @@ from ipaddress import ip_network
 from pathlib import Path
 from typing import List, Iterator, Optional, Tuple
 
-HOSTNAME_RE = re.compile("(?!-)[A-Z\d-]{1,63}(?<!-)$", re.IGNORECASE)
+HOSTNAME_RE = re.compile(r"(?!-)[A-Z\d-]{1,63}(?<!-)$", re.IGNORECASE)
 
 PHP_DELIMITED_RE = re.compile(r"^(?P<delim>[^A-Za-z0-9\\\s])(?P<pattern>.*)(?P=delim)(?P<flags>[A-Za-z]*)$", re.DOTALL)
 PCRE_MODIFIERS = set("imsxuADSUXJn")

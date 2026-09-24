@@ -8,15 +8,15 @@ def generate_american_warninglist():
 
     # Warning list for fictitious telephone numbers in the US
     warninglist = [
-        '/((?:\+|00)1)?55501([0-9]{2})/',
-        '/((?:\+|00)1)?([0-9]{3})55501([0-9]{2})/'
+        r'/((?:\+|00)1)?55501([0-9]{2})/',
+        r'/((?:\+|00)1)?([0-9]{3})55501([0-9]{2})/'
     ]
 
     return warninglist
 
 
 def generate_australian_warninglist():
-    prefix = '((?:\+|00)61)?'
+    prefix = r'((?:\+|00)61)?'
 
     # Australian Fictitious numbers
     warninglist = [f'/{prefix}1900654321/', f'/{prefix}1800160401/']
@@ -48,7 +48,7 @@ def generate_australian_warninglist():
 
 
 def generate_french_warninglist():
-    regex = '/((?:\+|00)33?|0?)(%s)([0-9]{%s})/'
+    regex = r'/((?:\+|00)33?|0?)(%s)([0-9]{%s})/'
 
     # Warning list for numbers dedicated to communications companies internal use: numbers starting with 09 99
     warninglist = [regex % ('999', '6')]
@@ -61,11 +61,11 @@ def generate_french_warninglist():
 
 
 def generate_irish_warninglist():
-    return ['/((?:\+|00)353)?02091([0-9]{5})/']
+    return [r'/((?:\+|00)353)?02091([0-9]{5})/']
 
 
 def generate_swedish_warninglist():
-    prefix = '((?:\+|00)46)?'
+    prefix = r'((?:\+|00)46)?'
     numbers = (
         '3139006',
         '4062804',
@@ -78,7 +78,7 @@ def generate_swedish_warninglist():
 
 
 def generate_uk_warninglist():
-    prefix = '((?:\+|00)44)?'
+    prefix = r'((?:\+|00)44)?'
     end = '([0-9]{3})'
     codes = ('13', '14', '15', '16', '17', '18', '21', '31', '41', '51', '61')
 
