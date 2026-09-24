@@ -8,8 +8,8 @@ def generate_american_warninglist():
 
     # Warning list for fictitious telephone numbers in the US
     warninglist = [
-        '/((?:\+|00)1)?55501([0-9]{2})/g',
-        '/((?:\+|00)1)?([0-9]{3})55501([0-9]{2})/g'
+        '/((?:\+|00)1)?55501([0-9]{2})/',
+        '/((?:\+|00)1)?([0-9]{3})55501([0-9]{2})/'
     ]
 
     return warninglist
@@ -19,15 +19,15 @@ def generate_australian_warninglist():
     prefix = '((?:\+|00)61)?'
 
     # Australian Fictitious numbers
-    warninglist = [f'/{prefix}1900654321/g', f'/{prefix}1800160401/g']
+    warninglist = [f'/{prefix}1900654321/', f'/{prefix}1800160401/']
     location = ('02', '03', '07', '08')
     numbers = ('5550', '7010')
     rate_numbers = ('07', '08', '09', '10', '11')
     warninglist = [
-        f'/{prefix}1900654321/g',
-        f'/{prefix}1800160401/g',
-        f"/{prefix}1(3|8)009757({'|'.join(rate_numbers)})/g",
-        '/%s(%s)(%s)([0-9]{4})/g' % (prefix, '|'.join(location), '|'.join(numbers))
+        f'/{prefix}1900654321/',
+        f'/{prefix}1800160401/',
+        f"/{prefix}1(3|8)009757({'|'.join(rate_numbers)})/",
+        '/%s(%s)(%s)([0-9]{4})/' % (prefix, '|'.join(location), '|'.join(numbers))
     ]
 
     mobile_numbers = {
@@ -42,13 +42,13 @@ def generate_australian_warninglist():
         '578': ('957', '148', '888'),
         '579': ('212', '760', '455')
     }
-    warninglist.extend([f"/{prefix}0491{key}({'|'.join(values)})/g" for key, values in mobile_numbers.items()])
+    warninglist.extend([f"/{prefix}0491{key}({'|'.join(values)})/" for key, values in mobile_numbers.items()])
 
     return warninglist
 
 
 def generate_french_warninglist():
-    regex = '/((?:\+|00)33?|0?)(%s)([0-9]{%s})/g'
+    regex = '/((?:\+|00)33?|0?)(%s)([0-9]{%s})/'
 
     # Warning list for numbers dedicated to communications companies internal use: numbers starting with 09 99
     warninglist = [regex % ('999', '6')]
@@ -61,7 +61,7 @@ def generate_french_warninglist():
 
 
 def generate_irish_warninglist():
-    return ['/((?:\+|00)353)?02091([0-9]{5})/g']
+    return ['/((?:\+|00)353)?02091([0-9]{5})/']
 
 
 def generate_swedish_warninglist():
@@ -72,8 +72,8 @@ def generate_swedish_warninglist():
         '8465004',
         '9803192'
     )
-    warninglist = ['/%s07017406(0[5-9]|[1-9][0-9])/g' % prefix]
-    warninglist.extend('/%s%s([0-9]{2})/g' % (prefix, number) for number in numbers)
+    warninglist = ['/%s07017406(0[5-9]|[1-9][0-9])/' % prefix]
+    warninglist.extend('/%s%s([0-9]{2})/' % (prefix, number) for number in numbers)
     return warninglist
 
 
@@ -83,15 +83,15 @@ def generate_uk_warninglist():
     codes = ('13', '14', '15', '16', '17', '18', '21', '31', '41', '51', '61')
 
     warninglist = [
-        f"/{prefix}01({'|'.join(codes)})4960{end}/g",
-        f'/{prefix}01914980{end}/g',
-        f'/{prefix}02079460{end}/g',
-        f'/{prefix}02(89|92)0180{end}/g',
-        f'/{prefix}01632960{end}/g',
-        f'/{prefix}07700900{end}/g',
-        f'/{prefix}03069990{end}/g',
-        f'/{prefix}08081570{end}/g',
-        f'/{prefix}09098790{end}/g'
+        f"/{prefix}01({'|'.join(codes)})4960{end}/",
+        f'/{prefix}01914980{end}/',
+        f'/{prefix}02079460{end}/',
+        f'/{prefix}02(89|92)0180{end}/',
+        f'/{prefix}01632960{end}/',
+        f'/{prefix}07700900{end}/',
+        f'/{prefix}03069990{end}/',
+        f'/{prefix}08081570{end}/',
+        f'/{prefix}09098790{end}/'
     ]
     return warninglist
 
