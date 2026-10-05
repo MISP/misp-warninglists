@@ -621,7 +621,6 @@
     "JPMORGAN",
     "JPRS",
     "JUEGOS",
-    "JUNIPER",
     "KAUFEN",
     "KDDI",
     "KE",
@@ -1447,5 +1446,5 @@
   ],
   "name": "TLDs as known by IANA",
   "type": "string",
-  "version": 20260811
+  "version": 20261005
 }
