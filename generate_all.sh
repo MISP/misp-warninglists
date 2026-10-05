@@ -26,7 +26,7 @@ python3 generate-sinkholes.py
 python3 generate-coreweave.py
 python3 generate_majestic-million.py -n 10000
 python3 generate-microsoft-azure.py
-python3 generate-scaleway.py
+# python3 generate-scaleway.py - now generating 404
 # See https://github.com/MISP/misp-warninglists/issues/319
 python3 generate_mozilla_certificates.py
 python3 generate_moz-top500.py
@@ -72,7 +72,7 @@ python3 generate-driftnet.py
 #python3 generate-umich-cse-connection-attempts.py # ON HOLD: source protected by Cloudflare managed JS challenge (HTTP 403, Cf-Mitigated: challenge header) as of 2026-08-29; not a User-Agent issue, requests-based fetch cannot pass itpython3 generate-icloud-private-relay.py
 python3 generate-bunny-net.py
 python3 generate-ovh.py
-python3 generate-microsoft-mdca.py
+# python3 generate-microsoft-mdca.py - 404
 python3 generate-palo-alto-networks-cortex-cloud.py
 python3 generate-openfilters-scanners.py
 python3 generate-lots-project.py
@@ -83,7 +83,7 @@ python3 generate-imperva.py
 python3 generate-gcore.py
 python3 generate-cachefly.py
 python3 generate-cdn77.py
-python3 generate-sucuri.py
+# python3 generate-sucuri.py - ValueError: '&lt;/FilesMatch&gt;' does not appear to be an IPv4 or IPv6 network
 python3 generate-digitalocean.py
 python3 generate-linode.py
 popd
