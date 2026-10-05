@@ -11,8 +11,6 @@
     "cdp1.pca.dfn.de",
     "cdp2.disig.sk",
     "cdp2.pca.dfn.de",
-    "certificates.godaddy.com",
-    "certificates.starfieldtech.com",
     "certum-crl.wt.trustasia.com",
     "certum.crl.sheca.com",
     "ch.siemens.com",
@@ -231,5 +229,5 @@
   ],
   "name": "CRL and OCSP domains",
   "type": "string",
-  "version": 20260811
+  "version": 20261005
 }
