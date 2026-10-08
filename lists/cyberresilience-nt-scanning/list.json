@@ -1,21 +1,20 @@
 {
-  "description": "List containing IP's associated with the Cyberresilience scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/08/10",
+  "description": "List containing IP's associated with the Cyberresilience scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/10/08",
   "list": [
     "104.248.206.108/32",
+    "137.184.75.34/32",
+    "137.184.78.203/32",
+    "138.68.73.85/32",
+    "142.93.49.93/32",
     "143.198.115.76/32",
-    "159.223.217.240/32",
-    "159.89.1.53/32",
-    "161.35.108.63/32",
-    "161.35.70.45/32",
-    "161.35.74.94/32",
-    "164.90.176.216/32",
-    "165.232.118.73/32",
-    "167.172.40.9/32",
-    "167.99.225.143/32",
-    "198.199.123.141/32",
-    "206.189.5.249/32",
-    "46.101.232.106/32",
-    "68.183.105.175/32"
+    "157.245.72.120/32",
+    "178.128.251.47/32",
+    "178.62.212.177/32",
+    "204.48.24.63/32",
+    "209.38.208.214/32",
+    "64.226.108.113/32",
+    "64.226.64.124/32",
+    "68.183.96.213/32"
   ],
   "matching_attributes": [
     "ip-src",
@@ -26,5 +25,5 @@
   ],
   "name": "Cyberresilience IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 26081010
+  "version": 26100812
 }
