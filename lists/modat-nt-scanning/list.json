@@ -1,5 +1,5 @@
 {
-  "description": "List containing IP's associated with the Modat scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/08/10",
+  "description": "List containing IP's associated with the Modat scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/10/08",
   "list": [
     "212.73.148.0/32",
     "212.73.148.11/32",
@@ -25,6 +25,7 @@
     "85.217.140.52/31",
     "85.217.140.54/32",
     "85.217.140.8/29",
+    "85.217.149.1/32",
     "85.217.149.10/31",
     "85.217.149.13/32",
     "85.217.149.19/32",
@@ -32,11 +33,8 @@
     "85.217.149.24/31",
     "85.217.149.26/32",
     "85.217.149.3/32",
-    "85.217.149.34/31",
-    "85.217.149.36/30",
+    "85.217.149.32/27",
     "85.217.149.4/30",
-    "85.217.149.40/29",
-    "85.217.149.48/28",
     "85.217.149.64/29",
     "85.217.149.72/31",
     "85.217.149.74/32"
@@ -50,5 +48,5 @@
   ],
   "name": "Modat IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 26081010
+  "version": 26100812
 }
