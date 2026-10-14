@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation Internet Metrics (internet-metrics.com), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "50.116.30.197/32",
@@ -13,5 +14,5 @@
   ],
   "name": "Internet Metrics (internet-metrics.com) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

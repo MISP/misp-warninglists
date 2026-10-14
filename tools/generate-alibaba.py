@@ -173,6 +173,7 @@ def main():
     warninglist = {
         "name": "List of known Alibaba Cloud IP address ranges",
         "version": get_version(),
+        "category": "known",
         "description": (
             "Alibaba Cloud (Aliyun) IPv4 and IPv6 ranges, from the prefixes "
             "its verified autonomous systems announce, read live from the "

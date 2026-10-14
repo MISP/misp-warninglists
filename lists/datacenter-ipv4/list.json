@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "IPv4 networks belonging to datacenters and VPN providers, from https://raw.githubusercontent.com/X4BNet/lists_vpn/main/output/datacenter/ipv4.txt",
   "list": [
     "1.116.0.0/15",
@@ -44439,5 +44440,5 @@
   ],
   "name": "List of known IPv4 networks belonging to datacenters and VPN providers",
   "type": "cidr",
-  "version": 20261012
+  "version": 20261014
 }

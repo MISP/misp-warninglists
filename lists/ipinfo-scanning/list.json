@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation IPinfo Internet Census Data Collection (ipinfo.io), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "102.130.49.212/32",
@@ -3073,5 +3074,5 @@
   ],
   "name": "IPinfo Internet Census Data Collection (ipinfo.io) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260908
+  "version": 20261014
 }

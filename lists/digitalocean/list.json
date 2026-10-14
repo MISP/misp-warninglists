@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "DigitalOcean IP address ranges, from their published RFC 8805 geofeed (https://digitalocean.com/geo/google.csv)",
   "list": [
     "103.253.145.0/24",
@@ -246,5 +247,5 @@
   ],
   "name": "List of known DigitalOcean IP address ranges",
   "type": "cidr",
-  "version": 20261005
+  "version": 20261014
 }

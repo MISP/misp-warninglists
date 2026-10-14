@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation Mandiant ASM / GTI (mandiant.com), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "103.66.28.0/22",
@@ -116,5 +117,5 @@
   ],
   "name": "Mandiant ASM / GTI (mandiant.com) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

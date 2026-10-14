@@ -23,6 +23,7 @@ if __name__ == '__main__':
     warninglist = {
         'name': 'List of LOTS (Living Off Trusted Sites) Project Domains',
         'version': get_version(),
+        'category': 'known',
         'description': 'List of popular legitimate domains from LOTS (Living Off Trusted Sites) Project used to conduct phishing, C&C, exfiltration or downloading tools to evade detection',
         'matching_attributes': ['domain', 'domain|ip', 'hostname', 'hostname|port', 'url'],
         'type': 'hostname',

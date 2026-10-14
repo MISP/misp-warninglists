@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Tencent Cloud IP address ranges, from the prefixes announced by Tencent's autonomous systems as reported by the RIPEstat Data API (https://stat.ripe.net/). Tencent publishes no machine-readable address-space file, so the address space is derived from BGP. This is general-purpose rented compute: the tenant behind any given address changes constantly and an attacker can simply rent one. The list recognises that an address belongs to the provider; it is NOT grounds for treating traffic as benign.",
   "list": [
     "1.116.0.0/15",
@@ -270,5 +271,5 @@
   ],
   "name": "List of known Tencent Cloud IP address ranges",
   "type": "cidr",
-  "version": 20261005
+  "version": 20261014
 }

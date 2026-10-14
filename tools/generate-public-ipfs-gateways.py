@@ -54,6 +54,7 @@ if __name__ == '__main__':
     warninglist = {
         'name': "List of known public IPFS gateways",
         'version': get_version(),
+        'category': 'known',
         'description': "Event contains one or more entries of known public IPFS gateways",
         'type': "string",
         'list': sorted(hostnames),

@@ -11,6 +11,7 @@ def process(url, dst):
     warninglist = {
         'name': 'List of known VPN by Google egress IP address ranges',
         'version': get_version(),
+        'category': 'known',
         'description': 'VPN by Google (formerly Google One VPN) egress IP address ranges, from the self-published RFC 8805 geofeed ({})'.format(url),
         'type': 'cidr',
         'list': consolidate_networks(ranges),

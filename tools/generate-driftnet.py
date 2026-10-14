@@ -21,6 +21,7 @@ def process(url, dst):
     warninglist = {
         "name": "List of known Driftnet / Internet-Measurement IP ranges (https://internet-measurement.com/)",
         "version": get_version(),
+        "category": "known",
         "description": "Driftnet / Internet-Measurement IP address ranges (https://internet-measurement.com/)",
         "matching_attributes": [
             "ip-src",

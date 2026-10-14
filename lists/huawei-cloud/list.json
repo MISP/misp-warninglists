@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Huawei Cloud IP address ranges, from the RFC 8805 geofeed Huawei publishes for its cloud regions (https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/IP-location/google-geo-feed.csv), the file referenced by the geofeed: attribute of Huawei Cloud's own inetnum objects in APNIC whois. This is general-purpose rented compute: the tenant behind any given address changes constantly and an attacker can simply rent one. The list recognises that an address belongs to the provider; it is NOT grounds for treating traffic as benign.",
   "list": [
     "1.178.32.0/19",
@@ -255,5 +256,5 @@
   ],
   "name": "List of known Huawei Cloud IP address ranges",
   "type": "cidr",
-  "version": 20260901
+  "version": 20261014
 }

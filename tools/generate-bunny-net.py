@@ -8,6 +8,7 @@ def process(files, dst):
     warninglist = {
         'name': "List of known Bunny.net CDN ranges",
         'version': get_version(),
+        'category': 'known',
         'description': "List of known Bunny.net CDN IP ranges (https://support.bunny.net/hc/en-us/articles/115003578911-How-to-detect-when-BunnyCDN-PoP-servers-are-accessing-your-backend)",
         'type': "cidr",
         'list': [],

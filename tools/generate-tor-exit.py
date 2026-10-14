@@ -31,6 +31,7 @@ def process(url, dst):
     warninglist = {
         "name": "List of known Tor exit nodes",
         "version": get_version(),
+        "category": "known",
         "description": (
             "Specialized list of IPv4 addresses belonging to Tor exit nodes, "
             "from https://github.com/X4BNet/lists_torexit"

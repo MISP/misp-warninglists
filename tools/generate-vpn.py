@@ -34,6 +34,7 @@ def process(category, ip_version):
     warninglist = {
         'name': 'List of known IPv{} networks belonging to {}'.format(ip_version, CATEGORIES[category]),
         'version': get_version(),
+        'category': 'known',
         'description': 'IPv{} networks belonging to {}, from {}'.format(ip_version, CATEGORIES[category], url),
         'list': consolidate_networks(networks),
         'type': 'cidr',

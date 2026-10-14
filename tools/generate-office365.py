@@ -22,6 +22,7 @@ def process(url):
     office365_ips_warninglist = {
         'name': 'List of known Office 365 IP address ranges',
         'description': 'Office 365 IP address ranges',
+        'category': 'known',
         'type': 'cidr',
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }
@@ -64,6 +65,7 @@ if __name__ == '__main__':
     warninglist = {
         'name': 'List of known Office 365 IP address ranges in China',
         'description': 'Office 365 IP address ranges in China',
+        'category': 'known',
         'type': 'cidr',
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }

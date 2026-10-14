@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation Tenable ASM (tenable.com / tenable.io), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "13.115.104.128/25",
@@ -150,5 +151,5 @@
   ],
   "name": "Tenable ASM (tenable.com / tenable.io) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

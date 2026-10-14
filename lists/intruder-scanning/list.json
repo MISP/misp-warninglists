@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation Intruder (intruder.io), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "13.115.104.128/25",
@@ -47,5 +48,5 @@
   ],
   "name": "Intruder (intruder.io) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

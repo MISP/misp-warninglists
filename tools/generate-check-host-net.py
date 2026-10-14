@@ -17,6 +17,7 @@ def process(file, dst):
     warninglist = {
         'name': 'List of known check-host.net IP address ranges',
         'version': get_version(),
+        'category': 'known',
         'description': 'check-host IP addresses (https://check-host.net/nodes/ips)',
         'type': 'cidr',
         'list': consolidate_networks(l),

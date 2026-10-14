@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation Group-IB (rnd.group-ib.com), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "80.82.70.118/32",
@@ -18,5 +19,5 @@
   ],
   "name": "Group-IB (rnd.group-ib.com) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260908
+  "version": 20261014
 }

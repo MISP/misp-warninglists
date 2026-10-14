@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation Stretchoid (stretchoid.com), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "104.42.220.14/32",
@@ -5050,5 +5051,5 @@
   ],
   "name": "Stretchoid (stretchoid.com) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260908
+  "version": 20261014
 }

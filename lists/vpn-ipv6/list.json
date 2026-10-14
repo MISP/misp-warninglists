@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "IPv6 networks belonging to common VPN providers, from https://raw.githubusercontent.com/X4BNet/lists_vpn/main/output/vpn/ipv6.txt",
   "list": [
     "2001:550:1d05::/48",
@@ -509,5 +510,5 @@
   ],
   "name": "List of known IPv6 networks belonging to common VPN providers",
   "type": "cidr",
-  "version": 20261012
+  "version": 20261014
 }

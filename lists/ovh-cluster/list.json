@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "OVH Cluster IP address (https://docs.ovhcloud.com/en/guides/web-cloud/web-hosting/clusters-and-shared-hosting-ip)",
   "list": [
     "137.74.180.117",
@@ -633,5 +634,5 @@
   ],
   "name": "List of known OVH Cluster IPs",
   "type": "cidr",
-  "version": 20260819
+  "version": 20261014
 }

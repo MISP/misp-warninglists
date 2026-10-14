@@ -28,6 +28,7 @@ if __name__ == '__main__':
     warninglist = {
         'name': "List of known CDN77 IP address ranges",
         'version': get_version(),
+        'category': 'known',
         'description': "CDN77 IP address ranges (https://prefixlists.tools.cdn77.com/public_lmax_prefixes.json)",
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"],
         'type': 'cidr',

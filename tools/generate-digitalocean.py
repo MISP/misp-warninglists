@@ -64,6 +64,7 @@ def main():
     warninglist = {
         "name": "List of known DigitalOcean IP address ranges",
         "version": get_version(),
+        "category": "known",
         "description": (
             "DigitalOcean IP address ranges, from their published RFC 8805 "
             "geofeed ({})".format(URL)

@@ -27,6 +27,7 @@ if __name__ == '__main__':
     warninglist = {
         'name': "List of known Imperva (Incapsula) IP address ranges",
         'version': get_version(),
+        'category': 'known',
         'description': "Imperva (Incapsula) IP address ranges (https://my.imperva.com/api/integration/v1/ips)",
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"],
         'type': 'cidr',

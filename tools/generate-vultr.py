@@ -100,6 +100,7 @@ def main():
     warninglist = {
         "name": "List of known Vultr IP address ranges",
         "version": get_version(),
+        "category": "known",
         "description": (
             "Vultr (Constant Company, LLC) IP address ranges, from their "
             "published RFC 8805 geofeed ({}). This is general-purpose rented "

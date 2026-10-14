@@ -10,6 +10,7 @@ def process(file, dst):
     warninglist = {
         'name': "List of known OVH Cluster IPs",
         'version': get_version(),
+        'category': 'known',
         'description': "OVH Cluster IP address (https://docs.ovhcloud.com/en/guides/web-cloud/web-hosting/clusters-and-shared-hosting-ip)",
         'type': "cidr",
         'list': [],

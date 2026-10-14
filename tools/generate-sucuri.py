@@ -63,6 +63,7 @@ if __name__ == '__main__':
     warninglist = {
         'name': "List of known Sucuri (Website Firewall) IP address ranges",
         'version': get_version(),
+        'category': 'known',
         'description': "Sucuri Website Firewall IP address ranges, scraped from "
                         "https://docs.sucuri.net/website-firewall/sucuri-firewall-troubleshooting-guide/ "
                         "(no machine-readable API is published)",
