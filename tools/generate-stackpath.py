@@ -71,6 +71,7 @@ def process(files, dst):
     warninglist = {
         'name': "List of known Stackpath CDN IP ranges",
         'version': get_version(),
+        'category': 'known',
         'description': "List of known Stackpath (Highwinds) CDN IP ranges (https://support.stackpath.com/hc/en-us/articles/360001091666-Whitelist-CDN-WAF-IP-Blocks)",
         'type': "cidr",
         'list': [],

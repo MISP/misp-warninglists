@@ -20,6 +20,7 @@ def process(file, dst):
     warninglist = {
         'name': 'List of known Amazon AWS IP address ranges',
         'version': get_version(),
+        'category': 'known',
         'description': 'Amazon AWS IP address ranges (https://ip-ranges.amazonaws.com/ip-ranges.json)',
         'type': 'cidr',
         'list': consolidate_networks(l),

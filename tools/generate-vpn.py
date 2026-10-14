@@ -8,6 +8,7 @@ def process(url, dst):
     warninglist = {
         'name': 'Specialized list of {} addresses belonging to common VPN providers and datacenters'.format(dst),
         'version': get_version(),
+        'category': 'known',
         'description': 'Specialized list of {} addresses belonging to common VPN providers and datacenters'.format(dst),
         'list': consolidate_networks(process_stream(url)),
         'type': 'cidr',

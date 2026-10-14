@@ -69,6 +69,7 @@ if __name__ == '__main__':
     warninglist = {
         'name': 'List of known Akamai IP ranges',
         'version': get_version(),
+        'category': 'known',
         'description': 'Akamai IP ranges from BGP search',
         'type': 'cidr',
         'list': consolidate_networks(networks),

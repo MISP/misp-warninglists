@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Fastly IP address ranges (https://api.fastly.com/public-ip-list)",
   "list": [
     "103.244.50.0/24",
@@ -30,5 +31,5 @@
   ],
   "name": "List of known Fastly IP address ranges",
   "type": "cidr",
-  "version": 20240422
+  "version": 20261014
 }

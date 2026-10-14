@@ -11,6 +11,7 @@ def process(url, dst):
     warninglist = {
         'name': 'List of disposable email domains',
         'version': get_version(),
+        'category': 'known',
         'description': 'List of disposable email domains',
         'list': process_stream(url),
         'type': 'substring',

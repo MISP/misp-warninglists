@@ -131,6 +131,13 @@ If matching_attributes are not set, the list is matched against any type of attr
 - ```cidr``` - IP or CDIR block matching in the warning list against matching attributes
 - ```regex``` - regex matching of a string matching attributes
 
+## category of warning list
+
+The optional `category` field states what a hit on the list means:
+
+- ```false_positive``` (default) - the value is very unlikely to be the indicator itself (e.g. RFC1918 addresses, public DNS resolvers, popular domains); reports of it are usually extraction or logging artifacts.
+- ```known``` - the value belongs to shared or multi-tenant infrastructure (e.g. cloud and CDN ranges, URL shorteners, dynamic DNS, VPN providers, research scanners). A report naming it as malicious can still be true, but acting on it (blocking, takedown) will also hit unrelated users of the same infrastructure.
+
 # Processing warning lists in python
 
 See [PyMISPWarningLists](https://github.com/MISP/PyMISPWarningLists) for a

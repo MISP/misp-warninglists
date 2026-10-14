@@ -9,6 +9,7 @@ def process(file, dst, name: str, description: str, prefixlist: str, prefixitem:
     warninglist = {
         'name': name,
         'version': get_version(),
+        'category': 'known',
         'description': description,
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"],
         'type': 'cidr'
