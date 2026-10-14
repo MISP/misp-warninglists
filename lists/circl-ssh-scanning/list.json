@@ -1,0 +1,15 @@
+{
+  "description": "CIRCL IP address to conducting non-intrusive SSH scans",
+  "list": [
+    "185.194.93.130",
+    "2a00:5980:93::130"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "domain|ip",
+    "ip-src|port"
+  ],
+  "name": "CIRCL IP address used for SSH scanning",
+  "type": "cidr",
+  "version": 26081401
+}

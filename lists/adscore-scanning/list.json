@@ -1,0 +1,30 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation Adscore (adscore.com), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "185.200.118.32/32",
+    "185.200.118.34/31",
+    "185.200.118.36/30",
+    "185.200.118.40/29",
+    "185.200.118.48/29",
+    "185.200.118.56/30",
+    "185.200.118.60/32",
+    "185.200.118.63/32",
+    "185.200.118.64/32",
+    "185.200.118.66/31",
+    "185.200.118.68/30",
+    "185.200.118.72/29",
+    "185.200.118.80/29",
+    "185.200.118.88/30",
+    "185.200.118.92/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "Adscore (adscore.com) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

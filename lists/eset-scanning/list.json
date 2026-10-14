@@ -1,0 +1,16 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation ESET Research (eset.com), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "142.93.146.198/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "ESET Research (eset.com) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

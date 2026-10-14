@@ -1,0 +1,17 @@
+{
+  "description": "List containing IP's associated with the F6 scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/10/08",
+  "list": [
+    "46.161.50.108/31",
+    "5.101.64.6/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-dst|port",
+    "ip-src|port"
+  ],
+  "name": "F6 IP Ranges Used for Scanning",
+  "type": "cidr",
+  "version": 26100812
+}

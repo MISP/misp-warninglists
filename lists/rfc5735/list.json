@@ -26,5 +26,5 @@
   ],
   "name": "List of RFC 5735 CIDR blocks",
   "type": "cidr",
-  "version": 5
+  "version": 20220705
 }

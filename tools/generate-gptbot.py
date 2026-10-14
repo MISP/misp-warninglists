@@ -2,33 +2,22 @@
 # -*- coding: utf-8 -*-
 
 import json
+from generator import download, get_version, write_to_file, consolidate_networks
 
-from generator import download_to_file, get_version, write_to_file, get_abspath_source_file, consolidate_networks
 
+if __name__ == '__main__':
+    bots = download("https://openai.com/gptbot.json")
+    parsed = json.loads(bots.text)
 
-def process(file, dst):
-    l = []
-    with open(get_abspath_source_file(file), 'r') as freetext_file:
-        for line in freetext_file:
-            cidr = line.rstrip()
-            l.append(cidr)
+    ranges = [p["ipv4Prefix"] if "ipv4Prefix" in p else p["ipv6Prefix"] for p in parsed["prefixes"]]
 
     warninglist = {
         'name': 'List of known IP address ranges for OpenAI GPT crawler bot',
         'version': get_version(),
-        'description': 'OpenAI gptbot crawler (https://openai.com/gptbot-ranges.txt)',
+        'description': 'OpenAI gptbot crawler (https://openai.com/gptbot.json)',
         'type': 'cidr',
-        'list': consolidate_networks(l),
+        'list': consolidate_networks(ranges),
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }
 
-    write_to_file(warninglist, dst)
-
-
-if __name__ == '__main__':
-    gptbot_url = "https://openai.com/gptbot-ranges.txt"
-    gptbot_file = "openai-gptbot-ranges.json"
-    gptbot_dst = "openai-gptbot"
-
-    download_to_file(gptbot_url, gptbot_file)
-    process(gptbot_file, gptbot_dst)
+    write_to_file(warninglist, "openai-gptbot")

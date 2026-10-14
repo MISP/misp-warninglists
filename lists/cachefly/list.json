@@ -1,0 +1,25 @@
+{
+  "description": "CacheFly IP address ranges (https://cachefly.cachefly.net/ips/cdn.txt)",
+  "list": [
+    "167.71.238.159/32",
+    "167.88.158.0/24",
+    "195.191.102.0/23",
+    "204.93.142.0/23",
+    "204.93.150.0/24",
+    "205.234.175.0/24",
+    "45.88.132.0/22",
+    "66.225.197.0/24",
+    "8.242.227.248/29",
+    "82.80.224.190/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "List of known CacheFly IP address ranges",
+  "type": "cidr",
+  "version": 20260831
+}

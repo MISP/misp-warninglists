@@ -3,7 +3,7 @@ import ipaddress
 import json
 import logging
 from inspect import currentframe, getframeinfo, getmodulename, stack
-from os import mkdir, path
+from os import mkdir, path, makedirs
 from typing import List, Union
 import gzip
 
@@ -37,17 +37,24 @@ def init_logging():
 
 init_logging()
 
+DEFAULT_HEADERS = {
+    # Wikimedia rejects generic or browser-impersonating user agents for API
+    # clients.  Keep the project and its contact URL identifiable, as requested
+    # by its user-agent policy.
+    "User-Agent": "MISP-Warninglists/1.0 (https://github.com/MISP/misp-warninglists)",
+}
 
-def download_to_file(url, file, gzip_enable=False):
+
+def download_to_file(url, file, gzip_enable=False, additional_headers=None):
     frame_records = stack()[1]
     caller = getmodulename(frame_records[1]).upper()
 
-    user_agent = {
-        "User-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0"
-    }
+    headers = DEFAULT_HEADERS.copy()
+    if additional_headers:
+        headers.update(additional_headers)
     try:
         logging.info(f'download_to_file - fetching url: {url}')
-        r = requests.head(url, headers=user_agent)
+        r = requests.head(url, headers=headers, allow_redirects=True)
         url_datetime = parsedate(r.headers['Last-Modified']).astimezone()
         file_datetime = datetime.datetime.fromtimestamp(
             path.getmtime(get_abspath_source_file(file))
@@ -59,7 +66,7 @@ def download_to_file(url, file, gzip_enable=False):
                     caller, get_abspath_source_file(file)
                 )
             )
-            actual_download_to_file(url, file, user_agent, gzip_enable=gzip_enable)
+            actual_download_to_file(url, file, headers, gzip_enable=gzip_enable)
         else:
             logging.info('{} File on server is older, nothing to do'.format(caller))
     except KeyError as exc:
@@ -68,19 +75,21 @@ def download_to_file(url, file, gzip_enable=False):
                 caller, str(exc), url
             )
         )
-        actual_download_to_file(url, file, user_agent, gzip_enable=gzip_enable)
+        actual_download_to_file(url, file, headers, gzip_enable=gzip_enable)
     except FileNotFoundError as exc:
         logging.info(
             "{} File didn't exist, so downloading {} from {}".format(caller, file, url)
         )
-        actual_download_to_file(url, file, user_agent, gzip_enable=gzip_enable)
+        actual_download_to_file(url, file, headers, gzip_enable=gzip_enable)
     except Exception as exc:
         logging.warning('{} General exception occured: {}.'.format(caller, str(exc)))
-        actual_download_to_file(url, file, user_agent, gzip_enable=gzip_enable)
+        actual_download_to_file(url, file, headers, gzip_enable=gzip_enable)
 
 
-def actual_download_to_file(url, file, user_agent, gzip_enable=False):
-    r = requests.get(url, headers=user_agent)
+def actual_download_to_file(url, file, headers, gzip_enable=False):
+    r = requests.get(url, headers=headers)
+    if r.status_code != 200:
+      raise Exception("Request returned HTTP code {}".format(r.status_code))
     with open(get_abspath_source_file(file), 'wb') as fd:
         for chunk in r.iter_content(4096):
             fd.write(chunk)
@@ -105,10 +114,7 @@ def process_stream(url):
 
 
 def download(url):
-    user_agent = {
-        "User-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0"
-    }
-    return requests.get(url, headers=user_agent)
+    return requests.get(url, headers=DEFAULT_HEADERS)
 
 
 def get_abspath_list_file(dst):
@@ -128,6 +134,9 @@ def get_abspath_source_file(dst):
 
 
 def get_version():
+    '''
+        Return the YYYYMMDD as int for version.
+    '''
     return int(datetime.date.today().strftime('%Y%m%d'))
 
 
@@ -137,16 +146,36 @@ def unique_sorted_warninglist(warninglist):
 
 
 def write_to_file(warninglist, dst):
+    # Write the final Json file into the module folder name
     frame_records = stack()[1]
     caller = getmodulename(frame_records[1]).upper()
+    skip_updates = False
     try:
         warninglist = unique_sorted_warninglist(warninglist)
-        with open(get_abspath_list_file(dst), 'w') as data_file:
-            json.dump(warninglist, data_file, indent=2, sort_keys=True)
-            data_file.write("\n")
-        logging.info(
-            'New warninglist written to {}.'.format(get_abspath_list_file(dst))
-        )
+        # Try to create the folder if it not exist yet
+        makedirs(path.dirname(get_abspath_list_file(dst)), exist_ok=True)
+        # Test if there's any difference with existing warninglist
+        try:
+            with open(get_abspath_list_file(dst), 'r') as data_file:
+                existing_warninglist = unique_sorted_warninglist(json.load(data_file))
+                existing_warninglist['version'] = None
+                new_warninglist = warninglist.copy()
+                new_warninglist['version'] = None
+                if new_warninglist == existing_warninglist:
+                    logging.info("No changes to warninglist. Skiping version bump for {}.".format(get_abspath_list_file(dst)))
+                    skip_updates = True
+        except FileNotFoundError:
+            # No existing version of the warninglist to compare to,
+            # so always write the incoming version.
+            pass
+        # Write changes to file
+        if not skip_updates:
+            with open(get_abspath_list_file(dst), 'w') as data_file:
+                json.dump(warninglist, data_file, indent=2, sort_keys=True)
+                data_file.write("\n")
+                logging.info(
+                    'New warninglist written to {}.'.format(get_abspath_list_file(dst))
+                )
     except Exception as exc:
         logging.error('{} General exception occurred: {}.'.format(caller, str(exc)))
 

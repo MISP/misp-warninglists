@@ -1,0 +1,19 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation Dataplane.org (dataplane.org), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "204.130.133.143/32",
+    "204.130.133.193/32",
+    "2607:fae0:f202:44c::143/128",
+    "2607:fae0:f202:44c::193/128"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "Dataplane.org (dataplane.org) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

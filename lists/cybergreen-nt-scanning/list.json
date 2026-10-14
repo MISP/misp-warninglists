@@ -1,0 +1,16 @@
+{
+  "description": "List containing IP's associated with the Cybergreen scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2025/12/10",
+  "list": [
+    "52.73.169.169/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-dst|port",
+    "ip-src|port"
+  ],
+  "name": "Cybergreen IP Ranges Used for Scanning",
+  "type": "cidr",
+  "version": 25121022
+}

@@ -1,0 +1,30 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation CyberResilience (cyberresilience.io), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "104.248.206.108/32",
+    "143.198.115.76/32",
+    "159.223.217.240/32",
+    "159.89.1.53/32",
+    "161.35.108.63/32",
+    "161.35.70.45/32",
+    "161.35.74.94/32",
+    "164.90.176.216/32",
+    "165.232.118.73/32",
+    "167.172.40.9/32",
+    "167.99.225.143/32",
+    "198.199.123.141/32",
+    "206.189.5.249/32",
+    "46.101.232.106/32",
+    "68.183.105.175/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "CyberResilience (cyberresilience.io) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

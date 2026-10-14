@@ -18,7 +18,7 @@ def process(file, dst):
         'name': 'List of known Zscaler IP address ranges',
         'version': get_version(),
         'category': 'known',
-        'description': 'Zscaler IP address ranges (https://config.zscaler.com/api/zscaler.net/hubs/cidr/json/required)',
+        'description': 'Zscaler IP address ranges (https://config.zscaler.com/api/zscaler.net/hubs/cidr/json/recommended)',
         'type': 'cidr',
         'list': consolidate_networks(l),
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
@@ -28,7 +28,7 @@ def process(file, dst):
 
 
 if __name__ == '__main__':
-    zscaler_url = "https://config.zscaler.com/api/zscaler.net/hubs/cidr/json/required"
+    zscaler_url = "https://config.zscaler.com/api/zscaler.net/hubs/cidr/json/recommended"
     zscaler_file = "zscaler_ip-ranges.json"
     zscaler_dst = "zscaler"
 

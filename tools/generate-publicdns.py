@@ -27,7 +27,7 @@ def process(ipv4: List, ipv6: List, hostname: List):
         'description': 'Event contains one or more public IPv4 DNS resolvers as attribute with an IDS flag set',
         'name': 'List of known IPv4 public DNS resolvers',
         'type': 'cidr',
-        'matching_attributes': ['ip-src', 'ip-dst', 'domain|ip']
+        'matching_attributes': ['ip-src', 'ip-dst', 'domain|ip', 'ip-src|port', 'ip-dst|port']
     }
     generate(ipv4, publicdns_ipv4_warninglist, publicdns_ipv4_dst)
 
@@ -37,7 +37,7 @@ def process(ipv4: List, ipv6: List, hostname: List):
         'description': 'Event contains one or more public IPv6 DNS resolvers as attribute with an IDS flag set',
         'name': 'List of known IPv6 public DNS resolvers',
         'type': 'cidr',
-        'matching_attributes': ['ip-src', 'ip-dst', 'domain|ip']
+        'matching_attributes': ['ip-src', 'ip-dst', 'domain|ip', 'ip-src|port', 'ip-dst|port']
     }
     generate(ipv6, publicdns_ipv6_warninglist, publicdns_ipv6_dst)
 
@@ -66,9 +66,10 @@ def get_lists_publidns(file) -> Tuple[List, List, List]:
                     elif ip.version == 6:
                         lipv6.append(ip.compressed)
 
-                    if row[1] not in (None, '', '.', '-.'):
+                    if row[1] is not None:
                         row[1] = row[1].rstrip('.')
-                        lhostname.append(row[1])
+                        if ('.') in row[1]:
+                           lhostname.append(row[1])
                 except ValueError as exc:
                     logging.warning(str(exc))
 

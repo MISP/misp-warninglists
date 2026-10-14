@@ -1,7 +1,8 @@
 {
-  "description": "\"OSINT DigitalSide Threat-Intel Repository - MISP Warninglist - List of domains should be marked as false positive in the related MISP event with IDS attribute not flagged",
+  "description": "OSINT DigitalSide Threat-Intel Repository - MISP Warninglist - List of domains should be marked as false positive in the related MISP event with IDS attribute not flagged",
   "list": [
     "amazonaws.com",
+    "archive.org",
     "assets-global.website-files.com",
     "backblaze.com",
     "backblazeb2.com",
@@ -11,6 +12,7 @@
     "codeberg.org",
     "codeload.github.com",
     "deac-ams.dl.sourceforge.net",
+    "discord.com",
     "dl.dropboxusercontent.com",
     "drive.google.com",
     "dropbox.com",
@@ -23,6 +25,7 @@
     "i.ibb.co",
     "i.imgur.com",
     "icloud.com",
+    "ipfs.io",
     "link.storjshare.io",
     "media.discordapp.net",
     "pastebin.com",
@@ -37,6 +40,7 @@
     "trello.com",
     "vimeo.com",
     "vk.com",
+    "www.autohotkey.com",
     "www.dl.dropboxusercontent.com",
     "www.zipshare.com",
     "zipshare.com"
@@ -47,5 +51,5 @@
   ],
   "name": "OSINT.DigitalSide.IT Warning List",
   "type": "hostname",
-  "version": 20240426
+  "version": 20260811
 }

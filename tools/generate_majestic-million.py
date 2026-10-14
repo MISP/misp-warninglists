@@ -8,12 +8,12 @@ import argparse
 def process(file, dst, numbers):
 
     with open(get_abspath_source_file(file), newline='\n', encoding='utf-8', errors='replace') as csv_file:
-        sites = csv_file.readlines()[1:numbers]
+        sites = csv_file.readlines()[1:numbers + 1]
 
     warninglist = {
         'name': f'Top {numbers} websites from Majestic Million',
         'version': get_version(),
-        'description': 'Event contains one or more entries from the top 10K of the most used websites (Majestic Million).',
+        'description': f'Event contains one or more entries from the top {numbers} of the most used websites (Majestic Million).',
         'matching_attributes': ['hostname', 'domain'],
         'type': 'string',
         'list': []

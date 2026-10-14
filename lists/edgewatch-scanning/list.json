@@ -1,0 +1,16 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation Edgewatch Security Intelligence (edgewatch.com), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "185.114.175.0/24"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "Edgewatch Security Intelligence (edgewatch.com) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

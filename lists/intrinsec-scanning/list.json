@@ -1,0 +1,20 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation Intrinsec (intrinsec.com), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "213.32.122.80/28",
+    "46.105.132.32/27",
+    "51.254.59.112/28",
+    "51.38.12.12/30",
+    "51.38.12.20/30"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "Intrinsec (intrinsec.com) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

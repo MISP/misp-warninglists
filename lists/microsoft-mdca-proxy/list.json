@@ -1,0 +1,30 @@
+{
+  "description": "Microsoft Defender for Cloud Apps (MDCA/MCAS) hostnames (https://learn.microsoft.com/en-us/defender-cloud-apps/troubleshooting-proxy-url)",
+  "list": [
+    ".admin-mcas-df.ms",
+    ".admin-mcas-gov-df.ms",
+    ".admin-mcas-gov-df.us",
+    ".admin-mcas-gov.ms",
+    ".admin-mcas-gov.us",
+    ".admin-mcas.ms",
+    ".admin-rs-mcas-df.ms",
+    ".admin-rs-mcas.ms",
+    ".mcas-df.ms",
+    ".mcas-gov-df.ms",
+    ".mcas-gov-df.us",
+    ".mcas-gov.ms",
+    ".mcas-gov.us",
+    ".mcas.ms",
+    ".rs-mcas-df.ms",
+    ".rs-mcas.ms"
+  ],
+  "matching_attributes": [
+    "hostname",
+    "domain",
+    "url",
+    "domain|ip"
+  ],
+  "name": "List of known Microsoft Defender for Cloud Apps (MDCA/MCAS) proxy hostnames",
+  "type": "hostname",
+  "version": 20260819
+}

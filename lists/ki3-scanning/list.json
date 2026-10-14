@@ -1,0 +1,23 @@
+{
+  "description": "Published source ranges of the internet-wide scanning organisation KI3 (ki3.org.cn), as tracked by https://github.com/OpenFilters/internet-scanners",
+  "list": [
+    "101.132.145.132/32",
+    "112.74.38.239/32",
+    "47.89.154.16/32",
+    "47.91.125.252/32",
+    "8.208.10.94/32",
+    "8.209.96.179/32",
+    "8.210.123.17/32",
+    "8.211.162.45/32"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain|ip",
+    "ip-src|port",
+    "ip-dst|port"
+  ],
+  "name": "KI3 (ki3.org.cn) IP ranges used for scanning",
+  "type": "cidr",
+  "version": 20260829
+}

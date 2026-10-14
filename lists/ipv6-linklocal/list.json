@@ -12,5 +12,5 @@
   ],
   "name": "List of IPv6 link local blocks",
   "type": "cidr",
-  "version": 3
+  "version": 20220705
 }
