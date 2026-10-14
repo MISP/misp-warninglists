@@ -17,6 +17,7 @@ def process(file, dst):
     warninglist = {
         'name': 'List of known Zscaler IP address ranges',
         'version': get_version(),
+        'category': 'known',
         'description': 'Zscaler IP address ranges (https://config.zscaler.com/api/zscaler.net/hubs/cidr/json/required)',
         'type': 'cidr',
         'list': consolidate_networks(l),
