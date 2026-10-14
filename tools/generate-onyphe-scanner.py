@@ -32,6 +32,7 @@ def process(file: str, dst: str):
     warninglist = {
         "name": "List of published IP address ranges for Onyphe Scanner",
         "version": get_version(),
+        "category": "known",
         "description": "Onyphe Scanner (https://www.onyphe.io/)",
         "type": "cidr",
         "list": consolidate_networks(l),

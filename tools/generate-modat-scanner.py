@@ -31,6 +31,7 @@ def process(file: str, dst: str):
     warninglist = {
         "name": "List of published IP address ranges for Modat Scanner",
         "version": get_version(),
+        "category": "known",
         "description": "Modat Scanner (https://www.modat.io/)",
         "type": "cidr",
         "list": consolidate_networks(l),

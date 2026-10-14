@@ -177,6 +177,7 @@ def main():
     warninglist = {
         "name": "List of known GoDaddy IP address ranges",
         "version": get_version(),
+        "category": "known",
         "description": (
             "GoDaddy IP address ranges, collected from the prefixes announced "
             "by the autonomous systems of GoDaddy.com, LLC and GoDaddy Host "

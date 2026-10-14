@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "IBM Cloud (ex-SoftLayer) IP address ranges, from the prefixes announced by its autonomous systems AS36351, AS46702, AS46703, AS46704 as reported by the RIPEstat Data API (https://stat.ripe.net/data/announced-prefixes/data.json). IBM publishes no unauthenticated machine-readable endpoint for these. Scoped to the SOFTLAYER-handle cloud fleet; IBM corporate address space is deliberately excluded. A minority of the announced prefixes are registered to third parties: those are customer / bring-your-own-IP ranges routed out of IBM Cloud's autonomous system and are kept on purpose. This is general-purpose rented compute: the tenant behind any given address changes constantly and an attacker can simply rent one. The list recognises that an address belongs to the provider; it is NOT grounds for treating traffic as benign.",
   "list": [
     "103.106.108.0/24",
@@ -228,5 +229,5 @@
   ],
   "name": "List of known IBM Cloud IP address ranges",
   "type": "cidr",
-  "version": 20261005
+  "version": 20261014
 }

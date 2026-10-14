@@ -25,6 +25,7 @@ if __name__ == '__main__':
     warninglist = {
         'name': "List of known Gcore CDN IP address ranges",
         'version': get_version(),
+        'category': 'known',
         'description': "Gcore CDN IP address ranges (https://api.gcore.com/cdn/public-net-list)",
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"],
         'type': 'cidr',

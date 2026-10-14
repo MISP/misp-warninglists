@@ -16,6 +16,7 @@ def process(file, dst):
     warninglist = {
         'name': 'List of known iCloud Private Relay egress IP address ranges',
         'version': get_version(),
+        'category': 'known',
         'description': 'iCloud Private Relay egress IP address ranges (https://developer.apple.com/support/prepare-your-network-for-icloud-private-relay/)',
         'type': 'cidr',
         'list': consolidate_networks(l),

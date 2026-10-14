@@ -21,6 +21,7 @@ if __name__ == '__main__':
     warninglist = {
         'name': "List of known CacheFly IP address ranges",
         'version': get_version(),
+        'category': 'known',
         'description': "CacheFly IP address ranges (https://cachefly.cachefly.net/ips/cdn.txt)",
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"],
         'type': 'cidr',

@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation Research Scanner (research-scanner.com), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "138.197.101.95/32",
@@ -36,5 +37,5 @@
   ],
   "name": "Research Scanner (research-scanner.com) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

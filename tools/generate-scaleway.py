@@ -108,6 +108,7 @@ def main():
     warninglist = {
         "name": "List of known Scaleway IP address ranges",
         "version": get_version(),
+        "category": "known",
         "description": (
             "Scaleway (formerly Online SAS) IP address ranges, from the ranges "
             "Scaleway documents itself ({}). This is general-purpose rented "

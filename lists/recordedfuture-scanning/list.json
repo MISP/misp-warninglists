@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation Recorded Future / SecurityTrails (securitytrails.com), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "13.219.121.241/32",
@@ -17,5 +18,5 @@
   ],
   "name": "Recorded Future / SecurityTrails (securitytrails.com) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

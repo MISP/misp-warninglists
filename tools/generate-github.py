@@ -20,6 +20,7 @@ if __name__ == '__main__':
     warninglist = {
         'name': 'List of known GitHub IP ranges (https://api.github.com/meta)',
         'version': get_version(),
+        'category': 'known',
         'description': "GitHub IP address ranges (https://api.github.com/meta)",
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"],
         'type': 'cidr',

@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation Scanners from various universities, as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "104.207.149.87/32",
@@ -215,5 +216,5 @@
   ],
   "name": "Scanners from various universities IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

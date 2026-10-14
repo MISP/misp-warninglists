@@ -167,6 +167,7 @@ def main():
     warninglist = {
         "name": "List of known IBM Cloud IP address ranges",
         "version": get_version(),
+        "category": "known",
         "description": (
             "IBM Cloud (ex-SoftLayer) IP address ranges, from the prefixes "
             "announced by its autonomous systems {} as reported by the RIPEstat "

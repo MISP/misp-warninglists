@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Sucuri Website Firewall IP address ranges, scraped from https://docs.sucuri.net/website-firewall/sucuri-firewall-troubleshooting-guide/ (no machine-readable API is published)",
   "list": [
     "185.93.228.0/22",
@@ -16,5 +17,5 @@
   ],
   "name": "List of known Sucuri (Website Firewall) IP address ranges",
   "type": "cidr",
-  "version": 20260831
+  "version": 20261014
 }

@@ -33,6 +33,7 @@ def process(content: str, dst: str):
     warninglist = {
         "name": "List of published IP address ranges for Internet Cleanup Foundation scanners",
         "version": get_version(),
+        "category": "known",
         "description": "Internet Cleanup Foundation scaninfo (https://internetcleanup.foundation/scaninfo/)",
         "type": "cidr",
         "list": consolidate_networks(networks),

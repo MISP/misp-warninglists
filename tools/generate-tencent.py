@@ -190,6 +190,7 @@ def main():
     warninglist = {
         "name": "List of known Tencent Cloud IP address ranges",
         "version": get_version(),
+        "category": "known",
         "description": (
             "Tencent Cloud IP address ranges, from the prefixes announced by "
             "Tencent's autonomous systems as reported by the RIPEstat Data "

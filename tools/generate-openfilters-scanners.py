@@ -241,11 +241,11 @@ def process(members, org, dst):
         "type": "cidr",
         "list": consolidate_networks(networks),
         "matching_attributes": matching_attributes,
+        # Scanner traffic is genuinely the scanner's own, so a hit is shared
+        # infrastructure rather than a false positive. A category already set
+        # on the committed list wins, for the same reason the name does.
+        "category": (existing or {}).get("category", "known"),
     }
-    # Same reason as the name: a category set on the committed list is a
-    # deliberate statement, and dropping it would silently revert it.
-    if existing is not None and "category" in existing:
-        warninglist["category"] = existing["category"]
     write_to_file(warninglist, dst)
 
 

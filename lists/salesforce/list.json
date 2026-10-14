@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Salesforce IP address ranges, from their published ip-ranges endpoint (https://ip-ranges.salesforce.com/ip-ranges.json). These are fixed SaaS service endpoints rather than rentable compute, which makes them cleaner warninglist material: the addresses stay tied to Salesforce's own platform instead of to whichever tenant rented them today.",
   "list": [
     "129.77.12.0/23",
@@ -48,5 +49,5 @@
   ],
   "name": "List of known Salesforce IP address ranges",
   "type": "cidr",
-  "version": 20260901
+  "version": 20261014
 }

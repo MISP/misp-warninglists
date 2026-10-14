@@ -181,6 +181,7 @@ def main():
     warninglist = {
         "name": "List of known Rackspace IP address ranges",
         "version": get_version(),
+        "category": "known",
         "description": (
             "Rackspace IP address ranges, from the prefixes announced by the "
             "Rackspace autonomous systems (RIPEstat announced-prefixes). Note "

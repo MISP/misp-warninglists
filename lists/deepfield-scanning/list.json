@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation Nokia Deepfield (deepfield.net), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "195.178.110.162/32",
@@ -59,5 +60,5 @@
   ],
   "name": "Nokia Deepfield (deepfield.net) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

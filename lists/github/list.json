@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "GitHub IP address ranges (https://api.github.com/meta)",
   "list": [
     "100.62.132.232/32",
@@ -5215,5 +5216,5 @@
   ],
   "name": "List of known GitHub IP ranges (https://api.github.com/meta)",
   "type": "cidr",
-  "version": 20261005
+  "version": 20261014
 }

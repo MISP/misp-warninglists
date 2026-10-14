@@ -100,6 +100,7 @@ def main():
     warninglist = {
         "name": "List of known Huawei Cloud IP address ranges",
         "version": get_version(),
+        "category": "known",
         "description": (
             "Huawei Cloud IP address ranges, from the RFC 8805 geofeed Huawei "
             "publishes for its cloud regions ({}), the file referenced by the "

@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation IPIP (ipip.net), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "103.16.130.243/32",
@@ -66,5 +67,5 @@
   ],
   "name": "IPIP (ipip.net) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

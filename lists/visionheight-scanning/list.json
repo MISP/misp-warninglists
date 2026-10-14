@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation VisionHeight (visionheight.com), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "100.28.153.226/32",
@@ -221,5 +222,5 @@
   ],
   "name": "VisionHeight (visionheight.com) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260908
+  "version": 20261014
 }

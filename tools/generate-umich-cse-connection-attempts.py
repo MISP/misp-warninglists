@@ -27,6 +27,7 @@ def process(content: str, dst: str):
     warninglist = {
         "name": "University of Michigan CSE connection-attempt network ranges",
         "version": get_version(),
+        "category": "known",
         "description": "University of Michigan Computer Science and Engineering connection attempts page (https://cse.engin.umich.edu/about/resources/connection-attempts/)",
         "type": "cidr",
         "list": consolidate_networks(networks),

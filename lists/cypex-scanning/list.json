@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation Cypex (cypex.ai), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "18.117.57.162/32",
@@ -32,5 +33,5 @@
   ],
   "name": "Cypex (cypex.ai) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

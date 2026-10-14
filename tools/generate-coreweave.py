@@ -145,6 +145,7 @@ def main():
     warninglist = {
         "name": "List of known CoreWeave IP address ranges",
         "version": get_version(),
+        "category": "known",
         "description": (
             "CoreWeave IP address ranges, from the prefixes announced by the "
             "autonomous systems held by CoreWeave, Inc (AS33425, AS46992) as "

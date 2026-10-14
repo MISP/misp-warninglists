@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "List of known Bunny.net CDN IP ranges (https://support.bunny.net/hc/en-us/articles/115003578911-How-to-detect-when-BunnyCDN-PoP-servers-are-accessing-your-backend)",
   "list": [
     "102.219.126.20",
@@ -919,5 +920,5 @@
   ],
   "name": "List of known Bunny.net CDN ranges",
   "type": "cidr",
-  "version": 20261005
+  "version": 20261014
 }

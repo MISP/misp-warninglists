@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Specialized list of IPv4 addresses belonging to Tor exit nodes, from https://github.com/X4BNet/lists_torexit",
   "list": [
     "102.130.113.9/32",
@@ -842,5 +843,5 @@
   ],
   "name": "List of known Tor exit nodes",
   "type": "cidr",
-  "version": 20261005
+  "version": 20261014
 }
