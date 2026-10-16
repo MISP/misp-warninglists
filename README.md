@@ -61,6 +61,8 @@ There is also a standalone software project called [misp-feedback](https://githu
 - [cybergreen-nt-scanning/list.json](./lists/cybergreen-nt-scanning/list.json) - **Cybergreen IP Ranges Used for Scanning** - _List containing IP's associated with the Cybergreen scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2025/12/10_
 - [cyberresilience-nt-scanning/list.json](./lists/cyberresilience-nt-scanning/list.json) - **Cyberresilience IP Ranges Used for Scanning** - _List containing IP's associated with the Cyberresilience scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/08/10_
 - [cypex-nt-scanning/list.json](./lists/cypex-nt-scanning/list.json) - **Cypex IP Ranges Used for Scanning** - _List containing IP's associated with the Cypex scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/04/09_
+- [datacenter-ipv4/list.json](./lists/datacenter-ipv4/list.json) - **List of known IPv4 networks belonging to datacenters and VPN providers** - _IPv4 networks belonging to datacenters and VPN providers, from https://raw.githubusercontent.com/X4BNet/lists_vpn/main/output/datacenter/ipv4.txt_
+- [datacenter-ipv6/list.json](./lists/datacenter-ipv6/list.json) - **List of known IPv6 networks belonging to datacenters and VPN providers** - _IPv6 networks belonging to datacenters and VPN providers, from https://raw.githubusercontent.com/X4BNet/lists_vpn/main/output/datacenter/ipv6.txt_
 - [dax30/list.json](./lists/dax30/list.json) - **List of known dax30 webpages** - _Event contains one or more entries of known dax30 webpages_
 - [digitalocean/list.json](./lists/digitalocean/list.json) - **List of known DigitalOcean IP address ranges** - _DigitalOcean IP address ranges, from their published RFC 8805 geofeed (https://digitalocean.com/geo/google.csv)_
 - [digitalside/list.json](./lists/digitalside/list.json) - **OSINT.DigitalSide.IT Warning List** - _OSINT DigitalSide Threat-Intel Repository - MISP Warninglist - List of domains should be marked as false positive in the related MISP event with IDS attribute not flagged_
@@ -167,8 +169,8 @@ There is also a standalone software project called [misp-feedback](https://githu
 - [umich-cse-connection-attempts/list.json](./lists/umich-cse-connection-attempts/list.json) - **University of Michigan CSE connection-attempt network ranges** - _University of Michigan Computer Science and Engineering connection attempts page (https://cse.engin.umich.edu/about/resources/connection-attempts/)_
 - [university_domains/list.json](./lists/university_domains/list.json) - **University domains** - _List of University domains from https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json_
 - [url-shortener/list.json](./lists/url-shortener/list.json) - **List of known URL Shorteners domains** - _Event contains one or more entries of known Shorteners domains_
-- [vpn-ipv4/list.json](./lists/vpn-ipv4/list.json) - **Specialized list of vpn-ipv4 addresses belonging to common VPN providers and datacenters** - _Specialized list of vpn-ipv4 addresses belonging to common VPN providers and datacenters_
-- [vpn-ipv6/list.json](./lists/vpn-ipv6/list.json) - **Specialized list of vpn-ipv6 addresses belonging to common VPN providers and datacenters** - _Specialized list of vpn-ipv6 addresses belonging to common VPN providers and datacenters_
+- [vpn-ipv4/list.json](./lists/vpn-ipv4/list.json) - **List of known IPv4 networks belonging to common VPN providers** - _IPv4 networks belonging to common VPN providers, from https://raw.githubusercontent.com/X4BNet/lists_vpn/main/output/vpn/ipv4.txt_
+- [vpn-ipv6/list.json](./lists/vpn-ipv6/list.json) - **List of known IPv6 networks belonging to common VPN providers** - _IPv6 networks belonging to common VPN providers, from https://raw.githubusercontent.com/X4BNet/lists_vpn/main/output/vpn/ipv6.txt_
 - [whats-my-ip/list.json](./lists/whats-my-ip/list.json) - **List of known domains to know external IP** - _Event contains one or more entries of known 'what's my ip' domains_
 - [wikimedia/list.json](./lists/wikimedia/list.json) - **List of known Wikimedia address ranges** - _Wikimedia address ranges (https://wikitech.wikimedia.org/w/api.php?action=parse&page=IP_and_AS_allocations&format=json&prop=wikitext)_
 - [windows-binary-hashes/list.json](./lists/windows-binary-hashes/list.json) - **List of known hashes for Windows binaries** - _List of known Windows binaries based on hashes from winbindex (https://github.com/m417z/winbindex)_
@@ -206,7 +208,20 @@ If matching_attributes are not set, the list is matched against any type of attr
 - ```cidr``` - IP or CDIR block matching in the warning list against matching attributes
 - ```regex``` - regex matching of a string matching attributes
 
+## category of warning list
+
+The optional `category` field states what a hit on the list means:
+
+- ```false_positive``` (default) - the value is very unlikely to be the indicator itself (e.g. RFC1918 addresses, public DNS resolvers, popular domains); reports of it are usually extraction or logging artifacts.
+- ```known``` - the value belongs to shared or multi-tenant infrastructure (e.g. cloud and CDN ranges, URL shorteners, dynamic DNS, VPN providers, research scanners). A report naming it as malicious can still be true, but acting on it (blocking, takedown) will also hit unrelated users of the same infrastructure.
+
 # Processing warning lists in python
+
+The X4BNet-based `vpn-ipv4` and `vpn-ipv6` lists use the known VPN networks feed.
+The broader `datacenter-ipv4` and `datacenter-ipv6` lists include both datacenters
+and VPN providers. Enable the datacenter lists as well when the previous combined
+VPN and datacenter coverage is needed. Running `python3 tools/generate-vpn.py`
+updates all four lists from X4BNet's `output/vpn/` and `output/datacenter/` feeds.
 
 See [PyMISPWarningLists](https://github.com/MISP/PyMISPWarningLists) for a
 python interface to warning lists.
@@ -214,3 +229,6 @@ python interface to warning lists.
 # License
 
 MISP warning-lists are licensed under [CC0 1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/) -  Public Domain Dedication. If a specific author of a warning-list (or associated source) wants to license it under a different license, a pull request can be requested.
+
+The X4BNet-derived VPN and datacenter data retain their upstream
+[MIT license notice](doc/licenses/X4BNet-lists_vpn.txt).

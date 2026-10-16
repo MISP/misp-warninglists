@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation bufferover.run / erbbysam (bufferover.run), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "139.144.235.132/32",
@@ -59,5 +60,5 @@
   ],
   "name": "bufferover.run / erbbysam (bufferover.run) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

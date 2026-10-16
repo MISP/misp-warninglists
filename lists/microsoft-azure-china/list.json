@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Microsoft Azure China Datacenter IP Ranges",
   "list": [
     "103.9.10.0/24",
@@ -167,5 +168,5 @@
   ],
   "name": "List of known Microsoft Azure China Datacenter IP Ranges",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

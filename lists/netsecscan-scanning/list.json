@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "List of NetSecScan.net scanners ",
   "list": [
     "89.248.167.132/31",
@@ -22,5 +23,5 @@
   ],
   "name": "NetSecScan IP-Ranges, pot. used for Scanning",
   "type": "cidr",
-  "version": 20251029
+  "version": 20261014
 }

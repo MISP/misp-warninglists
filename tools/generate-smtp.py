@@ -78,6 +78,7 @@ if __name__ == '__main__':
     warninglist = {
         'name': "List of known SMTP sending IP ranges",
         'version': get_version(),
+        'category': 'known',
         'description': "List of IP ranges for known SMTP servers.",
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"],
         'type': 'cidr',

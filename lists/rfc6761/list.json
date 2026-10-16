@@ -19,9 +19,13 @@
     "29.172.in-addr.arpa",
     "30.172.in-addr.arpa",
     "31.172.in-addr.arpa",
+    "example",
     "example.com",
     "example.net",
-    "example.org"
+    "example.org",
+    "invalid",
+    "localhost",
+    "test"
   ],
   "matching_attributes": [
     "hostname",
@@ -30,5 +34,5 @@
   ],
   "name": "List of RFC 6761 Special-Use Domain Names",
   "type": "string",
-  "version": 20210610
+  "version": 20260908
 }

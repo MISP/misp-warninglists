@@ -79,6 +79,7 @@ def main():
     warninglist = {
         "name": "List of known Hetzner IP address ranges",
         "version": get_version(),
+        "category": "known",
         "description": DESCRIPTION,
         "type": "cidr",
         "list": consolidate_networks(networks),

@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation Adscore (adscore.com), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "185.200.118.32/32",
@@ -26,5 +27,5 @@
   ],
   "name": "Adscore (adscore.com) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

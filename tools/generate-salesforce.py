@@ -87,6 +87,7 @@ def main():
     warninglist = {
         "name": "List of known Salesforce IP address ranges",
         "version": get_version(),
+        "category": "known",
         "description": (
             "Salesforce IP address ranges, from their published ip-ranges "
             "endpoint ({}). These are fixed SaaS service endpoints rather "

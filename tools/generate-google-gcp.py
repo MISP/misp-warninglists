@@ -14,6 +14,7 @@ if __name__ == '__main__':
     warninglist = {
         'name': "List of known GCP (Google Cloud Platform) IP address ranges",
         'version': get_version(),
+        'category': 'known',
         'description': "GCP (Google Cloud Platform) IP address ranges (https://www.gstatic.com/ipranges/cloud.json)",
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"],
         'type': 'cidr',

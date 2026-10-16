@@ -9,6 +9,7 @@ def process(file, dst):
     warninglist = {
         'name': "List of known Fastly IP address ranges",
         'version': get_version(),
+        'category': 'known',
         'description': "Fastly IP address ranges (https://api.fastly.com/public-ip-list)",
         'type': "cidr",
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]

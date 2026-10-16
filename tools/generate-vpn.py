@@ -1,15 +1,42 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from generator import process_stream, get_version, write_to_file, consolidate_networks
+from ipaddress import ip_network
+
+from generator import download, get_version, write_to_file, consolidate_networks
 
 
-def process(url, dst):
+SOURCE = 'https://raw.githubusercontent.com/X4BNet/lists_vpn/main/output'
+CATEGORIES = {
+    'vpn': 'common VPN providers',
+    'datacenter': 'datacenters and VPN providers',
+}
+
+
+def process(category, ip_version):
+    dst = '{}-ipv{}'.format(category, ip_version)
+    url = '{}/{}/ipv{}.txt'.format(SOURCE, category, ip_version)
+    response = download(url)
+    response.raise_for_status()
+
+    networks = []
+    for line in response.text.splitlines():
+        line = line.strip()
+        if not line or line.startswith('#'):
+            continue
+        network = ip_network(line)
+        if network.version != ip_version:
+            raise ValueError('Unexpected IP version in {}: {}'.format(url, line))
+        networks.append(network)
+    if not networks:
+        raise ValueError('No networks found in {}, refusing to write an empty list'.format(url))
+
     warninglist = {
-        'name': 'Specialized list of {} addresses belonging to common VPN providers and datacenters'.format(dst),
+        'name': 'List of known IPv{} networks belonging to {}'.format(ip_version, CATEGORIES[category]),
         'version': get_version(),
-        'description': 'Specialized list of {} addresses belonging to common VPN providers and datacenters'.format(dst),
-        'list': consolidate_networks(process_stream(url)),
+        'category': 'known',
+        'description': 'IPv{} networks belonging to {}, from {}'.format(ip_version, CATEGORIES[category], url),
+        'list': consolidate_networks(networks),
         'type': 'cidr',
         'matching_attributes': ["ip-src", "ip-dst", "domain|ip", "ip-src|port", "ip-dst|port"]
     }
@@ -17,11 +44,11 @@ def process(url, dst):
     write_to_file(warninglist, dst)
 
 
-if __name__ == '__main__':
-    url = 'https://raw.githubusercontent.com/X4BNet/lists_vpn/main/ipv4.txt'
-    dst = 'vpn-ipv4'
-    process(url, dst)
+def main():
+    for category in CATEGORIES:
+        for ip_version in (4, 6):
+            process(category, ip_version)
 
-    url = 'https://raw.githubusercontent.com/X4BNet/lists_vpn/main/ipv6.txt'
-    dst = 'vpn-ipv6'
-    process(url, dst)
+
+if __name__ == '__main__':
+    main()

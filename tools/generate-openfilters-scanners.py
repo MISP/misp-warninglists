@@ -241,6 +241,10 @@ def process(members, org, dst):
         "type": "cidr",
         "list": consolidate_networks(networks),
         "matching_attributes": matching_attributes,
+        # Scanner traffic is genuinely the scanner's own, so a hit is shared
+        # infrastructure rather than a false positive. A category already set
+        # on the committed list wins, for the same reason the name does.
+        "category": (existing or {}).get("category", "known"),
     }
     write_to_file(warninglist, dst)
 

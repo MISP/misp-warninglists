@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "CacheFly IP address ranges (https://cachefly.cachefly.net/ips/cdn.txt)",
   "list": [
     "167.71.238.159/32",
@@ -21,5 +22,5 @@
   ],
   "name": "List of known CacheFly IP address ranges",
   "type": "cidr",
-  "version": 20260831
+  "version": 20261014
 }

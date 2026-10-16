@@ -26,11 +26,12 @@ python3 generate-sinkholes.py
 python3 generate-coreweave.py
 python3 generate_majestic-million.py -n 10000
 python3 generate-microsoft-azure.py
-python3 generate-scaleway.py
+# python3 generate-scaleway.py - now generating 404
 # See https://github.com/MISP/misp-warninglists/issues/319
 python3 generate_mozilla_certificates.py
 python3 generate_moz-top500.py
 python3 generate-office365.py
+python3 generate-microsoft.py
 python3 generate-leaseweb.py
 python3 generate_phone_numbers.py
 #python3 generate-stackpath.py  # source https://k3t9x2h3.map2.ssl.hwcdn.net/ipblocks.txt is dead (NXDOMAIN); StackPath wound down its CDN and hwcdn.net is now a parked domain-for-sale page
@@ -38,6 +39,7 @@ python3 generate-tlds.py
 python3 generate-rfc6761.py
 python3 generate-salesforce.py
 python3 generate-github.py
+python3 generate-captive-portals.py
 python3 generate-vultr.py
 python3 generate-public-ipfs-gateways.py
 python3 generate_tranco.py
@@ -67,11 +69,12 @@ python3 generate-modat-scanner.py
 python3 generate-internetcleanup-scanner.py
 python3 generate-apple-domains.py
 python3 generate-icloud-private-relay.py
+python3 generate-google-vpn.py
 python3 generate-driftnet.py
 #python3 generate-umich-cse-connection-attempts.py # ON HOLD: source protected by Cloudflare managed JS challenge (HTTP 403, Cf-Mitigated: challenge header) as of 2026-08-29; not a User-Agent issue, requests-based fetch cannot pass itpython3 generate-icloud-private-relay.py
 python3 generate-bunny-net.py
 python3 generate-ovh.py
-python3 generate-microsoft-mdca.py
+# python3 generate-microsoft-mdca.py - 404
 python3 generate-palo-alto-networks-cortex-cloud.py
 python3 generate-openfilters-scanners.py
 python3 generate-lots-project.py
@@ -82,7 +85,7 @@ python3 generate-imperva.py
 python3 generate-gcore.py
 python3 generate-cachefly.py
 python3 generate-cdn77.py
-python3 generate-sucuri.py
+# python3 generate-sucuri.py - ValueError: '&lt;/FilesMatch&gt;' does not appear to be an IPv4 or IPv6 network
 python3 generate-digitalocean.py
 python3 generate-linode.py
 popd

@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "Published source ranges of the internet-wide scanning organisation 360 Quake (quake.360.net), as tracked by https://github.com/OpenFilters/internet-scanners",
   "list": [
     "1.192.192.4/32",
@@ -51,8 +52,8 @@
     "106.63.26.155/32",
     "106.63.26.156/31",
     "106.63.26.20/32",
-    "106.63.26.28/32",
-    "106.63.26.6/32",
+    "106.63.26.28/31",
+    "106.63.26.6/31",
     "106.63.26.8/32",
     "107.150.101.57/32",
     "107.150.103.155/32",
@@ -514,5 +515,5 @@
   ],
   "name": "360 Quake (quake.360.net) IP ranges used for scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

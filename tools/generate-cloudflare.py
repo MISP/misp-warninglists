@@ -8,6 +8,7 @@ def process(files, dst):
     warninglist = {
         'name': "List of known Cloudflare IP ranges",
         'version': get_version(),
+        'category': 'known',
         'description': "List of known Cloudflare IP ranges (https://www.cloudflare.com/ips/)",
         'type': "cidr",
         'list': [],

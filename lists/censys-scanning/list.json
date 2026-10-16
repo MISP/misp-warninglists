@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "List containing IP's associated with Censys scanning [https://support.censys.io/hc/en-us/articles/360043177092-Opt-Out-of-Data-Collection#Can_I_opt_out_of_Censys_data_collection?]",
   "list": [
     "162.142.125.0/24",
@@ -34,5 +35,5 @@
   ],
   "name": "Censys IP Ranges Used for Scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

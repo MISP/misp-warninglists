@@ -11,6 +11,7 @@ def process(file, dst):
     warninglist = {
         'name': "List of known Palo Alto Cortex Cloud IP ranges",
         'version': get_version(),
+        'category': 'known',
         'description': "Palo Alto Cortex Cloud IP address ranges (https://docs.ovhcloud.com/en/guides/web-cloud/web-hosting/clusters-and-shared-hosting-ip)",
         'type': "cidr",
         'list': [],

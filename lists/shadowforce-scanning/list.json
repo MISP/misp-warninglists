@@ -1,4 +1,5 @@
 {
+  "category": "known",
   "description": "List of shadowforce.io scanners ",
   "list": [
     "128.199.44.215/32",
@@ -34,5 +35,5 @@
   ],
   "name": "Shadowforce IP-Ranges, pot. used for Scanning",
   "type": "cidr",
-  "version": 20260829
+  "version": 20261014
 }

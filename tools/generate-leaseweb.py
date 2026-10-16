@@ -214,6 +214,7 @@ def main():
     warninglist = {
         "name": "List of known Leaseweb IP address ranges",
         "version": get_version(),
+        "category": "known",
         "description": (
             "Leaseweb IP address ranges, from the prefixes announced by the "
             "autonomous systems held by the Leaseweb group, as reported by "

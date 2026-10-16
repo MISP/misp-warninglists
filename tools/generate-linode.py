@@ -70,6 +70,7 @@ def main():
     warninglist = {
         "name": "List of known Linode (Akamai Connected Cloud) IP address ranges",
         "version": get_version(),
+        "category": "known",
         "description": (
             "Linode (Akamai Connected Cloud) IP address ranges, from their "
             "published RFC 8805 geofeed ({})".format(URL)

@@ -2528,6 +2528,7 @@
     "flights.google.com",
     "flip0101.page.link",
     "flow.google",
+    "flow.google.com",
     "fls.au.doubleclick.net",
     "fls.doubleclick.net",
     "fls.uk.doubleclick.net",
@@ -2680,6 +2681,8 @@
     "gemini.google",
     "gemini.google.com",
     "gemini.gstatic.com",
+    "geminiweb-pa.clients.google.com",
+    "geminiweb-pa.clients6.google.com",
     "generativeai.google",
     "generativelanguage.googleapis.com",
     "geo0.ggpht.com",
@@ -3822,6 +3825,7 @@
     "labs.google",
     "labs.google.com",
     "labs1.google.com",
+    "labstailwind.pa.googleapis.com",
     "lagupop-c7585.firebaseio.com",
     "lamssettings-pa.googleapis.com",
     "landing.google.com",
@@ -4541,6 +4545,7 @@
     "notafiscal01.page.link",
     "notafiscal01920.page.link",
     "notafiscal01992.page.link",
+    "notebook.google",
     "notebook.google.com",
     "notebooklm-pa.googleapis.com",
     "notebooklm.google",
@@ -5809,6 +5814,8 @@
     "redis.googleapis.com",
     "redwood.corp.google.com",
     "redwood2.corp.google.com",
+    "refergoogleworkspace.withgoogle.com",
+    "referworkspace.app.goo.gl",
     "regioinfo-pa.googleapis.com",
     "region1.analytics.google.com",
     "region1.app-measurement.com",
@@ -7559,5 +7566,5 @@
   ],
   "name": "List of known google domains",
   "type": "hostname",
-  "version": 20260829
+  "version": 20261005
 }

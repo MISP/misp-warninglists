@@ -18,6 +18,7 @@ def process(file, dst):
     warninglist = {
         'name': 'List of known Oracle Cloud Infrastructure (OCI) IP address ranges',
         'version': get_version(),
+        'category': 'known',
         'description': 'Oracle Cloud Infrastructure (OCI) IP address ranges (https://docs.oracle.com/en-us/iaas/Content/General/Concepts/addressranges.htm)',
         'type': 'cidr',
         'list': consolidate_networks(l),

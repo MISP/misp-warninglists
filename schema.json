@@ -2,6 +2,13 @@
   "additionalProperties": false,
   "id": "https://www.github.com/MISP/misp-warninglists/schema.json",
   "properties": {
+    "category": {
+      "enum": [
+        "false_positive",
+        "known"
+      ],
+      "type": "string"
+    },
     "description": {
       "type": "string"
     },
