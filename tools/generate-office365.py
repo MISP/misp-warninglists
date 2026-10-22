@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from generator import download, get_public_suffixes, get_version, write_to_file, consolidate_networks
+from generator import CERTIFICATE_AUTHORITY_DOMAINS, download, get_public_suffixes, get_version, write_to_file, consolidate_networks
 
 
 def process(url):
     lurls, lips = get_lists(url)
     # A public suffix (e.g. "azurewebsites.net") would match names registered
-    # by any customer of that platform, not by Microsoft.
+    # by any customer of that platform, not by Microsoft. Certificate
+    # authorities' CRL / OCSP endpoints are not Office 365 endpoints of their
+    # own, and would be suppressed for every other vendor using the same CA.
     public_suffixes = get_public_suffixes()
-    lurls = [u for u in lurls if u not in public_suffixes]
+    lurls = [u for u in lurls
+             if u not in public_suffixes
+             and '.'.join(u.split('.')[-2:]) not in CERTIFICATE_AUTHORITY_DOMAINS]
 
     # URLs of services
     office365_urls_dst = 'microsoft-office365'

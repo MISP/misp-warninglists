@@ -54,7 +54,9 @@ skipped:
 import json
 import logging
 
-from generator import download, get_abspath_list_file, get_public_suffixes, get_version, write_to_file
+from generator import (
+    CERTIFICATE_AUTHORITY_DOMAINS, download, get_abspath_list_file, get_public_suffixes, get_version, write_to_file
+)
 
 # A fixed request id, as the web service requires; the same convention as
 # generate-office365.py. See
@@ -78,19 +80,7 @@ INSTANCES = ("Worldwide", "China", "USGOVDoD", "USGOVGCCHigh", "Germany")
 # published candidates; it can never invent one.
 EXCLUDED_DOMAINS = {
     # Certificate authorities: CRL / OCSP / AIA endpoints
-    "digicert.com": "certificate authority",
-    "globalsign.com": "certificate authority",
-    "globalsign.net": "certificate authority",
-    "entrust.net": "certificate authority",
-    "geotrust.com": "certificate authority",
-    "identrust.com": "certificate authority",
-    "letsencrypt.org": "certificate authority",
-    "omniroot.com": "certificate authority (Baltimore/DigiCert root)",
-    "public-trust.com": "certificate authority",
-    "symcb.com": "certificate authority (Symantec)",
-    "symcd.com": "certificate authority (Symantec)",
-    "verisign.com": "certificate authority",
-    "verisign.net": "certificate authority",
+    **CERTIFICATE_AUTHORITY_DOMAINS,
     # Third-party content delivery networks
     "akamaihd.net": "Akamai CDN, not a Microsoft domain",
     "cdnsvc.com": "third-party CDN fronting the China instance",
