@@ -1,13 +1,27 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
+from generator import (
+    MULTI_TENANT_DOMAINS, download_to_file, filter_hostname_entries, get_version, write_to_file, get_abspath_source_file
+)
 import os
+
+# The list is of type "hostname", so an entry also matches all its subdomains.
+# Entries whose subdomains belong to third parties are dropped; public
+# suffixes and their parents are dropped by filter_hostname_entries() itself.
+TOO_WIDE = MULTI_TENANT_DOMAINS
+
+# Values seen in the datasets that are not domains: the CSV header, and a
+# broken line. Other malformed values are caught by the syntax check.
+JUNK = {
+    "domain",
+    '"com,thefatherofsalmon.com.host"',
+}
 
 def process(dataset_files, base_dst):
     warninglist = {
         'version': get_version(),
-        'type': "string",
+        'type': "hostname",
         'matching_attributes': ["hostname", "domain", "url", "domain|ip"]
     }
 
@@ -28,8 +42,7 @@ def process(dataset_files, base_dst):
             'list': [],
         })
         
-        for ip in ips:
-            warninglist['list'].append(ip.strip())
+        warninglist['list'] = filter_hostname_entries(ips, too_wide=TOO_WIDE, junk=JUNK)
 
         write_to_file(warninglist, base_dst + dataset_pretty_name)
 

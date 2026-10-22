@@ -4264,7 +4264,6 @@
     "kukinfo.com",
     "kul.lublin.pl",
     "kulak.kuleuven.be",
-    "kuleuven.be",
     "kumagaku.ac.jp",
     "kumamoto-u.ac.jp",
     "kumaununiversity.org",
@@ -4844,7 +4843,6 @@
     "miigaik.ru",
     "miit.ru",
     "miit.unikl.edu.my",
-    "mil.lv",
     "miles.edu",
     "milescc.edu",
     "millersville.edu",
@@ -5078,7 +5076,6 @@
     "mum.edu",
     "mums.ac.ir",
     "mundragon.edu",
-    "muni.cz",
     "muni.es",
     "muq.ac.ir",
     "murdoch.edu.au",
@@ -6298,7 +6295,6 @@
     "riphah.edu.pk",
     "ripon.edu",
     "ris.ac.jp",
-    "rit.edu",
     "ritchennai.org",
     "riths.ac.in",
     "ritsumei.ac.jp",
@@ -6389,7 +6385,6 @@
     "rug.edu.sa",
     "rug.nl",
     "ruh.ac.lk",
-    "ruhr-uni-bochum.de",
     "rule.edu.kh",
     "rumc.edu.my",
     "rumeli.edu.tr",
@@ -10597,6 +10592,6 @@
     "domain|ip"
   ],
   "name": "University domains",
-  "type": "string",
-  "version": 20261005
+  "type": "hostname",
+  "version": 20261022
 }

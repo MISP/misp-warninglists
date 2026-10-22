@@ -1,8 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
+from generator import (
+    MULTI_TENANT_DOMAINS, download_to_file, filter_hostname_entries, get_version, write_to_file, get_abspath_source_file
+)
 import argparse
+
+# The list is of type "hostname", so an entry also matches all its subdomains.
+# Entries whose subdomains belong to third parties are dropped; public
+# suffixes and their parents are dropped by filter_hostname_entries() itself.
+TOO_WIDE = MULTI_TENANT_DOMAINS
+
+# Values seen in the dataset that are not domains. None so far: malformed
+# values are caught by the syntax check in filter_hostname_entries().
+JUNK = set()
 
 
 def process(file, dst, numbers):
@@ -15,13 +26,12 @@ def process(file, dst, numbers):
         'version': get_version(),
         'description': f'Event contains one or more entries from the top {numbers} of the most used websites (Majestic Million).',
         'matching_attributes': ['hostname', 'domain'],
-        'type': 'string',
+        'type': 'hostname',
         'list': []
     }
 
-    for site in sites:
-        v = site.split(',')[2]
-        warninglist['list'].append(v.rstrip())
+    domains = [site.split(',')[2] for site in sites]
+    warninglist['list'] = filter_hostname_entries(domains, too_wide=TOO_WIDE, junk=JUNK)
 
     write_to_file(warninglist, dst)
 
