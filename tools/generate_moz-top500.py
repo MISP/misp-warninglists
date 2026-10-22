@@ -3,7 +3,18 @@
 
 import csv
 
-from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
+from generator import (
+    MULTI_TENANT_DOMAINS, download_to_file, filter_hostname_entries, get_version, write_to_file, get_abspath_source_file
+)
+
+# The list is of type "hostname", so an entry also matches all its subdomains.
+# Entries whose subdomains belong to third parties are dropped; public
+# suffixes and their parents are dropped by filter_hostname_entries() itself.
+TOO_WIDE = MULTI_TENANT_DOMAINS
+
+# Values seen in the dataset that are not domains. None so far: malformed
+# values are caught by the syntax check in filter_hostname_entries().
+JUNK = set()
 
 
 # TODO: Include MozRank
@@ -13,7 +24,7 @@ def process(files, dst):
         'description': "Event contains one or more entries from the top 500 of the most used domains from Moz.",
         'version': get_version(),
         'name': "Top 500 domains and pages from https://moz.com/top500",
-        'type': 'string',
+        'type': 'hostname',
         'list': [],
         'matching_attributes': ['hostname', 'domain', 'uri', 'url']
     }
@@ -29,6 +40,8 @@ def process(files, dst):
                     continue
                 v = row[1]
                 warninglist['list'].append(v.rstrip().rstrip('/'))
+
+    warninglist['list'] = filter_hostname_entries(warninglist['list'], too_wide=TOO_WIDE, junk=JUNK)
 
     write_to_file(warninglist, dst)
 

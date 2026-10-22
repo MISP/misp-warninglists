@@ -33,6 +33,6 @@
     "domain|ip"
   ],
   "name": "List of RFC 6761 Special-Use Domain Names",
-  "type": "string",
-  "version": 20260908
+  "type": "hostname",
+  "version": 20261022
 }

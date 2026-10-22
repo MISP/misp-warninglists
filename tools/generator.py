@@ -2,6 +2,7 @@ import datetime
 import ipaddress
 import json
 import logging
+import re
 from inspect import currentframe, getframeinfo, getmodulename, stack
 from os import mkdir, path, makedirs
 from typing import List, Union
@@ -131,6 +132,122 @@ def get_abspath_source_file(dst):
     if not path.exists(tmp_path):
         mkdir(tmp_path)
     return path.abspath(path.realpath(path.join(tmp_path, '{dst}'.format(dst=dst))))
+
+
+# Registrable domains of certificate authorities whose CRL / OCSP / AIA
+# endpoints Microsoft publishes as service endpoints. They are not Microsoft
+# domains, and listing them would suppress them for every other vendor using
+# the same CA too.
+CERTIFICATE_AUTHORITY_DOMAINS = {
+    "digicert.com": "certificate authority",
+    "globalsign.com": "certificate authority",
+    "globalsign.net": "certificate authority",
+    "entrust.net": "certificate authority",
+    "geotrust.com": "certificate authority",
+    "identrust.com": "certificate authority",
+    "letsencrypt.org": "certificate authority",
+    "omniroot.com": "certificate authority (Baltimore/DigiCert root)",
+    "public-trust.com": "certificate authority",
+    "symcb.com": "certificate authority (Symantec)",
+    "symcd.com": "certificate authority (Symantec)",
+    "verisign.com": "certificate authority",
+    "verisign.net": "certificate authority",
+}
+
+
+def get_public_suffixes():
+    '''
+        Return the Public Suffix List entries, as committed in the
+        second-level-tlds warninglist.
+
+        A "hostname" warninglist matches an entry and every subdomain of it,
+        so an entry that is itself a public suffix (azurewebsites.net,
+        blob.core.windows.net, ...) would match names registered by
+        arbitrary third parties.
+    '''
+    with open(get_abspath_list_file('second-level-tlds')) as data_file:
+        return set(json.load(data_file)['list'])
+
+
+# Domains whose subdomains are handed out to arbitrary customers or users, but
+# which the Public Suffix List does not (yet) record. In a "hostname"
+# warninglist such an entry would match every customer's site, malicious ones
+# included. Generators of popularity / ranking lists add these to their own
+# TOO_WIDE blacklist.
+MULTI_TENANT_DOMAINS = {
+    # Blogs, site builders, shops and forms: <user>.<domain>
+    "000webhostapp.com", "3dcartstores.com", "bigcartel.com", "blogspot.de",
+    "business.site", "free.fr", "godaddysites.com", "gumroad.com",
+    "hs-sites.com", "hubspotpagebuilder.com", "jimdo.com", "jimdosite.com",
+    "livejournal.com", "mailchimpsites.com", "medium.com", "myportfolio.com",
+    "mystrikingly.com", "narod.ru", "neocities.org", "podia.com",
+    "site123.me", "squarespace.com", "strikingly.com", "substack.com",
+    "teachable.com", "thinkific.com", "tilda.ws", "tumblr.com",
+    "typeform.com", "ucoz.com", "ucoz.net", "ucoz.ru", "webnode.com",
+    "weebly.com", "wordpress.com", "wufoo.com",
+    # SaaS tenants: <tenant>.<domain>
+    "atlassian.net", "auth0.com", "box.com", "force.com", "freshdesk.com",
+    "okta.com", "oktapreview.com", "onelogin.com", "salesforce-sites.com",
+    "service-now.com", "sharepoint.com", "webex.com", "zendesk.com",
+    "zoom.us",
+    # Cloud storage, hosting, CDN and tunnels: <bucket|app|zone>.<domain>
+    "amazonaws.com", "appdomain.cloud", "b-cdn.net", "backblazeb2.com",
+    "dropboxusercontent.com", "fastly.net", "firebaseio.com", "glitch.me",
+    "googleusercontent.com", "loca.lt", "localtunnel.me", "on.aws",
+    "railway.app", "serveo.net", "storage.googleapis.com", "wasabisys.com",
+    "windows.net",
+}
+
+HOSTNAME_RE = re.compile(
+    r'^(?=.{1,253}$)(?!-)[a-z0-9_-]{1,63}(?<!-)(\.(?!-)[a-z0-9_-]{1,63}(?<!-))+$'
+)
+
+
+def filter_hostname_entries(entries, too_wide=frozenset(), junk=frozenset()):
+    '''
+        Normalise the entries of a "hostname" warninglist and drop those that
+        do not belong in one. Returns the kept entries.
+
+        An entry is normalised by stripping whitespace and surrounding dots and
+        lowercasing it, as MISP core does when loading a "hostname" list.
+
+        Junk: entries in `junk`, or that are not a syntactically valid host
+        name of at least two labels (CSV headers, broken lines, bare TLDs).
+
+        Too wide: entries in `too_wide`, entries that are themselves a public
+        suffix, and entries a public suffix sits under (amazonaws.com, for
+        s3.amazonaws.com). A "hostname" entry matches every subdomain, so
+        these would match names registered by arbitrary third parties.
+    '''
+    frame_records = stack()[1]
+    caller = getmodulename(frame_records[1]).upper()
+
+    public_suffixes = get_public_suffixes()
+    public_suffix_parents = set()
+    for suffix in public_suffixes:
+        labels = suffix.split('.')
+        for i in range(1, len(labels)):
+            public_suffix_parents.add('.'.join(labels[i:]))
+
+    kept = []
+    dropped_junk = set()
+    dropped_too_wide = set()
+    for entry in entries:
+        value = entry.strip().strip('.').lower()
+        if entry in junk or value in junk or not HOSTNAME_RE.match(value):
+            dropped_junk.add(entry)
+        elif value in too_wide or value in public_suffixes or value in public_suffix_parents:
+            dropped_too_wide.add(value)
+        else:
+            kept.append(value)
+
+    if dropped_junk:
+        logging.info('{} dropped {} junk entries: {}'.format(
+            caller, len(dropped_junk), sorted(dropped_junk)))
+    if dropped_too_wide:
+        logging.info('{} dropped {} too wide entries: {}'.format(
+            caller, len(dropped_too_wide), sorted(dropped_too_wide)))
+    return kept
 
 
 def get_version():
