@@ -133,6 +133,20 @@ def get_abspath_source_file(dst):
     return path.abspath(path.realpath(path.join(tmp_path, '{dst}'.format(dst=dst))))
 
 
+def get_public_suffixes():
+    '''
+        Return the Public Suffix List entries, as committed in the
+        second-level-tlds warninglist.
+
+        A "hostname" warninglist matches an entry and every subdomain of it,
+        so an entry that is itself a public suffix (azurewebsites.net,
+        blob.core.windows.net, ...) would match names registered by
+        arbitrary third parties.
+    '''
+    with open(get_abspath_list_file('second-level-tlds')) as data_file:
+        return set(json.load(data_file)['list'])
+
+
 def get_version():
     '''
         Return the YYYYMMDD as int for version.

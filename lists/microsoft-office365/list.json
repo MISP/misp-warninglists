@@ -191,6 +191,6 @@
     "hostname"
   ],
   "name": "List of known Office 365 URLs",
-  "type": "string",
-  "version": 20260811
+  "type": "hostname",
+  "version": 20261022
 }

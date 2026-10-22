@@ -31,24 +31,29 @@ Normalisation rules applied to each "Destination" table cell:
   - A URL scheme (http:// or https://) is stripped, then everything
     from the first "/" onward (path) is stripped.
   - A trailing ":port" is stripped.
-  - A leading "*" (with or without a following ".") is normalised to a
-    single leading "." to match this repository's existing wildcard
-    convention (see lists/microsoft-win10-connection-endpoints), e.g.
-    "*.smartscreen-prod.microsoft.com" -> ".smartscreen-prod.microsoft.com"
-    and "*displaycatalog.mp.microsoft.com" -> ".displaycatalog.mp.microsoft.com".
+  - A leading "*" (with or without a following ".") is removed, e.g.
+    "*.smartscreen-prod.microsoft.com" -> "smartscreen-prod.microsoft.com"
+    and "*displaycatalog.mp.microsoft.com" -> "displaycatalog.mp.microsoft.com".
+    The list is of type "hostname", so an entry already matches every
+    subdomain of itself.
   - A trailing "*" (used inconsistently on the source page, with no
     accompanying footnote) is stripped as a rendering artifact rather
     than kept as a wildcard, e.g. "arc.msn.com*" -> "arc.msn.com".
   - Empty strings, and any value that still contains whitespace, a
     backtick, a pipe character, or has no "." after the above cleanup,
     are dropped as not being a plausible hostname.
+  - A value still containing a "*" (e.g. "watson.*.microsoft.com") is
+    dropped: no warninglist type treats "*" as a wildcard.
+  - A value that is itself a public suffix (e.g. "blob.core.windows.net")
+    is dropped: matching its subdomains would cover names registered by
+    any Azure customer, not by Microsoft.
 """
 
 import re
 
 from bs4 import BeautifulSoup
 
-from generator import download, get_version, write_to_file
+from generator import download, get_public_suffixes, get_version, write_to_file
 
 lists = [
     "https://learn.microsoft.com/en-us/windows/privacy/manage-windows-11-endpoints",
@@ -72,9 +77,8 @@ def normalise(raw):
     if not value:
         return None
 
-    # Leading wildcard: "*.foo.com" or "*foo.com" -> ".foo.com"
-    if value.startswith('*'):
-        value = '.' + value.lstrip('*').lstrip('.')
+    # Leading wildcard: "*.foo.com" or "*foo.com" -> "foo.com"
+    value = value.lstrip('*').lstrip('.')
     # Trailing wildcard artifact: "foo.com*" -> "foo.com"
     value = value.rstrip('*')
 
@@ -86,6 +90,9 @@ def normalise(raw):
     if any(ch in value for ch in (' ', '`', '|', '<', '>')):
         return None
     if '.' not in value:
+        return None
+    # Wildcard elsewhere than at the start
+    if '*' in value:
         return None
 
     return value.lower()
@@ -116,7 +123,7 @@ if __name__ == '__main__':
         'name': 'List of known Windows 11 connection endpoints',
         'version': get_version(),
         'description': 'Event contains one or more entries of known Windows 11 connection endpoints (https://learn.microsoft.com/en-us/windows/privacy/manage-windows-11-endpoints)',
-        'type': 'string',
+        'type': 'hostname',
         'matching_attributes': ['domain', 'hostname', 'domain|ip'],
     }
 
@@ -124,6 +131,7 @@ if __name__ == '__main__':
     for list_url in lists:
         endpoints.extend(get_destinations(list_url))
 
-    misp_warninglist['list'] = endpoints
+    public_suffixes = get_public_suffixes()
+    misp_warninglist['list'] = [e for e in endpoints if e not in public_suffixes]
 
     write_to_file(misp_warninglist, 'microsoft-win11-connection-endpoints')
