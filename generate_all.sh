@@ -43,6 +43,7 @@ python3 generate-captive-portals.py
 python3 generate-vultr.py
 python3 generate-public-ipfs-gateways.py
 python3 generate_tranco.py
+python3 generate-netapi-top1m.py
 python3 generate-university-domain-list.py
 python3 generate-rackspace.py
 # python3 generate-windows-binary-hashes.py  # ON HOLD DUE TO https://github.com/m417z/winbindex/commit/24dd6995fd1c8eacbf59b5ce658d34ccf00bae00
