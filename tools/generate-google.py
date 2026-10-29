@@ -93,10 +93,9 @@ this change):
     form MISP core itself normalizes "hostname" lists to.
   - The old leading-dot/`type: "string"` shape shared by `google`,
     `microsoft`, and `microsoft-win10-connection-endpoints` therefore
-    appears to already be non-functional against current MISP core --
-    but fixing those other two frozen lists is out of scope here
-    (scope is `google` only); this generator does not perpetuate the
-    same defect for `google` going forward.
+    was non-functional against current MISP core; this generator does
+    not perpetuate the same defect for `google` going forward, and the
+    other two lists have since been converted the same way.
   - Practically: dot-stripping/adding was a uniform bijection over the
     merged set, so switching to bare entries does not change *which*
     domains are in the list or its final count (verified: 7469 before

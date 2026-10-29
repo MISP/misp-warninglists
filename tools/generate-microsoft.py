@@ -19,8 +19,8 @@ the list complete; it keeps the M365-derived majority of it current and
 reproducible instead of hand-edited. The remainder stays curated by hand, and
 the union below is what protects it.
 
-**This generator unions, it never replaces.** Every committed entry survives
-untouched.
+**This generator unions, it never replaces.** Every committed entry survives,
+only normalised to the bare form described at the end of this docstring.
 
 Three deliberate restraints:
 
@@ -37,13 +37,26 @@ Three deliberate restraints:
     feed says "M365 talks to this", not "Microsoft owns this". See
     EXCLUDED_DOMAINS below.
 
-Entries carry a leading dot, this list's established matching convention.
+The list is of type "hostname": an entry matches itself and every subdomain
+(MISP core trims surrounding dots and lowercases entries of such lists), so
+entries are stored bare, without the leading dot the list used to carry while
+it was of type "string" -- under which those entries never matched anything.
+Two kinds of published host names cannot be expressed that way and are
+skipped:
+
+  * a "*" anywhere but at the very start ("autodiscover.*.onmicrosoft.com"),
+    since no warninglist type treats "*" as a wildcard, and
+  * a public suffix ("azurewebsites.net", "cloudapp.net"), since matching its
+    subdomains would cover names registered by any Azure customer, not by
+    Microsoft.
 """
 
 import json
 import logging
 
-from generator import download, get_abspath_list_file, get_version, write_to_file
+from generator import (
+    CERTIFICATE_AUTHORITY_DOMAINS, download, get_abspath_list_file, get_public_suffixes, get_version, write_to_file
+)
 
 # A fixed request id, as the web service requires; the same convention as
 # generate-office365.py. See
@@ -67,19 +80,7 @@ INSTANCES = ("Worldwide", "China", "USGOVDoD", "USGOVGCCHigh", "Germany")
 # published candidates; it can never invent one.
 EXCLUDED_DOMAINS = {
     # Certificate authorities: CRL / OCSP / AIA endpoints
-    "digicert.com": "certificate authority",
-    "globalsign.com": "certificate authority",
-    "globalsign.net": "certificate authority",
-    "entrust.net": "certificate authority",
-    "geotrust.com": "certificate authority",
-    "identrust.com": "certificate authority",
-    "letsencrypt.org": "certificate authority",
-    "omniroot.com": "certificate authority (Baltimore/DigiCert root)",
-    "public-trust.com": "certificate authority",
-    "symcb.com": "certificate authority (Symantec)",
-    "symcd.com": "certificate authority (Symantec)",
-    "verisign.com": "certificate authority",
-    "verisign.net": "certificate authority",
+    **CERTIFICATE_AUTHORITY_DOMAINS,
     # Third-party content delivery networks
     "akamaihd.net": "Akamai CDN, not a Microsoft domain",
     "cdnsvc.com": "third-party CDN fronting the China instance",
@@ -168,13 +169,25 @@ def main():
             "existing curated list and will not create one from scratch".format(DST)
         )
 
-    committed = set(warninglist.get("list", []))
-    suffixes = {entry.lstrip(".").lower() for entry in committed}
+    public_suffixes = get_public_suffixes()
+    committed = set()
+    for entry in warninglist.get("list", []):
+        entry = entry.strip(".").lower()
+        if "*" in entry or entry in public_suffixes:
+            logging.info("microsoft: dropping %s -- not a usable hostname entry", entry)
+            continue
+        committed.add(entry)
 
     additions = set()
     excluded = 0
     for host in fetched:
-        if covered_by(host, suffixes):
+        if covered_by(host, committed):
+            continue
+        if "*" in host or host in public_suffixes:
+            logging.info(
+                "microsoft: skipping %s -- not expressible as a hostname entry", host
+            )
+            excluded += 1
             continue
         reason = EXCLUDED_DOMAINS.get(registrable_domain(host))
         if reason:
@@ -183,17 +196,18 @@ def main():
             )
             excluded += 1
             continue
-        additions.add("." + host)
+        additions.add(host)
 
     merged = committed.union(additions)
     logging.info(
         "microsoft: %d committed + %d published endpoints -> %d after union "
-        "(%d new, %d already covered by a committed suffix, %d third-party)",
+        "(%d new, %d already covered by a committed suffix, %d excluded)",
         len(committed), len(fetched), len(merged), len(additions),
         len(fetched) - len(additions) - excluded, excluded,
     )
 
     warninglist["list"] = sorted(merged)
+    warninglist["type"] = "hostname"
     warninglist["version"] = get_version()
     write_to_file(warninglist, DST)
 

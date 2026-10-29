@@ -56,7 +56,9 @@ if __name__ == '__main__':
         'version': get_version(),
         'category': 'known',
         'description': "Event contains one or more entries of known public IPFS gateways",
-        'type': "string",
+        # "hostname" so that URLs and subdomain gateways
+        # (<cid>.ipfs.dweb.link) match too, not only the bare host name.
+        'type': "hostname",
         'list': sorted(hostnames),
         'matching_attributes': ["domain", "hostname", "domain|ip", "url", "uri"]
     }

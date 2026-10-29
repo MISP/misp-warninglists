@@ -31,6 +31,10 @@ different, separately named list.
 
 **This generator unions, it never replaces.** Entries are stored without the
 registry's trailing dot, matching the committed convention.
+
+The list is of type "hostname": RFC 6761 reserves every name *under* these
+names too ("foo.test", "x.localhost", "1.0.0.10.in-addr.arpa"), which an exact
+"string" match would miss.
 """
 
 import json

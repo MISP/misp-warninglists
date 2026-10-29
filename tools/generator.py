@@ -133,6 +133,41 @@ def get_abspath_source_file(dst):
     return path.abspath(path.realpath(path.join(tmp_path, '{dst}'.format(dst=dst))))
 
 
+# Registrable domains of certificate authorities whose CRL / OCSP / AIA
+# endpoints Microsoft publishes as service endpoints. They are not Microsoft
+# domains, and listing them would suppress them for every other vendor using
+# the same CA too.
+CERTIFICATE_AUTHORITY_DOMAINS = {
+    "digicert.com": "certificate authority",
+    "globalsign.com": "certificate authority",
+    "globalsign.net": "certificate authority",
+    "entrust.net": "certificate authority",
+    "geotrust.com": "certificate authority",
+    "identrust.com": "certificate authority",
+    "letsencrypt.org": "certificate authority",
+    "omniroot.com": "certificate authority (Baltimore/DigiCert root)",
+    "public-trust.com": "certificate authority",
+    "symcb.com": "certificate authority (Symantec)",
+    "symcd.com": "certificate authority (Symantec)",
+    "verisign.com": "certificate authority",
+    "verisign.net": "certificate authority",
+}
+
+
+def get_public_suffixes():
+    '''
+        Return the Public Suffix List entries, as committed in the
+        second-level-tlds warninglist.
+
+        A "hostname" warninglist matches an entry and every subdomain of it,
+        so an entry that is itself a public suffix (azurewebsites.net,
+        blob.core.windows.net, ...) would match names registered by
+        arbitrary third parties.
+    '''
+    with open(get_abspath_list_file('second-level-tlds')) as data_file:
+        return set(json.load(data_file)['list'])
+
+
 def get_version():
     '''
         Return the YYYYMMDD as int for version.

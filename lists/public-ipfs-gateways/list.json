@@ -111,6 +111,6 @@
     "uri"
   ],
   "name": "List of known public IPFS gateways",
-  "type": "string",
-  "version": 20261014
+  "type": "hostname",
+  "version": 20261022
 }
