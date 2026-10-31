@@ -1,8 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
+from generator import (
+    MULTI_TENANT_DOMAINS, download_to_file, split_hostname_entries, get_version, write_to_file,
+    write_exact_match_warninglist, get_abspath_source_file
+)
 import argparse
+
+# The list is of type "hostname", so an entry also matches all its subdomains.
+# Entries whose subdomains belong to third parties are dropped; public
+# suffixes and their parents are dropped by split_hostname_entries() itself.
+# The dropped entries go to the exact-match list majestic_million-exact.
+TOO_WIDE = MULTI_TENANT_DOMAINS
+
+# Values seen in the dataset that are not domains. None so far: malformed
+# values are caught by the syntax check in filter_hostname_entries().
+JUNK = set()
 
 
 def process(file, dst, numbers):
@@ -15,15 +28,24 @@ def process(file, dst, numbers):
         'version': get_version(),
         'description': f'Event contains one or more entries from the top {numbers} of the most used websites (Majestic Million).',
         'matching_attributes': ['hostname', 'domain'],
-        'type': 'string',
+        'type': 'hostname',
         'list': []
     }
 
-    for site in sites:
-        v = site.split(',')[2]
-        warninglist['list'].append(v.rstrip())
+    domains = [site.split(',')[2] for site in sites]
+    warninglist['list'], too_wide = split_hostname_entries(domains, too_wide=TOO_WIDE, junk=JUNK)
 
     write_to_file(warninglist, dst)
+
+    write_exact_match_warninglist(
+        too_wide,
+        dst + '-exact',
+        f'Top {numbers} websites from Majestic Million too wide for hostname matching (exact match)',
+        f'Domains from the top {numbers} of Majestic Million that the majestic_million list leaves out because it '
+        'matches hostnames: a public suffix, a domain a public suffix sits under, or a domain whose subdomains '
+        'belong to customers or users. Matched exactly, so the domain itself is flagged but names registered '
+        'under it are not.',
+    )
 
 
 if __name__ == '__main__':

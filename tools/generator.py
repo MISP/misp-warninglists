@@ -2,6 +2,7 @@ import datetime
 import ipaddress
 import json
 import logging
+import re
 from inspect import currentframe, getframeinfo, getmodulename, stack
 from os import mkdir, path, makedirs
 from typing import List, Union
@@ -166,6 +167,125 @@ def get_public_suffixes():
     '''
     with open(get_abspath_list_file('second-level-tlds')) as data_file:
         return set(json.load(data_file)['list'])
+
+
+# Domains whose subdomains are handed out to arbitrary customers or users, but
+# which the Public Suffix List does not (yet) record. In a "hostname"
+# warninglist such an entry would match every customer's site, malicious ones
+# included. Generators of popularity / ranking lists add these to their own
+# TOO_WIDE blacklist.
+MULTI_TENANT_DOMAINS = {
+    # Blogs, site builders, shops and forms: <user>.<domain>
+    "000webhostapp.com", "3dcartstores.com", "bigcartel.com", "blogspot.de",
+    "business.site", "free.fr", "godaddysites.com", "gumroad.com",
+    "hs-sites.com", "hubspotpagebuilder.com", "jimdo.com", "jimdosite.com",
+    "livejournal.com", "mailchimpsites.com", "medium.com", "myportfolio.com",
+    "mystrikingly.com", "narod.ru", "neocities.org", "podia.com",
+    "site123.me", "squarespace.com", "strikingly.com", "substack.com",
+    "teachable.com", "thinkific.com", "tilda.ws", "tumblr.com",
+    "typeform.com", "ucoz.com", "ucoz.net", "ucoz.ru", "webnode.com",
+    "weebly.com", "wordpress.com", "wufoo.com",
+    # SaaS tenants: <tenant>.<domain>
+    "atlassian.net", "auth0.com", "box.com", "force.com", "freshdesk.com",
+    "okta.com", "oktapreview.com", "onelogin.com", "salesforce-sites.com",
+    "service-now.com", "sharepoint.com", "webex.com", "zendesk.com",
+    "zoom.us",
+    # Cloud storage, hosting, CDN and tunnels: <bucket|app|zone>.<domain>
+    "amazonaws.com", "appdomain.cloud", "b-cdn.net", "backblazeb2.com",
+    "dropboxusercontent.com", "fastly.net", "firebaseio.com", "glitch.me",
+    "googleusercontent.com", "loca.lt", "localtunnel.me", "on.aws",
+    "railway.app", "serveo.net", "storage.googleapis.com", "wasabisys.com",
+    "windows.net",
+}
+
+HOSTNAME_RE = re.compile(
+    r'^(?=.{1,253}$)(?!-)[a-z0-9_-]{1,63}(?<!-)(\.(?!-)[a-z0-9_-]{1,63}(?<!-))+$'
+)
+
+
+def filter_hostname_entries(entries, too_wide=frozenset(), junk=frozenset()):
+    '''
+        Normalise the entries of a "hostname" warninglist and drop those that
+        do not belong in one. Returns the kept entries.
+
+        An entry is normalised by stripping whitespace and surrounding dots and
+        lowercasing it, as MISP core does when loading a "hostname" list.
+
+        Junk: entries in `junk`, or that are not a syntactically valid host
+        name of at least two labels (CSV headers, broken lines, bare TLDs).
+
+        Too wide: entries in `too_wide`, entries that are themselves a public
+        suffix, and entries a public suffix sits under (amazonaws.com, for
+        s3.amazonaws.com). A "hostname" entry matches every subdomain, so
+        these would match names registered by arbitrary third parties.
+        split_hostname_entries() also returns them, for an exact-match list.
+    '''
+    caller = getmodulename(stack()[1][1]).upper()
+    return _split_hostname_entries(entries, too_wide, junk, caller)[0]
+
+
+def split_hostname_entries(entries, too_wide=frozenset(), junk=frozenset()):
+    '''
+        Like filter_hostname_entries(), but return a tuple: the kept entries,
+        and the normalised, sorted entries dropped as too wide.
+
+        The too wide entries are still well-known domains: they only must not
+        be matched together with their subdomains. Pass them to
+        write_exact_match_warninglist() so that the domain itself still gets
+        a warning.
+    '''
+    caller = getmodulename(stack()[1][1]).upper()
+    return _split_hostname_entries(entries, too_wide, junk, caller)
+
+
+def _split_hostname_entries(entries, too_wide, junk, caller):
+    public_suffixes = get_public_suffixes()
+    public_suffix_parents = set()
+    for suffix in public_suffixes:
+        labels = suffix.split('.')
+        for i in range(1, len(labels)):
+            public_suffix_parents.add('.'.join(labels[i:]))
+
+    kept = []
+    dropped_junk = set()
+    dropped_too_wide = set()
+    for entry in entries:
+        value = entry.strip().strip('.').lower()
+        if entry in junk or value in junk or not HOSTNAME_RE.match(value):
+            dropped_junk.add(entry)
+        elif value in too_wide or value in public_suffixes or value in public_suffix_parents:
+            dropped_too_wide.add(value)
+        else:
+            kept.append(value)
+
+    if dropped_junk:
+        logging.info('{} dropped {} junk entries: {}'.format(
+            caller, len(dropped_junk), sorted(dropped_junk)))
+    if dropped_too_wide:
+        logging.info('{} dropped {} too wide entries: {}'.format(
+            caller, len(dropped_too_wide), sorted(dropped_too_wide)))
+    return kept, sorted(dropped_too_wide)
+
+
+def write_exact_match_warninglist(entries, dst, name, description,
+                                  matching_attributes=('hostname', 'domain', 'domain|ip')):
+    '''
+        Write the entries a "hostname" list left out as too wide
+        (split_hostname_entries()) to a companion "string" warninglist.
+
+        MISP matches a "string" list exactly, so an attribute that is the
+        domain itself (windows.net, blob.core.windows.net) still gets a
+        warning, while names registered under it do not. A URL never equals a
+        bare domain, so url and uri are not matching attributes here.
+    '''
+    write_to_file({
+        'name': name,
+        'version': get_version(),
+        'description': description,
+        'matching_attributes': list(matching_attributes),
+        'type': 'string',
+        'list': sorted(set(entries)),
+    }, dst)
 
 
 def get_version():

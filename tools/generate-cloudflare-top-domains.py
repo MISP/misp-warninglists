@@ -1,15 +1,32 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
+from generator import (
+    MULTI_TENANT_DOMAINS, download_to_file, split_hostname_entries, get_version, write_to_file,
+    write_exact_match_warninglist, get_abspath_source_file
+)
 import os
+
+# The list is of type "hostname", so an entry also matches all its subdomains.
+# Entries whose subdomains belong to third parties are dropped; public
+# suffixes and their parents are dropped by split_hostname_entries() itself.
+# The dropped entries go to the exact-match list cloudflare-top-exact.
+TOO_WIDE = MULTI_TENANT_DOMAINS
+
+# Values seen in the datasets that are not domains: the CSV header, and a
+# broken line. Other malformed values are caught by the syntax check.
+JUNK = {
+    "domain",
+    '"com,thefatherofsalmon.com.host"',
+}
 
 def process(dataset_files, base_dst):
     warninglist = {
         'version': get_version(),
-        'type': "string",
+        'type': "hostname",
         'matching_attributes': ["hostname", "domain", "url", "domain|ip"]
     }
+    too_wide_entries = set()
 
     for dataset, file in dataset_files.items():
         with open(get_abspath_source_file(file), 'r') as f:
@@ -28,10 +45,20 @@ def process(dataset_files, base_dst):
             'list': [],
         })
         
-        for ip in ips:
-            warninglist['list'].append(ip.strip())
+        warninglist['list'], too_wide = split_hostname_entries(ips, too_wide=TOO_WIDE, junk=JUNK)
+        too_wide_entries.update(too_wide)
 
         write_to_file(warninglist, base_dst + dataset_pretty_name)
+
+    write_exact_match_warninglist(
+        too_wide_entries,
+        base_dst + '-exact',
+        "Top domains from Cloudflare Radar too wide for hostname matching (exact match)",
+        "Domains from the Cloudflare Radar top domains lists (https://developers.cloudflare.com/radar/investigate/"
+        "domain-ranking-datasets/) that the cloudflare-top* lists leave out because they match hostnames: a "
+        "public suffix, a domain a public suffix sits under, or a domain whose subdomains belong to customers or "
+        "users. Matched exactly, so the domain itself is flagged but names registered under it are not.",
+    )
 
 
 if __name__ == '__main__':

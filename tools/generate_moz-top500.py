@@ -3,7 +3,20 @@
 
 import csv
 
-from generator import download_to_file, get_version, write_to_file, get_abspath_source_file
+from generator import (
+    MULTI_TENANT_DOMAINS, download_to_file, split_hostname_entries, get_version, write_to_file,
+    write_exact_match_warninglist, get_abspath_source_file
+)
+
+# The list is of type "hostname", so an entry also matches all its subdomains.
+# Entries whose subdomains belong to third parties are dropped; public
+# suffixes and their parents are dropped by split_hostname_entries() itself.
+# The dropped entries go to the exact-match list moz-top500-exact.
+TOO_WIDE = MULTI_TENANT_DOMAINS
+
+# Values seen in the dataset that are not domains. None so far: malformed
+# values are caught by the syntax check in filter_hostname_entries().
+JUNK = set()
 
 
 # TODO: Include MozRank
@@ -13,7 +26,7 @@ def process(files, dst):
         'description': "Event contains one or more entries from the top 500 of the most used domains from Moz.",
         'version': get_version(),
         'name': "Top 500 domains and pages from https://moz.com/top500",
-        'type': 'string',
+        'type': 'hostname',
         'list': [],
         'matching_attributes': ['hostname', 'domain', 'uri', 'url']
     }
@@ -30,7 +43,18 @@ def process(files, dst):
                 v = row[1]
                 warninglist['list'].append(v.rstrip().rstrip('/'))
 
+    warninglist['list'], too_wide = split_hostname_entries(warninglist['list'], too_wide=TOO_WIDE, junk=JUNK)
+
     write_to_file(warninglist, dst)
+
+    write_exact_match_warninglist(
+        too_wide,
+        dst + '-exact',
+        "Top 500 domains from Moz too wide for hostname matching (exact match)",
+        "Domains from the Moz top 500 that the moz-top500 list leaves out because it matches hostnames: a public "
+        "suffix, a domain a public suffix sits under, or a domain whose subdomains belong to customers or users. "
+        "Matched exactly, so the domain itself is flagged but names registered under it are not.",
+    )
 
 
 if __name__ == '__main__':

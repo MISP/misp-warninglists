@@ -1,0 +1,28 @@
+{
+  "description": "Domains from the Moz top 500 that the moz-top500 list leaves out because it matches hostnames: a public suffix, a domain a public suffix sits under, or a domain whose subdomains belong to customers or users. Matched exactly, so the domain itself is flagged but names registered under it are not.",
+  "list": [
+    "akamaihd.net",
+    "amazonaws.com",
+    "box.com",
+    "googleusercontent.com",
+    "it.com",
+    "medium.com",
+    "mystrikingly.com",
+    "narod.ru",
+    "netlify.app",
+    "ovh.net",
+    "sakura.ne.jp",
+    "storage.googleapis.com",
+    "vercel.app",
+    "zendesk.com",
+    "zoom.us"
+  ],
+  "matching_attributes": [
+    "hostname",
+    "domain",
+    "domain|ip"
+  ],
+  "name": "Top 500 domains from Moz too wide for hostname matching (exact match)",
+  "type": "string",
+  "version": 20261031
+}
