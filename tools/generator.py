@@ -218,10 +218,27 @@ def filter_hostname_entries(entries, too_wide=frozenset(), junk=frozenset()):
         suffix, and entries a public suffix sits under (amazonaws.com, for
         s3.amazonaws.com). A "hostname" entry matches every subdomain, so
         these would match names registered by arbitrary third parties.
+        split_hostname_entries() also returns them, for an exact-match list.
     '''
-    frame_records = stack()[1]
-    caller = getmodulename(frame_records[1]).upper()
+    caller = getmodulename(stack()[1][1]).upper()
+    return _split_hostname_entries(entries, too_wide, junk, caller)[0]
 
+
+def split_hostname_entries(entries, too_wide=frozenset(), junk=frozenset()):
+    '''
+        Like filter_hostname_entries(), but return a tuple: the kept entries,
+        and the normalised, sorted entries dropped as too wide.
+
+        The too wide entries are still well-known domains: they only must not
+        be matched together with their subdomains. Pass them to
+        write_exact_match_warninglist() so that the domain itself still gets
+        a warning.
+    '''
+    caller = getmodulename(stack()[1][1]).upper()
+    return _split_hostname_entries(entries, too_wide, junk, caller)
+
+
+def _split_hostname_entries(entries, too_wide, junk, caller):
     public_suffixes = get_public_suffixes()
     public_suffix_parents = set()
     for suffix in public_suffixes:
@@ -247,7 +264,28 @@ def filter_hostname_entries(entries, too_wide=frozenset(), junk=frozenset()):
     if dropped_too_wide:
         logging.info('{} dropped {} too wide entries: {}'.format(
             caller, len(dropped_too_wide), sorted(dropped_too_wide)))
-    return kept
+    return kept, sorted(dropped_too_wide)
+
+
+def write_exact_match_warninglist(entries, dst, name, description,
+                                  matching_attributes=('hostname', 'domain', 'domain|ip')):
+    '''
+        Write the entries a "hostname" list left out as too wide
+        (split_hostname_entries()) to a companion "string" warninglist.
+
+        MISP matches a "string" list exactly, so an attribute that is the
+        domain itself (windows.net, blob.core.windows.net) still gets a
+        warning, while names registered under it do not. A URL never equals a
+        bare domain, so url and uri are not matching attributes here.
+    '''
+    write_to_file({
+        'name': name,
+        'version': get_version(),
+        'description': description,
+        'matching_attributes': list(matching_attributes),
+        'type': 'string',
+        'list': sorted(set(entries)),
+    }, dst)
 
 
 def get_version():

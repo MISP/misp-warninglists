@@ -1,0 +1,18 @@
+{
+  "description": "University domains from https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json that the university_domains list leaves out because it matches hostnames: a public suffix, a domain a public suffix sits under, or a domain shared with other organisations. Matched exactly, so the domain itself is flagged but names registered under it are not.",
+  "list": [
+    "kuleuven.be",
+    "mil.lv",
+    "muni.cz",
+    "rit.edu",
+    "ruhr-uni-bochum.de"
+  ],
+  "matching_attributes": [
+    "hostname",
+    "domain",
+    "domain|ip"
+  ],
+  "name": "University domains too wide for hostname matching (exact match)",
+  "type": "string",
+  "version": 20261031
+}

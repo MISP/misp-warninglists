@@ -44,6 +44,32 @@ class FilterHostnameEntriesTest(unittest.TestCase):
             ["blog.wordpress.com", "example.com"],
         )
 
+    def test_split_returns_the_too_wide_entries(self):
+        with patch.object(generator, "get_public_suffixes", return_value=PUBLIC_SUFFIXES):
+            kept, too_wide = generator.split_hostname_entries(
+                ["Example.com", "github.io", "amazonaws.com", "WordPress.com", "domain"],
+                too_wide={"wordpress.com"},
+                junk={"domain"},
+            )
+        self.assertEqual(kept, ["example.com"])
+        # Junk is not a domain, so it is not kept for exact matching either.
+        self.assertEqual(too_wide, ["amazonaws.com", "github.io", "wordpress.com"])
+
+
+class WriteExactMatchWarninglistTest(unittest.TestCase):
+    def test_writes_a_string_list_without_url_matching(self):
+        written = {}
+        with patch.object(generator, "write_to_file",
+                          side_effect=lambda warninglist, dst: written.update(warninglist=warninglist, dst=dst)):
+            generator.write_exact_match_warninglist(
+                ["windows.net", "github.io", "windows.net"], "example-exact", "Name", "Description")
+        self.assertEqual(written["dst"], "example-exact")
+        warninglist = written["warninglist"]
+        # MISP matches a "string" list exactly: windows.net, not <account>.blob.core.windows.net.
+        self.assertEqual(warninglist["type"], "string")
+        self.assertEqual(warninglist["list"], ["github.io", "windows.net"])
+        self.assertEqual(warninglist["matching_attributes"], ["hostname", "domain", "domain|ip"])
+
 
 if __name__ == "__main__":
     unittest.main()
