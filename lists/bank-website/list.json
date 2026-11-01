@@ -889,6 +889,7 @@
     ".fidelitybank.com",
     ".fih.dk",
     ".finance.luxweb.com",
+    ".finansbank.com.tr",
     ".fincombank.com",
     ".fioniabank.dk",
     ".first-citizens.com",
@@ -1011,6 +1012,7 @@
     ".garanti.com.tr",
     ".garantibank.com",
     ".garantibbva.com.tr",
+    ".garantibbva.ro",
     ".garantiedesdepots.fr",
     ".gatewaybank.com",
     ".gbba.net",
@@ -2236,5 +2238,5 @@
   ],
   "name": "List of known bank domains",
   "type": "hostname",
-  "version": 20260414
+  "version": 20261101
 }
