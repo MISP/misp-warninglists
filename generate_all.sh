@@ -54,6 +54,7 @@ python3 generate-wikimedia.py
 python3 generate-second-level-tlds.py
 python3 generate-google-gcp.py
 python3 generate-google-bot.py
+python3 generate-bingbot.py
 python3 generate-google-gmail-sending-ips.py
 python3 generate-smtp.py
 python3 generate-tenable.py

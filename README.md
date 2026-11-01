@@ -25,6 +25,7 @@ There is also a standalone software project called [misp-feedback](https://githu
 - [apple/list.json](./lists/apple/list.json) - **List of known Apple IP ranges** - _IP ranges assigned to Apple_
 - [automated-malware-analysis/list.json](./lists/automated-malware-analysis/list.json) - **List of known domains used by automated malware analysis services & security vendors** - _Domains used by automated malware analysis services & security vendors_
 - [bank-website/list.json](./lists/bank-website/list.json) - **List of known bank domains** - _Event contains one or more entries of known banking website_
+- [bingbot/list.json](./lists/bingbot/list.json) - **List of known Bingbot IP ranges (https://www.bing.com/toolbox/bingbot.json)** - _Microsoft Bingbot crawler IP address ranges (https://www.bing.com/toolbox/bingbot.json)_
 - [bufferover-nt-scanning/list.json](./lists/bufferover-nt-scanning/list.json) - **Bufferover IP Ranges Used for Scanning** - _List containing IP's associated with the Bufferover scanners. This scanner CIDR range is extracted from CIRCL Network Telescope analysis on 2026/08/10_
 - [bunny-net/list.json](./lists/bunny-net/list.json) - **List of known Bunny.net CDN ranges** - _List of known Bunny.net CDN IP ranges (https://support.bunny.net/hc/en-us/articles/115003578911-How-to-detect-when-BunnyCDN-PoP-servers-are-accessing-your-backend)_
 - [cachefly/list.json](./lists/cachefly/list.json) - **List of known CacheFly IP address ranges** - _CacheFly IP address ranges (https://cachefly.cachefly.net/ips/cdn.txt)_
