@@ -1,0 +1,17 @@
+{
+  "description": "Domains used by the Snowflake data platform for account, Snowsight and app hostnames (https://docs.snowflake.com/en/sql-reference/functions/system_allowlist). Account hostnames are customer-chosen and can contain words that resemble brand names.",
+  "list": [
+    ".snowflake.app",
+    ".snowflake.com",
+    ".snowflakecomputing.com"
+  ],
+  "matching_attributes": [
+    "hostname",
+    "domain",
+    "url",
+    "domain|ip"
+  ],
+  "name": "List of known Snowflake domains",
+  "type": "hostname",
+  "version": 20261101
+}
